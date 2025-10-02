@@ -7,6 +7,12 @@ INHERIT: mkdocs.yml  # Use upstream mkdocs.yml as base
 site_name: "Manual de Usuario de Omeka S"
 site_url: "https://ateeducacion.github.io/omeka-s-enduser-es/"
 
+theme:
+  name: material
+  features:
+    - i18n        # enables the language switcher in the header
+
+
 plugins:
   - search
   - i18n:
