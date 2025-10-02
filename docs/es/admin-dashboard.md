@@ -1,27 +1,75 @@
-# Dashboard Administrativo El dashboard administrativo gestiona el contenido compartido por todos los sitios de Omeka S y las funcionalidades principales de la instalación de Omeka S. 
+# Panel de Administración
 
-Este [screencast](https://vimeo.com/455708039){target=_blank} te guía a través de las principales características del panel de control y la navegación por tu instalación de Omeka S: <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/455708039?h=438143f0d3" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> <p><a href="https://vimeo.com/455708039">Navegando por Omeka S</a> desde <a href="https://vimeo.com/omeka">Omeka</a> en <a href="https://vimeo.com">Vimeo</a>.</p> ## Página principal de administración Cuando un usuario inicia sesión, la primera página que ve es el Panel de administración. 
+El panel de administración gestiona el contenido compartido por todos los sitios de Omeka S y las funcionalidades principales de la instalación.
 
-!!! nota Dependiendo del rol del usuario, puede que no vea precisamente las mismas opciones en la navegación de la izquierda. Ver [abajo](#navegación-izquierda) para más detalles. 
+Este [videotutorial](https://vimeo.com/455708039){target=_blank} le guía a través de las características principales del panel y la navegación de su instalación de Omeka S:
 
-vista completa del panel de administración](files/admindashfullview.png) Además de la navegación a la izquierda presente en todas las páginas (ver más abajo), el panel de administración presenta a los usuarios dos casillas: **Gestionar recursos** y Gestionar sitios**. El cuadro Gestionar recursos** muestra los siguientes recursos con su recuento total: [Artículos](content/items.md), [Conjuntos de artículos](content/item-sets.md), [Vocabularios](content/vocabularies.md) y [Plantillas de recursos](content/resource-template.md). Si hace clic en la etiqueta del recurso, accederá a la página de exploración; si hace clic en el botón con el símbolo más situado a la derecha de la etiqueta, accederá a la página de adición de ese tipo de recurso. 
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/455708039?h=438143f0d3" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p><a href="https://vimeo.com/455708039">Navegando en Omeka S</a> from <a href="https://vimeo.com/omeka">Omeka</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
-La casilla **Gestionar sitios** muestra los [Sitios](sites/index.md) de la instalación. Si hace clic en el nombre del sitio, accederá a la pestaña de administración del sitio; si hace clic en el icono de la flecha pequeña de la derecha, accederá a la vista pública del sitio (en una nueva ventana o pestaña). 
+## Página principal de Administración
 
-## Navegación a la izquierda El siguiente contenido aparece en la parte izquierda del panel de administración y en todas las páginas administrativas. 
+Cuando un usuario inicia sesión, la primera página que ve es el Panel de Administración.
 
-vista de la navegación izquierda en el panel de administración, que también aparece en toda la interfaz de administración, con las opciones que se describen a continuación](files/leftnav.png) En la esquina superior izquierda de la pantalla hay un enlace que muestra el título de la instalación y que siempre le llevará de vuelta al panel de administración. 
+!!! note
+	Dependiendo del rol del usuario, es posible que no vea exactamente las mismas opciones en el menú de navegación izquierdo. Consulte [abajo](#navegación-izquierda) para más detalles.
 
-Justo debajo del título de la instalación aparece el mensaje "Accedido como [Usuario]", donde [Usuario] es el nombre de usuario de la persona que ha iniciado sesión. Junto al nombre de usuario hay un icono de engranaje que [le llevará a la página de configuración de usuario](admin/users.md#user-settings). 
+![Vista completa del panel de administración](files/admindashfullview.png)
 
-Cerca del nombre de usuario (debajo o a la derecha, dependiendo del ancho de la ventana) está el botón para **Salir**. 
+Además del menú de navegación izquierdo presente en todas las páginas (ver más abajo), el panel de administración presenta a los usuarios dos recuadros: **Gestionar Recursos** y **Gestionar Sitios**.
 
-Debajo de la información del usuario hay un campo de búsqueda que tiene una opción de búsqueda avanzada (elipsis) además del botón para buscar (lupa). Utilícelo para buscar en todos los elementos de la instalación. 
+El recuadro **Gestionar Recursos** muestra los siguientes recursos con su contador total: [Elementos](content/items.md), [Conjuntos de elementos](content/item-sets.md), [Vocabularios](content/vocabularies.md) y [Plantillas de recursos](content/resource-template.md). Al hacer clic en la etiqueta del Recurso, se le dirigirá a la página de exploración; al hacer clic en el botón con el símbolo de más a la derecha de la etiqueta, se le dirigirá a la página para añadir ese tipo de recurso.
 
-Las opciones de búsqueda avanzada (la elipsis) le permiten refinar la búsqueda por Tipo de Recurso, limitándola a **Items**, **Item Sets**, o **Media** haciendo clic en el botón de opción situado junto al Tipo de Recurso en el que desea buscar. 
+El recuadro **Gestionar Sitios** lista los [Sitios](sites/index.md) de la instalación. Al hacer clic en el nombre del sitio, se le dirigirá a la pestaña administrativa del sitio; al hacer clic en el pequeño icono de flecha a la derecha, se le dirigirá a la vista pública del sitio (en una nueva ventana o pestaña).
 
-![Opciones de búsqueda avanzada](files/search.png) La navegación de la izquierda del panel de control se divide en secciones relacionadas con la función y el acceso de los usuarios: - [Sitios](sites/index.md): enumera y proporciona acceso a todos los sitios de la instalación de OmekaS. (Icono de ordenador) - Recursos: creación de contenido y gestión de metadatos. - [Elementos](content/items.md): gestiona los recursos individuales de su instalación. (Icono de caja) - [Conjuntos de elementos](content/item-sets.md): gestiona grupos agregados de elementos. (Icono de varios recuadros) - [Vocabularies](content/vocabularies.md): gestiona los estándares de metadatos de la instalación. (Icono de libro cerrado) - [Resource Templates](content/resource-template.md): gestiona conjuntos predefinidos de propiedades (campos) que se utilizan al crear elementos. (Icono de lápiz en un cuadrado) - Admin: administración a nivel de instalación (tenga en cuenta que algunas de estas pestañas pueden no ser visibles para todos los niveles de usuario) - [Usuarios](admin/users.md): gestiona usuarios para toda la instalación y sitios individuales. (Icono de silueta humana) - [Módulos](modules/index.md): añada funcionalidad a sus sitios. (Icono de un signo más en un cuadrado) - [Jobs](admin/jobs.md): muestra las tareas activadas por el usuario que se están ejecutando actualmente. Nota: las tareas sólo se muestran cuando están en ejecución. (Icono de tres barras) - [Configuración](admin/settings.md): gestiona la configuración global de todos los sitios, el panel de control del administrador y los paneles de control de los sitios. (Icono de engranajes) Si has instalado módulos, pueden aparecer en la sección admin de la navegación izquierda, debajo de ajustes. Ten en cuenta que los usuarios con permisos más limitados sólo verán algunas de estas opciones de navegación. ## Información del sistema En la esquina inferior derecha de cada página de la parte admin aparece la versión actual de Omeka S, junto con algunos enlaces útiles. Haz clic en el enlace "Información del sistema" para ver una página completa con detalles sobre tu instalación. ##[Ejemplo de página de información del sistema](files/systeminfo.png) En esta página puedes verificar las versiones de las dependencias que Omeka está usando, como PHP, ImageMagick y MySQL. Si un módulo en particular requiere que tu servidor suministre algo como una utilidad PHP, puedes buscarla aquí. También puedes mirar aquí para verificar si tu instalación de Omeka reconoce un módulo que has intentado instalar. Ten en cuenta que tu sección PHP te dirá el "Límite de carga de archivos", que es el número reflejado en la interfaz de carga de medios y en la interfaz de carga de activos. Observe también que Omeka S le dirá a cuánto espacio libre del servidor tiene acceso. 
+## Navegación izquierda
 
-Es posible que se te pida que proporciones la información de esta página cuando solicites asistencia técnica en los [Foros](https://forum.omeka.org/){target=_blank} o cuando publiques un problema en GitHub. 
+El siguiente contenido aparece en el lado izquierdo del panel de administración y en todas las páginas administrativas.
 
-Hacer clic en los dos botones situados cerca de la parte inferior de la página puede ayudarte a verificar que PHP e ImageMagick funcionan correctamente en tu sitio. Hazlo justo después de la instalación para asegurarte de que no tendrás problemas más adelante, como cuando importes elementos por lotes o ejecutes otros trabajos que dependan de PHP. ![Ejemplo de resultados del botón de versión de PHP CLI y del botón de versión de ImageMagick](files/systeminfo_buttons.png)
+![Vista del menú de navegación izquierdo en el panel de administración, que aparece de forma consistente en toda la interfaz de administración, con las opciones descritas a continuación](files/leftnav.png)
+
+En la esquina superior izquierda de la pantalla hay un enlace que muestra el título de la instalación, el cual siempre le llevará de vuelta al panel de administración.
+
+Directamente debajo del título de la instalación está el mensaje “Sesión iniciada como [Usuario]”, donde [Usuario] es el nombre de pila de la persona conectada. Junto al nombre de usuario hay un icono de engranaje que le [llevará a la página de ajustes de su usuario](admin/users.md#user-settings).
+
+Cerca del nombre de usuario (debajo o a la derecha, según el ancho de la ventana) se encuentra el botón para **Cerrar sesión**.
+
+Debajo de la información del usuario hay un campo de búsqueda que tiene una opción para búsqueda avanzada (puntos suspensivos) además del botón para buscar (lupa). Use esto para buscar en todos los elementos de la instalación.
+
+Las opciones de búsqueda avanzada (los puntos suspensivos) le permiten refinar la búsqueda por Tipo de Recurso, limitándola a **Elementos**, **Conjuntos de elementos**, o **Medios** haciendo clic en el botón de opción junto al Tipo de Recurso que desea buscar.
+
+![Opciones de búsqueda avanzada](files/search.png)
+
+El menú de navegación izquierdo del panel se divide en secciones relacionadas con la función y el acceso del usuario:
+
+- [Sitios](sites/index.md): lista y proporciona acceso a todos los sitios de la instalación de Omeka S. (Icono de ordenador)
+- Recursos: creación de contenido y gestión de metadatos.
+    - [Elementos](content/items.md): gestione los recursos individuales de su instalación. (Icono de caja)
+    - [Conjuntos de elementos](content/item-sets.md): gestione grupos agregados de elementos. (Icono de múltiples cajas)
+    - [Vocabularios](content/vocabularies.md): gestione los estándares de metadatos para su instalación. (Icono de libro cerrado)
+    - [Plantillas de Recursos](content/resource-template.md): gestione conjuntos predefinidos de propiedades (campos) para usar al crear elementos. (Icono de lápiz en un cuadrado)
+- Admin: administración a nivel de instalación (tenga en cuenta que algunas de estas pestañas pueden no ser visibles para todos los niveles de usuario).
+    - [Usuarios](admin/users.md): gestione usuarios para toda la instalación y sitios individuales. (Icono de silueta humana)
+    - [Módulos](modules/index.md): añada funcionalidad a sus sitios. (Icono de signo más en un cuadrado)
+    - [Tareas de sistema](admin/jobs.md): muestra las tareas activadas por el usuario que se están ejecutando actualmente. NB: las tareas solo se muestran mientras se están ejecutando. (Icono de tres barras)
+    - [Ajustes](admin/settings.md): gestione los ajustes globales para todos los sitios, el panel de administración y los paneles de los sitios. (Icono de engranajes)
+
+Si ha instalado módulos, pueden aparecer en la sección de administración de la navegación izquierda, debajo de ajustes.
+
+Tenga en cuenta que los usuarios con permisos más limitados solo verán algunas de estas opciones de navegación.
+
+## Información del sistema
+
+En la esquina inferior derecha de cada página del lado de administración se encuentra la versión actual de Omeka S, junto con algunos enlaces útiles. Haga clic en el enlace etiquetado como "Información del sistema" para ver una página completa con detalles sobre su instalación.
+
+![Ejemplo de página de Información del sistema](files/systeminfo.png)
+
+En esta página puede verificar las versiones de las dependencias que Omeka está utilizando, como PHP, ImageMagick y MySQL. Si un módulo en particular requiere que su servidor proporcione algo, como una utilidad de PHP, puede buscarlo aquí. También puede consultar aquí para verificar si su instalación de Omeka reconoce un módulo que ha intentado instalar.
+
+Tenga en cuenta que la sección de PHP le indicará el "Límite de subida de archivos", que es el número que se refleja en la interfaz de carga de medios y en la interfaz de carga de activos. Note también que Omeka S le informará de cuánto espacio libre en el servidor tiene acceso.
+
+Es posible que se le pida que proporcione la información de esta página al solicitar soporte técnico en los [Foros](https://forum.omeka.org/){target=_blank} o al publicar un problema en GitHub.
+
+Hacer clic en los dos botones cerca de la parte inferior de la página puede ayudarle a verificar que PHP e ImageMagick funcionan correctamente para su sitio. Haga esto justo después de la instalación para asegurarse de no encontrar problemas más adelante, como al importar elementos por lotes o ejecutar otras tareas dependientes de PHP.
+
+![Ejemplo de resultados del botón de versión de PHP CLI y del botón de versión de ImageMagick](files/systeminfo_buttons.png)
