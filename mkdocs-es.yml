@@ -1,0 +1,26 @@
+# mkdocs-i18n.yml
+# Purpose: Overlay config to enable i18n with Spanish as default, without editing upstream mkdocs.yml.
+# Assumes upstream mkdocs.yml exists and is compatible. We "extend" it here.
+
+INHERIT: mkdocs.yml  # Use upstream mkdocs.yml as base
+
+site_name: "Manual de Usuario de Omeka S"  # Default language branding for ES
+
+plugins:
+  - search
+  - i18n:
+      default_language: es
+      languages:
+        es: Español
+        en: English
+      docs_structure: suffix
+
+# Optional: if upstream changes nav, we inherit it automatically.
+# You can still add nav_translations if needed:
+# nav_translations:
+#   es:
+#     "Sites": "Sitios"
+#     "Resources": "Recursos"
+#     "Admin": "Administración"
+#     "Modules": "Módulos"
+#     "Miscellaneous": "Varios"
