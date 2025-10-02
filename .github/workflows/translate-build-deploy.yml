@@ -27,15 +27,23 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      # 2) Sync fork with upstream (omeka/omeka-s-enduser)
-      - name: Sync fork with upstream
-        uses: tgymnich/fork-sync@v2
-        with:
-          owner: omeka
-          repo: omeka-s-enduser
-          base: master
-          head: master
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # 2) Add upstream remote and fast-forward/merge into this fork's master
+      - name: Sync fork with upstream (manual git)
+        run: |
+          set -euo pipefail
+          git remote add upstream https://github.com/omeka/omeka-s-enduser.git || true
+          git fetch upstream master
+          git checkout master
+          # Try fast-forward first; if not possible, do a merge commit
+          if git merge-base --is-ancestor HEAD upstream/master; then
+            echo "Already up to date."
+          else
+            git merge --ff-only upstream/master || git merge --no-edit upstream/master
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git push origin master
+          fi
+
 
       # 3) Detect changed Markdown files since last remote commit
       - name: Get changed Markdown files
