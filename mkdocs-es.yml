@@ -4,16 +4,20 @@
 
 INHERIT: mkdocs.yml  # Use upstream mkdocs.yml as base
 
-site_name: "Manual de Usuario de Omeka S"  # Default language branding for ES
+site_name: "Manual de Usuario de Omeka S"
+site_url: "https://ateeducacion.github.io/omeka-s-enduser-es/"
 
 plugins:
   - search
   - i18n:
       default_language: es
       languages:
-        es: Español
-        en: English
+        - locale: es
+          name: Español
+        - locale: en
+          name: English
       docs_structure: suffix
+
 
 # Optional: if upstream changes nav, we inherit it automatically.
 # You can still add nav_translations if needed:
