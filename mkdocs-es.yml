@@ -10,14 +10,16 @@ site_url: "https://ateeducacion.github.io/omeka-s-enduser-es/"
 plugins:
   - search
   - i18n:
-      default_language: es
+      default_language: es        # convenience; default locale is also marked below
+      docs_structure: suffix
       languages:
         - locale: es
           name: Español
+          default: true           # required: this is the default language
+          build: true             # required: actually build this locale
         - locale: en
           name: English
-      docs_structure: suffix
-
+          build: true             # build English too
 
 # Optional: if upstream changes nav, we inherit it automatically.
 # You can still add nav_translations if needed:
