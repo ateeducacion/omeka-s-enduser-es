@@ -47,6 +47,16 @@ jobs:
             git push origin master
           fi
 
+      # ---- DeepL key check
+      - name: Check DeepL key
+        id: deepl
+        run: |
+          if [ -n "${{ secrets.DEEPL_API_KEY }}" ]; then
+            echo "has_key=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_key=false" >> "$GITHUB_OUTPUT"
+          fi
+
       # ---- Bootstrap check: translate ALL if docs/es is missing or empty
       - name: Check if Spanish tree exists
         id: boots
@@ -57,9 +67,8 @@ jobs:
           else
             echo "need_bootstrap=true" >> "$GITHUB_OUTPUT"
           fi
-          echo "need_bootstrap=$(cat $GITHUB_OUTPUT | sed -n 's/^need_bootstrap=//p')" || true
 
-      # ---- Incremental diff for when we already have docs/es
+      # ---- Incremental diff (only if we already have docs/es)
       - name: Get changed Markdown files
         id: changed
         if: steps.boots.outputs.need_bootstrap == 'false'
@@ -75,55 +84,91 @@ jobs:
           echo "Any changed: ${{ steps.changed.outputs.any_changed }}"
           printf "%s\n" ${{ steps.changed.outputs.all_changed_files }}
 
-      # ---- Setup Node (required by DeepL action runtime)
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      # ---- Bootstrap translation: translate ALL .md on first run
-      - name: Translate ALL docs to Spanish (bootstrap)
-        if: steps.boots.outputs.need_bootstrap == 'true'
-        uses: lyqht/deepl-translate-github-action@v2
-        with:
-          target_lang: ES
-          glob_patterns: |
-            docs/**/*.md
-          output_dir: docs/es
-        env:
-          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
-
-      # ---- Incremental translation: only changed files
-      - name: Translate changed files to Spanish
-        if: steps.boots.outputs.need_bootstrap == 'false' && steps.changed.outputs.any_changed == 'true'
-        uses: lyqht/deepl-translate-github-action@v2
-        with:
-          target_lang: ES
-          glob_patterns: ${{ steps.changed.outputs.all_changed_files }}
-          output_dir: docs/es
-        env:
-          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
-
-      # ---- Commit translations
-      - name: Commit translated files
-        if: steps.boots.outputs.need_bootstrap == 'true' || steps.changed.outputs.any_changed == 'true'
-        run: |
-          git add docs/es
-          git commit -m "chore(i18n): bootstrap/update ES translations" || echo "No changes"
-          git push origin master
-
-      # ---- Build site
+      # ---- Setup Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install MkDocs + i18n
+      - name: Install deps (MkDocs + DeepL)
         run: |
           python -m pip install --upgrade pip
-          pip install "mkdocs>=1.5" mkdocs-material "mkdocs-static-i18n>=1.2,<2.0"
-          python -c "import mkdocs_i18n; print('mkdocs-static-i18n:', mkdocs_i18n.__version__)"
+          pip install "mkdocs>=1.5" mkdocs-material "mkdocs-static-i18n>=1.2,<2.0" deepl==1.17.0
 
+      # ---- Translate (bootstrap or incremental) using DeepL SDK
+      - name: Translate docs to Spanish (Python)
+        if: steps.deepl.outputs.has_key == 'true' && (steps.boots.outputs.need_bootstrap == 'true' || steps.changed.outputs.any_changed == 'true')
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+          NEED_BOOTSTRAP: ${{ steps.boots.outputs.need_bootstrap }}
+          CHANGED_FILES: ${{ steps.changed.outputs.all_changed_files }}
+        run: |
+          python - <<'PY'
+          import os, sys, glob, pathlib, io
+          import deepl
+
+          # --- Configuration ---
+          SRC_ROOT = pathlib.Path("docs")
+          OUT_ROOT = pathlib.Path("docs/es")
+          TARGET_LANG = "ES"  # Spanish
+          # --- End config ---
+
+          auth = os.environ.get("DEEPL_API_KEY", "")
+          if not auth:
+            print("No DEEPL_API_KEY; skipping.", file=sys.stderr); sys.exit(0)
+
+          translator = deepl.Translator(auth)
+          need_bootstrap = os.environ.get("NEED_BOOTSTRAP", "false") == "true"
+          changed_raw = os.environ.get("CHANGED_FILES", "").strip()
+
+          # Collect files to translate
+          files: list[str] = []
+          if need_bootstrap:
+            files = [str(p) for p in SRC_ROOT.rglob("*.md")]
+          else:
+            if changed_raw:
+              files = changed_raw.split()
+            else:
+              print("No changed files; nothing to translate."); sys.exit(0)
+
+          def out_path(src: pathlib.Path) -> pathlib.Path:
+            rel = src.relative_to(SRC_ROOT)
+            return OUT_ROOT / rel
+
+          # Ensure output dirs
+          for f in files:
+            dst = out_path(pathlib.Path(f))
+            dst.parent.mkdir(parents=True, exist_ok=True)
+
+          # Translate file-by-file
+          for i, f in enumerate(files, 1):
+            src = pathlib.Path(f)
+            dst = out_path(src)
+            try:
+              text = src.read_text(encoding="utf-8")
+              # Preserve formatting to avoid breaking Markdown/code blocks
+              result = translator.translate_text(
+                  text,
+                  target_lang=TARGET_LANG,
+                  preserve_formatting=True,
+                  split_sentences="nonewlines"
+              )
+              dst.write_text(result.text, encoding="utf-8")
+              print(f"[{i}/{len(files)}] Translated: {src} -> {dst}")
+            except Exception as e:
+              print(f"ERROR translating {src}: {e}", file=sys.stderr)
+              # Don't fail the whole job on single-file errors
+          PY
+
+      # ---- Commit translations (only if we actually created/updated files)
+      - name: Commit translated files
+        if: steps.deepl.outputs.has_key == 'true' && (steps.boots.outputs.need_bootstrap == 'true' || steps.changed.outputs.any_changed == 'true')
+        run: |
+          git add docs/es
+          git commit -m "chore(i18n): bootstrap/update ES translations" || echo "No changes"
+          git push origin master
+
+      # ---- Build site (Material + i18n overlay)
       - name: Build site (i18n overlay)
         run: |
           test -f mkdocs-es.yml || (echo "mkdocs-es.yml missing" && exit 1)
