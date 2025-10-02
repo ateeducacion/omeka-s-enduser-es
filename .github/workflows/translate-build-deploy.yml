@@ -40,7 +40,7 @@ jobs:
       # 3) Detect changed Markdown files since last remote commit
       - name: Get changed Markdown files
         id: changed
-        uses: tj-actions/changed-files@v45
+        uses: tj-actions/changed-files@v47
         with:
           files: |
             docs/**/*.md
