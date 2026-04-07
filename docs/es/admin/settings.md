@@ -1,30 +1,88 @@
-# Configuración Los usuarios administradores pueden cambiar la configuración del panel de control administrativo y la configuración general de todos los sitios utilizando la sección **Configuración** situada en la parte izquierda del panel de control administrativo (con el icono de engranaje). La configuración global solo está disponible para los usuarios administradores globales.
+# Configuración
 
-La configuración se divide en cinco secciones: **General**, **Visualización**, **Edición**, **Búsqueda** y **Seguridad**. ## General ![Configuración general con los campos descritos a continuación](adminfiles/settings_general.png)
+Los usuarios administradores pueden modificar la configuración del panel de administración y los ajustes generales de todos los sitios a través de la sección **Configuración**, situada en la parte izquierda del panel de administración (con el icono de un engranaje). 
 
-**Correo electrónico del administrador**: establece la dirección de correo electrónico del administrador de la instalación. !!! nota Algunas configuraciones de alojamiento pueden requerir que el nombre de dominio del correo electrónico del administrador coincida con el nombre de dominio de la instalación (si su dominio es `yourinstall.org`, el correo electrónico del administrador debe ser `user@yourinstall.org`). Omeka S utiliza la utilidad `sendmail` del servidor para enviar correos electrónicos.
+Los ajustes globales solo están disponibles para los usuarios con privilegios de administrador global.
 
-**Título de la instalación**: le permite cambiar el título de la instalación de Omeka S en general. Es lo que aparece en la esquina superior izquierda del panel de administración. **Zona horaria**: establece la zona horaria predeterminada para la instalación, que se utilizará para los mensajes de registro de errores y para determinar las fechas de creación de los elementos, conjuntos de elementos y otros materiales de la instalación. Se trata de un menú desplegable. 
+La configuración se divide en cinco secciones: **General**, **Visualización**, **Edición**, **Búsqueda** y **Seguridad**.
 
-**Configuración regional**: Un menú desplegable que le permite seleccionar entre los [idiomas disponibles](https://www.transifex.com/omeka/omeka-s/){target=_blank} para el núcleo de Omeka S y cambiar el idioma en el que se muestra la parte administrativa de su instalación. **Habilitar notificaciones de versión**: Marque esta casilla para habilitar los banners de advertencia para las nuevas versiones de Omeka S, temas y módulos. Si no está marcada, ningún usuario (de cualquier rol) verá las advertencias de actualización, ni siquiera el administrador global. Si está marcada, todos los usuarios aplicables podrán verlas (es decir, los usuarios supervisores que pueden ver la página Módulos, los administradores del sitio que pueden ver las páginas Temas y todos los usuarios de la página de inicio `/admin`).
+## General
 
-**Desactivar JSON-LD @reverse**: Desactive las [propiedades inversas JSON-LD](https://www.w3.org/TR/json-ld11/#reverse-properties){target=_blank} en la salida de la API para los recursos. **Favicon**: Elija entre sus activos o cargue un archivo para que aparezca en el pequeño espacio del icono de la ventana/pestaña del navegador. Un [favicon](https://www.w3schools.com/html/html_favicon.asp){target=_blank} debe ser una imagen pequeña de unos 32 x 32 píxeles subida específicamente para este fin. Los favicons se pueden [configurar a nivel de instalación](../sites/site_settings.md#general-settings), así como en cada sitio individual.
+![Configuración general con los campos que se describen a continuación](adminfiles/settings_general.png)
 
-## Mostrar **Resultados por página**: cambia el número de resultados (elementos, conjuntos de elementos, medios) que se muestran por página al navegar en los lados público o de administración de la instalación. **Información de la etiqueta de propiedad**: determina lo que se muestra junto a cada propiedad cuando los usuarios editan elementos y conjuntos de elementos. - De forma predeterminada, está configurado en «ninguno», lo que significa que solo se muestra la etiqueta de propiedad.
-- Si se selecciona **Mostrar vocabulario**, la declaración entre paréntesis junto al nombre de la propiedad muestra el vocabulario utilizado (por ejemplo, Dublin Core). - Si se selecciona **Mostrar término**, la declaración entre paréntesis junto al nombre de la propiedad muestra el vocabulario:término (por ejemplo, `dc:title`). 
+**Correo electrónico del administrador**: Establece la dirección de correo electrónico del administrador de la instalación. 
 
-**Sitio predeterminado**: este menú desplegable le permite controlar dónde aterrizan los usuarios cuando navegan a la URL base de su instalación. Puede mostrar una lista de todos los sitios de la instalación (predeterminado) o seleccionar un sitio específico del menú desplegable al que se redirigirá a los usuarios.
+!!! nota
+  Algunas configuraciones de alojamiento pueden requerir que el nombre de dominio del correo electrónico del administrador coincida con el nombre de dominio de la instalación (si su dominio es `yourinstall.org`, el correo electrónico del administrador debe ser `user@yourinstall.org`). Omeka S utiliza la utilidad `sendmail` subyacente del servidor para enviar correo electrónico.
 
-**Desactivar incrustación JSON-LD**: De forma predeterminada, Omeka incrusta JSON-LD en las páginas de exploración y visualización de recursos con el fin de facilitar el descubrimiento de metadatos legibles por máquina. Marque esta casilla para desactivar la incrustación. ![Mostrar ajustes con campos como se describe](adminfiles/settings_display.png)
+**Título de la instalación**: te permite cambiar el título general de la instalación de Omeka S. Es lo que aparece en la esquina superior izquierda del panel de administración.
 
-## Edición **Establecer la visibilidad predeterminada de los elementos como privada**: cuando se marca esta casilla, todos los elementos nuevos creados por todos los usuarios tendrán su visibilidad establecida como privada. Si no se marca esta casilla, todos los elementos nuevos serán públicos de forma predeterminada, a menos que se establezca lo contrario en el momento de su creación. **Establecer la visibilidad predeterminada de los conjuntos de elementos como privada**: cuando se marca esta casilla, todos los conjuntos de elementos nuevos creados por todos los usuarios tendrán su visibilidad establecida como privada.
+**Zona horaria**: establece la zona horaria predeterminada de la instalación, que se utilizará para los mensajes de registro de errores y para determinar las fechas de creación de los elementos, conjuntos de elementos y otros materiales de la instalación. Se trata de un menú desplegable. 
 
-**Establecer la visibilidad predeterminada del sitio como privada**: cuando esta casilla está marcada, todos los sitios nuevos creados por todos los usuarios tendrán su visibilidad establecida como privada. **Establecer la visibilidad predeterminada de la página del sitio como privada**: cuando esta casilla está marcada, todas las páginas nuevas del sitio creadas por todos los usuarios tendrán su visibilidad establecida como privada.
+**Configuración regional**: Un menú desplegable que le permite seleccionar entre los [idiomas disponibles](https://www.transifex.com/omeka/omeka-s/){target=_blank} para el núcleo de Omeka S, con el fin de cambiar el idioma en el que se muestra el panel de administración de su instalación.
 
-**Idiomas sugeridos para los valores**: puede enumerar aquí los idiomas para proporcionar una cómoda selección desplegable de idiomas al rellenar los metadatos descriptivos de los recursos en toda la instalación. Proporcione etiquetas de idioma de dos o cuatro letras [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes){target+_blank} para obtener la máxima compatibilidad. Los usuarios pueden seguir escribiendo sus propios valores al editar recursos. **Propiedad de texto alternativo de los medios**: seleccione un campo (por ejemplo, `dc:title` o `dc:description`) de la descripción de los medios para utilizarlo como texto alternativo si no se ha establecido explícitamente ningún texto alternativo. El [texto alternativo](https://webaim.org/techniques/alttext/){target=_blank} se utiliza en lugar de imágenes (incluidas las miniaturas en las páginas de navegación y resultados de búsqueda) cuando un usuario utiliza un lector de pantalla y es una parte importante para cumplir con las expectativas de accesibilidad.
+**Habilitar notificaciones de versión**: Marque esta casilla para habilitar los banners de advertencia sobre nuevas versiones de Omeka S, temas y módulos. Si no está marcada, ningún usuario (de ningún rol) verá las advertencias de actualización, ni siquiera el Administrador global. Si está marcada, todos los usuarios pertinentes podrán verlas (es decir, los usuarios Supervisores que pueden ver la página de Módulos, los Administradores del sitio que pueden ver las páginas de Temas y todos los usuarios de la página de inicio `/admin`).
 
-**Tamaño del lote**: al editar o procesar cambios por lotes, Omeka procesará un «lote» del total de recursos cada vez. Es posible que desee establecer un valor más alto o más bajo en función de la capacidad de su servidor. ![Configuración de edición y búsqueda con los campos descritos](adminfiles/settings_editing.png)
+**Desactivar JSON-LD @reverse**: Desactiva las [propiedades inversas de JSON-LD](https://www.w3.org/TR/json-ld11/#reverse-properties){target=_blank} en la salida de la API para los recursos. 
 
-## Búsqueda **Búsqueda de texto completo en el índice**: marque esta casilla y «Guarde» la página para ejecutar un índice de los recursos y sitios de su instalación. Solo deberá ejecutar este proceso si tiene problemas con la búsqueda. ## Seguridad ![Configuración de seguridad con los campos descritos a continuación](adminfiles/settings_security.png) **Usar HTMLPurifier**: una casilla de verificación. Si se marca, el servicio [HTMLPurifier](http://htmlpurifier.org/){target=_blank} limpiará cualquier código HTML introducido por el usuario. **Desactivar la validación de archivos**: una casilla de verificación, desmarcada por defecto. Cuando no está marcada, las subidas de archivos están limitadas por los dos campos siguientes. Cuando esta casilla está marcada, se puede subir cualquier tipo de medio o tipo MIME.
+**Favicon**: Elige entre tus recursos o sube un archivo para que aparezca en el pequeño espacio del icono de la ventana o pestaña del navegador. Un [favicon](https://www.w3schools.com/html/html_favicon.asp){target=_blank} debe ser una imagen pequeña de unos 32x32 píxeles de tamaño subida específicamente para este fin. Los favicons se pueden [configurar a nivel de instalación](../sites/site_settings.md#general-settings) así como en cada sitio individual.
 
-**Tipos de medios permitidos**: la lista predeterminada contiene los tipos de medios más comunes. Solo se pueden cargar en la instalación los archivos con tipos de medios incluidos en esta lista. - Separe las adiciones a la lista con una coma. - Para volver a los valores predeterminados, haga clic en el botón «Restaurar tipos de medios predeterminados». **Extensiones de archivo permitidas**: la lista predeterminada contiene extensiones de archivo comunes. Solo se pueden cargar en la instalación archivos con extensiones incluidas en esta lista. - Separe las adiciones a la lista con una coma. - Para volver a los valores predeterminados, haga clic en el botón «Restaurar extensiones predeterminadas». Los dos últimos campos se refieren a la configuración de [Google reCAPTCHA](https://www.google.com/recaptcha/intro/index.html){target=_blank} para su sitio. Necesitará una clave de sitio y una clave secreta. Introdúzcalas en los campos correspondientes después de registrarse en reCAPTCHA: **La clave de sitio de reCAPTCHA** permite mostrar el widget en los sitios de su instalación. **La clave secreta de reCAPTCHA** permite la comunicación entre su instalación y el servidor de reCAPTCHA. 
+## Visualización
+
+**Resultados por página**: Cambia el número de resultados (elementos, conjuntos de elementos, medios) que se muestran por página al navegar tanto en la parte pública como en la de administración de la instalación.
+
+**Información de la etiqueta de la propiedad**: Determina qué se muestra junto a cada propiedad cuando los usuarios editan elementos y conjuntos de elementos. 
+
+- Por defecto, está configurado en «ninguno», lo que significa que solo se muestra la etiqueta de la propiedad.
+- Si se selecciona **Mostrar vocabulario**, la indicación entre paréntesis junto al nombre de la propiedad muestra el vocabulario utilizado (por ejemplo, Dublin Core) 
+- Si se selecciona **Mostrar término**, la indicación entre paréntesis junto al nombre de la propiedad muestra el vocabulario:término (por ejemplo, `dc:title`). 
+
+**Sitio predeterminado**: Este menú desplegable le permite controlar a qué página llegan los usuarios cuando acceden a la URL base de su instalación. Puede mostrar una lista de todos los sitios de la instalación (opción predeterminada) o seleccionar un sitio específico del menú desplegable, al que se redirigirá a los usuarios.
+
+**Desactivar la incrustación de JSON-LD**: Por defecto, Omeka incrusta JSON-LD en las páginas de exploración y visualización de recursos con el fin de permitir el descubrimiento de metadatos legibles por máquina. Marque esta casilla para desactivar la incrustación.
+
+![Configuración de visualización con los campos tal y como se describen](adminfiles/settings_display.png)
+
+## Edición
+
+**Establecer la visibilidad predeterminada de los elementos en privada**: Cuando esta casilla está marcada, todos los nuevos elementos creados por todos los usuarios tendrán su visibilidad establecida en privada. Si esta casilla no está marcada, todos los nuevos elementos son públicos por defecto, a menos que se establezca lo contrario en el momento de su creación.
+
+**Establecer la visibilidad predeterminada de los conjuntos de elementos en privada**: Cuando esta casilla está marcada, todos los nuevos conjuntos de elementos creados por todos los usuarios tendrán su visibilidad establecida en privada.
+
+**Establecer la visibilidad predeterminada del sitio en privada**: Cuando esta casilla está marcada, todos los nuevos sitios creados por todos los usuarios tendrán su visibilidad establecida en privada.
+
+**Establecer la visibilidad predeterminada de las páginas del sitio en privada**: Cuando esta casilla está marcada, todas las nuevas páginas del sitio creadas por todos los usuarios tendrán su visibilidad establecida en privada.
+
+**Idiomas sugeridos para los valores**: Aquí puede enumerar idiomas para proporcionar un cómodo menú desplegable de selección de idiomas al rellenar los metadatos descriptivos de los recursos en toda la instalación. Proporcione etiquetas de idioma de dos o cuatro letras [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes){target+_blank} para una compatibilidad máxima. Los usuarios podrán seguir introduciendo sus propios valores al editar los recursos. 
+
+**Propiedad de texto alternativo de los medios**: Seleccione un campo (por ejemplo, `dc:title` o `dc:description`) de la descripción del medio para utilizarlo como texto alternativo si no se ha establecido explícitamente ningún texto alternativo. El [texto alternativo](https://webaim.org/techniques/alttext/){target=_blank} se utiliza en lugar de las imágenes (incluidas las miniaturas en las páginas de navegación y de resultados de búsqueda) cuando un usuario utiliza un lector de pantalla, y es una parte importante para cumplir con las expectativas de accesibilidad.
+
+**Tamaño del bloque por lotes**: Al editar por lotes o procesar cambios, Omeka procesará un «bloque» del total de recursos cada vez. Es posible que desee aumentar o reducir este valor en función de la capacidad de su servidor. 
+
+![Configuración de edición y búsqueda con los campos descritos](adminfiles/settings_editing.png)
+
+## Búsqueda
+
+**Búsqueda de texto completo en el índice**: Marque esta casilla y haga clic en «Guardar» para ejecutar un índice de los recursos y sitios de su instalación. Solo debería ejecutar este proceso si tiene problemas con la búsqueda.
+
+## Seguridad
+
+![Configuración de seguridad con los campos descritos a continuación](adminfiles/settings_security.png)
+
+**Usar HTMLPurifier**: una casilla de verificación. Si está marcada, el servicio [HTMLPurifier](http://htmlpurifier.org/){target=_blank} limpiará cualquier código HTML introducido por el usuario. 
+
+**Desactivar validación de archivos**: una casilla de verificación, desmarcada por defecto. Cuando está desmarcada, las subidas de archivos están limitadas por los dos campos siguientes. Cuando esta casilla está marcada, se puede subir cualquier tipo de medio o tipo MIME.
+
+**Tipos de medios permitidos**: La lista predeterminada contiene los tipos de medios más comunes. Solo se pueden subir a la instalación archivos con tipos de medios incluidos en esta lista.
+  - Separe las adiciones a la lista con una coma.
+  - Para volver a los valores predeterminados, haga clic en el botón «Restaurar tipos de medios predeterminados».
+
+**Extensiones de archivo permitidas**: La lista predeterminada contiene extensiones de archivo comunes. Solo se pueden cargar en la instalación archivos con extensiones incluidas en esta lista.
+  - Separe las adiciones a la lista con una coma.
+  - Para volver a los valores predeterminados, haga clic en el botón «Restaurar extensiones predeterminadas».
+
+Los dos últimos campos se refieren a la configuración de [Google reCAPTCHA](https://www.google.com/recaptcha/intro/index.html){target=_blank} para su sitio. Necesitará tanto una clave de sitio como una clave secreta. Introdúzcalas en los campos correspondientes después de registrarse en reCAPTCHA:
+
+**La clave de sitio de reCAPTCHA** permite mostrar el widget en los sitios de su instalación.
+
+**La clave secreta de reCAPTCHA** permite la comunicación entre su instalación y el servidor de reCAPTCHA. 

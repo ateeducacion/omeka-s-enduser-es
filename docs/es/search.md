@@ -1,49 +1,163 @@
-# Búsqueda Hay funciones de búsqueda tanto en la parte administrativa como en la pública de las instalaciones y sitios de Omeka S. ## Interfaz administrativa ### Búsqueda básica Hay un campo de búsqueda cerca de la parte superior del menú de la izquierda, justo debajo de la información del usuario. Este campo de búsqueda funciona como una búsqueda por palabra clave en todas las propiedades de los recursos. ![Opción de búsqueda en la barra lateral azul.](files/search1.png)
+# Búsqueda
 
-De forma predeterminada, esta búsqueda opera sobre los elementos de su instalación. Sin embargo, puede utilizar los tres puntos suspensivos para abrir un menú y cambiar el tipo de recurso que se busca, seleccionando entre Elementos, Conjuntos de elementos o Medios. ![Primer plano de las opciones de búsqueda, mostrando el menú expandido de los tres puntos suspensivos con las opciones de selección de Elementos, Conjuntos de elementos o Medios.](files/search2.png)
+Las instalaciones y los sitios de Omeka S cuentan con funciones de búsqueda tanto en la interfaz administrativa como en la pública.
 
-### Búsqueda avanzada de elementos La búsqueda avanzada solo para elementos está disponible en la página [Elementos](content/items.md), desde el enlace «Búsqueda avanzada» situado encima de la tabla de elementos. ![Botón de búsqueda avanzada indicado con una flecha roja.](files/search_advanced.png)
+## Interfaz administrativa
 
-La búsqueda avanzada se carga en una nueva página y tiene las siguientes opciones: - **Ordenar**: puede configurar cómo se muestran los resultados, basándose en las columnas específicas de recursos que haya configurado en su cuenta de usuario. Puede ordenar cada selección de forma ascendente o descendente. - **Buscar texto completo**: realiza una búsqueda de texto completo en todo el texto de cada elemento de la instalación.
-- **Buscar por valor**: busca un término o frase que introduzcas. - El primer selector te permite especificar una propiedad para buscar. - El segundo selector te permite establecer la relación que tiene la propiedad con el valor. Las opciones son: - es exactamente, - no es exactamente, - contiene, - no contiene, - es un recurso con ID,
-		- no es un recurso con ID, - tiene cualquier valor (hay algo en la propiedad), - no tiene valores, - tiene tipo de datos o - no tiene tipo de datos. - Introduzca el valor que desea que tenga la propiedad. Para encontrar un ID de recurso, vaya al recurso y mire la URL en la barra de direcciones de su navegador. Los números al final de la URL son el ID del recurso.
-- **Buscar por clase**: seleccione una clase en el menú desplegable. - **Buscar por plantilla**: seleccione una plantilla de recurso en el menú desplegable. Las plantillas están ordenadas por propietario y, a continuación, alfabéticamente. - **Buscar por conjunto de elementos**: seleccione si los resultados deseados se incluyen o se excluyen del conjunto de elementos dado. Elija un conjunto de elementos en el menú desplegable o escriba para buscar. Puede añadir varios parámetros; estos reducirán la búsqueda (es decir, devolverán todos los elementos que no están en el conjunto X Y tampoco en el conjunto Y; todos los elementos que están en el conjunto X Y también en el conjunto Y; todos los elementos que están en el conjunto X Y tampoco en el conjunto Y). - **Búsqueda por sitio**: seleccione un sitio en el menú desplegable de sitios de la instalación. Tenga en cuenta que solo puede buscar elementos de un sitio a la vez.
-- **Buscar por presencia de medios**: seleccione si los resultados tienen medios o no tienen medios. - **Buscar por propietario**: seleccione un usuario de un menú desplegable de usuarios en la instalación. - **Buscar por visibilidad**: seleccione si los resultados son elementos públicos o privados.
-- **Búsqueda por ID**: introduzca un valor identificador de elemento específico o una lista de identificadores separados por comas (por ejemplo, «1, 5, 9, 12, 43, 44, 45»). Solo funciona con coincidencias exactas, no con comodines ni rangos. ![Página de opciones de búsqueda avanzada de elementos.](files/search_advanced2.png)
+### Búsqueda básica
 
-Se pueden introducir otros campos de búsqueda con módulos que añaden nuevos campos de metadatos a sus elementos. Las búsquedas por valor, clase, plantilla y conjunto de elementos le permiten buscar por más de una entrada: utilice los iconos grandes con el signo más rojo para añadir más parámetros. Estos términos de búsqueda se acumulan: al buscar dos conjuntos de elementos, se mostrarán todos los elementos de cualquiera de los dos conjuntos, en lugar de solo aquellos que están en ambos. Puede eliminar esas búsquedas utilizando el icono rojo de la papelera situado a la derecha de las líneas. Puede restablecer los términos de búsqueda en cualquier momento utilizando el botón «Restablecer» situado en la parte superior derecha, junto al botón «Buscar».
+Hay un campo de búsqueda situado en la parte superior del menú de la izquierda, justo debajo de la información del usuario. Este campo de búsqueda permite realizar búsquedas por palabra clave en todas las propiedades de los recursos.
 
-### Búsqueda avanzada de medios Se accede a la búsqueda avanzada de medios desde la página de exploración [Medios](content/media.md), desde el enlace **Búsqueda avanzada** situado encima de la tabla de conjuntos de elementos. ![Botón de búsqueda avanzada indicado con una flecha roja.](files/search_mediaadvanced1.png) La búsqueda avanzada se carga en una nueva página y tiene las siguientes opciones: - **Ordenar**
-- **Buscar texto completo** - **Buscar por valor** - **Buscar por clase** - **Buscar por plantilla** - **Buscar por tipo MIME**: puede especificar el tipo de medio para la búsqueda. Por ejemplo, para encontrar todas las imágenes TIFF, debe introducir `image/tiff`.
-- **Buscar por propietario** - **Buscar por visibilidad** - **Buscar por ID**: introduzca un valor de identificador de medio específico o una lista de identificadores separados por comas (por ejemplo, «1, 5, 9, 12, 43, 44, 45»). Solo funciona con coincidencias exactas, no con comodines ni rangos.
+![Opción de búsqueda en la barra lateral azul.](files/search1.png)
 
-### Búsqueda avanzada de conjuntos de elementos Solo se puede acceder a la búsqueda avanzada de conjuntos de elementos en la página [Conjuntos de elementos](content/item-sets.md), desde el enlace «Búsqueda avanzada» situado encima de la tabla de conjuntos de elementos. ![Botón de búsqueda avanzada indicado con una flecha roja.](files/search_advancedis1.png)
+Por defecto, esta búsqueda se aplica a los elementos de su instalación. Sin embargo, puede utilizar los tres puntos para abrir un menú y cambiar el tipo de recurso que se busca, seleccionando entre Elementos, Conjuntos de elementos o Medios.
 
-La búsqueda avanzada se carga en una nueva página y tiene las siguientes opciones: - **Ordenar** - **Buscar texto completo** - **Buscar por valor** - **Buscar por clase** - **Buscar por plantilla** - **Buscar por propietario** - **Buscar por visibilidad**
-- **Buscar por ID**: introduzca un valor identificador específico del conjunto de elementos o una lista de identificadores separados por comas (por ejemplo, «1, 2, 5, 9»). Solo funciona con coincidencias exactas, no con comodines ni rangos. ## Vistas públicas El aspecto exacto de la interfaz de búsqueda variará en función del [tema](sites/site_theme.md) seleccionado. El funcionamiento de la búsqueda es el mismo independientemente del tema. ### Búsqueda básica Hay una barra de búsqueda cerca del menú de cada sitio. En el tema predeterminado, se encuentra justo debajo del menú principal, como se muestra en la imagen siguiente. ![Página de inicio del sitio de Jane Austen, con una flecha azul que apunta a la barra de búsqueda situada debajo del menú de navegación principal](files/search_public1.png)
+![Primer plano de las opciones de búsqueda, mostrando el menú desplegado de los tres puntos con las opciones de selección para Elementos, Conjuntos de elementos o Medios.](files/search2.png)
 
-Esta barra de búsqueda funciona como una búsqueda de texto completo en todo el sitio. Buscará todos los elementos, conjuntos de elementos y medios, así como el contenido de todas las páginas publicadas en el sitio. Los resultados se ordenan por tipo, agrupando los resultados de las páginas y los resultados de los elementos o conjuntos de elementos. Desde la página de resultados inicial, puede ver todos los resultados de ese tipo (página, elemento) utilizando el enlace «ver todos los resultados».
+### Búsqueda avanzada de elementos
 
-![Resultados de la búsqueda de «Cassandra» mostrando una página y tres elementos](files/search_public2.png) ### Búsqueda avanzada de elementos Los visitantes del sitio pueden acceder a una búsqueda avanzada de elementos desde la página Examinar elementos, si tiene esa página accesible. Hay un enlace para «Búsqueda avanzada» entre la paginación y las opciones de clasificación en la parte superior de la tabla de exploración de elementos.
+La búsqueda avanzada solo para elementos está disponible en la página [Elementos](content/items.md), desde el enlace «Búsqueda avanzada» situado encima de la tabla de elementos.
 
-Puede controlar la configuración de la búsqueda avanzada para cada sitio desde la [pestaña Configuración del sitio](sites/site_settings.md#search). Esto incluirá los campos de búsqueda avanzada introducidos por los módulos. ![La página Elementos del sitio Jane Austen, con una flecha azul que apunta al enlace de Búsqueda avanzada](files/search_publicitems1.png) Al hacer clic en este enlace, se carga una nueva página con cuatro opciones de búsqueda:
+![Botón de búsqueda avanzada indicado con una flecha roja.](files/search_advanced.png)
 
-- **Ordenar** - **Buscar texto completo**: realiza una búsqueda de texto completo en todo el texto de cada elemento del sitio. - **Buscar por valor** - Tenga en cuenta que si tiene el [conjunto de sitios](sites/site_settings.md#search) para restringir la búsqueda a las plantillas, solo se mostrarán las propiedades utilizadas por esas plantillas.
-- **Buscar por clase** - **Buscar por conjunto de elementos**: los resultados mostrarán los elementos dentro de uno o más de los conjuntos que haya elegido. - **Buscar por presencia en los medios** - **Buscar por ID**. Aquí está el formulario de búsqueda avanzada predeterminado en dos temas: Thanks, Roy y The Daily: ![Campos de búsqueda avanzada de elementos tal y como se describen](files/search_publicitems2.png)
+La búsqueda avanzada se carga en una nueva página y ofrece las siguientes opciones:
 
-![Campos de búsqueda avanzada de elementos tal y como se describen](files/search_publicitems3.png) ### Búsqueda avanzada de conjuntos de elementos Los visitantes del sitio pueden acceder a una búsqueda avanzada de conjuntos de elementos desde la página Examinar conjuntos de elementos, si tiene esa página accesible. Hay un enlace para la búsqueda avanzada cerca de la parte superior de la página Conjuntos de elementos.
+- **Ordenar**: puedes configurar cómo se muestran los resultados, basándote en las columnas específicas de los recursos que hayas configurado en tu cuenta de usuario. Puedes ordenar cada selección de forma ascendente o descendente.
+- **Búsqueda de texto completo**: realiza una búsqueda de texto completo en todo el texto de cada elemento de la instalación.
+- **Buscar por valor**: busca un término o frase que introduzcas.
+  - El primer selector te permite especificar una propiedad para buscar.
+  - El segundo selector te permite establecer la relación que tiene la propiedad con el valor. Las opciones son:
+    - es exactamente,
+    - no es exactamente,
+    - contiene,
+    - no contiene,
+    - es un recurso con ID,
+		- no es un recurso con ID,
+    - tiene cualquier valor (hay algo en la propiedad),
+    - no tiene valores,
+    - tiene tipo de datos, o
+    - no tiene tipo de datos.
+  - Introduzca el valor que desea que tenga la propiedad. Para encontrar un ID de recurso, vaya al recurso y mire la URL en la barra de direcciones de su navegador. Los números al final de la URL son el ID del recurso.
+- **Buscar por clase**: seleccione una clase del menú desplegable.
+- **Buscar por plantilla**: seleccione una plantilla de recurso del menú desplegable. Las plantillas están ordenadas por propietario y, a continuación, alfabéticamente. 
+- **Buscar por conjunto de elementos**: seleccione si los resultados deseados se incluyen o se excluyen del conjunto de elementos dado. Elija un conjunto de elementos del menú desplegable o escriba para buscar. Puede añadir varios parámetros; estos reducirán la búsqueda (es decir, mostrarán todos los elementos que no estén en el conjunto X Y tampoco en el conjunto Y; todos los elementos que estén en el conjunto X Y también en el conjunto Y; todos los elementos que estén en el conjunto X Y tampoco en el conjunto Y).
+- **Búsqueda por sitio**: seleccione un sitio del menú desplegable de sitios de la instalación. Tenga en cuenta que solo puede buscar elementos de un sitio a la vez.
+- **Buscar por presencia de medios**: seleccione si los resultados tienen medios o no tienen medios.
+- **Buscar por propietario**: seleccione un usuario de un menú desplegable de usuarios de la instalación.
+- **Buscar por visibilidad**: seleccione si los resultados son elementos públicos o privados.
+- **Buscar por ID**: introduzca un valor de identificador de elemento específico, o una lista de identificadores separados por comas (por ejemplo, «1, 5, 9, 12, 43, 44, 45»). Solo funciona para coincidencias exactas, no con comodines ni rangos.
 
-![Página de conjuntos de elementos del sitio Jane Austen. Una flecha azul apunta al enlace de búsqueda avanzada](files/search_publicitemsets1.png) Al hacer clic en el enlace de búsqueda avanzada, se carga una nueva página con tres opciones de búsqueda: - **Ordenar** - **Buscar texto completo**
-- **Buscar por valor**: tenga en cuenta que si tiene el [conjunto de sitios](sites/site_settings.md#search) para restringir la búsqueda a plantillas, solo se mostrarán las propiedades utilizadas por esas plantillas. - **Buscar por clase** - **Buscar por ID**. ![Opciones de búsqueda avanzada de conjuntos de elementos, tal y como se describe](files/search_publicitemsets2.png)
+![Página de opciones de búsqueda avanzada de elementos.](files/search_advanced2.png)
 
-### Estilo de las vistas públicas Puede aplicar estilos, ocultar y resaltar los campos de búsqueda utilizando CSS. Cada entrada tiene un identificador personalizado, como el `div` con «has_media_field», dentro de la clase «advanced-search-content» `div`. Puede aplicar estilos a estas opciones utilizando el [módulo CSS Editor](modules/csseditor.md) o modificando el código de su instalación. ## Ordenación
+Es posible que se introduzcan otros campos de búsqueda con módulos que añadan nuevos campos de metadatos a tus elementos.
 
-Todas las vistas de navegación públicas y administrativas, así como todos los resultados de búsqueda, se pueden ordenar de varias maneras. En la parte superior derecha de cada tabla de navegación o resultados hay dos menús desplegables y un botón «Ordenar». Uno le permite seleccionar un campo y el otro determina el orden en el que se ordenarán.
+Las búsquedas por valor, clase, plantilla y conjunto de elementos te permiten buscar por más de un criterio; utiliza los iconos rojos grandes con el signo más para añadir más parámetros. Estos términos de búsqueda se combinan: si buscas dos conjuntos de elementos, se mostrarán todos los elementos de cualquiera de los dos conjuntos, en lugar de solo aquellos que estén en ambos. Puedes eliminar esas búsquedas utilizando el icono de la papelera roja situado a la derecha de las líneas.
 
-Puede modificar estos órdenes de clasificación predeterminados para las páginas públicas de los sitios en [Configuración del sitio](sites/site_settings.md#settings) y para las páginas administrativas de cada usuario en [Configuración del usuario](admin/users.md#admin-browse-defaults).
+Puedes restablecer tus términos de búsqueda en cualquier momento utilizando el botón «Restablecer» situado en la parte superior derecha, junto al botón «Buscar».
 
-La forma predeterminada en que se ordenan la mayoría de los recursos es por el identificador interno de Omeka (ID), en orden cronológico inverso (descendente). Esto se aplica a los elementos, los medios y los conjuntos de elementos. Los sitios, los vocabularios y las plantillas de recursos se ordenan de forma predeterminada por título o etiqueta ascendente. Los usuarios se ordenan de forma predeterminada por correo electrónico ascendente. 
+### Búsqueda avanzada de medios
+Se accede a la búsqueda avanzada de medios desde la página de exploración [Medios](content/media.md), a través del enlace **Búsqueda avanzada** situado encima de la tabla de conjuntos de elementos.
 
-Cuando se realiza una búsqueda de texto completo, los resultados se muestran por relevancia, en orden descendente (los resultados más relevantes primero). Ascendente significa de la A a la Z alfabéticamente para los campos de texto, de más antiguo a más reciente para los campos con formato de fecha, como Creado (es decir, la fecha y hora internas de creación del elemento) y Modificado (la fecha y hora en que se modificó el elemento por última vez), y de menor a mayor para los números, como los identificadores. Tenga en cuenta que algunos campos (como la fecha Dublin Core) pueden tener formato de texto para incluir información como «circa» y se ordenarán alfabéticamente en lugar de como números (como «1800-01-01») o fechas. Es posible que esté utilizando módulos como [Tipos de datos numéricos](modules/numericdatatypes.md) que pueden modificar estos ajustes.
+![Botón de búsqueda avanzada indicado con una flecha roja.](files/search_mediaadvanced1.png)
 
-Tanto en orden ascendente como descendente, los campos vacíos aparecerán al final. 
+La búsqueda avanzada se carga en una nueva página y ofrece las siguientes opciones:
+
+- **Ordenar**
+- **Búsqueda de texto completo**
+- **Búsqueda por valor**
+- **Búsqueda por clase**
+- **Búsqueda por plantilla**
+- **Búsqueda por tipo MIME**: puede especificar el tipo de archivo multimedia para la búsqueda. Por ejemplo, para encontrar todas las imágenes TIFF, debe introducir `image/tiff`.
+- **Buscar por propietario**
+- **Buscar por visibilidad**
+- **Buscar por ID**: introduzca un valor de identificador de medio específico o una lista de identificadores separados por comas (por ejemplo, «1, 5, 9, 12, 43, 44, 45»). Solo funciona para coincidencias exactas, no con comodines ni rangos.
+
+### Búsqueda avanzada de conjuntos de elementos
+
+Se accede a la búsqueda avanzada exclusiva para conjuntos de elementos en la página [Conjuntos de elementos](content/item-sets.md), desde el enlace «Búsqueda avanzada» situado encima de la tabla de conjuntos de elementos.
+
+![Botón de búsqueda avanzada indicado con una flecha roja.](files/search_advancedis1.png)
+
+La búsqueda avanzada se carga en una nueva página y ofrece las siguientes opciones:
+
+- **Ordenar**
+- **Búsqueda de texto completo**
+- **Búsqueda por valor**
+- **Búsqueda por clase**
+- **Búsqueda por plantilla**
+- **Búsqueda por propietario**
+- **Búsqueda por visibilidad**
+- **Buscar por ID**: introduce un valor de identificador de conjunto de elementos específico, o una lista de identificadores separados por comas (por ejemplo, «1, 2, 5, 9»). Solo funciona para coincidencias exactas, no con comodines ni rangos.
+
+
+## Vistas públicas
+
+El aspecto exacto de la interfaz de búsqueda variará en función del [tema](sites/site_theme.md) seleccionado. El funcionamiento de la búsqueda es el mismo independientemente del tema.
+
+### Búsqueda básica
+Hay una barra de búsqueda cerca del menú de cada sitio. En el tema predeterminado, se encuentra justo debajo del menú principal, como se muestra en la imagen siguiente.
+
+![Página de inicio del sitio de Jane Austen, con una flecha azul que señala la barra de búsqueda situada debajo del menú de navegación principal](files/search_public1.png)
+
+Esta barra de búsqueda funciona como una búsqueda de texto completo para todo el sitio. Buscará en todos los elementos, conjuntos de elementos y archivos multimedia, así como en el contenido de todas las páginas publicadas en el sitio. Los resultados se ordenan por tipo, agrupando los resultados de páginas y los resultados de elementos o conjuntos de elementos. Desde la página de resultados inicial, puedes ver todos los resultados de ese tipo (página, elemento) utilizando el enlace «ver todos los resultados».
+
+![Resultados de búsqueda para «Cassandra» que muestran una página y tres elementos](files/search_public2.png)
+
+### Búsqueda avanzada de elementos
+Los visitantes del sitio pueden acceder a una búsqueda avanzada de elementos desde la página «Explorar elementos», si dicha página está disponible. Hay un enlace para «Búsqueda avanzada» entre la paginación y las opciones de ordenación en la parte superior de la tabla de exploración de elementos.
+
+Puede controlar la configuración de la búsqueda avanzada para cada sitio individualmente, desde la [pestaña Configuración del sitio](sites/site_settings.md#search). Esto incluirá los campos de búsqueda avanzada introducidos por los módulos.
+
+![La página Elementos del sitio de Jane Austen, con una flecha azul que señala el enlace de Búsqueda avanzada](files/search_publicitems1.png)
+
+Al hacer clic en este enlace, se carga una nueva página con cuatro opciones de búsqueda:
+
+- **Ordenar**
+- **Búsqueda de texto completo**: realiza una búsqueda de texto completo en todo el texto de cada elemento del sitio.
+- **Búsqueda por valor**
+  - Ten en cuenta que si has configurado el [sitio](sites/site_settings.md#search) para restringir la búsqueda a las plantillas, solo se mostrarán las propiedades utilizadas por dichas plantillas.
+- **Buscar por clase**
+- **Buscar por conjunto de elementos**: los resultados mostrarán los elementos dentro de uno o más de los conjuntos que hayas elegido.
+- **Buscar por presencia en medios**
+- **Buscar por ID**.
+
+Aquí está el formulario de búsqueda avanzada predeterminado en dos temas: Thanks, Roy y The Daily:
+
+![Campos de búsqueda avanzada de elementos tal y como se describe](files/search_publicitems2.png)
+
+![Campos de búsqueda avanzada de elementos tal y como se describe](files/search_publicitems3.png)
+
+### Búsqueda avanzada de conjuntos de elementos
+
+Los visitantes del sitio pueden acceder a una búsqueda avanzada de conjuntos de elementos desde la página «Explorar conjuntos de elementos», si dicha página está disponible. Hay un enlace para la búsqueda avanzada cerca de la parte superior de la página «Conjuntos de elementos».
+
+![Página de conjuntos de elementos del sitio de Jane Austen. Una flecha azul señala el enlace de búsqueda avanzada](files/search_publicitemsets1.png)
+
+Al hacer clic en el enlace de búsqueda avanzada se carga una nueva página con tres opciones de búsqueda:
+
+- **Ordenar**
+- **Búsqueda de texto completo**
+- **Buscar por valor**
+  - Ten en cuenta que si tienes la [configuración del sitio](sites/site_settings.md#search) para restringir la búsqueda a plantillas, esto solo mostrará las propiedades utilizadas por esas plantillas.
+- **Buscar por clase**
+- **Buscar por ID**.
+
+![Opciones de búsqueda avanzada de conjuntos de elementos tal y como se describe](files/search_publicitemsets2.png)
+
+### Estilizar las vistas públicas
+
+Puede estilizar, ocultar y resaltar los campos de búsqueda utilizando CSS. Cada entrada tiene un identificador personalizado, como el `div` con «has_media_field», dentro del `div` de la clase «advanced-search-content». Puede estilizar estas opciones utilizando el [módulo Editor de CSS](modules/csseditor.md) o modificando el código de su instalación.  
+
+## Ordenación
+
+Todas las vistas de navegación públicas y administrativas, así como todos los resultados de búsqueda, se pueden ordenar de varias maneras. En la parte superior derecha de cada tabla de navegación o de resultados hay dos menús desplegables y un botón «Ordenar». Uno permite seleccionar un campo y el otro determina el orden en el que se ordenarán.
+
+Puede modificar estos órdenes de clasificación predeterminados para las páginas públicas de los sitios en [Configuración del sitio](sites/site_settings.md#settings), y para las páginas administrativas de forma individual por usuario en [Configuración del usuario](admin/users.md#admin-browse-defaults).
+
+La forma predeterminada en que se ordenan la mayoría de los recursos es por el identificador interno de Omeka (ID), en orden cronológico inverso (descendente). Esto se aplica a los elementos, los medios y los conjuntos de elementos. Los sitios, los vocabularios y las plantillas de recursos se ordenan de forma predeterminada por título o etiqueta en orden ascendente. Los usuarios se ordenan de forma predeterminada por correo electrónico en orden ascendente. 
+
+Cuando se realiza una búsqueda de texto completo, los resultados se mostrarán por relevancia, en orden descendente (los resultados más relevantes primero). 
+
+«Ascendente» significa de la A a la Z en orden alfabético para los campos de texto, de más antiguo a más reciente para los campos con formato de fecha, como «Creado» (es decir, la fecha y hora internas de creación del elemento) y «Modificado» (la fecha y hora en que se modificó por última vez el elemento), y de menor a mayor para los números, como los identificadores. Tenga en cuenta que algunos campos (como «Fecha de Dublin Core») pueden tener formato de texto para incluir información como «circa» y se ordenarán alfabéticamente en lugar de como números (como «1800-01-01») o fechas. Es posible que esté utilizando módulos como [Tipos de datos numéricos](modules/numericdatatypes.md) que pueden modificar esta configuración.
+
+Tanto en orden ascendente como descendente, los campos vacíos aparecerán al final.

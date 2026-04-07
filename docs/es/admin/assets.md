@@ -1,10 +1,29 @@
-# Activos Los archivos digitales añadidos a Omeka S que no son archivos multimedia adjuntos a elementos se pueden gestionar en la sección **Activos** de la interfaz administrativa. Algunos ejemplos de activos son los logotipos del sitio, las imágenes que son meras ilustraciones y las miniaturas personalizadas. 
+# Recursos
 
-La sección Activos proporciona a los usuarios una lista navegable de todos los activos de toda la instalación, con una miniatura, un título, iconos para editar (lápiz), eliminar (papelera) o ver detalles (tres puntos) y el propietario del activo. No hay opciones de edición por lotes disponibles para los activos. 
+Los archivos digitales añadidos a Omeka S que no sean archivos multimedia adjuntos a elementos se pueden gestionar en la sección **Recursos** de la interfaz de administración. Entre los ejemplos de recursos se incluyen los logotipos del sitio, las imágenes que son meras ilustraciones y las miniaturas personalizadas. 
 
-![Sección de administración del menú de navegación que muestra la sección Activos](adminfiles/assets_menu.png) ## Permisos de activos | Categoría | Permiso | Administrador global | Supervisor | Editor | Revisor | Autor | Investigador | |-----|-----|---|---|---|---|---|---|
-| Activos | Ver | Sí | Sí | Sí | Sí | Sí | Sí | | | Editar | Todos | Todos | Todos | Todos | Los propios | No | | | Eliminar | Todos | Todos | Todos | Los propios | Los propios | No | ## Añadir un activo Para añadir un nuevo activo a la instalación, haga clic en el botón «Añadir nuevo activo» situado en la esquina superior derecha de la pantalla Activos. Se abrirá un cajón que permite al usuario buscar un archivo de activo en su ordenador y crear un texto alternativo para ese archivo (el texto alternativo estará disponible para los lectores de pantalla y siempre que no se pueda cargar una imagen). Haga clic en el botón «Cargar» para completar el proceso. ![Lista de búsqueda de activos con el cajón Añadir un nuevo activo abierto y una imagen seleccionada para cargar](adminfiles/assets_add.png)
+La sección «Activos» ofrece a los usuarios una lista navegable de todos los activos de toda la instalación, ordenados por miniatura, título, iconos para editar (lápiz), eliminar (papelera) o ver detalles (tres puntos), y el propietario del activo. No hay opciones de edición por lotes disponibles para los activos. 
 
-Los activos se mantienen solo en su tamaño original; no se duplican ni se redimensionan como los medios adjuntos a los elementos. Deberá cargar manualmente otros tamaños según lo desee. ## Editar un activo Los activos existentes se pueden editar haciendo clic en el icono del lápiz. Los usuarios tienen la opción de cambiar el nombre del archivo y crear o editar texto alternativo. Los usuarios también pueden eliminar activos haciendo clic en el botón rojo «Eliminar» situado en la esquina superior derecha. 
+![Sección de administración del menú de navegación que muestra la sección «Recursos»](adminfiles/assets_menu.png)
 
-![Pantalla de edición de un activo seleccionado, con una imagen de un mapa del National Mall en Washington D. C. y texto rellenado para el nombre del archivo y el texto alternativo: Un mapa del área de Washington D. C. centrado en el National Mall.](adminfiles/assets_edit.png) 
+## Permisos de los recursos
+
+| Categoría | Permiso | Administrador global | Supervisor | Editor | Revisor | Autor | Investigador |
+|-----|-----|---|---|---|---|---|---|
+| Recursos | Ver | Sí | Sí | Sí | Sí | Sí | Sí | 
+| | Editar | Todos | Todos | Todos | Todos | Los propios | No |
+| | Eliminar | Todos | Todos | Todos | Los propios | Los propios | No |
+
+## Añadir un recurso
+
+Para añadir un nuevo recurso a la instalación, haz clic en el botón «Añadir nuevo recurso» situado en la esquina superior derecha de la pantalla de Recursos. Se abrirá un panel que permite al usuario buscar en su ordenador un archivo de recurso y crear un texto alternativo para ese archivo (el texto alternativo estará disponible para los lectores de pantalla y siempre que una imagen no se pueda cargar). Haga clic en el botón «Subir» para completar el proceso.
+
+![Lista de recursos con el panel «Añadir un nuevo recurso» abierto y una imagen seleccionada para subir](adminfiles/assets_add.png)
+
+Los recursos se conservan únicamente en su tamaño original; no se duplican ni se redimensionan como los archivos multimedia adjuntos a los elementos. Deberá subir manualmente otros tamaños según lo desee. 
+
+## Editar un recurso
+
+Los recursos existentes se pueden editar haciendo clic en el icono del lápiz. Los usuarios tienen la opción de cambiar el nombre del archivo y de crear o editar texto alternativo. Los usuarios también pueden eliminar recursos haciendo clic en el botón rojo «Eliminar» situado en la esquina superior derecha. 
+
+![Pantalla de edición de un recurso seleccionado, con una imagen de un mapa del National Mall en Washington D. C. y texto introducido en los campos de nombre de archivo y texto alternativo: Un mapa de la zona de Washington D. C. con el National Mall en primer plano.](adminfiles/assets_edit.png)

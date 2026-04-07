@@ -1,27 +1,73 @@
-# Carga lateral de archivos El [módulo File Sideload](https://omeka.org/s/modules/FileSideload){target=_blank} añade la posibilidad de importar archivos multimedia que ya están almacenados en el servidor donde se encuentra tu instalación de Omeka S. Al cargar archivos multimedia en sus elementos, aparecerán nuevas opciones: «Sideload» para seleccionar archivos individuales de su servidor, o «Sideload directory» para seleccionar carpetas completas de archivos. La carga lateral de archivos es compatible con la [importación CSV](../modules/csvimport.md). Una vez instalada, las opciones de importación CSV incluirán la posibilidad de añadir archivos multimedia a través de los nombres de archivo de su directorio Sideload. Asegúrese de desactivar la eliminación de archivos en el módulo Carga lateral de archivos cuando lo utilice con la importación CSV. ## Crear un directorio Cree un directorio (carpeta) en su servidor. Puede estar dentro del directorio del módulo Carga lateral de archivos o en el mismo nivel que la instalación de Omeka S. 
+# Carga lateral de archivos
 
-!!! Nota Si coloca su directorio sideload en cualquier lugar dentro de su instalación de Omeka, incluido el directorio del módulo (`youromekainstall/modules/FileSideload/yourdirectory`), tenga cuidado de no eliminarlo ni moverlo al actualizar la instalación o el módulo. Es posible que vea mensajes de error al editar elementos o medios si no se encuentra el directorio sideload. Vuelva a la página de configuración del módulo para solucionar este problema.
+El [módulo File Sideload](https://omeka.org/s/modules/FileSideload){target=_blank} permite importar archivos multimedia que ya están almacenados en el servidor donde se encuentra tu instalación de Omeka S. Al subir archivos multimedia a tus elementos, aparecerán nuevas opciones: «Carga lateral» para seleccionar archivos individuales de tu servidor, o «Carga lateral de directorio» para seleccionar carpetas llenas de archivos. 
 
-Cargue o mueva archivos a este directorio. Todos los archivos y carpetas deben estar en este directorio para que sean accesibles. Tenga en cuenta que al explorar estos archivos desde el módulo para añadirlos como medios, solo verá los nombres de los archivos y las carpetas, por lo que debe nombrar los recursos de la forma más clara posible (por ejemplo, «StudyInScarlet_coverpage.jpg» será más útil que «img001.jpg»).
+La carga lateral de archivos es compatible con la [importación CSV](../modules/csvimport.md). Una vez instalado, las opciones de importación CSV incluirán la posibilidad de añadir archivos multimedia mediante nombres de archivo en tu directorio de carga lateral. Asegúrate de desactivar la eliminación de archivos en el módulo File Sideload cuando lo utilices con la importación CSV.
 
-## Configuración Después de instalar el módulo, deberá configurarlo para indicarle dónde se encuentra el directorio. En la página Módulos del menú de navegación de la izquierda, desplácese hasta Carga lateral de archivos en la lista y haga clic en el botón «Configurar».
+## Crear un directorio
 
-El módulo Carga lateral de archivos tiene dos opciones de configuración. ![Se muestra una pantalla de configuración de ejemplo, con los campos que se enumeran a continuación, rellenados. El directorio de carga lateral se rellena con una ruta relativa que termina en la carpeta «/sideloadFiles». La casilla ¿Eliminar archivo cargado lateralmente? está marcada.](../modules/modulesfiles/filesideload_config2.png)
+Crea un directorio (carpeta) en tu servidor. Puede estar dentro del directorio del módulo File Sideload o en el mismo nivel que la instalación de Omeka S. 
 
-**Directorio Sideload**: la ruta, **relativa a la raíz del servidor**, del directorio en el que se almacenan los archivos. Debería tener un aspecto similar a este: - `/var/www/html/yourinstallationpath/omeka-s/sideload-media` - `/home/yourusername/yourwebsite.org/omeka-s/sideload-files` (una ruta típica para alojamiento compartido)
-- `/home/yourusername/public_html/omeka-s/modules/FileSideload/sideload` (una ruta típica para usuarios de cPanel). Si tiene acceso shell al directorio a través de la terminal, puede copiar y pegar los resultados del comando `pwd`. Si utiliza una aplicación FTP, copie la ruta del sitio remoto en la barra de ubicación de la aplicación.
+!!! nota
+  Si coloca su directorio de sideload en cualquier lugar dentro de su instalación de Omeka, incluso dentro del directorio del módulo (`youromekainstall/modules/FileSideload/yourdirectory`), tenga cuidado de no eliminarlo ni moverlo al actualizar la instalación o el módulo. Es posible que vea mensajes de error al editar elementos o archivos multimedia si no se encuentra el directorio de sideload. Vuelva a la página de configuración del módulo para solucionar este problema.
 
-**¿Eliminar el archivo sideloaded?** - Si se marca, cualquier archivo añadido a un elemento como medio se eliminará del directorio Sideload, ya que el archivo ahora se guarda como medio en la instalación de Omeka S. - Si no se marca, los archivos permanecerán en el directorio y estarán disponibles para añadirlos como medios a cualquier elemento, hasta que los elimine manualmente.
+Sube o mueve archivos a este directorio. Todos los archivos y carpetas deben estar en este directorio para que sean accesibles.
+
+Ten en cuenta que, al explorar estos archivos desde el módulo para añadirlos como medios, solo verás los nombres de los archivos y las carpetas, por lo que debes nombrar los recursos de la forma más clara posible (por ejemplo, «StudyInScarlet_coverpage.jpg» será más útil que «img001.jpg»).
+
+## Configuración
+
+Tras instalar el módulo, deberá configurarlo para indicarle dónde se encuentra el directorio.
+
+En la página Módulos del menú de navegación de la izquierda, desplácese hasta File Sideload en la lista y haga clic en el botón «Configurar».
+
+El módulo File Sideload tiene dos opciones de configuración.
+
+![Una pantalla de configuración de ejemplo, con los campos que se enumeran a continuación. El directorio Sideload se rellena con una ruta relativa que termina en la carpeta «/sideloadFiles». La casilla «¿Eliminar el archivo sideload?» está marcada.](../modules/modulesfiles/filesideload_config2.png)
+
+**Directorio de carga lateral**: la ruta, **relativa a la raíz del servidor**, del directorio en el que se almacenan los archivos. Debería tener un aspecto similar a:
+
+- `/var/www/html/tu-ruta-de-instalación/omeka-s/sideload-media`
+- `/home/tu-nombre-de-usuario/tu-sitio-web.org/omeka-s/sideload-files` (una ruta típica para alojamiento compartido)
+- `/home/tu_nombre_de_usuario/public_html/omeka-s/modules/FileSideload/sideload` (una ruta típica para usuarios de cPanel).
+
+Si tienes acceso al directorio a través del terminal, puedes copiar y pegar el resultado del comando `pwd`.
+
+Si utilizas una aplicación FTP, copia la ruta del sitio remoto que aparece en la barra de direcciones de la aplicación.
+
+**¿Eliminar el archivo sideload?**
+
+- Si está marcado, cualquier archivo añadido a un elemento como medio se eliminará del directorio Sideload, ya que el archivo ahora se guarda como medio en la instalación de Omeka S.
+- Si no está marcado, los archivos permanecerán en el directorio y estarán disponibles para añadirlos como medios a cualquier elemento, hasta que los elimines manualmente.
 
 
-Añadir un archivo sideload a un elemento ------------------------------ Con File Sideload instalado y configurado, y los archivos en el directorio, ahora puede utilizar el módulo para añadir medios a los elementos.
+Añadir un archivo sideload a un elemento
+------------------------------
+Con File Sideload instalado y configurado, y los archivos en el directorio, ya puede utilizar el módulo para añadir medios a los elementos.
 
-Al editar un elemento, vaya a la pestaña «Medios». La barra lateral «Añadir medios» incluye ahora dos botones para Sideload (debajo de las opciones principales). ![Se muestra la pestaña «Medios» de un elemento en el modo de edición. Ya se han añadido al campo principal dos entradas de la barra lateral de Sideload.](../modules/modulesfiles/filesideload_browse.png)
+Al editar un elemento, vaya a la pestaña Medios. La barra lateral «Añadir medios» incluye ahora dos botones para Sideload (debajo de las opciones principales).
 
-Al hacer clic en cualquiera de los botones, se añade un bloque de medios de Sideload. Al añadir un solo archivo se crean dos campos: - **Título**: Asigne un nuevo título al archivo multimedia (opcional). - **Archivo**: Seleccione un archivo en este menú desplegable. El menú cargará los nombres de los archivos tal y como aparecen en el directorio. Seleccione uno en el menú desplegable y guarde los cambios.
+![Se muestra la pestaña de medios de un elemento en el modo de edición. Ya se han añadido al campo principal dos entradas de la barra lateral de Sideload.](../modules/modulesfiles/filesideload_browse.png)
 
-![Opciones de medios de carga lateral como se indica arriba, con el menú desplegable abierto, mostrando los nombres de los archivos. Algunas opciones se muestran como si estuvieran en una subcarpeta, en forma de «item123/24750.jpg».](../modules/modulesfiles/filesideload_addfile.png) Al añadir medios por directorio se crean tres campos: - **Título**: Asigne un nuevo título al archivo multimedia (opcional). Este título se aplicará de forma idéntica a todos los medios añadidos. - **Directorio**: seleccione una carpeta en este menú desplegable. El menú cargará los nombres de las carpetas tal y como aparecen en el directorio. - **Ingestar directorio de forma recursiva**: al marcar esta casilla, se incluirán tanto todos los medios de la carpeta de carga lateral que haya elegido como todos los medios de todas las carpetas dentro de esa carpeta. 
+Al hacer clic en cualquiera de los botones se añade un bloque multimedia de Sideload. Al añadir un solo archivo se crean dos campos:
 
-![Opciones de medios del directorio de carga lateral como se indica arriba, con el menú desplegable abierto, mostrando los nombres de los directorios. Un directorio se muestra como «item234/item234b», lo que indica una carpeta dentro de otra carpeta.](../modules/modulesfiles/filesideload_directory_addfile.png) Recuerde que la carga lateral de archivos tiene una configuración para todo el módulo que permite eliminar archivos cuando se ingestan a través de este proceso. Cuando esté seguro de que la configuración es correcta, guarde los cambios en el elemento. Debería ver el archivo o archivos añadidos como medios en la sección de medios de la barra lateral. ## Integración de CSV Import Con CSV Import, puede añadir medios a los elementos a través de File Sideload. Proporcione una columna con los nombres de los archivos, no las URL completas, que apunten a los archivos de su directorio Sideload. Añada la asignación a Fuente de medios > Sideload.
+- **Título**: Asigna un nuevo título al archivo multimedia (opcional).
+- **Archivo**: Selecciona un archivo en este menú desplegable. El menú cargará los nombres de los archivos tal y como aparecen en el directorio. Selecciona uno del menú desplegable y guarda los cambios.
 
-Cuando utilice la importación CSV con su directorio Sideload, le recomendamos que desmarque la configuración de eliminación de archivos en la configuración del módulo Carga lateral de archivos. La importación CSV puede eliminar archivos de su directorio Sideload incluso si una tarea de importación ha fallado o se ha detenido. Siempre debe comprobar manualmente los resultados de la importación CSV antes de eliminar los archivos que ha importado. 
+![Opciones multimedia de Sideload tal y como se enumeran arriba, con el menú desplegable abierto, mostrando los nombres de los archivos. Algunas opciones se muestran como si estuvieran en una subcarpeta, lo que se indica por su formato; por ejemplo, «item123/24750.jpg».](../modules/modulesfiles/filesideload_addfile.png)
+
+Al añadir archivos multimedia por directorio se crean tres campos:
+
+- **Título**: Asigna un nuevo título al archivo multimedia (opcional). Este título se aplicará de forma idéntica a todos los archivos multimedia añadidos.
+- **Directorio**: Seleccione una carpeta de este menú desplegable. El menú cargará los nombres de las carpetas tal y como aparecen en el directorio. 
+- **Importar directorio de forma recursiva**: Al marcar esta casilla, se incluirán tanto todos los archivos multimedia de la carpeta de carga lateral que haya elegido como todos los archivos multimedia de todas las carpetas que se encuentren dentro de esa carpeta. 
+
+![Opciones multimedia del directorio de carga lateral tal y como se enumeran arriba, con el menú desplegable abierto, mostrando los nombres de los directorios. Se muestra un directorio como «item234/item234b», lo que indica una carpeta dentro de otra carpeta.](../modules/modulesfiles/filesideload_directory_addfile.png)
+
+Recuerda que File Sideload tiene una configuración a nivel de módulo para eliminar archivos cuando se importan a través de este proceso. Cuando esté seguro de que la configuración es correcta, guarde los cambios en el elemento. Debería ver el archivo o archivos añadidos como medios en la sección de medios de la barra lateral.
+
+## Integración de la importación CSV
+
+Con la importación CSV, puede añadir medios a los elementos a través de File Sideload. Proporcione una columna con los nombres de archivo, no las URL completas, que apunte a los archivos de su directorio Sideload. Añada la asignación a Fuente de medios > Sideload.
+
+Al utilizar la importación CSV con su directorio de carga lateral, le recomendamos que desmarque la configuración de eliminación de archivos en la configuración del módulo de carga lateral de archivos. La importación CSV puede eliminar archivos de su directorio de carga lateral incluso si una tarea de importación ha fallado o se ha detenido. Siempre debe comprobar manualmente los resultados de la importación CSV antes de eliminar los archivos que ha importado. 
