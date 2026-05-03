@@ -28,7 +28,7 @@ Puede utilizar el [módulo Omeka S Item Importer](modules/ositemimporter.md) par
 
 Omeka se conecta fácilmente a otras plataformas desarrolladas por la [Corporation for Digital Scholarship](https://digitalscholar.org/){target=_blank}. 
 
-- Omeka S cuenta con un módulo para importar elementos desde [Zotero](https://zotero.org){target=_blank}. Zotero es una herramienta de gestión de investigación que puede utilizarse para organizar artículos de revistas y materiales de lectura. Puede organizar los elementos allí y luego exportarlos como elementos de Omeka S utilizando el [módulo de importación de Zotero](modules/zoteroimport.md), o insertar una bibliografía o citas individuales en una página del sitio de Omeka S utilizando el [módulo de citas de Zotero](modules/zoterocitation.md). 
+- Omeka S cuenta con un módulo para importar elementos desde [Zotero](https://zotero.org){target=_blank}. Zotero es una herramienta de gestión de investigación que se puede utilizar para organizar artículos de revistas y materiales de lectura. Se pueden organizar elementos allí y luego exportarlos como elementos de Omeka S utilizando el [módulo de importación de Zotero](modules/zoteroimport.md), o insertar una bibliografía o citas individuales en una página del sitio de Omeka S utilizando el [módulo de citas de Zotero](modules/zoterocitation.md). 
 - [Tropy](https://tropy.org){target=_blank} cuenta con un complemento para exportar elementos a Omeka S. Tropy se puede utilizar para gestionar, editar y describir imágenes digitales de materiales de archivo y patrimonio, y resulta especialmente útil para combinar múltiples imágenes de un mismo elemento (por ejemplo, libros, cartas con muchas páginas, álbumes de fotos, etc.). Instala Tropy y [añade allí el complemento «Exportar a Omeka S»](https://docs.tropy.org/other-features/omeka){target=_blank}. 
 
 Omeka S también cuenta con módulos para importar recursos desde: 
@@ -54,7 +54,7 @@ Es posible exportar recursos desde Omeka S utilizando un script de Python para c
 
 Las hojas de cálculo resultantes tendrán encabezados de columna para los términos de metadatos en orden alfabético: `dcterms:description`, `dcterms:title`, etc. 
 
-También habrá una sección de columnas `o:`, que incluye el ID interno de Omeka S (`o:id`), los ID internos de los medios adjuntos a los elementos (`o:media`), la configuración de privacidad (`o:is_public`, con valores de «TRUE» o «FALSE»), las fechas de creación y modificación, los propietarios, los sitios y otros datos de los recursos. Al final habrá columnas `thumbnail` que contienen las URL de las miniaturas de los archivos multimedia generadas por la instalación. 
+También habrá una sección de columnas `o:`, que incluye el ID interno de Omeka S (`o:id`), los ID internos de los archivos multimedia adjuntos a los elementos (`o:media`), la configuración de privacidad (`o:is_public`, con valores de «TRUE» o «FALSE»), las fechas de creación y modificación, los propietarios, los sitios y otros datos de los recursos. Al final habrá columnas `thumbnail` que contienen las URL de las miniaturas de los archivos multimedia generadas por la instalación. 
 
 Este script no puede exportar información del sitio o de las páginas, ni exportará plantillas de recursos, vocabularios u otros datos almacenados en módulos (como la configuración de Propiedades inversas en las plantillas de recursos). 
 

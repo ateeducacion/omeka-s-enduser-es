@@ -30,7 +30,7 @@ Las siguientes afirmaciones se aplican a Omeka S versión 1.0.1 y superiores:
 
 Los temas de Omeka S creados por el equipo de Omeka cuentan con las siguientes características para mejorar la accesibilidad:
 
--   Puntos de referencia [ARIA](http://www.w3.org/WAI/intro/aria){target=_blank} (Aplicaciones de Internet enriquecidas accesibles) para desplazarse por el contenido de la página con el teclado, cuando no se utiliza el ratón o se emplea un lector de pantalla.
+-   Puntos de referencia [ARIA](http://www.w3.org/WAI/intro/aria){target=_blank} (Aplicaciones de Internet enriquecidas accesibles) para desplazarse por el contenido de la página mediante el teclado, cuando no se utiliza el ratón o se emplea un lector de pantalla.
 -   Marcado HTML5 semántico.
 
 Tenga en cuenta que, aunque el código central de Omeka S cumple con los estándares anteriores, las instalaciones de Omeka S que hayan sido personalizadas o que utilicen módulos y temas que no sean de RRCHNM pueden carecer de algunas o de todas estas opciones. Aunque animamos a los desarrolladores a tener en cuenta la accesibilidad, no podemos garantizar que su código incluya puntos de referencia ARIA, SkipNav u otras consideraciones de accesibilidad.
@@ -44,4 +44,4 @@ El panel de control administrativo de Omeka S cuenta con las siguientes caracter
 
 ## Problemas de accesibilidad
 
-Si detecta algún problema de accesibilidad en el software principal de Omeka S o en los complementos desarrollados por el equipo de Omeka, por favor, comuníquelo mediante una [publicación en el foro](https://forum.omeka.org/c/omeka-s/accessibility/36){target=_blank} o creando una incidencia en el repositorio de GitHub correspondiente.
+Si detecta algún problema de accesibilidad en el software principal de Omeka S o en los complementos desarrollados por el equipo de Omeka, por favor, informe de ello mediante una [publicación en el foro](https://forum.omeka.org/c/omeka-s/accessibility/36){target=_blank} o creando una incidencia en el repositorio de GitHub correspondiente.

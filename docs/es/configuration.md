@@ -36,7 +36,7 @@ La clave de configuración `thumbnails` contiene la mayoría de los ajustes de m
     ],
 ```
 
-En `types`, establezca las dimensiones máximas en píxeles para las imágenes derivadas de los archivos multimedia. Hay opciones separadas para grande, mediano y cuadrado. Los valores predeterminados son 800, 200 y 200 píxeles, respectivamente.
+En `types`, establezca las dimensiones máximas en píxeles para las imágenes derivadas de los archivos multimedia. Hay opciones separadas para grande, mediano y cuadrado. Los valores predeterminados para estos son 800, 200 y 200 píxeles, respectivamente.
 
 `thumbnailer_options` es una matriz de opciones que se pasan al generador de miniaturas específico que se esté utilizando. Por ejemplo, la opción de miniaturas `imagemagick_dir` establece la ruta a la carpeta donde se encuentra el comando `convert` de ImageMagick en el servidor. Esto puede resultar útil si Omeka S no puede detectar automáticamente la ruta correcta para ImageMagick.
 
@@ -106,7 +106,7 @@ Sustituya la palabra «null» por una ruta, entre comillas simples («usr/local/
 
 Estos son solo ejemplos; la ruta correcta dependerá de su servidor. Busque en la documentación de ayuda o en la base de conocimientos de su proveedor de alojamiento la ruta correcta de PHP; esta es una pregunta frecuente para una gran variedad de instalaciones de software. Si no encuentra nada, póngase en contacto con su proveedor de alojamiento o con el administrador del sistema y pregúnteles.
 
-Si ha descargado el archivo para editarlo, asegúrese de volver a subir la versión modificada a su instalación de Omeka.
+Si ha descargado el archivo para editarlo, asegúrese de volver a cargar la versión modificada en su instalación de Omeka.
 
 ## Correo
 

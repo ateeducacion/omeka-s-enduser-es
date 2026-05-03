@@ -22,7 +22,7 @@ Para instalar Omeka S (última versión 4.2), necesitarás un servidor que ejecu
 1. [Descargue la última versión desde la página de versiones](https://omeka.org/s/download/){target=_blank}.
 1. Extraiga el archivo zip descargado en su ordenador.
 1. Dentro del directorio, abra el archivo `config/database.ini` y añada su nombre de usuario de MySQL, contraseña, nombre de la base de datos y nombre del servidor. El usuario y la base de datos deben crearse antes de este paso.
-1. Sube todo este directorio a tu servidor, en la carpeta que elijas. Por ejemplo, si tu servidor es `https://yourwebsite.org/`, es posible que desees instalar Omeka S en una carpeta ubicada en `https://yourwebsite.org/myomekas/`. Asegúrate de que contenga tu archivo `database.ini` actualizado (no subas el archivo zip original que descargaste).
+1. Sube todo este directorio a tu servidor, en la carpeta que elijas. Por ejemplo, si tu servidor es `https://yourwebsite.org/`, es posible que desees instalar Omeka S en una carpeta ubicada en `https://yourwebsite.org/myomekas/`. Asegúrate de que contiene tu archivo `database.ini` actualizado (no subas el archivo zip original que descargaste).
 1. Asegúrate de que el directorio `files/` del servidor sea escribible por Apache.
 1. En tu navegador web, ve a la página `admin` de tu instalación de Omeka S, donde podrás completar la instalación. Por ejemplo, si has subido el contenido del directorio a `https://yourwebsite.org/myomekas/`, ve a `https://yourwebsite.org/myomekas/admin`.
 
@@ -53,7 +53,7 @@ Entre las sugerencias de alojamiento de nuestros usuarios se incluyen:
 
 Una vez que hayas instalado correctamente Omeka S y configurado el archivo `database.ini`, debes dirigirte a la URL de administración de tu instalación de Omeka S (algo así como `https://yourwebsite.org/myomekas/admin`).
 
-La primera vez que accedas con tu navegador al sitio recién instalado, tendrás que introducir los datos del primer usuario, junto con la información básica de tu instalación. Hay dos secciones en esta página: **Crear el primer usuario** y **Configuración**.
+La primera vez que accedas con tu navegador al sitio recién instalado, tendrás que introducir la información del primer usuario, junto con la información básica de tu instalación. Hay dos secciones en esta página: **Crear el primer usuario** y **Configuración**.
 
 En la sección **Crear el primer usuario**:
 
@@ -61,7 +61,7 @@ En la sección **Crear el primer usuario**:
 - Confirma la **contraseña** y vuelve a escribirla en el siguiente campo para confirmarla
 - Introduce un **nombre de usuario** para el usuario.
 
-Ten en cuenta que puedes cambiar todos estos datos más adelante en la sección de gestión de [Usuarios](admin/users.md) de tu instalación.
+Ten en cuenta que puedes cambiar todo esto más adelante en la sección de gestión de [Usuarios](admin/users.md) de tu instalación.
 
 ![Sección del primer usuario con los campos descritos](files/installOmekaS1.png)
 
@@ -108,7 +108,7 @@ Una vez que haya configurado correctamente todos los componentes técnicos de su
 1. Elimina todos los archivos de Omeka S y sustitúyelos por los archivos del archivo zip actualizado.
 1. Reemplaza tus archivos originales `/config/local.config.php`, `/config/database.ini` y `.htaccess`.
 1. Reemplaza tus directorios originales `/modules`, `/themes` y `/files`.
-    - En el caso de actualizaciones de versión importantes, es posible que también tengas que instalar una versión actualizada de tus módulos y temas. Las notas de la versión del núcleo indicarán si es probable que se necesiten esas actualizaciones. Una vez completadas las migraciones mediante el navegador, los módulos y temas que requieran nuevas versiones aparecerán claramente marcados en sus respectivas páginas. La página Módulos de su instalación le indicará qué es lo que hay que actualizar; la página Temas, dentro de cualquiera de sus sitios, le mostrará los temas activos que necesitan actualizarse.
+    - En el caso de actualizaciones de versión importantes, es posible que también tengas que instalar una versión actualizada de tus módulos y temas. Las notas de la versión del núcleo indicarán si es probable que se necesiten esas actualizaciones. Una vez completadas las migraciones mediante el navegador, los módulos y temas que requieran nuevas versiones aparecerán claramente marcados en sus respectivas páginas. La página Módulos de su instalación le indicará qué hay que actualizar; la página Temas de cualquiera de sus sitios indicará los temas activos que necesitan actualizarse. 
 1. En su navegador web, vaya a la página de administración de su sitio (`/myomekas/admin`) y ejecute las migraciones que sean necesarias.
 
 ### Actualización desde GitHub
@@ -138,7 +138,7 @@ En segundo lugar, debe configurar Omeka S para que utilice la utilidad de genera
  ],
     ],
 ```
-Edita el valor de `Omeka\File\Thumbnailer` con lo siguiente, según lo que esté disponible en tu sistema:
+Edita el valor de `Omeka\File\Thumbnailer` de la siguiente manera, según lo que esté disponible en tu sistema:
 
 - Reemplaza el generador de miniaturas predeterminado por `Omeka\File\Thumbnailer\Gd`.
 - Sustituya el generador de miniaturas predeterminado por `Omeka\File\Thumbnailer\Imagick` y habilite Imagick en el archivo `php.ini` de su servidor a través de la interfaz de administración del servidor o directamente en el archivo.

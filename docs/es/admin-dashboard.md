@@ -1,6 +1,6 @@
 # Panel de control administrativo
 
-El panel de control administrativo gestiona el contenido compartido por todos los sitios de Omeka S y las funcionalidades básicas de la instalación de Omeka S. 
+El panel de control administrativo gestiona el contenido compartido por todos los sitios de Omeka S y las funciones básicas de la instalación de Omeka S. 
 
 Este [vídeo tutorial](https://vimeo.com/455708039){target=_blank} te guía a través de las principales funciones del panel de control y te muestra cómo navegar por tu instalación de Omeka S:
 
@@ -9,14 +9,14 @@ Este [vídeo tutorial](https://vimeo.com/455708039){target=_blank} te guía a tr
 
 ## Página principal de administración
 
-Cuando un usuario inicia sesión, la primera página que ve es el panel de control de administración. 
+Cuando un usuario inicia sesión, la primera página que ve es el Panel de control de administración. 
 
 !!! nota
-  Dependiendo del rol del usuario, es posible que no veas exactamente las mismas opciones en el menú de navegación de la izquierda. Consulta [más abajo](#left-hand-navigation) para obtener más detalles. 
+  Dependiendo del rol del usuario, es posible que no vea exactamente las mismas opciones en el menú de navegación de la izquierda. Consulte [más abajo](#left-hand-navigation) para obtener más detalles. 
 
 ![Vista completa del panel de control de administración](files/admindashfullview.png)
 
-Además de la barra de navegación de la izquierda presente en todas las páginas (véase más abajo), el panel de control de administración muestra a los usuarios dos cuadros: **Gestionar recursos** y **Gestionar sitios**.
+Además de la barra de navegación de la izquierda presente en todas las páginas (véase más abajo), el panel de administración muestra a los usuarios dos cuadros: **Gestionar recursos** y **Gestionar sitios**.
 
 El cuadro **Gestionar recursos** muestra los siguientes recursos con su recuento total: [Elementos](content/items.md), [Conjuntos de elementos](content/item-sets.md), [Vocabularios](content/vocabularies.md) y [Plantillas de recursos](content/resource-template.md). Al hacer clic en la etiqueta del recurso, se le redirigirá a la página de exploración; al hacer clic en el botón con el símbolo de más situado a la derecha de la etiqueta, se le redirigirá a la página de añadir para ese tipo de recurso. 
 
@@ -42,7 +42,7 @@ Las opciones de búsqueda avanzada (los tres puntos) te permiten refinar la bús
 
 La barra de navegación de la izquierda del panel de control se divide en secciones relacionadas con la función y el acceso de los usuarios:
 
-- [Sitios](sites/index.md): muestra y proporciona acceso a todos los sitios de la instalación de OmekaS. (Icono de ordenador)
+- [Sitios](sites/index.md): muestra una lista y proporciona acceso a todos los sitios de la instalación de OmekaS. (Icono de ordenador)
 - Recursos: creación de contenido y gestión de metadatos.
     - [Elementos](content/items.md): gestiona los recursos individuales de tu instalación. (Icono de caja)
     - [Conjuntos de elementos](content/item-sets.md): gestiona grupos agregados de elementos. (Icono de varias cajas)
@@ -52,7 +52,7 @@ La barra de navegación de la izquierda del panel de control se divide en seccio
     - [Usuarios](admin/users.md): gestiona los usuarios de toda la instalación y de sitios individuales. (Icono de silueta humana)
     - [Módulos](modules/index.md): añade funcionalidad a sus sitios. (Icono de signo más dentro de un cuadrado)
     - [Tareas](admin/jobs.md): muestra las tareas activadas por el usuario que se están ejecutando actualmente. Nota: las tareas solo se muestran cuando se están ejecutando. (Icono de tres barras)
-    - [Configuración](admin/settings.md): gestiona la configuración global de todos los sitios, el panel de administración y los paneles de los sitios. (Icono de engranajes)
+    - [Configuración](admin/settings.md): gestiona la configuración global de todos los sitios, el panel de control de administración y los paneles de control de los sitios. (Icono de engranajes)
 
 Si ha instalado módulos, es posible que aparezcan en la sección de administración del menú de navegación de la izquierda, debajo de «Configuración».
 
@@ -64,7 +64,7 @@ En la esquina inferior derecha de cada página del panel de administración se e
 
 ![Página de ejemplo de información del sistema](files/systeminfo.png)
 
-En esta página puede verificar las versiones de las dependencias que utiliza Omeka, como PHP, ImageMagick y MySQL. Si un módulo concreto requiere que su servidor proporcione algo como una utilidad PHP, puede buscarlo aquí. También puede consultar esta página para verificar si su instalación de Omeka reconoce un módulo que ha intentado instalar.
+En esta página puede verificar las versiones de las dependencias que utiliza Omeka, como PHP, ImageMagick y MySQL. Si un módulo concreto requiere que su servidor proporcione algo como una utilidad PHP, puede buscarlo aquí. También puede consultar aquí para verificar si su instalación de Omeka reconoce un módulo que ha intentado instalar.
 
 Ten en cuenta que la sección de PHP te indicará el «Límite de carga de archivos», que es el número que se refleja en la interfaz de carga de medios y en la interfaz de carga de activos. Ten en cuenta también que Omeka S te indicará de cuánto espacio libre en el servidor dispone. 
 

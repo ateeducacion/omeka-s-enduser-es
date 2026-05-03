@@ -20,7 +20,7 @@ Para ver los detalles de un trabajo, haga clic en su número de ID. En la págin
 - **Clase** (origen del trabajo, por ejemplo, `DspaceConnector\Job\Import`)
 - **Propietario**
 - **Argumentos**
-- **Registro**: haz clic en **ver registro** para ver cualquier error u otros mensajes. 
+- **Registro**: haga clic en **ver registro** para ver cualquier error u otros mensajes. 
 
 ![El campo «Args» del registro con contenido, y con un enlace rojo «ver registro» debajo, con una flecha azul apuntando hacia él.](adminfiles/jobs_viewlog.png)
 

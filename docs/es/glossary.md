@@ -25,10 +25,10 @@ El siguiente glosario debería ayudar a aclarar algunos de los términos menos c
 **Módulo**: Un complemento para su instalación de Omeka S que amplía la funcionalidad de Omeka S. Los módulos pueden añadir opciones a la introducción de datos y la interacción en el back-end, así como nuevas funciones a sus sitios.  
 *Analogía con Omeka Classic*: Complemento.
 
-**Propiedad**: Un tipo de metadatos definido —en mayor o menor medida— que se utiliza para describir un recurso. La más común es dcterms:title, para el título escrito y legible por humanos de un elemento. Los valores de las propiedades pueden ser lenguaje escrito destinado a ser leído por humanos u otros seres sensibles («literales»), recursos (entendidos aquí como internos a una instalación de Omeka S) o URI externos (por ejemplo, un URI a una página de recursos de DBpedia).  
+**Propiedad**: Un tipo de metadatos definido —en mayor o menor medida— que se utiliza para describir un recurso. La más común es dcterms:title, para el título escrito y legible por humanos de un elemento. Los valores de las propiedades pueden ser lenguaje escrito destinado a que lo lean humanos u otros seres sensibles («literales»), recursos (entendidos aquí como internos a una instalación de Omeka S) o URI externos (por ejemplo, un URI a una página de recursos de DBpedia).  
 *Analogía con Omeka Classic*: Elemento.
 
-**Recurso**: En general, un término que se refiere a elementos, medios y conjuntos de elementos. No incluye activos. Un recurso puede tener una descripción de metadatos (propiedades y valores), una clase de recurso y utilizar una plantilla. Los recursos se pueden mostrar de diferentes maneras en cada sitio, utilizando los ajustes de «Configurar páginas de recursos» que se incluyen en cada tema activo. 
+**Recurso**: En general, un término que se refiere a elementos, medios y conjuntos de elementos. No incluye activos. Un recurso puede tener una descripción de metadatos (propiedades y valores), una clase de recurso y utilizar una plantilla. Los recursos pueden mostrarse de diferentes maneras en cada sitio, utilizando la configuración de «Configurar páginas de recursos» incluida en cada tema activo. 
 
 **Plantilla de recurso**: Un conjunto de propiedades predefinidas y, opcionalmente, una clase, que se utiliza para guiar la creación de elementos y la interpretación de las propiedades. Un uso típico es crear una plantilla para, por ejemplo, un `foaf:Person`, que hace que los elementos que utilizan esa plantilla muestren las entradas para las propiedades `foaf:` esperadas o deseadas, y establece la clase del elemento como `foaf:Person`. 
 *Analogía con Omeka Classic*: Tipo de elemento (aunque la analogía es débil).
@@ -36,7 +36,7 @@ El siguiente glosario debería ayudar a aclarar algunos de los términos menos c
 **Administrador del sitio**: Un administrador de un único sitio dentro de una instalación de Omeka S.  
 *Analogía con Omeka Classic*: Rol de superusuario.
 
-**Valor**: Los datos reales que completan la tripleta recurso-propiedad-valor. Si la propiedad es `dcterms:title`, un valor razonable podría ser «El corazón de las tinieblas». Los valores literales también pueden incluir información sobre el idioma en el que se expresa dicho valor. Los valores también pueden ser recursos o URI a datos externos (preferiblemente URI que devuelvan datos RDF, pero no creo que vayamos a imponerlo).   
+**Valor**: Los datos reales que completan el triple recurso-propiedad-valor. Si la propiedad es `dcterms:title`, un valor razonable podría ser «El corazón de las tinieblas». Los valores literales también pueden incluir información sobre el idioma en el que se expresa dicho valor. Los valores también pueden ser recursos o URI a datos externos (preferiblemente URI que devuelvan datos RDF, pero no creo que vayamos a imponerlo).   
 *Analogía con Omeka Classic*: Texto del elemento.
 
 **Vocabulario**: Una colección de clases y propiedades de metadatos RDF publicadas para describir un recurso. Estas existen y se crean externamente a Omeka, y pueden importarse (con algunas limitaciones) a Omeka S para su uso en toda la instalación. El vocabulario más utilizado es Dublin Core Terms (`dcterms:`).  

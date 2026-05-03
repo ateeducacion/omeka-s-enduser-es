@@ -20,7 +20,7 @@ La búsqueda avanzada solo para elementos está disponible en la página [Elemen
 
 ![Botón de búsqueda avanzada indicado con una flecha roja.](files/search_advanced.png)
 
-La búsqueda avanzada se carga en una nueva página y ofrece las siguientes opciones:
+La búsqueda avanzada se carga en una nueva página y cuenta con las siguientes opciones:
 
 - **Ordenar**: puedes configurar cómo se muestran los resultados, basándote en las columnas específicas de los recursos que hayas configurado en tu cuenta de usuario. Puedes ordenar cada selección de forma ascendente o descendente.
 - **Búsqueda de texto completo**: realiza una búsqueda de texto completo en todo el texto de cada elemento de la instalación.
@@ -41,7 +41,7 @@ La búsqueda avanzada se carga en una nueva página y ofrece las siguientes opci
 - **Buscar por clase**: seleccione una clase del menú desplegable.
 - **Buscar por plantilla**: seleccione una plantilla de recurso del menú desplegable. Las plantillas están ordenadas por propietario y, a continuación, alfabéticamente. 
 - **Buscar por conjunto de elementos**: seleccione si los resultados deseados se incluyen o se excluyen del conjunto de elementos dado. Elija un conjunto de elementos del menú desplegable o escriba para buscar. Puede añadir varios parámetros; estos reducirán la búsqueda (es decir, mostrarán todos los elementos que no estén en el conjunto X Y tampoco en el conjunto Y; todos los elementos que estén en el conjunto X Y también en el conjunto Y; todos los elementos que estén en el conjunto X Y tampoco en el conjunto Y).
-- **Búsqueda por sitio**: seleccione un sitio del menú desplegable de sitios de la instalación. Tenga en cuenta que solo puede buscar elementos de un sitio a la vez.
+- **Buscar por sitio**: seleccione un sitio del menú desplegable de sitios de la instalación. Tenga en cuenta que solo puede buscar elementos de un sitio a la vez.
 - **Buscar por presencia de medios**: seleccione si los resultados tienen medios o no tienen medios.
 - **Buscar por propietario**: seleccione un usuario de un menú desplegable de usuarios de la instalación.
 - **Buscar por visibilidad**: seleccione si los resultados son elementos públicos o privados.
@@ -99,7 +99,7 @@ Hay una barra de búsqueda cerca del menú de cada sitio. En el tema predetermin
 
 ![Página de inicio del sitio de Jane Austen, con una flecha azul que señala la barra de búsqueda situada debajo del menú de navegación principal](files/search_public1.png)
 
-Esta barra de búsqueda funciona como una búsqueda de texto completo para todo el sitio. Buscará en todos los elementos, conjuntos de elementos y archivos multimedia, así como en el contenido de todas las páginas publicadas en el sitio. Los resultados se ordenan por tipo, agrupando los resultados de páginas y los resultados de elementos o conjuntos de elementos. Desde la página de resultados inicial, puedes ver todos los resultados de ese tipo (página, elemento) utilizando el enlace «ver todos los resultados».
+Esta barra de búsqueda funciona como una búsqueda de texto completo para todo el sitio. Buscará en todos los elementos, conjuntos de elementos y medios, así como en el contenido de todas las páginas publicadas en el sitio. Los resultados se ordenan por tipo, agrupando los resultados de páginas y los resultados de elementos o conjuntos de elementos. Desde la página de resultados inicial, puede ver todos los resultados de ese tipo (página, elemento) utilizando el enlace «ver todos los resultados».
 
 ![Resultados de búsqueda para «Cassandra» que muestran una página y tres elementos](files/search_public2.png)
 
@@ -158,6 +158,6 @@ La forma predeterminada en que se ordenan la mayoría de los recursos es por el 
 
 Cuando se realiza una búsqueda de texto completo, los resultados se mostrarán por relevancia, en orden descendente (los resultados más relevantes primero). 
 
-«Ascendente» significa de la A a la Z en orden alfabético para los campos de texto, de más antiguo a más reciente para los campos con formato de fecha, como «Creado» (es decir, la fecha y hora internas de creación del elemento) y «Modificado» (la fecha y hora en que se modificó por última vez el elemento), y de menor a mayor para los números, como los identificadores. Tenga en cuenta que algunos campos (como «Fecha de Dublin Core») pueden tener formato de texto para incluir información como «circa» y se ordenarán alfabéticamente en lugar de como números (como «1800-01-01») o fechas. Es posible que esté utilizando módulos como [Tipos de datos numéricos](modules/numericdatatypes.md) que pueden modificar esta configuración.
+«Ascendente» significa de la A a la Z en orden alfabético para los campos de texto, de más antiguo a más reciente para los campos con formato de fecha, como «Creado» (es decir, la fecha y hora internas de creación del elemento) y «Modificado» (la fecha y hora en que el elemento se modificó por última vez), y de menor a mayor para los números, como los identificadores. Tenga en cuenta que algunos campos (como «Fecha de Dublin Core») pueden tener formato de texto para incluir información como «circa» y se ordenarán alfabéticamente en lugar de como números (como «1800-01-01») o fechas. Es posible que esté utilizando módulos como [Tipos de datos numéricos](modules/numericdatatypes.md) que pueden modificar esta configuración.
 
 Tanto en orden ascendente como descendente, los campos vacíos aparecerán al final.

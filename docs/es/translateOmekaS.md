@@ -1,8 +1,8 @@
 # Traducir Omeka S
 
-Necesitamos la ayuda de la comunidad para traducir el texto en inglés de Omeka S a otros idiomas, de modo que los usuarios puedan disponer de diversas opciones. No es necesario saber programar para ayudar a traducir Omeka S; solo hay que dominar el inglés y otro idioma.
+Necesitamos la ayuda de la comunidad para traducir el texto en inglés de Omeka S a nuevos idiomas, de modo que los usuarios puedan disponer de una amplia variedad de opciones. No es necesario saber programar para ayudar a traducir Omeka S; solo tienes que dominar el inglés y otro idioma.
 
-## Cómo empezar
+## Primeros pasos
 
 ### Regístrate en Transifex.com
 Omeka S utiliza [Transifex.com](https://www.transifex.com){target=_blank} para gestionar las traducciones. Para empezar a ayudar a traducir Omeka a otros idiomas, primero tendrás que [registrarte para crear una cuenta](https://www.transifex.com/signup/){target=_blank}. Transifex.net ofrece varios planes, pero como Omeka es un proyecto de código abierto, puedes utilizar el plan gratuito.

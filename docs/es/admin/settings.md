@@ -1,6 +1,6 @@
 # Configuración
 
-Los usuarios administradores pueden modificar la configuración del panel de administración y los ajustes generales de todos los sitios a través de la sección **Configuración**, situada en la parte izquierda del panel de administración (con el icono de un engranaje). 
+Los usuarios con privilegios de administrador pueden modificar la configuración del panel de administración y los ajustes generales de todos los sitios a través de la sección **Configuración**, situada en la parte izquierda del panel de administración (con el icono de un engranaje). 
 
 Los ajustes globales solo están disponibles para los usuarios con privilegios de administrador global.
 
@@ -21,11 +21,11 @@ La configuración se divide en cinco secciones: **General**, **Visualización**,
 
 **Configuración regional**: Un menú desplegable que le permite seleccionar entre los [idiomas disponibles](https://www.transifex.com/omeka/omeka-s/){target=_blank} para el núcleo de Omeka S, con el fin de cambiar el idioma en el que se muestra el panel de administración de su instalación.
 
-**Habilitar notificaciones de versión**: Marque esta casilla para habilitar los banners de advertencia sobre nuevas versiones de Omeka S, temas y módulos. Si no está marcada, ningún usuario (de ningún rol) verá las advertencias de actualización, ni siquiera el Administrador global. Si está marcada, todos los usuarios pertinentes podrán verlas (es decir, los usuarios Supervisores que pueden ver la página de Módulos, los Administradores del sitio que pueden ver las páginas de Temas y todos los usuarios de la página de inicio `/admin`).
+**Habilitar notificaciones de versión**: Marque esta casilla para habilitar los banners de advertencia sobre nuevas versiones de Omeka S, temas y módulos. Si no está marcada, ningún usuario (de ningún rol) verá las advertencias de actualización, ni siquiera el administrador global. Si está marcada, todos los usuarios pertinentes podrán verlas (es decir, los usuarios supervisores que pueden ver la página de módulos, los administradores del sitio que pueden ver las páginas de temas y todos los usuarios de la página de inicio `/admin`).
 
 **Desactivar JSON-LD @reverse**: Desactiva las [propiedades inversas de JSON-LD](https://www.w3.org/TR/json-ld11/#reverse-properties){target=_blank} en la salida de la API para los recursos. 
 
-**Favicon**: Elige entre tus recursos o sube un archivo para que aparezca en el pequeño espacio del icono de la ventana o pestaña del navegador. Un [favicon](https://www.w3schools.com/html/html_favicon.asp){target=_blank} debe ser una imagen pequeña de unos 32x32 píxeles de tamaño subida específicamente para este fin. Los favicons se pueden [configurar a nivel de instalación](../sites/site_settings.md#general-settings) así como en cada sitio individual.
+**Favicon**: Elige entre tus recursos o sube un archivo para que aparezca en el pequeño espacio del icono de la ventana o pestaña del navegador. Un [favicon](https://www.w3schools.com/html/html_favicon.asp){target=_blank} debe ser una pequeña imagen de unos 32x32 píxeles de tamaño subida específicamente para este fin. Los favicons se pueden [configurar a nivel de instalación](../sites/site_settings.md#general-settings) así como en cada sitio individual.
 
 ## Visualización
 
@@ -37,7 +37,7 @@ La configuración se divide en cinco secciones: **General**, **Visualización**,
 - Si se selecciona **Mostrar vocabulario**, la indicación entre paréntesis junto al nombre de la propiedad muestra el vocabulario utilizado (por ejemplo, Dublin Core) 
 - Si se selecciona **Mostrar término**, la indicación entre paréntesis junto al nombre de la propiedad muestra el vocabulario:término (por ejemplo, `dc:title`). 
 
-**Sitio predeterminado**: Este menú desplegable le permite controlar a qué página llegan los usuarios cuando acceden a la URL base de su instalación. Puede mostrar una lista de todos los sitios de la instalación (opción predeterminada) o seleccionar un sitio específico del menú desplegable, al que se redirigirá a los usuarios.
+**Sitio predeterminado**: Este menú desplegable le permite controlar a dónde llegan los usuarios cuando navegan a la URL base de su instalación. Puede mostrar una lista de todos los sitios de la instalación (opción predeterminada) o seleccionar un sitio específico del menú desplegable, al que se redirigirá a los usuarios.
 
 **Desactivar la incrustación de JSON-LD**: Por defecto, Omeka incrusta JSON-LD en las páginas de exploración y visualización de recursos con el fin de permitir el descubrimiento de metadatos legibles por máquina. Marque esta casilla para desactivar la incrustación.
 
@@ -77,7 +77,7 @@ La configuración se divide en cinco secciones: **General**, **Visualización**,
   - Separe las adiciones a la lista con una coma.
   - Para volver a los valores predeterminados, haga clic en el botón «Restaurar tipos de medios predeterminados».
 
-**Extensiones de archivo permitidas**: La lista predeterminada contiene extensiones de archivo comunes. Solo se pueden cargar en la instalación archivos con extensiones incluidas en esta lista.
+**Extensiones de archivo permitidas**: La lista predeterminada contiene extensiones de archivo comunes. Solo se pueden subir a la instalación archivos con extensiones incluidas en esta lista.
   - Separe las adiciones a la lista con una coma.
   - Para volver a los valores predeterminados, haga clic en el botón «Restaurar extensiones predeterminadas».
 

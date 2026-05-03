@@ -1,6 +1,6 @@
 # Página de inicio
 
-Omeka S permite a los usuarios crear varios sitios independientes dentro de una misma instalación, que no tienen por qué estar conectados entre sí. Cada instalación cuenta, por defecto, con una página de inicio que muestra todos los sitios de la instalación. Se accede a esta página yendo a la URL principal de tu instalación de Omeka S; si tu [panel de administración](admin-dashboard.md) estaba en `tudominio.org/omekas/admin`, entonces encontrarás esta página en `tudominio.org/omekas/`.
+Omeka S permite a los usuarios crear varios sitios independientes dentro de una misma instalación que no tienen por qué estar conectados entre sí. Cada instalación cuenta, por defecto, con una página de inicio que muestra todos los sitios de la instalación. Se accede a esta página yendo a la URL principal de tu instalación de Omeka S; si tu [panel de administración](admin-dashboard.md) estaba en `tudominio.org/omekas/admin`, entonces encontrarás esta página en `tudominio.org/omekas/`.
 
 La página muestra todos los sitios que un usuario tiene permiso para ver, junto con los resúmenes y las miniaturas de los sitios, si existen. Si alguien no ha iniciado sesión, solo verá los sitios públicos. Por el contrario, un administrador global que haya iniciado sesión verá todos los sitios existentes en la instalación.
 
