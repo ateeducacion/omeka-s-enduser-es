@@ -1,1 +1,79 @@
-# Glosario El siguiente glosario debería ayudar a aclarar algunos de los términos menos familiares de Omeka S. Cuando es apropiado, hemos proporcionado un término aproximadamente análogo de Omeka Classic, aunque algunas analogías son más fuertes que otras. **Clase**: Un tipo de Recurso, definido por un Vocabulario. A menudo, los Vocabularios esperan que determinadas Propiedades se utilicen con determinadas Clases. Por ejemplo, un `foaf:Person` no tendría una Propiedad `dcterms:publisher`, pero podría esperarse que tuviera una Propiedad `foaf:familyName`. *Analogía clásica de Omeka*: Tipo de elemento **Archivo**: Datos cargados en una instalación Omeka S y asociados directamente a un Item (ver también: Media). *Analogía clásica de Omeka*: Archivo (pero la analogía es débil). **Administrador Global**: Un administrador que controla todo, y es típicamente la persona que creó la Instalación. *Analogía clásica de Omeka*: Superusuario. **Instalación**: Una instancia de Omeka S. A veces, un departamento central de TI de una institución realiza el proceso de configuración y mantenimiento de la instalación y sus módulos para que otros los utilicen. En otros casos, una instalación sólo tiene un administrador y mantenedor, así como un usuario registrado. **Item**: Los registros utilizados para construir un Sitio Omeka S. Los ítems son compartidos y están disponibles para cualquier Sitio en una Instalación, a menos que sean explícitamente excluidos de ser compartidos. *Analogía de Omeka Classic*: Elemento. **Conjunto de elementos**: Conjunto de elementos. Los elementos pueden pertenecer a cualquier número de conjuntos de elementos. *Analogía clásica de Omeka*: Colección; elementos con la misma etiqueta. **Medios**: Añadidos a un elemento, los medios contribuyen al "contenido" de la descripción de un elemento (sus metadatos). Típicamente, "media" se refiere a un archivo de cualquier tipo, pero también podría referirse a un archivo adjunto de texto sin formato o con formato HTML, fuentes de datos externas como un vídeo de YouTube, una presentación de Slideshare, un flujo de bits de DSpace, etc. Un elemento puede tener infinitos Medios, mientras que los Medios sólo existen como adjuntos a un elemento. (Consulte "Activos" si necesita archivos no adjuntos a elementos, como logotipos y banners del sitio) *Analogía clásica de Omeka*: Archivo. **Módulo**: Un complemento de su instalación de Omeka S que amplía la funcionalidad de Omeka S. Los módulos pueden añadir opciones a la entrada de datos y la interacción en el back-end y añadir nuevas características a sus sitios. *Analogía de Omeka Classic*: Plugin. **Propiedad**: Tipo de metadatos definido -en un grado u otro- que se utiliza para describir un Recurso. El más común es dcterms:title, para el título escrito, legible por humanos, de un Elemento. Los Valores de las Propiedades pueden ser lenguaje escrito para que lo lean los humanos u otros seres sensibles ('Literales'), Recursos (entendidos aquí como internos a una instalación de Omeka S), o URIs Externos (por ejemplo, un URI a una página de recursos de DBpedia). *Analogía clásica de Omeka*: Elemento. **Recurso**: Generalmente, un término para referirse a elementos, medios y conjuntos de elementos. No incluye activos. Un recurso puede tener una descripción de metadatos (propiedades y valores), una clase de recurso y utilizar una plantilla. Los recursos pueden mostrarse de diferentes maneras en cada sitio, utilizando los ajustes de "Configurar páginas de recursos" contenidos en cada tema activo. **Plantilla de recursos**: Un conjunto de Propiedades predefinidas, y opcionalmente una Clase, a utilizar para guiar la creación de Elementos y la interpretación de Propiedades. El uso típico es crear una plantilla para, por ejemplo, un `foaf:Persona` que hace que los Elementos que usan esa plantilla muestren las entradas para las `foaf: propiedades` esperadas o deseadas, y establece la Clase del Elemento a `foaf:Persona`. *Analogía clásica de Omeka*: Tipo de elemento (pero la analogía es débil) **Administrador del sitio**: Un administrador de un único Sitio dentro de una Instalación Omeka S. *Analogía clásica de Omeka*: Rol de superusuario. **Valor**: Los datos reales que rellenan el triple Recurso-Propiedad-Valor. Si la propiedad es `dcterms:title`, un Valor razonable podría ser "Heart of Darkness". Los Valores literales también pueden llevar adjunta información sobre el idioma en el que se expresa dicho Valor. Los Valores también pueden ser Recursos o URIs a datos externos (preferiblemente URIs que devuelvan datos RDF, pero no creo que vayamos a imponer eso). *Analogía clásica de Omeka*: Elemento Texto. **Vocabulario**: Una colección de Clases y Propiedades de metadatos RDF publicadas para describir un Recurso. Estos existen y son creados externamente a Omeka, y pueden ser importados (con algunas limitaciones) en Omeka S para su uso en toda la Instalación. El Vocabulario más utilizado es Dublin Core Terms (`dcterms:`). *Analogía clásica de Omeka*: Conjunto de elementos
+# Glosario
+
+El siguiente glosario debería ayudar a aclarar algunos de los términos menos conocidos de Omeka S. Cuando ha sido posible, hemos incluido un término más o menos equivalente de Omeka Classic, aunque algunas analogías son más evidentes que otras. 
+
+## **Clase**: 
+Un tipo de recurso, tal y como lo define un vocabulario. A menudo, los vocabularios esperan que se utilicen propiedades concretas con clases concretas. Por ejemplo, un `foaf:Person` no tendría una propiedad `dcterms:publisher`, pero cabría esperar que tuviera una propiedad `foaf:familyName`.  
+
+*Analogía con Omeka Classic*: Tipo de elemento.
+
+## **Archivo**: 
+
+Datos cargados en una instalación de Omeka S y asociados directamente a un elemento (véase también: Medios). 
+
+*Analogía con Omeka Classic*: Archivo (pero la analogía es débil).
+
+## **Administrador global**: 
+Un administrador que lo controla todo y que suele ser la persona que creó la instalación.  
+
+*Analogía con Omeka Classic*: Superusuario.
+
+## **Instalación**: 
+Una instancia de Omeka S. A veces, el departamento central de TI de una institución se encarga de configurar y mantener la instalación y sus módulos para que otros los utilicen. En otros casos, una instalación solo tiene un administrador y un responsable de mantenimiento, además de los usuarios que inician sesión. 
+
+En Omeka Classic, una instalación de Classic equivaldría a un sitio, con páginas de navegación y funciones de búsqueda; cada sitio de Classic puede tener muchas exposiciones. En Omeka S, la principal diferencia es que una instalación no tiene necesariamente un sitio predeterminado; puede tener muchos sitios. Cada sitio es independiente, con su propia imagen de marca, páginas de navegación, páginas de búsqueda y tantas exposiciones como se desee. Un uso habitual es que cada «sitio» sea su propia exposición. 
+
+## **Elemento**: 
+Los registros utilizados para crear un sitio de Omeka S. Los elementos se comparten y están disponibles para cualquier sitio de una instalación, a menos que se excluyan explícitamente del uso compartido.  
+
+*Analogía con Omeka Classic*: Elemento.
+
+## **Conjunto de elementos**: 
+Una agrupación de elementos. Los elementos pueden pertenecer a cualquier número de conjuntos de elementos.  
+
+*Analogía con Omeka Classic*: Colección; Elementos con la misma etiqueta.
+
+## **Mapeo**:
+
+Omeka S utiliza el término «mapeo» de dos maneras. Una se refiere a nuestro [módulo de mapeo](modules/mapping.md), que ofrece utilidades de geolocalización para fijar elementos y otros recursos en mapas navegables. En Omeka Classic, el complemento análogo al módulo de mapeo se llama «Geolocalización». 
+
+La otra es una acepción del mundo de los metadatos, donde «mapeo» significa tomar un campo de metadatos y asignarlo a otro. Un término similar es «crosswalking»: se podría crear una correspondencia entre Dublin Core y MODS, por ejemplo, transfiriendo datos del campo `Title` de Dublin Core al campo `titleInfo` de MODS. Al importar información desde hojas de cálculo u otras bases de datos, los campos utilizados en los recursos remotos deberán asignarse a los campos que desee utilizar en su instalación de Omeka. También puede pensar en esto como una migración o conversión de metadatos. 
+
+
+## **Medios**: 
+Añadidos a un elemento, los medios aportan el «contenido» a la descripción del elemento (sus metadatos). Normalmente, «medios» se refiere a un archivo de cualquier tipo, pero también podría referirse a un archivo adjunto de texto sin formato o con formato HTML, fuentes de datos externas como un vídeo de YouTube, una presentación de Slideshare, un flujo de bits de DSpace, etc. Un elemento puede tener un número ilimitado de medios, mientras que los medios solo existen adjuntos a un elemento. (Consulte «Recursos» si necesita archivos no adjuntos a elementos, como logotipos y banners del sitio). 
+
+*Analogía con Omeka Classic*: Archivo.
+
+## **Módulo**: 
+Un complemento para su instalación de Omeka S que amplía la funcionalidad de Omeka S. Los módulos pueden añadir opciones a la introducción de datos y la interacción en el back-end, así como nuevas funciones a sus sitios.  
+
+*Analogía con Omeka Classic*: Complemento.
+
+## **Propiedad**: 
+Un tipo de metadatos definido —en mayor o menor medida— que se utiliza para describir un recurso. La más común es dcterms:title, para el título escrito y legible por humanos de un elemento. Los valores de las propiedades pueden ser lenguaje escrito destinado a ser leído por humanos u otros seres sensibles («literales»), recursos (entendidos aquí como internos a una instalación de Omeka S) o URI externos (por ejemplo, un URI a una página de recursos de DBpedia).  
+
+*Analogía con Omeka Classic*: Elemento.
+
+## **Recurso**: 
+En general, un término que hace referencia a elementos, medios y conjuntos de elementos. No incluye activos. Un recurso puede tener una descripción de metadatos (propiedades y valores), una clase de recurso y utilizar una plantilla. Los recursos se pueden mostrar de diferentes maneras en cada sitio, utilizando la configuración de «Configurar páginas de recursos» incluida en cada tema activo. 
+
+## **Plantilla de recurso**: 
+Un conjunto de propiedades predefinidas y, opcionalmente, una clase, que se utiliza para guiar la creación de elementos y la interpretación de las propiedades. Un uso típico es crear una plantilla para, por ejemplo, un `foaf:Person` que haga que los elementos que utilicen esa plantilla muestren las entradas para las `foaf: propiedades` esperadas o deseadas, y establezca la clase del elemento en `foaf:Person`. 
+
+*Analogía con Omeka Classic*: Tipo de elemento (aunque la analogía es débil).
+
+## **Administrador del sitio**: 
+Un administrador de un único sitio dentro de una instalación de Omeka S.  
+
+*Analogía con Omeka Classic*: Rol de superusuario.
+
+## **Valor**: 
+Los datos reales que completan la tripleta «recurso-propiedad-valor». Si la propiedad es `dcterms:title`, un valor razonable podría ser «El corazón de las tinieblas». Los valores literales también pueden incluir información sobre el idioma en el que se expresa dicho valor. Los valores también pueden ser recursos o URI a datos externos (preferiblemente URI que devuelvan datos RDF, pero no creo que vayamos a imponerlo).   
+
+*Analogía con Omeka Classic*: Texto del elemento.
+
+## **Vocabulario**: 
+Una colección de clases y propiedades de metadatos RDF publicadas para describir un recurso. Estas existen y se crean externamente a Omeka, y pueden importarse (con algunas limitaciones) a Omeka S para su uso en toda la instalación. El vocabulario más utilizado es Dublin Core Terms (`dcterms:`).  
+
+*Analogía con Omeka Classic*: Conjunto de elementos.
