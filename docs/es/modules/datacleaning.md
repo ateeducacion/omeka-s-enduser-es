@@ -1,30 +1,91 @@
---- título: Limpieza de datos --- # Limpieza de datos El [módulo de limpieza de datos](https://omeka.org/s/modules/DataCleaning){target=_blank} sirve para auditar y limpiar metadatos de recursos a bajo nivel. Está diseñado para preparar metadatos de recursos para su uso en visualizaciones.
+---
+título: Limpieza de datos
+---
+# Limpieza de datos
 
-Los cambios realizados por la limpieza de datos no se pueden deshacer fácilmente y pueden ser destructivos. Debido a la potente naturaleza del módulo, solo pueden utilizarlo los administradores globales. !!! nota Antes de ejecutar cualquier auditoría, asegúrese de tener una copia de seguridad reciente de sus datos. La copia de seguridad de su base de datos SQL se puede realizar con muchos hosts, y puede hacer una copia de seguridad de toda su instalación de Omeka si la ha instalado a través de un gestor de aplicaciones.
+El [módulo de limpieza de datos](https://omeka.org/s/modules/DataCleaning){target=_blank} sirve para la auditoría y limpieza de bajo nivel de los metadatos de los recursos. Está diseñado para preparar los metadatos de los recursos para su uso en visualizaciones.
 
-Una vez que haya [instalado](index.md#installing-modules) Data Cleaning, se añadirá a los módulos disponibles en la navegación de la izquierda de su vista administrativa. ## Ejecutar una auditoría En la sección de Data Cleaning, en Módulos, haga clic en el botón «Preparar nueva auditoría» en la esquina superior derecha de la página. 
+Los cambios realizados por Limpieza de datos no se pueden deshacer fácilmente y pueden ser destructivos. Debido a la gran potencia del módulo, solo pueden utilizarlo los administradores globales. 
 
-### Preparar auditoría Esto abrirá el formulario «Preparar auditoría», que le permite centrarse en los datos que desea revisar y, quizás, corregir. El formulario tiene las siguientes opciones básicas: - **Tipo de recurso**: seleccione el tipo de recurso que desea auditar en un menú desplegable. Las opciones son elementos, conjuntos de elementos o medios.
+!!! nota
+  Antes de ejecutar cualquier auditoría, asegúrate de tener una copia de seguridad reciente de tus datos. La copia de seguridad de su base de datos SQL se puede realizar con muchos servidores, y puede hacer una copia de seguridad de toda su instalación de Omeka si la instaló a través de un gestor de aplicaciones.
 
-- **Consulta de recursos**: haga clic en el botón «Editar» para mostrar la interfaz del generador de consultas en la barra lateral derecha. Utilice el formulario para establecer el universo de recursos que desea auditar. Puede hacer clic en el botón Edición avanzada para mostrar y editar la cadena de consulta. - **Propiedad**: selecciona la propiedad que se va a auditar. Este menú desplegable cargará todas las propiedades de todos los vocabularios de su instalación. Cuando está abierto, la parte superior del menú desplegable funciona como una búsqueda que le permite localizar una propiedad más rápidamente. - **Columna de auditoría**: establece qué tipo de datos se auditarán en el grupo de recursos. Seleccione en un menú desplegable entre «valor», «uri» o «valor-recurso-id». En general, los tipos de datos pueden utilizar estas columnas por diferentes motivos. Pero, en particular, el tipo de datos «literal» utiliza la columna «valor» para almacenar el valor; el tipo de datos «uri» utiliza la columna «uri» para almacenar el URI y la columna «valor» para almacenar la etiqueta URI; y el tipo de datos «recurso» utiliza «valor-recurso-id» para almacenar el ID del recurso. Los módulos que añaden tipos de datos asignan datos a una o más de estas tres columnas. 
+Una vez que haya [instalado](index.md#installing-modules) Data Cleaning, se añadirá a los módulos disponibles en el panel de navegación de la izquierda de su vista administrativa.
 
-- **Tipo de datos**: seleccione en un menú desplegable los tipos de datos que desea auditar. Esto incluye los tipos de datos estándar para Omeka S, así como cualquier tipo de datos adicional añadido por otros módulos, por ejemplo, los tipos de datos numéricos. #### Opciones avanzadas Si desea auditar los datos contenidos en una propiedad, pero almacenar los datos corregidos en una ubicación diferente dentro de los recursos, puede utilizar las opciones «destino» para hacerlo.
+## Realizar una auditoría
+En la sección de Data Cleaning, dentro de Módulos, haz clic en el botón «Preparar nueva auditoría» situado en la esquina superior derecha de la página. 
+
+### Preparar auditoría
+Esto abrirá el formulario «Preparar auditoría», que te permite centrarte en los datos que deseas revisar y, tal vez, corregir. El formulario tiene las siguientes opciones básicas: 
+
+- **Tipo de recurso**: Seleccione el tipo de recurso que desea auditar en el menú desplegable. Las opciones son elementos, conjuntos de elementos o medios.
+
+- **Consulta de recursos**: Haga clic en el botón «Editar» para mostrar la interfaz del generador de consultas en la barra lateral derecha. Utilice el formulario para definir el conjunto de recursos que desea auditar. Puede hacer clic en el botón de edición avanzada para mostrar y editar la cadena de consulta.
+
+- **Propiedad**: Selecciona la propiedad que se va a auditar. Este menú desplegable cargará todas las propiedades de todos los vocabularios de su instalación. Cuando está abierto, la parte superior del menú funciona como un campo de búsqueda para permitirle localizar una propiedad más rápidamente. 
+
+- **Columna de auditoría**: Establece qué tipo de datos se auditarán en el conjunto de recursos. Seleccione en el menú desplegable entre `value`, `uri` o `value-resource-id`. En general, los tipos de datos pueden utilizar estas columnas por diferentes motivos. Sin embargo, en concreto, el tipo de datos «literal» utiliza la columna `value` para almacenar el valor; el tipo de datos «uri» utiliza la columna «uri» para almacenar el URI y la columna «value» para almacenar la etiqueta del URI; y el tipo de datos «resource» utiliza la columna «value-resource-id» para almacenar el ID del recurso. Los módulos que añaden tipos de datos asignan datos a una o más de estas tres columnas. 
+
+- **Tipo de datos**: Seleccione en un menú desplegable los tipos de datos que desea auditar. Esto incluye los tipos de datos estándar de Omeka S, así como cualquier tipo de datos adicional añadido por otros módulos, por ejemplo, los tipos de datos numéricos. 
+
+#### Opciones avanzadas
+
+Si desea auditar los datos contenidos en una propiedad pero almacenar los datos corregidos en una ubicación diferente dentro de los recursos, puede utilizar las opciones «destino» para hacerlo.
  
-- **Propiedad de destino**: seleccione la propiedad en la que desea que se almacenen las correcciones. No es necesario seleccionar un destino si es el mismo que la propiedad anterior. Este menú desplegable cargará todas las propiedades de todos los vocabularios de su instalación. Cuando está abierto, la parte superior del menú desplegable funciona como una búsqueda que le permite localizar una propiedad más rápidamente. 
+- **Propiedad de destino**: Seleccione la propiedad en la que desea que se almacenen las correcciones. No es necesario seleccionar un destino si es el mismo que la propiedad anterior. Este menú desplegable cargará todas las propiedades de todos los vocabularios de su instalación. Cuando está abierto, la parte superior del menú funciona como un campo de búsqueda para permitirle localizar una propiedad más rápidamente. 
 
-- **Columna de auditoría de destino**: seleccione la columna en la que se almacenarán las correcciones. No es necesario seleccionar un destino si es el mismo que la columna de auditoría anterior. Las opciones son «valor», «uri» o «valor_recurso_id». - **Tipo de datos de destino**: seleccione el tipo de datos en el que se almacenarán las correcciones. No es necesario seleccionar un destino si es el mismo que el tipo de datos anterior. Este menú desplegable incluye los tipos de datos estándar para Omeka S, así como cualquier tipo de datos adicional añadido por otros módulos, por ejemplo, tipos de datos numéricos. Una vez que haya introducido la información en todos los campos pertinentes, haga clic en el botón «Enviar» situado en la esquina superior derecha. 
+- **Columna de auditoría de destino**: Seleccione la columna en la que se almacenarán las correcciones. No es necesario seleccionar un destino si es el mismo que la columna de auditoría anterior. Las opciones son `value`, `uri` o `value_resource_id`. 
 
-Puede salir en cualquier momento haciendo clic en el botón «Cancelar». ![La pantalla Preparar auditoría con Elementos como tipo de recurso; una consulta de recursos para eventos de elementos; la propiedad establecida en Esquema:ubicación; la columna Auditoría establecida en value_resource_id; y el tipo de datos establecido en Recurso](../modules/modulesfiles/datacleaning_prepareAudit.png)
+- **Tipo de datos de destino**: Seleccione el tipo de datos en el que se almacenarán las correcciones. No es necesario seleccionar un destino si es el mismo que el tipo de datos anterior. Este menú desplegable incluye los tipos de datos estándar de Omeka S, así como cualquier tipo de datos adicional añadido por otros módulos, por ejemplo, los tipos de datos numéricos. 
 
-### Datos de auditoría Al hacer clic en «Enviar» en la página Preparar auditoría, se le redirigirá a la página Datos de auditoría. En la parte superior de la página, justo debajo del encabezado, aparecerá un mensaje que le indicará cuántas cadenas únicas está editando y para cuántos recursos. El número de recursos es un enlace a los recursos devueltos por la consulta de búsqueda que introdujo en la página anterior. Debajo de este mensaje hay una tabla que indica los datos que se están auditando. Hay tres columnas: Columna de auditoría, Propiedad y Tipo de datos. Hay dos filas, De y A. Asegúrese de verificar la información de esta tabla antes de continuar. ![Mensaje de cadenas y tabla para una auditoría. Esta auditoría tiene 18 cadenas únicas para 66 recursos, y la información de «De» y «A» es idéntica](../modules/modulesfiles/datacleaning_auditTable1.png) 
+Una vez que haya introducido la información en todos los campos pertinentes, haga clic en el botón «Enviar» situado en la esquina superior derecha. 
 
-Debajo verá una fila de botones que le permiten operar con todas las cadenas que está auditando. - **Copiar todo**: copia los datos de la columna «De» a la columna «A» para todas las cadenas únicas.
-- **Borrar todo**: elimina todos los datos de la columna «Destino». - **Validar todo**: comprueba todos los cambios propuestos para asegurarse de que son posibles dentro de los límites de la columna y el tipo de datos actuales, es decir, no se puede establecer un `value_resource_id` en una cadena de texto literal porque el tipo de datos busca un número. La validación solo comprueba que la entrada sea estructuralmente posible, no que la edición introducida exista, es decir, se podría cambiar un `value_resource_id` por un número que no corresponda a un ID real de Omeka S. - **Eliminar todo**: marca la casilla «Eliminar» para todas las cadenas únicas. Esto establecerá los datos de la propiedad que se está auditando como nulos. Ten mucho cuidado al aplicar esta opción. - **Deseliminar todo**: Desmarca la casilla «Eliminar» para todas las cadenas únicas. A continuación, verás una tabla con todas las cadenas únicas de tu auditoría. Si tienes un resultado de auditoría con muchas cadenas únicas, puedes utilizar los filtros para centrarte en las cadenas que deseas editar. Además, las columnas con los datos de auditoría actuales se pueden ordenar haciendo clic en el encabezado de la columna. La tabla le proporciona un recuento del número de recursos por cadena, la cadena única tal y como existe actualmente (Desde:), un cuadro de entrada para editar las cadenas actuales (Hasta:) y una casilla de verificación para establecer los datos en nulo. La celda de entrada de edición de cada fila también tiene botones que le permiten copiar, borrar y validar los cambios propuestos.
+Puede salir en cualquier momento haciendo clic en el botón «Cancelar». 
 
-![Tabla de edición de auditoría con una cadena no válida en la primera fila de la columna A, el botón de validación es rojo, lo que indica una discrepancia en el tipo de datos; la segunda fila de la columna A tiene datos enteros válidos y un botón de validación verde](../modules/modulesfiles/datacleaning_auditTableValidation.png)
+![La pantalla «Preparar auditoría» con «Elementos» establecido como tipo de recurso; una consulta de recursos para eventos de elementos; la propiedad establecida en «Esquema:ubicación»; la columna de auditoría establecida en «value_resource_id»;  y el tipo de datos establecido en «Recurso»](../modules/modulesfiles/datacleaning_prepareAudit.png)
 
-Una vez que haya editado cuidadosamente el contenido de la columna «A», haga clic en el botón «Enviar» para ejecutar la actualización de sus datos. Dada la potente naturaleza del módulo, se le pedirá que confirme sus decisiones. El proceso de limpieza de datos se ejecutará en segundo plano y, aunque se puede revisar el trabajo, no se puede deshacer.
+### Datos de auditoría
+Al hacer clic en «Enviar» en la página «Preparar auditoría», se le redirigirá a la página «Datos de auditoría». 
 
-## Ejemplo de flujo de trabajo Este es un ejemplo de flujo de trabajo para un usuario que desea auditar los títulos de los elementos de un conjunto de elementos específico: - En el menú de navegación de la izquierda, vaya al módulo Limpieza de datos. - Haga clic en el botón «Preparar nueva auditoría» (arriba a la derecha). - Seleccione los criterios (expanda las flechas para obtener más información): - Tipo de recurso: «Elemento»
-	- Consulta de recursos: item_set_id[]=1234 - Propiedad: «Dublin Core: Título» - Columna de auditoría: «valor» - Tipo de datos: «Texto». - Ignore la sección «Avanzado». - Haga clic en «Enviar» (arriba a la derecha). - Audite la columna «De: valor» para posibles correcciones o eliminaciones.
-- Realice las correcciones introduciendo el texto correcto en la columna «A: valor». - Realice las eliminaciones marcando la casilla «Eliminar». - Haga clic en «Enviar» (arriba a la derecha). - Haga clic para confirmar el envío. - Actualice la página «Auditorías anteriores» hasta que el trabajo aparezca como «Completado». - Compruebe los elementos para ver si los valores se han corregido y eliminado.
+En la parte superior de la página, justo debajo del encabezado, aparecerá un mensaje que le indicará cuántas cadenas únicas está editando y para cuántos recursos. El número de recursos es un enlace a los recursos devueltos por la consulta de búsqueda que introdujo en la página anterior. 
+
+Debajo de este mensaje hay una tabla que muestra los datos que se están auditando. Hay tres columnas: Columna de auditoría, Propiedad y Tipo de datos.  Hay dos filas: De y A. Asegúrate de comprobar dos veces la información de esta tabla antes de continuar. 
+
+![Mensaje y tabla de cadenas para una auditoría. Esta auditoría tiene 18 cadenas únicas para 66 recursos, y la información de «Desde» y «Hasta» es idéntica](../modules/modulesfiles/datacleaning_auditTable1.png) 
+
+A continuación verás una fila de botones que te permiten realizar operaciones con todas las cadenas que estás auditando.
+
+- **Copiar todo**: Copia los datos de la columna «De» a la columna «A» para todas las cadenas únicas.
+- **Borrar todo**: Elimina todos los datos de la columna «A».
+- **Validar todo**: comprueba todos los cambios propuestos para asegurarse de que son posibles dentro de los límites de la columna y el tipo de datos actuales; es decir, no se puede establecer un `value_resource_id` como una cadena de texto literal porque el tipo de datos espera un número. La validación solo comprueba que la entrada sea estructuralmente posible, no que la edición introducida exista; es decir, se podría cambiar un `value_resource_id` a un número que no se correspondiera con un ID real de Omeka S.
+- **Eliminar todo**: Marca la casilla «Eliminar» para todas las cadenas únicas. Esto establecerá los datos de la propiedad que se está auditando en nulo. Se recomienda extrema precaución al aplicar esta opción.
+- **Deshacer todo**: Desmarca la casilla «Eliminar» para todas las cadenas únicas.
+
+A continuación, verá una tabla con todas las cadenas únicas de su auditoría. Si el resultado de la auditoría contiene muchas cadenas únicas, puede utilizar los filtros para centrarse en las cadenas que desea editar. Además, las columnas con los datos de la auditoría actual se pueden ordenar haciendo clic en el encabezado de la columna.
+
+La tabla le proporciona un recuento del número de recursos por cadena, la cadena única tal y como existe actualmente (De:), un cuadro de entrada para editar las cadenas actuales (A:) y una casilla de verificación de eliminación para establecer los datos en nulo. La celda de entrada de edición de cada fila también cuenta con botones que le permiten copiar, borrar y validar los cambios propuestos.
+
+![Tabla de edición de auditoría con una cadena no válida en la primera fila de la columna «Para»; el botón de validación está en rojo, lo que indica una discrepancia en el tipo de datos; la segunda fila de la columna «Para» contiene datos enteros válidos y el botón de validación está en verde](../modules/modulesfiles/datacleaning_auditTableValidation.png)
+
+Una vez que haya editado cuidadosamente el contenido de la columna «Para», haga clic en el botón «Enviar» para ejecutar la actualización de sus datos. Dada la potencia del módulo, se le pedirá que confirme sus decisiones. El proceso de limpieza de datos se ejecutará en segundo plano y, aunque el trabajo se puede revisar, no se puede deshacer.
+
+## Flujo de trabajo de ejemplo
+Este es un flujo de trabajo de ejemplo para un usuario que desea auditar los títulos de los elementos de un conjunto de elementos específico:
+
+- En el menú de navegación de la izquierda, vaya al módulo de limpieza de datos.
+- Haga clic en el botón «Preparar nueva auditoría» (arriba a la derecha).
+- Seleccione los criterios (expanda las flechas para obtener información):
+  - Tipo de recurso: «Elemento»
+  - Consulta de recursos: item_set_id[]=1234
+  - Propiedad: «Dublin Core: Título»
+  - Columna de auditoría: «valor»
+  - Tipo de datos: «Texto».
+- Ignora la sección «Avanzado».
+- Haz clic en «Enviar» (arriba a la derecha).
+- Revisa la columna «De: valor» en busca de posibles correcciones o eliminaciones.
+- Realiza las correcciones introduciendo el texto correcto en la columna «A: valor».
+- Realice eliminaciones marcando la casilla «Eliminar».
+- Haga clic en «Enviar» (arriba a la derecha).
+- Haga clic para confirmar el envío.
+- Actualice la página «Auditorías anteriores» hasta que la tarea aparezca como «Completada».
+- Compruebe los elementos para ver si los valores se han corregido y eliminado.

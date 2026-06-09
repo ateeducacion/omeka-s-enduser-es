@@ -1,10 +1,10 @@
-# Página de inicio
+# Página principal
 
-Omeka S permite a los usuarios crear varios sitios independientes dentro de una misma instalación que no tienen por qué estar conectados entre sí. Cada instalación cuenta, por defecto, con una página de inicio que muestra todos los sitios de la instalación. Se accede a esta página yendo a la URL principal de tu instalación de Omeka S; si tu [panel de administración](admin-dashboard.md) estaba en `tudominio.org/omekas/admin`, entonces encontrarás esta página en `tudominio.org/omekas/`.
+Omeka S permite a los usuarios crear varios sitios distintos dentro de una misma instalación que no tienen por qué estar conectados entre sí. Cada instalación cuenta, por defecto, con una página principal que muestra todos los sitios de la instalación. Se accede a esta página dirigiéndose a la URL principal de tu instalación de Omeka S; si tu [panel de administración](admin-dashboard.md) estaba en `tudominio.org/omekas/admin`, entonces encontrarás esta página en `tudominio.org/omekas/`.
 
-La página muestra todos los sitios que un usuario tiene permiso para ver, junto con los resúmenes y las miniaturas de los sitios, si existen. Si alguien no ha iniciado sesión, solo verá los sitios públicos. Por el contrario, un administrador global que haya iniciado sesión verá todos los sitios existentes en la instalación.
+La página muestra todos los sitios que un usuario tiene permiso para ver, junto con los resúmenes y las miniaturas de los sitios, si existen. Si alguien no ha iniciado sesión, solo verá los sitios públicos. Por el contrario, un administrador global que haya iniciado sesión vería todos los sitios existentes en la instalación.
 
-![Página principal de la instalación de «Stackable Sandbox» que muestra siete sitios, tres de los cuales tienen resúmenes.](files/frontpage-basic.png)
+![Página de inicio de la instalación de «Stackable Sandbox» que muestra siete sitios, tres de los cuales tienen resúmenes.](files/frontpage-basic.png)
 
 Si desea que esta página de índice quede oculta a los visitantes del sitio, un administrador global puede seleccionar un sitio público de su instalación al que se redirigirá a los visitantes cuando accedan a su URL base (de `yourdomain.org/omekas/` a `yourdomain.org/omekas/s/yourmainsite/`). Para ello:
 

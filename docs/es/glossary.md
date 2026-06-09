@@ -9,7 +9,7 @@ Un tipo de recurso, tal y como lo define un vocabulario. A menudo, los vocabular
 
 ## **Archivo**: 
 
-Datos cargados en una instalación de Omeka S y asociados directamente a un elemento (véase también: Medios). 
+Datos subidos a una instalación de Omeka S y asociados directamente a un elemento (véase también: Medios). 
 
 *Analogía con Omeka Classic*: Archivo (pero la analogía es débil).
 
@@ -19,7 +19,7 @@ Un administrador que lo controla todo y que suele ser la persona que creó la in
 *Analogía con Omeka Classic*: Superusuario.
 
 ## **Instalación**: 
-Una instancia de Omeka S. A veces, el departamento central de TI de una institución se encarga de configurar y mantener la instalación y sus módulos para que otros los utilicen. En otros casos, una instalación solo tiene un administrador y un responsable de mantenimiento, además de los usuarios que inician sesión. 
+Una instancia de Omeka S. A veces, el departamento central de TI de una institución se encarga de configurar y mantener la instalación y sus módulos para que otros los utilicen. En otros casos, una instalación solo tiene un administrador y mantenedor, además de un usuario que ha iniciado sesión. 
 
 En Omeka Classic, una instalación de Classic equivaldría a un sitio, con páginas de navegación y funciones de búsqueda; cada sitio de Classic puede tener muchas exposiciones. En Omeka S, la principal diferencia es que una instalación no tiene necesariamente un sitio predeterminado; puede tener muchos sitios. Cada sitio es independiente, con su propia imagen de marca, páginas de navegación, páginas de búsqueda y tantas exposiciones como se desee. Un uso habitual es que cada «sitio» sea su propia exposición. 
 
@@ -41,7 +41,7 @@ La otra es una acepción del mundo de los metadatos, donde «mapeo» significa t
 
 
 ## **Medios**: 
-Añadidos a un elemento, los medios aportan el «contenido» a la descripción del elemento (sus metadatos). Normalmente, «medios» se refiere a un archivo de cualquier tipo, pero también podría referirse a un archivo adjunto de texto sin formato o con formato HTML, fuentes de datos externas como un vídeo de YouTube, una presentación de Slideshare, un flujo de bits de DSpace, etc. Un elemento puede tener un número ilimitado de medios, mientras que los medios solo existen adjuntos a un elemento. (Consulte «Recursos» si necesita archivos no adjuntos a elementos, como logotipos y banners del sitio). 
+Añadidos a un elemento, los medios aportan el «contenido» a la descripción del elemento (sus metadatos). Normalmente, «medios» se refiere a un archivo de cualquier tipo, pero también podría referirse a un archivo adjunto de texto sin formato o con formato HTML, fuentes de datos externas como un vídeo de YouTube, una presentación de Slideshare, un flujo de bits de DSpace, etc. Un elemento puede tener infinitos medios, mientras que los medios solo existen adjuntos a un elemento. (Consulte «Recursos» si necesita archivos no adjuntos a elementos, como logotipos y banners del sitio). 
 
 *Analogía con Omeka Classic*: Archivo.
 
@@ -56,7 +56,7 @@ Un tipo de metadatos definido —en mayor o menor medida— que se utiliza para 
 *Analogía con Omeka Classic*: Elemento.
 
 ## **Recurso**: 
-En general, un término que hace referencia a elementos, medios y conjuntos de elementos. No incluye activos. Un recurso puede tener una descripción de metadatos (propiedades y valores), una clase de recurso y utilizar una plantilla. Los recursos se pueden mostrar de diferentes maneras en cada sitio, utilizando la configuración de «Configurar páginas de recursos» incluida en cada tema activo. 
+En general, un término que se refiere a elementos, medios y conjuntos de elementos. No incluye activos. Un recurso puede tener una descripción de metadatos (propiedades y valores), una clase de recurso y utilizar una plantilla. Los recursos se pueden mostrar de diferentes maneras en cada sitio, utilizando la configuración de «Configurar páginas de recursos» incluida en cada tema activo. 
 
 ## **Plantilla de recurso**: 
 Un conjunto de propiedades predefinidas y, opcionalmente, una clase, que se utiliza para guiar la creación de elementos y la interpretación de las propiedades. Un uso típico es crear una plantilla para, por ejemplo, un `foaf:Person` que haga que los elementos que utilicen esa plantilla muestren las entradas para las `foaf: propiedades` esperadas o deseadas, y establezca la clase del elemento en `foaf:Person`. 
