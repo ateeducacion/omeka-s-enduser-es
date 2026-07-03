@@ -1,34 +1,138 @@
-# Registro de actividad El [módulo Registro de actividad](https://omeka.org/s/modules/ActivityLog/){target=_blank} le permite recopilar información sobre los cambios realizados en la interfaz de Omeka en una tabla. El módulo mostrará todos los cambios realizados en los recursos, sitios, ajustes de instalación, usuarios y puntos de datos añadidos por el módulo. 
+# Registro de actividad
 
-![La tabla de eventos en el módulo Registro de actividad.](modulesfiles/activityLog.png) Una vez activado en la pestaña [módulos](index.md) del panel de administración, el Registro de actividad no requiere ninguna configuración. Añade una entrada a la lista de módulos en la barra lateral izquierda, que lleva a los usuarios a la tabla de eventos. 
+El [módulo «Registro de actividad»](https://omeka.org/s/modules/ActivityLog/){target=_blank} te permite recopilar en una sola tabla la información sobre los cambios realizados en la interfaz de Omeka. El módulo mostrará todos los cambios realizados en los recursos, los sitios, la configuración de la instalación, los usuarios y los puntos de datos añadidos por los módulos. 
 
-Solo los usuarios con nivel de administrador global y supervisor pueden acceder al registro de actividad. Solo el administrador global puede borrar los datos del registro de actividad. ## Ver eventos El registro de actividad registrará los eventos cuando esté activo. La tabla reflejará todos los cambios realizados en la instalación por todos los usuarios. La tabla se muestra en orden cronológico inverso (los eventos más recientes en la parte superior). Solo muestra los eventos que modifican (crean, actualizan y eliminan). No incluye eventos de solo lectura (como las búsquedas). La tabla incluye las siguientes columnas: - **ID**: el identificador interno del evento - **Fecha**: la fecha y hora del evento, utilizando la zona horaria de la instalación
-- **Usuario**: el usuario que desencadenó el evento y su función. Cuando ningún usuario ha iniciado sesión (como en el caso de las contribuciones realizadas mediante los formularios públicos del módulo [Recopilación](collecting.md)), este espacio quedará en blanco. - **IP**: la dirección IP del usuario en el momento del evento.
-- **Nombre del evento**: El tipo de evento que fue desencadenado por el usuario - **Recurso**: El ID del recurso que fue modificado por el usuario. Si se trata de varios recursos, como en una acción masiva, los ID de todos los recursos afectados aparecerán en los datos. - **Mensajes**: Cualquier mensaje que describa el evento, en forma de lista.
+![La tabla de eventos del módulo «Registro de actividad».](modulesfiles/activityLog.png)
 
-Se puede ver un evento con más detalle haciendo clic en el enlace «Ver datos del evento» en cada entrada de la tabla. Esto abrirá el panel derecho para mostrar una versión técnica de los datos guardados en la base de datos en el evento. ![La tabla de eventos en el módulo Registro de actividad, con los datos del evento mostrados en el panel derecho.](modulesfiles/activityLog_eventData.png)
+Una vez activado en la pestaña [Módulos](index.md) del panel de administración, el Registro de actividad no requiere ninguna configuración. Añade una entrada a la lista de módulos de la barra lateral izquierda, que lleva a los usuarios a la tabla de eventos. 
 
-Por ejemplo, un evento en el que se eliminan varios elementos (ID 123, 124 y 125) de un sitio (ID 01) dirá: ``` { "request_options": { "collectionAction": "remove", },
-    "request_content": { "o:site": [ "01" ] }, "request_ids": [ "123", "124", "125"])
-``` Algunos eventos, cuando están relacionados con un recurso específico, proporcionarán un enlace a ese recurso, así como un enlace para ver más información. ![La tabla de eventos en el módulo Registro de actividad, con los datos del evento mostrados en el panel derecho.](modulesfiles/activityLog_events.png)
+Solo los usuarios con los niveles de administrador global y supervisor pueden acceder al Registro de actividad. Solo el «Administrador global» puede borrar los datos del «Registro de actividad».  
 
-### Filtrar eventos Los usuarios con permiso para ver el Registro de actividad pueden filtrar los eventos. Haga clic en el botón «Ver filtros» en la parte superior de la tabla para abrir el panel derecho: ![La tabla de eventos en el módulo Registro de actividad, con el panel derecho mostrando las opciones de filtrado para la tabla.](modulesfiles/activityLog_filter.png)
+## Ver eventos
 
-- El filtrado por nombre de evento le permitirá reducir la búsqueda por los tipos de cambios realizados: creación, eliminación, actualización, actualización por lotes, cambios de configuración, etc. ![La tabla de eventos en el módulo Registro de actividad, con el panel derecho mostrando las opciones de filtrado de eventos para la tabla.](modulesfiles/activityLog_filterName.png)
+El «Registro de actividad» registrará los eventos cuando esté activo. La tabla reflejará todos los cambios realizados en la instalación por todos los usuarios. La tabla se muestra en orden cronológico inverso (los eventos más recientes aparecen en la parte superior). Solo muestra los eventos que modifican (crear, actualizar y eliminar). No incluye eventos de solo lectura (como las búsquedas). 
 
-- El filtrado por recurso le permitirá seleccionar entre los recursos dentro de la instalación: elemento, medio, conjunto de elementos, sitio, página, etc. ![La tabla de eventos en el módulo Registro de actividad, con el panel derecho mostrando las opciones de filtrado de recursos para la tabla.](modulesfiles/activityLog_filterResource.png)
+La tabla incluye las siguientes columnas:
 
-- El filtrado por usuario le permitirá elegir entre la lista de usuarios que han realizado cambios en la instalación dentro del rango de recopilación del Registro de actividad. ![La tabla de eventos en el módulo Registro de actividad, con el panel derecho mostrando las opciones de filtrado de usuarios para la tabla.](modulesfiles/activityLog_filterUser.png)
+- **ID**: El identificador interno del evento
+- **Fecha**: La fecha y hora del evento, según la zona horaria de la instalación
+- **Usuario**: El usuario que provocó el evento y su rol. Cuando no haya ningún usuario conectado (como en el caso de las contribuciones realizadas mediante los formularios públicos del módulo [Collecting](collecting.md)), este campo aparecerá en blanco. 
+- **IP**: La dirección IP del usuario en el momento del evento
+- **Nombre del evento**: El tipo de evento que ha desencadenado el usuario
+- **Recurso**: El ID del recurso que ha modificado el usuario. Si se trata de varios recursos, como en una acción masiva, se mostrarán en los datos los ID de todos los recursos afectados. 
+- **Mensajes**: Cualquier mensaje que describa el evento, en forma de lista.
 
-- El filtrado por fecha le permitirá seleccionar una o dos fechas en el calendario: una fecha de inicio para los eventos (a partir de) y una fecha de finalización. ![La tabla de eventos en el módulo Registro de actividad, con el panel derecho mostrando las opciones de filtrado por fecha para la tabla.](modulesfiles/activityLog_filterDate.png)
+Se puede ver un evento con más detalle haciendo clic en el enlace «Ver datos del evento» en cada entrada de la tabla. Esto abrirá el panel lateral derecho para mostrar una versión técnica de los datos guardados en la base de datos correspondientes al evento. 
 
-Los usuarios pueden filtrar los eventos utilizando los múltiples filtros disponibles (verá el recuento de cada entrada entre paréntesis): - **ID**: Filtra los eventos por ID de evento - **Usuario**: Filtra los eventos por usuario - **Rol de usuario**: Filtra los eventos por rol de usuario - **IP**: Filtra los eventos por dirección IP - **Nombre del evento**: Filtra los eventos por nombre del evento
-- **Recurso**: filtra los eventos por nombre de recurso - **ID de recurso**: filtra los eventos por ID de recurso - **Desde**: filtra los eventos por fecha desde (en adelante) - **Antes de**: filtra los eventos por fecha anterior. Configura los filtros y haz clic en «Aplicar filtros». La página resultante mostrará los resultados filtrados. Haz clic en «Borrar filtros» para volver a la lista predeterminada.
+![La tabla de eventos del módulo «Registro de actividad», con los datos del evento mostrados en el panel lateral derecho.](modulesfiles/activityLog_eventData.png)
 
-#### Eventos capturados De forma predeterminada, el módulo registrará los siguientes tipos de eventos. Los módulos pueden añadir más eventos, pero no se incluyen aquí. - `user.login` - `user.logout` - `setting.insert` - para el recurso «setting» - para el recurso «site_setting» - para el recurso «user_setting»
-- `setting.update` - para el recurso «setting» - para el recurso «site_setting» - para el recurso «user_setting» - `setting.delete` - para el recurso «setting» - para el recurso «site_setting» - para el recurso «user_setting»
-- `api.create.post` para todos los recursos API - `api.update.post` para todos los recursos API - `api.delete.post` para todos los recursos API - `api.batch_create.post` para todos los recursos API - `api.batch_update.post` para todos los recursos API - `api.batch_delete.post` para todos los recursos API - `entity.persist.post`
-    - para el recurso «Omeka\Entity\Media» - para el recurso «Omeka\Entity\ApiKey» - para el recurso «Omeka\Entity\Module» - `entity.update.post` - para el recurso «Omeka\Entity\User»
-    - para el recurso «Omeka\Entity\Module» - `entity.remove.post` - para el recurso «Omeka\Entity\ApiKey» - para el recurso «Omeka\Entity\Module». #### Exportar eventos Los administradores pueden exportar los datos utilizando la API REST: ```
+Por ejemplo, un evento en el que se eliminan varios elementos (ID 123, 124 y 125) de un sitio (ID 01) dirá:
 
-/api-local/activity_log_event ``` ## Eliminar eventos Desde la página Módulos, un usuario administrador global puede seleccionar «Configurar» en la entrada del registro de actividad. Esto ofrece la posibilidad de eliminar todas las entradas del registro de actividad anteriores a una fecha determinada. ![La página de configuración del registro de actividad, con la opción de eliminar los eventos que se hayan producido antes de una fecha determinada.](modulesfiles/activityLog_config.png) 
+
+```
+{
+    "request_options": {
+ "collectionAction": "remove",
+    },
+    "request_content": {
+ "o:site": [
+ "01"
+ ]
+    },
+    "request_ids": [
+ "123",
+ "124",
+ "125"])
+```
+
+Algunos eventos, cuando están relacionados con un recurso específico, proporcionarán un enlace a dicho recurso, así como un enlace para ver más información.
+
+![La tabla de eventos del módulo «Registro de actividad», con los datos de los eventos mostrados en el panel lateral derecho.](modulesfiles/activityLog_events.png)
+
+### Filtrar eventos
+
+Los usuarios con permiso para ver el «Registro de actividad» pueden filtrar los eventos. Haz clic en el botón «Ver filtros» situado en la parte superior de la tabla para abrir el panel lateral derecho: 
+
+![La tabla de eventos del módulo «Registro de actividad», con el panel lateral derecho mostrando las opciones de filtrado de la tabla.](modulesfiles/activityLog_filter.png)
+
+- El filtrado por nombre de evento te permitirá acotar los resultados según los tipos de cambios realizados: creación, eliminación, actualización, actualización por lotes, cambios en la configuración, etc.
+
+![La tabla de eventos del módulo «Registro de actividad», con el panel lateral derecho mostrando las opciones de filtrado de eventos para la tabla.](modulesfiles/activityLog_filterName.png)
+
+- El filtrado por recurso te permitirá seleccionar entre los recursos de la instalación: elemento, medio, conjunto de elementos, sitio, página, etc.
+
+![La tabla de eventos del módulo «Registro de actividad», con el panel deslizante de la derecha mostrando las opciones de filtrado por recurso para la tabla.](modulesfiles/activityLog_filterResource.png)
+
+- El filtrado por usuario te permitirá elegir entre la lista de usuarios que han realizado cambios en la instalación dentro del intervalo de recopilación del «Registro de actividad».
+
+![La tabla de eventos del módulo «Registro de actividad», con el panel lateral derecho mostrando las opciones de filtrado por usuario para la tabla.](modulesfiles/activityLog_filterUser.png)
+
+- El filtrado por fecha te permitirá seleccionar una o dos fechas en el calendario: una fecha de inicio para los eventos (a partir de esa fecha) y una fecha de fin.
+
+![La tabla de eventos del módulo «Registro de actividad», con el panel lateral derecho mostrando las opciones de filtrado por fecha de la tabla.](modulesfiles/activityLog_filterDate.png)
+
+Los usuarios pueden filtrar los eventos utilizando los distintos filtros disponibles (verás el recuento de cada entrada entre paréntesis):
+
+- **ID**: Filtrar eventos por ID de evento
+- **Usuario**: Filtrar eventos por usuario
+- **Rol de usuario**: Filtrar eventos por rol de usuario 
+- **IP**: Filtrar eventos por dirección IP
+- **Nombre del evento**: Filtrar eventos por nombre del evento
+- **Recurso**: Filtrar eventos por nombre de recurso
+- **ID de recurso**: Filtrar eventos por ID de recurso
+- **Desde**: Filtrar eventos por fecha a partir de (a partir de)
+- **Antes de**: Filtrar eventos por fecha anterior a.
+
+Configure los filtros y haga clic en «Aplicar filtros». La página resultante mostrará los resultados filtrados. Haga clic en «Borrar filtros» para volver a la lista predeterminada.
+
+#### Eventos capturados
+
+De forma predeterminada, el módulo registrará los siguientes tipos de eventos. Los módulos pueden añadir más eventos, pero no se enumeran aquí.
+
+- `user.login`
+- `user.logout`
+- `setting.insert`
+    - para el recurso «setting»
+    - para el recurso «site_setting»
+    - para el recurso «user_setting»
+- `setting.update`
+    - para el recurso «setting»
+    - para el recurso «site_setting»
+    - para el recurso «user_setting»
+- `setting.delete`
+    - para el recurso «setting»
+    - para el recurso «site_setting»
+    - para el recurso «user_setting»
+- `api.create.post` para todos los recursos de la API
+- `api.update.post` para todos los recursos de la API
+- `api.delete.post` para todos los recursos de la API
+- `api.batch_create.post` para todos los recursos de la API
+- `api.batch_update.post` para todos los recursos de la API
+- `api.batch_delete.post` para todos los recursos de la API
+- `entity.persist.post`
+    - para el recurso «Omeka\Entity\Media»
+    - para el recurso «Omeka\Entity\ApiKey»
+    - para el recurso «Omeka\Entity\Module»
+- `entity.update.post`
+    - para el recurso «Omeka\Entity\User»
+    - para el recurso «Omeka\Entity\Module»
+- `entity.remove.post`
+    - para el recurso «Omeka\Entity\ApiKey»
+    - para el recurso «Omeka\Entity\Module».
+
+#### Exportar eventos
+
+Los administradores pueden exportar los datos mediante la API REST:
+
+```
+
+/api-local/activity_log_event
+
+```
+
+## Eliminar eventos
+
+Desde la página «Módulos», un usuario con permisos de administrador global puede seleccionar «Configurar» en la entrada del Registro de actividad. Esto permite eliminar todas las entradas del registro de actividad anteriores a una fecha determinada. 
+
+![La página de configuración del registro de actividad, con la opción de eliminar eventos ocurridos antes de una fecha introducida.](modulesfiles/activityLog_config.png)
+

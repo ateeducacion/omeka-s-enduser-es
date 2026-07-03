@@ -1,8 +1,8 @@
 # Red de términos NDE
 
-El [módulo Red de términos NDE](https://omeka.org/s/modules/NdeTermennetwerk/){target=_blank} es un submódulo de [Value Suggest](valuesuggest.md) y añade una función de autocompletado a propiedades específicas de una plantilla de recursos, basándose en vocabularios controlados para ayudar a los usuarios a rellenarlas. 
+El [módulo «Red de términos NDE»](https://omeka.org/s/modules/NdeTermennetwerk/){target=_blank} es un submódulo de [Value Suggest](valuesuggest.md) y añade una función de autocompletado a propiedades específicas de una plantilla de recurso, basándose en vocabularios controlados para ayudar a los usuarios a rellenarlas. 
 
-Para que este módulo funcione, es necesario que el módulo Value Suggest esté instalado y activo. Cuando está activo, la lista desplegable de Value Suggest mostrará las entradas de NDE al principio.
+Para que este módulo funcione, es necesario que el módulo Value Suggest esté instalado y activo. Cuando está activo, la lista desplegable de Value Suggest mostrará entradas de NDE al principio.
 
 Añade los siguientes vocabularios como tipos de datos:
 
@@ -14,9 +14,9 @@ Añade los siguientes vocabularios como tipos de datos:
 - Registro Básico Arqueológico
 - Adamlink: calles de Ámsterdam
 - Tesauro de palabras clave de Brinkman
-- Tesauro de Historia Cultural
-- Tesauro de Historia Cultural - Materiales
-- Tesauro de Historia Cultural - Estilos y períodos
+- Tesauro histórico-cultural
+- Tesauro histórico-cultural - Materiales
+- Tesauro histórico-cultural - Estilos y períodos
 - EuroVoc - tesauro de la Unión Europea
 - GeoNames: nombres geográficos de los Países Bajos, Bélgica y Alemania
 - GTAA: géneros
@@ -34,7 +34,7 @@ Añade los siguientes vocabularios como tipos de datos:
 - Tesauro de la Segunda Guerra Mundial en los Países Bajos
 - Wikidata: todas las entidades
 - Wikidata: personas
-- Wikidata: lugares en los Países Bajos y Bélgica
-- Wikidata: calles en los Países Bajos.
+- Wikidata: localidades de los Países Bajos y Bélgica
+- Wikidata: calles de los Países Bajos.
 
 Para obtener más información, consulta la [documentación del módulo Value Suggest](valuesuggest.md).
