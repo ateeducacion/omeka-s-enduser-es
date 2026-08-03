@@ -1,6 +1,6 @@
-# Navegación por metadatos
+# Exploración de metadatos
 
-El [módulo «Navegación por metadatos»](https://omeka.org/s/modules/MetadataBrowse){target=_blank} permite explorar todos los recursos que comparten un valor para una propiedad de metadatos concreta.
+El [módulo «Exploración de metadatos»](https://omeka.org/s/modules/MetadataBrowse){target=_blank} permite explorar todos los recursos que comparten un valor para una propiedad de metadatos concreta.
 
 Para ello, convierte las propiedades seleccionadas en un enlace o añade un enlace debajo de las propiedades con el texto «Ver todos los elementos con este valor». Estos enlaces solo aparecen en las páginas de visualización de los elementos. Al hacer clic en el enlace, el módulo muestra los resultados de esa búsqueda (el valor de la propiedad es igual al introducido). Es similar al complemento de Omeka Classic [Búsqueda por metadatos](http://omeka.org/add-ons/plugins/search-by-metadata/){target=_blank}.
 
@@ -19,9 +19,9 @@ En la página que se muestra, la sección principal muestra todas las propiedade
 
 ![Página de configuración de «Metadata Browse» del sitio. La barra lateral muestra las propiedades disponibles y la zona principal muestra las propiedades que ya se han configurado: Creador, Fecha, Editor, Es una versión de y Título.](../modules/modulesfiles/mdbr_sites2.png)
 
-Elimina cualquier propiedad seleccionada haciendo clic en el icono de la papelera. Si haces clic accidentalmente en el botón de eliminar, simplemente haz clic en el botón de deshacer que lo sustituye para conservar esa propiedad.
+Elimina cualquier propiedad seleccionada haciendo clic en el icono de la papelera. Si haces clic accidentalmente en el botón de eliminar, solo tienes que hacer clic en el botón de deshacer que lo sustituye para conservar esa propiedad.
 
-![Una propiedad marcada para su eliminación, resaltada en rojo, que muestra el botón de deshacer.](../modules/modulesfiles/mdbr_sites3.png)
+![Una propiedad marcada para ser eliminada, resaltada en rojo, que muestra el botón de deshacer.](../modules/modulesfiles/mdbr_sites3.png)
 
 Recuerda hacer clic en el botón «Guardar» para guardar los cambios.
 
@@ -30,7 +30,7 @@ Una vez que hayas seleccionado las propiedades y guardado los cambios, los visit
 
 La vista del elemento se mostrará con la propiedad como un enlace o con un enlace que diga «Ver todos los elementos con este valor», dependiendo de si la [opción «Enlaces directos» está marcada](#direct-links) en la configuración global del módulo.
 
-En el ejemplo siguiente, la navegación por metadatos está disponible para Título, Fecha de publicación y Editor, y la opción «Enlaces directos» no está marcada.
+En el ejemplo siguiente, la navegación por metadatos está disponible para «Título», «Fecha de publicación» y «Editor», y la opción «Enlaces directos» no está marcada.
 
 ![Un elemento con flechas que apuntan a los enlaces para «ver todos los elementos con este valor»](../modules/modulesfiles/mdbr_public1.png)
 
@@ -70,7 +70,7 @@ La selección de propiedades para la exploración de metadatos en la configuraci
 
 Selecciona las propiedades en la barra lateral haciendo clic en la propiedad deseada. Se cargará bajo el mensaje «Seleccionar propiedades».
 
-![Configuración de Metadata Browse, con algunas propiedades seleccionadas](../modules/modulesfiles/mdbr_config4.png)
+![Configuración de Metadata Browse, algunas propiedades seleccionadas](../modules/modulesfiles/mdbr_config4.png)
 
 Para eliminar una propiedad, basta con hacer clic en el icono de la papelera situado a la derecha de la etiqueta de la propiedad.
 

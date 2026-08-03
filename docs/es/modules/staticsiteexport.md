@@ -6,7 +6,7 @@ Los sitios estáticos no contienen los elementos habituales de los sitios web di
 
 ![La página del módulo que se encuentra en cada sitio, donde se crean y gestionan las exportaciones.](modulesfiles/sse_siteTable.png)
 
-Una vez generada una exportación, puedes editar su CSS u otro código para personalizarla y que se ajuste mejor a tu sitio web original. Para este y otros usos avanzados de las exportaciones, consulta la documentación para desarrolladores incluida en el archivo «Readme» del paquete del módulo. 
+Una vez generada una exportación, puedes editar su CSS u otro código para personalizarla y que se ajuste mejor a tu sitio web original. Para esto y otros usos avanzados de las exportaciones, consulta la documentación para desarrolladores incluida en el archivo «Readme» del paquete del módulo. 
 
 Los sitios estáticos pueden resultar útiles como copia de seguridad y registro del contenido de tu sitio, así como para reducir la carga del servidor en proyectos web heredados. 
 
@@ -19,7 +19,7 @@ Cualquier usuario con permisos específicos para el sitio puede crear y gestiona
 
 ## Configuración
 
-Tras instalar este módulo, deberás añadir una «Ruta al directorio de sitios» en la página de configuración del módulo. Esta es la ruta al directorio donde se guardarán tus sitios estáticos en el servidor. La ruta debe existir y el servidor web debe tener permisos de escritura en ella.
+Tras instalar este módulo, deberás añadir una «Ruta al directorio de sitios» en la página de configuración del módulo. Se trata de la ruta al directorio donde se guardarán tus sitios estáticos en el servidor. La ruta debe existir y el servidor web debe tener permisos de escritura en ella.
 
 ![La página de configuración del módulo, donde el administrador global establecerá el directorio en el que se guardarán las exportaciones de los sitios.](modulesfiles/sse_config.png)
 
@@ -44,13 +44,13 @@ Ten en cuenta que la exportación ejecuta varios comandos de uso común en tu se
 
 ![La tabla de exportaciones con la barra lateral abierta, en la que se muestra la información de la exportación.](modulesfiles/sse_info.png)
 
-La exportación se guardará como un archivo ZIP en la carpeta que hayas establecido en la configuración del módulo. Esta será relativa a la ruta de instalación. Puedes acceder al archivo ZIP de la exportación y descargarlo mediante tu navegador o desde la línea de comandos. 
+La exportación se guardará como un archivo ZIP que aparecerá en la carpeta que hayas establecido en la configuración del módulo. Esta será relativa a tu ruta de instalación. Puedes acceder al archivo ZIP de la exportación y descargarlo mediante tu navegador o desde la línea de comandos. 
 
 ![La tabla de exportaciones con la barra lateral abierta, mostrando una confirmación de la eliminación de una exportación.](modulesfiles/sse_delete.png)
 
 ## Implementa tu sitio con Hugo
 
-Puedes descomprimir la exportación y generar tu sitio con Hugo, ya sea de forma local o en línea. 
+Puedes descomprimir la exportación y compilar tu sitio utilizando Hugo, ya sea de forma local o en línea. 
 
 Tras exportar un sitio estático, puedes descomprimir el archivo ZIP resultante y utilizar inmediatamente [Hugo](https://gohugo.io/){target=_blank} para generar el sitio, ejecutar un servidor de pruebas local y visualizar el sitio:
 
@@ -61,6 +61,6 @@ cd <nombre-de-la-exportación>/
 hugo server
 ```
 
-Una vez completada la compilación, sigue las instrucciones que aparecen en tu terminal y accede al servidor web especificado desde tu navegador. Si tu sitio web es muy grande, es posible que tengas que desactivar el comportamiento predeterminado de «vigilar los cambios y volver a generar» ejecutando `hugo server --watch=false`.
+Una vez completada la compilación, sigue las instrucciones que aparecen en tu terminal y accede al servidor web especificado desde tu navegador. Si tu sitio es muy grande, es posible que tengas que desactivar el comportamiento predeterminado de «vigilar los cambios y volver a generar» ejecutando `hugo server --watch=false`.
 
-Cuando estés listo para implementar tu sitio, ejecuta `hugo` en el directorio de tu proyecto. Consulta la documentación de Hugo para obtener más información sobre cómo utilizar la  [interfaz de línea de comandos (CLI)](https://gohugo.io/commands/){target=_blank} para gestionar tu sitio web, y cómo [alojar y publicar](https://gohugo.io/host-and-deploy/){target=_blank} tu sitio web.
+Cuando estés listo para implementar tu sitio, ejecuta `hugo` en el directorio de tu proyecto. Consulta la documentación de Hugo para obtener más información sobre cómo utilizar la  [interfaz de línea de comandos (CLI)](https://gohugo.io/commands/){target=_blank} para gestionar tu sitio web, y cómo [alojar y desplegar](https://gohugo.io/host-and-deploy/){target=_blank} tu sitio web.

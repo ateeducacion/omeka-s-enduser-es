@@ -42,7 +42,7 @@ Cuando se selecciona una salida, el usuario verá un archivo disponible para des
 
 ## Problemas con los formatos de salida
 
-La conversión de los datos de su sitio a estos formatos puede generar algunos errores. Por lo general, se trata de problemas de compatibilidad entre los metadatos de sus recursos y los formatos, o con la herramienta que utilizamos para crear dichos formatos. 
+La conversión de los datos de tu sitio a estos formatos puede generar algunos errores. Por lo general, se trata de problemas de compatibilidad entre los metadatos de tus recursos y los formatos, o con la herramienta que utilizamos para crear dichos formatos. 
 
 Recomendamos a los administradores que comprueben minuciosamente cada formato de salida y busquen errores antes de que los detecte el público. A continuación, edite los recursos según sea necesario para corregir los errores producidos. Algunos ejemplos son:
 

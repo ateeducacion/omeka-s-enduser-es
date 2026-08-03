@@ -74,7 +74,7 @@ Puedes utilizar la [página «Información del sistema»](admin-dashboard.md#sys
 
 	`No se ha podido crear el servicio con el nombre «Omeka\Cli». Motivo: ni «proc_open()» ni «exec()» están disponibles.`
 
-  En este caso, ImageMagick no funcionará, pero sí lo harán Imagick y GD.
+  En este caso, ImageMagick no funcionará, pero Imagick y GD sí lo harán.
 
 ## Ruta de PHP
 
@@ -84,11 +84,11 @@ Omeka 4.0 y versiones posteriores requieren PHP 7.4 o superior.
 
 Por defecto, Omeka S intentará detectar automáticamente la ruta a la CLI de PHP en el servidor, pero en algunos servidores esta detección no funciona, o bien hay varios comandos `php` diferentes entre los que elegir. 
 
-Utiliza la [página de información del sistema](admin-dashboard.md#system-information) para comprobar que tu instalación ha identificado la ruta correcta a PHP. Si aparece un error al hacer clic en el botón, esto puede indicar que debes configurar los ajustes manualmente.
+Utiliza la [página de información del sistema](admin-dashboard.md#system-information) para comprobar que tu instalación ha identificado la ruta correcta a PHP. Si aparece un error al hacer clic en el botón, esto puede indicar que es necesario configurar los ajustes manualmente.
 
 ![Los botones de «Información del sistema» para obtener la ruta de PHP y la versión de ImageMagick.](files/systeminfo_buttons.png)
 
-Si empiezas a ver errores al comenzar a trabajar con Omeka, como «Error de PHP-CLI: ruta de PHP no válida», o si tienes [tareas](admin/jobs.md) que se inician pero no se completan, tendrás que configurar manualmente la ruta de PHP.
+Si empiezas a ver errores al comenzar a trabajar con Omeka, como por ejemplo «Error de PHP-CLI: ruta de PHP no válida», o si tienes [tareas](admin/jobs.md) que se inician pero no se completan, tendrás que configurar manualmente la ruta de PHP.
 
 Quizá también te interese seleccionar manualmente una versión estable anterior de PHP, en lugar de una nueva versión que pueda estar provocando un comportamiento inesperado en tu sitio de Omeka.
 
@@ -102,9 +102,9 @@ Configura manualmente la ruta correcta en el archivo `local.config.php`, ubicado
     ],
 ```
 
-Sustituye la palabra «null» por una ruta, entre comillas simples ('usr/local/bin/php'). Esta ruta suele tener un formato similar a `/usr/local/php80/bin/php`, `/usr/local/bin/php` o `/usr/local/bin/ea-php74`.
+Sustituye la palabra «null» por una ruta, entre comillas simples («usr/local/bin/php»). Esta ruta suele tener un formato similar a `/usr/local/php80/bin/php`, `/usr/local/bin/php` o `/usr/local/bin/ea-php74`.
 
-Estos son solo ejemplos; la ruta correcta dependerá de tu servidor. Busca en la documentación de ayuda o en la base de conocimientos de tu proveedor de alojamiento la ruta correcta de PHP; se trata de una pregunta frecuente en relación con una gran variedad de instalaciones de software. Si no encuentras nada, ponte en contacto con tu proveedor de alojamiento o con el administrador del sistema y pregúntales.
+Estos son solo ejemplos; la ruta correcta dependerá de tu servidor. Busca en la documentación de ayuda o en la base de conocimientos de tu proveedor de alojamiento la ruta correcta de PHP; se trata de una pregunta frecuente para una gran variedad de instalaciones de software. Si no encuentras nada, ponte en contacto con tu proveedor de alojamiento o con el administrador del sistema y pregúntales.
 
 Si has descargado el archivo para editarlo, asegúrate de volver a subir la versión modificada a tu instalación de Omeka.
 
@@ -112,7 +112,7 @@ Si has descargado el archivo para editarlo, asegúrate de volver a subir la vers
 
 La clave `mail` se puede utilizar para configurar cómo Omeka S envía correos electrónicos. Omeka envía correos electrónicos a los [usuarios al registrarse](admin/users.md#create-a-user) y cuando restablecen sus contraseñas; los módulos pueden añadir otras funciones de correo electrónico, como la [confirmación de envíos](modules/collecting.md). 
 
-Por defecto, se utiliza [sendmail](https://en.wikipedia.org/wiki/Sendmail){target=_blank}, donde el servidor se encarga de tener configurado y preparado el envío de correo. Sendmail no suele requerir ninguna configuración por parte de Omeka S. Otra opción para algunos servidores es configurar una conexión SMTP directa para el envío de correo. 
+Por defecto, se utiliza [sendmail](https://en.wikipedia.org/wiki/Sendmail){target=_blank}, donde el servidor se encarga de tener configurada y preparada la entrega del correo. Sendmail no suele requerir ninguna configuración por parte de Omeka S. Otra opción para algunos servidores es configurar una conexión SMTP directa para el envío de correo. 
 
 Un ejemplo de configuración, que debe añadirse al final del archivo `local.config.php`, tendría un aspecto similar al siguiente:
 
@@ -136,7 +136,7 @@ Un ejemplo de configuración, que debe añadirse al final del archivo `local.con
     ],
 ```
 
-Consulta la [documentación de lamas-mail](https://docs.laminas.dev/laminas-mail/transport/smtp-options/){target=_blank} para obtener más información.
+Consulta la [documentación de lamas-mail](https://docs.laminas.dev/laminas-mail/transport/smtp-options/){target=_blank} para obtener más aclaraciones.
 
 Algunas configuraciones de correo solo permiten enviar mensajes con un encabezado «From» que utilice una dirección específica y autorizada. Para garantizar que todo el correo saliente utilice una dirección «From» específica, puedes utilizar `default_message_options`:
 

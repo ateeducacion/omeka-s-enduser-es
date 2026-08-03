@@ -1,6 +1,6 @@
 # Conector DSpace
 
-El [módulo DSpace Connector](https://omeka.org/s/modules/DspaceConnector){target=_blank} te permite conectar una instancia de Omeka S a un [repositorio DSpace](https://duraspace.org/dspace/){target=_blank} para importar elementos desde dicho repositorio. Además de importar la información, el elemento de Omeka S mantendrá una conexión con el elemento original. Esto te permite [actualizar la información desde la fuente cuando lo desees](#update-imported-resources).
+El [módulo Conector DSpace](https://omeka.org/s/modules/DspaceConnector){target=_blank} te permite conectar una instancia de Omeka S a un [repositorio DSpace](https://duraspace.org/dspace/){target=_blank} para importar elementos desde dicho repositorio. Además de importar la información, el elemento de Omeka S mantendrá una conexión con el elemento original. Esto te permite [actualizar la información desde la fuente cuando lo desees](#update-imported-resources).
 
 Ten en cuenta que el conector DSpace solo funciona con las versiones 5.6 y superiores de DSpace, incluida la versión 7.x. Este conector se basa en la API de DSpace y en su configuración específica para cada sitio.
 
@@ -13,7 +13,7 @@ Accede a la sección denominada «DSpace Connector» en la sección Módulos.
 En el primer formulario, introduce la siguiente información:
 
 * **URL del sitio DSpace** del repositorio: la URL completa, incluyendo `http://`. Debe ser la URL base del repositorio DSpace sin añadir al final la información `/rest/` ni `/server/`.
-* **Punto final** de la API (las versiones de DSpace anteriores a la 7 probablemente utilicen `rest` como punto final; este es el valor por defecto. Las versiones de DSpace 7 y superiores probablemente utilicen `server/api` como punto final; tendrás que cambiarlo manualmente).
+* **Punto final** de la API (las versiones de DSpace anteriores a la 7 probablemente utilicen `rest` como punto final; este es el valor predeterminado. Las versiones de DSpace 7 y superiores probablemente utilicen `server/api` como punto final; tendrás que cambiarlo manualmente).
 * **Límite** o número máximo de resultados que se pueden recuperar de una sola vez.
 * **Importación de prueba** SOLO si deseas importar el número de resultados indicado en el campo «Límite» anterior desde la colección seleccionada en la siguiente pantalla. Útil para realizar pruebas y ajustes.
 
@@ -42,33 +42,33 @@ Para importar una sola colección, haz clic en el botón «Importar» situado a 
 Para importar todo el repositorio, haz clic en «Importar todo el repositorio» en la parte superior del formulario.
 
 !!! Nota
-  La importación de un repositorio completo de DSpace con un gran número de elementos (más de 5.000) probablemente saturará el servidor que aloja DSpace con solicitudes hasta provocar un fallo. Considera la posibilidad de importar colección por colección. Si aún así desea importar un repositorio grande al completo de una sola vez, lo siguiente podría resultarle útil:
+  La importación de un repositorio completo de DSpace con un gran número de elementos (más de 5 000) probablemente saturará el servidor que aloja DSpace con solicitudes hasta provocar un fallo. Considera la posibilidad de importar colección por colección. Si aún así desea importar un repositorio grande completo de una sola vez, lo siguiente podría resultarle útil:
 
   * En el menú inicial «Configuración de importación», establezca el **Límite** en un número menor, como 50 o 25.
 	* Prueba la importación marcando la casilla **Prueba de importación** en el menú inicial «Configuración de importación».
   * Ejecuta la importación por la noche y/o en cualquier momento en que haya menos tráfico en el servidor de DSpace.
 	* Considera la posibilidad de insertar temporalmente [una función `sleep()`](https://www.w3schools.com/php/func_misc_sleep.asp){target=_blank} entre la importación de cada registro en `Import.php` para ralentizar ligeramente el proceso (no recomendado para entornos de producción).
 
-Puedes seguir el estado de las importaciones accediendo a la pestaña «Importaciones anteriores» de DSpace Connector, o en la página [Tareas](../admin/jobs.md) del panel de administración.
+Puedes realizar un seguimiento del estado de las importaciones accediendo a la pestaña «Importaciones anteriores» de DSpace Connector, o en la página [Tareas](../admin/jobs.md) del panel de administración.
 
 !!! Nota
   ¿Tus tareas se inician pero no se completan? Es posible que tengas que [configurar la ruta de PHP](../configuration.md#php-path) para que tu sistema pueda ejecutar el proceso en segundo plano para crear los elementos.
 
 ## Revisar importaciones
 
-La página «Importaciones anteriores de DSpace» muestra una tabla con las importaciones anteriores de DSpace, con una casilla de selección para **Deshacer**, otra para **Volver a ejecutar**, el **ID de la tarea** de la importación, el **enlace a la colección de DSpace** del repositorio (que se muestra como nombre de la colección si se encuentra), cualquier **comentario** realizado durante la importación, el número de **elementos** importados con un enlace a los resultados de la búsqueda avanzada, la **fecha** de la importación, el **estado** de la importación, y el **propietario**, es decir, el usuario que inició la importación.
+La página «Importaciones pasadas de DSpace» muestra una tabla con las importaciones pasadas de DSpace, con una casilla de selección para **Deshacer**, otra para **Volver a ejecutar**, el **ID de tarea** de la importación, el **enlace a la colección de DSpace** del repositorio (que se muestra como nombre de la colección si se encuentra), cualquier **comentario** realizado durante la importación, el número de **elementos** importados con un enlace a los resultados de la búsqueda avanzada, la **fecha** de la importación, el **estado** de la importación, y el **Propietario**, es decir, el usuario que inició la importación.
 
 ![Tabla de importaciones anteriores que muestra dos importaciones completadas y una importación que dio lugar a un error al importar colecciones diferentes](../modules/modulesfiles/dspace_past.png)
 
-Los elementos de DSpace se importarán con cualquier campo de metadatos reconocido en la fuente (como `dc.title` o `dc.description.abstract`), y utilizarán `bibo:uri` para cargar el URI tal y como figura en el elemento de origen como `dc.identifier.uri`. Se tratará de un enlace en el que se puede hacer clic que aparecerá en las páginas públicas de los elementos y permitirá a los usuarios ver la fuente del elemento en su repositorio DSpace de origen. Si los campos contienen una o más etiquetas de idioma, los campos importados a Omeka también utilizarán esa etiqueta de idioma.
+Los elementos de DSpace se importarán con cualquier campo de metadatos reconocido en la fuente (como `dc.title` o `dc.description.abstract`), y utilizarán `bibo:uri` para cargar el URI tal y como figura en el elemento de origen como `dc.identifier.uri`. Este será un enlace en el que se podrá hacer clic y que aparecerá en las páginas públicas de los elementos, lo que permitirá a los usuarios ver la fuente del elemento en su repositorio DSpace de origen. Si los campos contienen una o más etiquetas de idioma, los campos importados a Omeka también utilizarán dicha etiqueta de idioma.
 
 ## Actualizar recursos importados
 
-Para actualizar los recursos creados mediante el conector de DSpace, basta con marcar «Re-run» (Volver a ejecutar) y, a continuación, hacer clic en «Submit» (Enviar) en la página «Past DSpace Imports» (Importaciones anteriores de DSpace). Los recursos se actualizarán, no se volverán a importar. Esto te permite utilizar el conector para sincronizar datos entre instalaciones de DSpace y Omeka S.
+Para actualizar los recursos creados mediante el conector de DSpace, basta con marcar «Re-run» y, a continuación, hacer clic en «Submit» en la página «Past DSpace Imports». Los recursos se actualizarán, no se volverán a importar. Esto te permite utilizar el conector para sincronizar datos entre instalaciones de DSpace y Omeka S.
 
 ## Deshacer una importación
 
-Puede ver las importaciones anteriores en la página «Importaciones anteriores de DSpace». Para deshacer una importación completada y eliminar todos los elementos asociados, marque la casilla correspondiente a cada importación que desee deshacer y haga clic en el botón «Enviar».
+Puedes ver las importaciones anteriores en la página «Importaciones anteriores de DSpace». Para deshacer una importación completada y eliminar todos los elementos asociados, marca la casilla correspondiente a cada importación que desees deshacer y haz clic en el botón «Enviar».
 
 ## Comprobar la API
 

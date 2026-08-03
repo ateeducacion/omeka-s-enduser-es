@@ -2,9 +2,9 @@
 
 El [módulo «Extraer metadatos»](https://omeka.org/s/modules/ExtractMetadata){target=_blank} permite a los administradores del sitio extraer los metadatos incrustados de los archivos multimedia. 
 
-El módulo añade una nueva pestaña «Extraer metadatos» a cada página multimedia, lo que te permitirá extraer manualmente cualquier metadato incrustado que se encuentre en el archivo. También añade un campo «Extraer metadatos» a la página de edición por lotes. Cuando está activado, funciona automáticamente con los archivos recién subidos. 
+El módulo añade una nueva pestaña «Extraer metadatos» a cada página de multimedia, lo que te permitirá extraer manualmente cualquier metadato incrustado que se encuentre en el archivo. También añade un campo «Extraer metadatos» a la página de edición por lotes. Cuando está activado, funciona automáticamente con los archivos recién subidos. 
 
-Un buen flujo de trabajo consiste en instalar y configurar el módulo, extraer de forma masiva los metadatos de los archivos existentes en la base de datos, asignarlos a los campos de metadatos multimedia elegidos y, a continuación, dejar que el módulo siga extrayendo metadatos de los archivos en el futuro.
+Un buen flujo de trabajo consiste en instalar y configurar el módulo, extraer de forma masiva los metadatos de los archivos existentes en la base de datos, asignarlos a los campos de metadatos multimedia que elijas y, a continuación, dejar que el módulo siga extrayendo metadatos de los archivos en el futuro.
 
 ## Configuración del módulo
 
@@ -20,7 +20,7 @@ Al configurar el módulo, puedes:
 
 Cuando hayas terminado de configurar el módulo, haz clic en el botón «Enviar» situado en la esquina superior derecha de la pantalla.
 
-![Vista de configuración del módulo «Extract Metadata» con la tabla de correspondencias del puntero JSON y el botón «Enviar» indicado con una flecha de color verde azulado](../modules/modulesfiles/extractmetadata_config.png)
+![Vista de configuración del módulo «Extract Metadata» con la tabla de correspondencias del puntero JSON y el botón «Enviar» indicado por una flecha de color verde azulado](../modules/modulesfiles/extractmetadata_config.png)
 
 ## Añadir archivos multimedia
 
@@ -72,7 +72,7 @@ Se utiliza para extraer muchos tipos de metadatos de diversos tipos de archivos.
  
 ### Tika
 
-Se utiliza para extraer diversos tipos de metadatos de diversos tipos de archivos. Requiere el kit de herramientas de análisis de contenido [Apache Tika](https://tika.apache.org/){target=_blank}. Es necesario tener instalado Java y configurar la ruta al archivo `tika-app-*.jar` en `config/module.config.php`, en la sección `[extract_metadata_extractor_config][tika][jar_path]`.
+Se utiliza para extraer diversos tipos de metadatos de distintos tipos de archivos. Requiere el kit de herramientas de análisis de contenido [Apache Tika](https://tika.apache.org/){target=_blank}. Es necesario tener instalado Java y configurar la ruta al archivo `tika-app-*.jar` en `config/module.config.php`, en la sección `[extract_metadata_extractor_config][tika][jar_path]`.
 
 ### OHMS
 
@@ -80,7 +80,7 @@ Añadido por el [módulo OHMS Embed](ohmsembed.md). Se utiliza para extraer los 
 
 ## Mapeadores
 
-Los mapeadores asignan los metadatos extraídos a los valores de los recursos. Ten en cuenta que es necesario habilitar un mapeador en la página de configuración del módulo. Este módulo incluye un mapeador. La mejor práctica para utilizar este módulo con otros mapeadores sería crear una bifurcación del código del módulo; consulta [nuestra documentación para desarrolladores para obtener más detalles](https://omeka.org/s/docs/developer/modules/){target=_blank}.
+Los mapeadores asocian los metadatos extraídos a los valores de los recursos. Ten en cuenta que es necesario habilitar un mapeador en la página de configuración del módulo. Este módulo incluye un mapeador. La mejor práctica para utilizar este módulo con otros mapeadores sería crear una bifurcación del código del módulo; consulta [nuestra documentación para desarrolladores para obtener más detalles](https://omeka.org/s/docs/developer/modules/){target=_blank}.
 
 ### Punteros JSON
 
@@ -88,7 +88,7 @@ Puedes asignar los metadatos extraídos a las propiedades de metadatos de los ar
 
 Quizá te interese extraer primero los metadatos de unos cuantos archivos y ver a qué información se puede apuntar, para luego probar algunas opciones sobre cuál es la mejor forma de asignarlos.
 
-Un ejemplo habitual es asignar la fecha de creación de un archivo JPEG a la propiedad «Fecha de creación» de Dublin Core. El puntero apunta al valor `DateTimeOriginal` de los metadatos Exif, que puedes ver si accedes a un elemento multimedia y consultas la pestaña «Extraer metadatos». 
+Un ejemplo habitual es asignar la fecha de creación de un archivo JPEG a la propiedad «Fecha de creación» de Dublin Core. El puntero apunta al valor `DateTimeOriginal` de los metadatos Exif, que puede consultar si accede a un elemento multimedia y consulta la pestaña «Extraer metadatos». 
 
 Configura el mapeador de la siguiente manera:
 + Recurso: [Multimedia o Elemento]
@@ -97,7 +97,7 @@ Configura el mapeador de la siguiente manera:
 + Propiedad: «Dublin Core: Fecha de creación»
 + Reemplazar valores: [marcado o desmarcado].
 
-![Vista de configuración del módulo «Extraer metadatos» con la tabla de correspondencias de punteros JSON y el botón de envío indicado por una flecha verde azulada](../modules/modulesfiles/extractmetadata_config.png)
+![Vista de configuración del módulo «Extraer metadatos» con la tabla de correspondencias de punteros JSON y el botón de envío indicado con una flecha verde azulada](../modules/modulesfiles/extractmetadata_config.png)
 
 Una vez guardada esta asignación, ejecuta la acción «Asignar metadatos» en un solo archivo o por lotes y, si tu archivo JPEG incluye `DateTimeOriginal`, el recurso multimedia debería tener ahora un valor de «Fecha de creación».
 

@@ -1,11 +1,11 @@
 # Tipos de datos numéricos
 
-El [módulo «Tipos de datos numéricos»](https://omeka.org/s/modules/NumericDataTypes){target=_blank} te permite configurar determinadas propiedades como datos numéricos mediante plantillas de recursos. Puedes designar propiedades como fechas y horas o como números.
+El [módulo «Tipos de datos numéricos»](https://omeka.org/s/modules/NumericDataTypes){target=_blank} te permite configurar determinadas propiedades como datos numéricos mediante plantillas de recursos. Puedes designar las propiedades como fechas y horas o como números.
 
 ## Crear propiedades numéricas
 Para implementar el módulo, tendrás que crear o editar una [plantilla de recursos](../content/resource-template.md) para establecer que determinadas propiedades tengan tipos de datos numéricos. 
 
-Al crear o editar una plantilla de recurso, busca en la barra lateral derecha la propiedad que deseas configurar como numérica. Haz clic en la propiedad para añadirla a la plantilla si es necesario.
+Al crear o editar una plantilla de recursos, busca en la barra lateral derecha la propiedad que deseas configurar como numérica. Haz clic en la propiedad para añadirla a la plantilla si es necesario.
 
 Una vez incluida la propiedad en la plantilla, haz clic en el icono del lápiz para editarla. En el panel lateral derecho que se abre, busca el menú desplegable «Tipo de datos» bajo el encabezado «Otras opciones».
 
@@ -13,7 +13,7 @@ Una vez incluida la propiedad en la plantilla, haz clic en el icono del lápiz p
 
 En el menú desplegable, selecciona una de las siguientes opciones bajo el encabezado «Numérico»:
 
-- Marca de tiempo, que puede abarcar un periodo tan amplio como un año o estar formateada como fecha y hora
+- Marca de tiempo, que puede abarcar un año o estar formateada como fecha y hora
 - Número, que puede ser negativo o positivo, y puede incluir decimales
 - Duración, para indicar cuánto tiempo duró algo, con opciones que van desde años hasta segundos
 - Intervalo, un rango basado en fechas con fechas de inicio y fin en cada instancia de la propiedad.
@@ -37,7 +37,7 @@ Si introduces un día sin mes, la información del día no se guardará.
 
 ![Campos de marca de tiempo vacíos, para la propiedad «Fecha»](../modules/modulesfiles/ndt-timestamp1.png)
 
-Al hacer clic en el botón «hora» situado a la derecha del campo de entrada del día, se cargarán campos desplegables adicionales para la hora, los minutos y los segundos. Ten en cuenta que no hay opción AM/PM; utiliza el formato de 24 horas (14 para las 2 p. m., etc.).
+Al hacer clic en el botón «hora» situado a la derecha del campo de entrada del día, se cargarán campos desplegables adicionales para la hora, los minutos y los segundos. Ten en cuenta que no hay opción de AM/PM; utiliza el formato de 24 horas (14 para las 2 p. m., etc.).
 
 ![Campos de marca de tiempo vacíos, para la propiedad «Fecha», con una fila de opciones de introducción de la hora debajo de las opciones de introducción de la fecha](../modules/modulesfiles/ndt-timestamp2.png)
 
@@ -51,9 +51,9 @@ El valor introducido debe ser un número entero o decimal. El número no debe se
 ![Campo de la propiedad «Cobertura espacial» con el número 1 en el campo de introducción de números y un botón de selección hacia arriba o hacia abajo a la derecha del campo](../modules/modulesfiles/ndt-number.png)
 
 ### Duración
-La propiedad «Duración» cuenta con una serie de campos en los que introducir la duración del recurso. Hay campos para Años, Meses y Días. Al hacer clic en el botón «hora» situado a la derecha del campo de introducción de días, se cargarán campos desplegables adicionales para horas, minutos y segundos. Ten en cuenta que no hay opción de AM/PM; utiliza el formato de 24 horas (14 para las 2 de la tarde, etc.).
+La propiedad «Duración» cuenta con una serie de campos en los que introducir la duración del recurso. Hay campos para años, meses y días. Al hacer clic en el botón «hora» situado a la derecha del campo de introducción de días, se cargarán campos desplegables adicionales para horas, minutos y segundos. Ten en cuenta que no hay opción AM/PM; utiliza el formato de 24 horas (14 para las 2 de la tarde, etc.).
 
-![Una propiedad denominada «duración», que utiliza el término «extent» del vocabulario DCTerms. Los campos descritos se encuentran en una pila, con el año en la parte superior.](../modules/modulesfiles/ndt-duration.png)
+![Una propiedad denominada «duración», que utiliza el término «extent» del vocabulario DCTerms. Los campos descritos aparecen en una pila, con el año en la parte superior.](../modules/modulesfiles/ndt-duration.png)
 
 No es necesario rellenar todos los campos. Por ejemplo, puedes introducir una duración de 1 año y 5 días, dejando en blanco el campo del mes.
 
@@ -64,7 +64,7 @@ Una propiedad «Intervalo» te permite introducir las fechas y horas de inicio y
 
 ## Edición masiva de datos numéricos
 
-El módulo añade opciones adicionales al menú desplegable de la [opción «Convertir tipo de datos» en las páginas de edición masiva](../content/items.md#batch-editing) para los recursos (elementos, medios y conjuntos de elementos).
+El módulo añade opciones adicionales al menú desplegable de la [opción «Convertir tipo de datos» en las páginas de edición masiva](../content/items.md#batch-editing) para recursos (elementos, medios y conjuntos de elementos).
 
 La opción «Convertir tipo de datos» te permite convertir una propiedad de texto existente a otros tipos de datos, incluidos los numéricos. No funcionará en propiedades cuyos datos sean actualmente un recurso de Omeka o un URI. 
 
@@ -81,7 +81,7 @@ En el segundo campo, selecciona una de las siguientes opciones para la conversi�
 
 ![Las opciones de edición por lotes para «Convertir a numérico».](modulesfiles/ndt-batchedit.png)
 
-Cuando los datos textuales se convierten en datos numéricos, el módulo identificará números o fechas y horas con formato [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){target=_blank}. No reconocerá ni reformateará fechas con, por ejemplo, el formato `MM/DD/AAAA`. Tendrás que editar manualmente o importar de forma masiva los formatos correctos mediante la [importación CSV](../modules/csvimport.md).
+Cuando los datos textuales se convierten en datos numéricos, el módulo identificará números o fechas y horas con formato [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){target=_blank}. No reconocerá ni reformateará fechas con, por ejemplo, el formato `MM/DD/AAAA`. Tendrás que editar manualmente o importar de forma masiva los formatos correctos mediante la [Importación CSV](../modules/csvimport.md).
 
 Utiliza los siguientes formatos para las [fechas](https://en.wikipedia.org/wiki/ISO_8601#Dates){target=_blank}, incluyendo guiones entre los valores:
 
@@ -109,7 +109,7 @@ Utiliza los siguientes formatos para [duraciones](https://en.wikipedia.org/wiki/
 
 Una vez que dispongas de recursos que utilicen tipos de datos numéricos, estos aparecerán como opciones ordenables en las vistas de exploración de los recursos correspondientes. Por ejemplo, si al menos un elemento tiene un valor de «Marca de tiempo» en un campo, puedes ordenar la tabla de exploración de elementos según ese campo. 
 
-Haz clic en el primer menú desplegable situado en la esquina superior derecha de la tabla de recursos, cuyo valor por defecto es «Creado».
+Haz clic en el primer menú desplegable situado en la esquina superior derecha de la tabla de recursos, cuyo valor predeterminado es «Creado».
 
 Al hacer clic en este menú desplegable, aparecerán varias opciones, incluidas todas las propiedades que utilizan tipos de datos numéricos. Estas opciones se muestran como la propiedad con el tipo de datos entre paréntesis, por ejemplo, «Fecha (numérico:marca de tiempo)». 
 
@@ -131,10 +131,10 @@ Los datos de **marca de tiempo** tienen dos opciones de búsqueda: «Fecha anter
 
 Los datos de **Duración**, al igual que los de marca de tiempo, tienen dos opciones: «La duración es mayor que» y «La duración es menor que». Tras seleccionar la propiedad en la que desea realizar la búsqueda, introduzca valores para años, meses, días, horas, minutos o segundos.
 
-La búsqueda **«Fecha en un intervalo»** busca una fecha dentro de un intervalo. Al realizar una búsqueda por intervalo, sea lo más preciso posible. Debido a la forma en que el módulo almacena las marcas de tiempo, la fecha que se busca debe estar *dentro* del intervalo. Por lo tanto, una búsqueda del año 1814 no mostraría un evento con el intervalo del 12 al 15 de septiembre de 1814, debido a la forma en que los datos interpretan ambas fechas. 
+**Fecha en intervalo** busca una fecha dentro de un intervalo. Al realizar una búsqueda por intervalo, sea lo más preciso posible. Debido a la forma en que el módulo almacena las marcas de tiempo, la fecha que se busca debe estar *dentro* del intervalo. Por lo tanto, una búsqueda del año 1814 no mostraría un evento con el intervalo del 12 al 15 de septiembre de 1814, debido a la forma en que los datos interpretan ambas fechas. 
 
 Los datos **numéricos** se pueden buscar con «Valor menor que» y «Valor mayor que». Al igual que con los datos de marca de tiempo, solo se cargarán en el menú desplegable las propiedades que contengan datos numéricos. 
 
 ## Integración con otros módulos
 
-Las funciones de los tipos de datos numéricos son compatibles con [Collecting](../modules/collecting.md), [CSV Import](../modules/csvimport.md), [Navegación por facetas](../modules/facetedbrowse.md) y [Asignación](../modules/mapping.md).
+Los tipos de datos numéricos funcionan con [Collecting](../modules/collecting.md), [CSV Import](../modules/csvimport.md), [Navegación por facetas](../modules/facetedbrowse.md) y [Asignación](../modules/mapping.md).

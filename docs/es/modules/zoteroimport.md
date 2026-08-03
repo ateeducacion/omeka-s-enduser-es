@@ -6,24 +6,24 @@ El [módulo de importación de Zotero](https://omeka.org/s/modules/ZoteroImport)
 Para poder importar desde una biblioteca de Zotero, debes tener acceso a la API de dicha biblioteca. Para utilizar la importación de Zotero, necesitarás el ID del grupo o del usuario:
 
   * Los ID individuales se encuentran en la pestaña «Feeds/API» de la configuración de Zotero; hay una frase que dice: «Tu ID de usuario para utilizar en llamadas a la API es».
-  * Los ID de grupo se encuentran en la página de la biblioteca del grupo de Zotero, fijándote en la URL de la biblioteca: será `zotero.org/groups/<número>`. Si accedes a `https://api.zotero.org/groups/<número>`, deberías obtener información al respecto en esa página.
+  * Los ID de grupo se encuentran en la página de la biblioteca del grupo de Zotero, en la URL de la biblioteca; tendrá el formato `zotero.org/groups/<número>`. Si accedes a `https://api.zotero.org/groups/<número>`, deberías obtener información al respecto en esa página.
 
 Es posible que también necesites el ID de una colección específica y una clave API para importar archivos. 
 
-* Las claves de colección aparecen en la URL de la página de una colección; son la secuencia alfanumérica al final de la URL, después de «collections/».
+* Las claves de colección aparecen en la URL de la página de una colección: son la secuencia alfanumérica al final de la URL, después de «collections/».
 * Para generar una clave API, ve a «Configuración» en tu cuenta de Zotero, a la pestaña «Fuentes/API», y haz clic en el enlace *Crear nueva clave privada*.
 
 ## Importar datos
 
 Para importar, ve a la sección «Importación de Zotero» en el menú de navegación de la izquierda del panel de administración de tu instalación de Omeka S. Esto te llevará automáticamente a la subsección «Importación», también en el menú de navegación de la izquierda.
 
-![Opciones de importación de Zotero, tal y como se enumeran a continuación.](modulesfiles/zoteroimport_new.png)
+![Opciones de importación de Zotero, tal y como se muestran a continuación.](modulesfiles/zoteroimport_new.png)
 
 Para importar desde una biblioteca de Zotero:
 
 * Elige un conjunto de elementos al que se añadirán los elementos importados (obligatorio). 
 * Elige entre bibliotecas de **Usuario** o de **Grupo** mediante los botones de opción (obligatorio). 
-* Introduce el ID de la biblioteca (que es el número de identificación del grupo o del usuario, tal y como se ha explicado anteriormente). 
+* Introduce el ID de la biblioteca (se trata del número de identificación del grupo o del usuario, tal y como se ha explicado anteriormente). 
 * Si se importa una colección, introduce la clave de la colección.
 * Introduce tu clave API para importar datos privados y/o archivos (opcional para la importación, pero necesario para importar archivos).
 * Marca la casilla para importar archivos. La clave API es necesaria para importar archivos.
@@ -51,7 +51,7 @@ La página «Importaciones anteriores» muestra una tabla con las importaciones 
 - **Estado de la tarea**: estado actual de la tarea. Al hacer clic en el texto del estado de una tarea, se accederá a la página de dicha tarea.
 - **Recuento de elementos**: el número de elementos añadidos en la importación.
 
-Para deshacer una importación, haz clic en el botón «Deshacer» situado a la izquierda de la marca de tiempo **Elementos añadidos antes**. Se abrirá un cuadro de diálogo en la barra lateral en el que se te pedirá que confirmes que deseas deshacer la importación y eliminar todos los elementos importados. Haz clic en «Confirmar» para continuar. 
+Para deshacer una importación, haz clic en el botón «Deshacer» situado a la izquierda de la marca de tiempo de **Elementos añadidos antes**. Se abrirá un cuadro de diálogo en la barra lateral en el que se te pedirá que confirmes que deseas deshacer la importación y eliminar todos los elementos importados. Haz clic en «Confirmar» para continuar. 
 
 ![Página de importaciones anteriores con la barra lateral abierta para confirmar la anulación](modulesfiles/zoteroimport_undo.png)
 

@@ -48,7 +48,7 @@ Los valores pueden aparecer en cualquier orden y se mostrarán en el visor en el
 
 Puedes comprobar que el módulo funciona correctamente accediendo directamente a la URL de un visor o de un manifiesto en tu navegador. 
 
-En el visor, deberías ver cómo se carga el contenido multimedia de tu elemento, con los metadatos en la barra lateral. La URL se redirigirá a algo con el siguiente formato: 
+En el visor, deberías ver cómo se carga el contenido multimedia de tu elemento, con los metadatos en la barra lateral. La URL se redirigirá a algo con un formato similar a 
 
 `
 https://example.com/omeka-s/iiif-viewer?url=https://example.com/omeka-s/iiif-presentation/3/item/1082/manifest
@@ -75,22 +75,22 @@ Estos puntos finales están disponibles para la versión 3 de la API de IIIF Pre
     Visualiza el recurso de manifiesto IIIF de un elemento de Omeka. Redirige al visor IIIF de Omeka S (Mirador).
     - `:item-id`: El ID del elemento de Omeka
 - `/iiif-presentation/3/item/:item-ids/collection`
-    Obtiene el recurso de colección IIIF para dos o más elementos de Omeka. Devuelve JSON-LD.
+    Obtiene el recurso de colección IIIF para dos o más elementos de Omeka. Genera JSON-LD.
     - `:item-ids`: Los identificadores de los elementos de Omeka, delimitados por comas
 - `/iiif-presentation/3/item/:item-ids`
-    Ver el recurso de colección IIIF correspondiente a dos o más elementos de Omeka. Redirige al visor IIIF de Omeka (Mirador).
+    Visualiza el recurso de colección IIIF para dos o más elementos de Omeka. Redirige al visor IIIF de Omeka (Mirador).
     - `:item-ids`: Los ID de los elementos de Omeka, delimitados por comas
 - `/iiif-presentation/3/item-set/:item-set-id/collection`
     Obtiene el recurso de colección IIIF para un conjunto de elementos de Omeka. Genera JSON-LD.
     - `:item-set-id`: El identificador del conjunto de elementos de Omeka
 - `/iiif-presentation/3/item-set/:item-set-id`
     Visualiza el recurso de colección IIIF correspondiente a un conjunto de elementos de Omeka. Redirige al visor IIIF de Omeka S (Mirador).
-    - `:item-set-id`: El ID del conjunto de elementos de Omeka
+    - `:item-set-id`: El identificador del conjunto de elementos de Omeka
 - `/iiif-presentation/3/item-set/:item-set-ids/collection`
     Obtiene el recurso de colección IIIF para dos o más conjuntos de elementos de Omeka. Genera JSON-LD.
     - `:item-set-ids`: Los identificadores de los conjuntos de elementos de Omeka, separados por comas
 - `/iiif-presentation/3/item-set/:item-set-ids`
-    Visualiza el recurso de colección IIIF para dos o más conjuntos de elementos de Omeka. Redirige al visor IIIF de Omeka (Mirador).
+    Visualiza el recurso de colección IIIF correspondiente a dos o más conjuntos de elementos de Omeka. Redirige al visor IIIF de Omeka (Mirador).
     - `:item-set-ids`: Los ID de los conjuntos de elementos de Omeka, delimitados por comas.
 
 ### Presentación IIIF v2
@@ -105,18 +105,18 @@ Estos puntos finales están disponibles para la versión 2 de la API de presenta
     - `:item-id`: El ID del elemento de Omeka
 - `/iiif-presentation/2/item/:item-ids/collection`
     Obtiene el recurso de colección IIIF para dos o más elementos de Omeka. Genera JSON-LD.
-    - `:item-ids`: Los ID de los elementos de Omeka, delimitados por comas
+    - `:item-ids`: Los identificadores de los elementos de Omeka, delimitados por comas
 - `/iiif-presentation/2/item/:item-ids`
-    Ver el recurso de colección IIIF para dos o más elementos de Omeka. Redirige al visor IIIF de Omeka (Mirador).
+    Ver el recurso de colección IIIF correspondiente a dos o más elementos de Omeka. Redirige al visor IIIF de Omeka (Mirador).
     - `:item-ids`: Los ID de los elementos de Omeka, delimitados por comas
 - `/iiif-presentation/2/item-set/:item-set-id/collection`
     Obtiene el recurso de colección IIIF para un conjunto de elementos de Omeka. Genera JSON-LD.
     - `:item-set-id`: El identificador del conjunto de elementos de Omeka
 - `/iiif-presentation/2/item-set/:item-set-id`
     Visualiza el recurso de colección IIIF correspondiente a un conjunto de elementos de Omeka. Redirige al visor IIIF de Omeka S (Mirador).
-    - `:item-set-id`: El identificador del conjunto de elementos de Omeka
+    - `:item-set-id`: El ID del conjunto de elementos de Omeka
 - `/iiif-presentation/2/item-set/:item-set-ids/collection`
-    Obtiene el recurso de colección IIIF para dos o más conjuntos de elementos de Omeka. Genera JSON-LD.
+    Obtiene el recurso de colección IIIF para dos o más conjuntos de elementos de Omeka. Devuelve JSON-LD.
     - `:item-set-ids`: Los identificadores de los conjuntos de elementos de Omeka, separados por comas
 - `/iiif-presentation/2/item-set/:item-set-ids`
     Visualiza el recurso de colección IIIF para dos o más conjuntos de elementos de Omeka. Redirige al visor IIIF de Omeka (Mirador).
@@ -134,18 +134,18 @@ Estos eventos están disponibles para la versión 3 de la API de presentación I
     Se activa tras componer una matriz de lienzos multimedia. Para modificar el lienzo, los controladores pueden modificar el parámetro `canvas` y volver a asignarlo al evento.
     - `canvas`: La matriz de lienzos
     - `canvas_type`: El objeto de servicio del tipo de lienzo
-    - `media_id`: El ID del medio
+    - `media_id`: El ID del contenido multimedia
 - `iiif_presentation.3.item.manifest`
     Se activa tras componer una matriz de manifiesto de elementos. Para modificar el manifiesto, los controladores pueden modificar el parámetro `manifest` y volver a asignarlo al evento.
     - `manifest`: El array del manifiesto
     - `item_id`: El ID del elemento
 - `iiif_presentation.3.item.collection`
-    Se activa tras componer un array de la colección de elementos. Para modificar la colección, los gestores pueden modificar el parámetro `collection` y volver a asignarlo al evento.
+    Se activa tras componer un array de la colección de elementos. Para modificar la colección, los controladores pueden modificar el parámetro `collection` y volver a asignarlo al evento.
     - `collection`: El array de la colección
     - `item_ids`: Los ID de los elementos de la colección
 - `iiif_presentation.3.item_set.collection`
     Se activa tras componer un array de colecciones de conjuntos de elementos. Para modificar la colección, los controladores pueden modificar el parámetro `collection` y volver a asignarlo al evento.
-    - `collection`: El array de la colección
+    - `collection`: El array de colecciones
     - `item_set_id`: El identificador del conjunto de elementos
 - `iiif_presentation.3.item_set.collections`
     Se activa tras componer un array de colecciones de conjuntos de elementos. Para modificar la colección, los controladores pueden modificar el parámetro `collection` y volver a asignarlo al evento.
@@ -160,7 +160,7 @@ Estos eventos están disponibles para la versión 2 de la API de IIIF Presentati
     Se activa tras componer una matriz de lienzos multimedia. Para modificar el lienzo, los controladores pueden modificar el parámetro `canvas` y volver a asignarlo al evento.
     - `canvas`: La matriz de lienzos
     - `canvas_type`: El objeto de servicio del tipo de lienzo
-    - `media_id`: El ID de los medios
+    - `media_id`: El identificador de los medios
 - `iiif_presentation.2.item.manifest`
     Se activa tras componer una matriz de manifiesto de elementos. Para modificar el manifiesto, los controladores pueden modificar el parámetro `manifest` y volver a asignarlo al evento.
     - `manifest`: El array del manifiesto

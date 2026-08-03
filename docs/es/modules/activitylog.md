@@ -10,21 +10,21 @@ Solo los usuarios con los niveles de administrador global y supervisor pueden ac
 
 ## Ver eventos
 
-El «Registro de actividad» registrará los eventos cuando esté activo. La tabla reflejará todos los cambios realizados en la instalación por todos los usuarios. La tabla se muestra en orden cronológico inverso (los eventos más recientes aparecen en la parte superior). Solo muestra los eventos que modifican (crear, actualizar y eliminar). No incluye eventos de solo lectura (como las búsquedas). 
+El «Registro de actividad» registrará los eventos cuando esté activo. La tabla reflejará todos los cambios realizados en la instalación por todos los usuarios. La tabla se muestra en orden cronológico inverso (los eventos más recientes aparecen en la parte superior). Solo muestra los eventos que implican modificaciones (creación, actualización y eliminación). No incluye eventos de solo lectura (como las búsquedas). 
 
 La tabla incluye las siguientes columnas:
 
 - **ID**: El identificador interno del evento
 - **Fecha**: La fecha y hora del evento, según la zona horaria de la instalación
-- **Usuario**: El usuario que provocó el evento y su rol. Cuando no haya ningún usuario conectado (como en el caso de las contribuciones realizadas mediante los formularios públicos del módulo [Collecting](collecting.md)), este campo aparecerá en blanco. 
+- **Usuario**: El usuario que ha provocado el evento y su rol. Cuando no haya ningún usuario conectado (como en el caso de las contribuciones realizadas mediante los formularios públicos del módulo [Collecting](collecting.md)), este campo aparecerá en blanco. 
 - **IP**: La dirección IP del usuario en el momento del evento
 - **Nombre del evento**: El tipo de evento que ha desencadenado el usuario
-- **Recurso**: El ID del recurso que ha modificado el usuario. Si se trata de varios recursos, como en una acción masiva, se mostrarán en los datos los ID de todos los recursos afectados. 
+- **Recurso**: El ID del recurso que ha modificado el usuario. Si se trata de varios recursos, como en una acción masiva, en los datos aparecerán los ID de todos los recursos afectados. 
 - **Mensajes**: Cualquier mensaje que describa el evento, en forma de lista.
 
-Se puede ver un evento con más detalle haciendo clic en el enlace «Ver datos del evento» en cada entrada de la tabla. Esto abrirá el panel lateral derecho para mostrar una versión técnica de los datos guardados en la base de datos correspondientes al evento. 
+Se puede ver un evento con más detalle haciendo clic en el enlace «Ver datos del evento» que aparece en cada entrada de la tabla. Esto abrirá el panel de la derecha para mostrar una versión técnica de los datos guardados en la base de datos correspondientes al evento. 
 
-![La tabla de eventos del módulo «Registro de actividad», con los datos del evento mostrados en el panel lateral derecho.](modulesfiles/activityLog_eventData.png)
+![La tabla de eventos del módulo «Registro de actividad», con los datos del evento mostrados en el panel de la derecha.](modulesfiles/activityLog_eventData.png)
 
 Por ejemplo, un evento en el que se eliminan varios elementos (ID 123, 124 y 125) de un sitio (ID 01) dirá:
 
@@ -55,7 +55,7 @@ Los usuarios con permiso para ver el «Registro de actividad» pueden filtrar lo
 
 ![La tabla de eventos del módulo «Registro de actividad», con el panel lateral derecho mostrando las opciones de filtrado de la tabla.](modulesfiles/activityLog_filter.png)
 
-- El filtrado por nombre de evento te permitirá acotar los resultados según los tipos de cambios realizados: creación, eliminación, actualización, actualización por lotes, cambios en la configuración, etc.
+- El filtrado por nombre de evento te permitirá acotar la búsqueda según los tipos de cambios realizados: creación, eliminación, actualización, actualización por lotes, cambios en la configuración, etc.
 
 ![La tabla de eventos del módulo «Registro de actividad», con el panel lateral derecho mostrando las opciones de filtrado de eventos para la tabla.](modulesfiles/activityLog_filterName.png)
 
@@ -77,13 +77,13 @@ Los usuarios pueden filtrar los eventos utilizando los distintos filtros disponi
 - **Usuario**: Filtrar eventos por usuario
 - **Rol de usuario**: Filtrar eventos por rol de usuario 
 - **IP**: Filtrar eventos por dirección IP
-- **Nombre del evento**: Filtrar eventos por nombre del evento
-- **Recurso**: Filtrar eventos por nombre de recurso
-- **ID de recurso**: Filtrar eventos por ID de recurso
-- **Desde**: Filtrar eventos por fecha a partir de (a partir de)
-- **Antes de**: Filtrar eventos por fecha anterior a.
+- **Nombre del evento**: Filtrar eventos por nombre de evento
+- **Recurso**: Filtra los eventos por nombre de recurso
+- **ID de recurso**: Filtra los eventos por ID de recurso
+- **Desde**: Filtra los eventos por fecha a partir de (a partir de)
+- **Antes de**: Filtra los eventos por fecha anterior a.
 
-Configure los filtros y haga clic en «Aplicar filtros». La página resultante mostrará los resultados filtrados. Haga clic en «Borrar filtros» para volver a la lista predeterminada.
+Configura los filtros y haz clic en «Aplicar filtros». La página resultante mostrará los resultados filtrados. Haz clic en «Borrar filtros» para volver a la lista predeterminada.
 
 #### Eventos capturados
 

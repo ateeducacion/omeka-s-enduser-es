@@ -1,6 +1,6 @@
-# Fedora Connector
+# Conector de Fedora
 
-El [módulo Fedora Connector](https://omeka.org/s/modules/FedoraConnector){target=_blank} te permite conectar una instancia de Omeka S a un [repositorio de Fedora](https://duraspace.org/fedora/){target=_blank} 4 con el fin de importar elementos de los contenedores de dicho repositorio. Además de importar la información, el elemento de Omeka S mantendrá una conexión con el elemento original. Esto te permite actualizar la información desde la fuente cuando lo desees.
+El [módulo Conector de Fedora](https://omeka.org/s/modules/FedoraConnector){target=_blank} te permite conectar una instancia de Omeka S a un [repositorio de Fedora](https://duraspace.org/fedora/){target=_blank} 4 con el fin de importar elementos desde los contenedores de dicho repositorio. Además de importar la información, el elemento de Omeka S mantendrá una conexión con el elemento original. Esto te permite actualizar la información desde la fuente cuando lo desees.
 
 Ten en cuenta que Fedora Connector solo funciona con la versión 4 de Fedora.
 
@@ -22,18 +22,18 @@ Deberías ver una pantalla con las siguientes opciones:
 
 * **URI del contenedor de Fedora** para el repositorio, la colección o el recurso que desees importar (obligatorio).
 * Casilla de verificación **Importar archivos a Omeka**: marca «Sí» si deseas importar archivos multimedia y otros archivos adjuntos al contenido (opcional, recomendado).
-* Casilla de verificación **Ignorar contenedor principal**: márcala si solo quieres importar los descendientes del contenedor principal indicado en la URI del contenedor, no el contenedor principal en sí (opcional).
-* Casilla de verificación **Importar solo descendientes directos**: márquela si desea importar únicamente los descendientes directos del contenedor indicado en **URI del contenedor** (no los hijos de los hijos). Si no se marca, se importarán de forma recursiva todos los recursos situados por debajo del contenedor (opcional).
+* Casilla de verificación **Ignorar contenedor principal**: márcala si solo quieres importar los descendientes del contenedor principal indicado en la URI del contenedor, y no el contenedor principal en sí (opcional).
+* Casilla de verificación **Importar solo descendientes directos**: márquela si desea importar únicamente los descendientes directos del contenedor indicado en **URI del contenedor** (sin descendientes de los descendientes). Si no se marca, se importarán de forma recursiva todos los recursos situados por debajo del contenedor (opcional).
 * **Comentario**: añade información sobre esta tarea que se mostrará en la página «Importaciones anteriores» (opcional).
 * **Conjuntos de elementos**: añade los elementos importados a un [conjunto de elementos](../content/item-sets.md) seleccionado, si lo deseas (opcional; ten en cuenta que el conjunto de elementos debe existir ya para poder importar en él).
 * **Sitios**: añade los elementos importados al sitio o sitios especificados. Aquí aparecerán preseleccionados los sitios predeterminados globales y específicos del usuario (opcional).
 
-![Las opciones de los campos de Fedora Connector, tal y como se enumeran arriba.](../modules/modulesfiles/fc_options.png)
+![Las opciones de los campos de Fedora Connector, tal y como se enumeran más arriba.](../modules/modulesfiles/fc_options.png)
 
 Cuando los datos estén completos, pulsa «Enviar». Puedes seguir el estado de la importación accediendo a la página Fedora Connector > Importaciones anteriores, o en la sección [Tareas](../admin/jobs.md).
 
 !!! Nota
-  ¿Tus tareas se inician pero no se completan? Es posible que tengas que [configurar la ruta de PHP](../configuration.md#php-path) para que tu sistema pueda ejecutar el proceso en segundo plano y crear los elementos.
+  ¿Tus tareas se inician pero no se completan? Es posible que tengas que [configurar la ruta de PHP](../configuration.md#php-path) para que tu sistema pueda ejecutar el proceso en segundo plano necesario para crear los elementos.
 
 ## Revisar importaciones
 

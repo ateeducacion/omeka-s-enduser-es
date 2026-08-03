@@ -1,6 +1,6 @@
 # Contextos locales
 
-El [módulo «Contextos locales»](https://omeka.org/s/modules/LocalContexts){target=_blank} permite a los usuarios aplicar [Contextos locales](https://localcontexts.org/){target=_blank} Avisos y Etiquetas de Contextos Locales a los sitios, páginas y recursos de Omeka S. Para ello, es necesario crear una cuenta en Contextos Locales y crear proyectos en el registro. A continuación, introduce la clave API en Omeka para importar los [Avisos](https://localcontexts.org/notices/about-the-notices/){target=_blank} y [Etiquetas](https://localcontexts.org/labels/about-the-labels/){target=_blank} y aplicarlas a elementos, sitios y páginas. 
+El [módulo «Contextos locales»](https://omeka.org/s/modules/LocalContexts){target=_blank} permite a los usuarios aplicar [Contextos locales](https://localcontexts.org/){target=_blank} Avisos y Etiquetas de «Contextos locales» a los sitios, páginas y recursos de Omeka S. Para ello, es necesario crear una cuenta en «Contextos locales» y crear proyectos en el registro. A continuación, introduce la clave API en Omeka para importar los [Avisos](https://localcontexts.org/notices/about-the-notices/){target=_blank} y [Etiquetas](https://localcontexts.org/labels/about-the-labels/){target=_blank} y aplicarlas a elementos, sitios y páginas. 
 
 ![](modulesfiles/localcontexts_itemPublic.png)
 
@@ -26,7 +26,7 @@ Este texto procede del [sitio web de Local Contexts](https://localcontexts.org/l
 
 > *Las etiquetas de Conocimiento Tradicional (TK) y Biocultural (BC) son herramientas destinadas a las comunidades indígenas y las organizaciones locales. Desarrolladas gracias a una colaboración sostenida y a pruebas realizadas en comunidades indígenas de varios países, las etiquetas permiten a las comunidades expresar condiciones locales y específicas para compartir y participar en futuras investigaciones y relaciones, de manera coherente con las normas, la gobernanza y los protocolos comunitarios ya existentes para el uso, el intercambio y la difusión de conocimientos y datos.*
 
-> *Las etiquetas pueden aplicarse a sitios web, publicaciones, conjuntos de datos, exposiciones de museos, objetos de una colección, muestras genéticas y mucho más. Las comunidades pueden personalizar y aplicar sus etiquetas de CK y CC mediante el Centro de Contextos Locales.*
+> *Las etiquetas pueden aplicarse a sitios web, publicaciones, conjuntos de datos, exposiciones de museos, objetos de una colección, muestras genéticas y mucho más. Las comunidades pueden personalizar y aplicar sus etiquetas de CK y CB mediante el Centro de Contextos Locales.*
 
 ![Imagen](modulesfiles/localcontexts_labels.png)
 
@@ -36,31 +36,31 @@ Este texto procede de la [página web de Local Contexts](https://localcontexts.o
 
 > *¿Qué es un proyecto de Local Contexts?*
 
-> *Los proyectos de Local Contexts describen el contexto en el que se aplican las etiquetas o los avisos. Por ejemplo, un proyecto podría incluir: un sitio web, un programa de estudios universitario, una tesis, una publicación de investigación, un conjunto de datos, una exposición en un museo, un registro de archivo, un objeto de una colección, una base de datos bibliotecaria, una colección fotográfica, un espécimen de referencia y/o metadatos sobre un registro.*
+> *Los proyectos de Local Contexts describen el contexto en el que se aplican las etiquetas o los avisos. Por ejemplo, un proyecto podría incluir: un sitio web, un programa de estudios universitario, una tesis doctoral, una publicación de investigación, un conjunto de datos, una exposición de museo, un registro de archivo, un objeto de una colección, una base de datos de biblioteca, una colección fotográfica, un espécimen de referencia y/o metadatos sobre un registro.*
 
 > *Al crear un proyecto de «Contextos locales», se te solicitarán los detalles del proyecto y los datos de contacto, y tendrás la opción de añadir metadatos.*
 
 > *La creación de proyectos permite a las instituciones y a los investigadores generar avisos e implicarse, reconocer y dar visibilidad a los intereses indígenas en las colecciones, la información y los datos. Las comunidades pueden entonces elegir cómo y cuándo añadir sus etiquetas.*
 
-> *Las cuentas de las comunidades pueden aplicar etiquetas personalizadas a los proyectos que crean en el Hub, así como a los proyectos que les hayan enviado las cuentas de instituciones e investigadores. Puedes ver los proyectos que se han añadido públicamente al Hub en el tablero de proyectos.*
+> *Las cuentas de las comunidades pueden aplicar etiquetas personalizadas a los proyectos que crean en el Hub, así como a los proyectos que les hayan enviado las cuentas de instituciones e investigadores. Puedes ver los proyectos que se han añadido públicamente al Hub en el tablón de proyectos.*
 
 ![Imagen](modulesfiles/localcontexts_hub.png)
 
 ## Preparación para utilizar el módulo «Contextos locales»
 
-El módulo «Contextos locales» tiene como objetivo fomentar la participación de los miembros de las comunidades indígenas, mediante «Avisos» creados por las instituciones y «Etiquetas» creadas por la comunidad. Un «Aviso» de «Abierto a la colaboración», por ejemplo, indica que se agradece la colaboración. Por lo tanto, debes estar preparado para gestionar dicha colaboración. Si utilizas avisos, asegúrate de que tu sitio Omeka disponga de medios para que los miembros de las comunidades indígenas puedan participar: creación de cuentas para los miembros de las comunidades indígenas, la posibilidad de añadir proyectos y etiquetas de «Local Contexts» al sitio, un formulario de contacto, comentarios sobre los elementos o un plan para que el personal responda a las contribuciones. Piensa en el flujo de trabajo que pretendes seguir para mejorar tus colecciones de forma colaborativa antes de continuar.
+El módulo «Contextos locales» tiene por objeto fomentar la participación de los miembros de las comunidades indígenas, mediante «Avisos» creados por las instituciones y «Etiquetas» creadas por la comunidad. Un «Aviso de colaboración abierta», por ejemplo, indica que se agradece la colaboración. Por lo tanto, debes estar preparado para gestionar dicha colaboración. Si utilizas avisos, asegúrate de que tu sitio de Omeka disponga de medios para que los miembros de las comunidades indígenas puedan participar: creación de cuentas para los miembros de las comunidades indígenas, la posibilidad de añadir proyectos y etiquetas de «Contextos locales» al sitio, un formulario de contacto, comentarios sobre los elementos o un plan para que el personal responda a las contribuciones. Piensa en el flujo de trabajo que pretendes seguir para mejorar tus colecciones de forma colaborativa antes de continuar.
 
 ### Cuenta de Local Contexts Hub
 
 Para utilizar este módulo, debes tener una cuenta de Local Contexts Hub. Crear un perfil allí te permite tener uno o más proyectos, que luego pueden conectarse a tu instalación de Omeka mediante una clave API.
 
-[Visita la página web de Local Contexts para obtener más información y configurar tus proyectos](https://localcontexts.org/support/getting-started-on-the-hub/#about-projects){target=_blank}. 
+[Visita el sitio web de Local Contexts para obtener más información y configurar tus proyectos](https://localcontexts.org/support/getting-started-on-the-hub/#about-projects){target=_blank}. 
 
 Un proyecto puede diseñarse para un único objeto, una colección, una exposición o para toda tu institución. Puede que tengas necesidades sencillas —como añadir un aviso de «Abierto a la colaboración» en el pie de página de tu sitio de Omeka— o complejas, como conjuntos de etiquetas distintos y únicos para cada uno de los cientos de elementos. Familiarízate con todas las opciones de avisos y etiquetas de Local Contexts, y planifica qué conjunto de proyectos necesitarás para reflejar la situación de tu organización. 
 
 ### Permisos
 
-Los proyectos de Local Contexts pueden aplicarse a sitios en los que el usuario tenga permisos de gestor del sitio (o una cuenta de administrador global para toda la instalación); Los avisos y las etiquetas se pueden añadir a las páginas del sitio para las que el usuario tenga permiso (nivel de «Creador del sitio» o superior). Los proyectos de «Contextos locales» se pueden añadir a los recursos para los que el usuario tenga permisos de edición (ya sea el propietario del recurso o una cuenta con nivel de «Editor» o superior). 
+Los proyectos de Local Contexts se pueden aplicar a sitios en los que el usuario tenga permisos de «Administrador del sitio» (o una cuenta de «Administrador global» para toda la instalación); Los avisos y las etiquetas se pueden añadir a las páginas del sitio para las que el usuario tenga permiso (nivel de «Creador del sitio» o superior). Los proyectos de «Contextos locales» se pueden añadir a los recursos para los que el usuario tenga permisos de edición (ya sea el propietario del recurso o una cuenta con nivel de «Editor» o superior). 
 
 ## Cómo utilizar el módulo Local Contexts
 
@@ -86,7 +86,7 @@ Esta tabla te permitirá eliminar proyectos de tu sitio. Si deseas volver a aña
 
 ### Aplicar proyectos a los sitios
 
-Los gestores de sitio o los administradores globales pueden elegir uno o varios proyectos de «Contextos locales» para que aparezcan en el pie de página de cada sitio de tu instalación de Omeka S. Ve a la pestaña «Sitios» de la barra lateral, selecciona un sitio y ve a «Administración del sitio». En la pestaña «Configuración» de la página de administración del sitio, busca la sección «Local Contexts». Desde aquí puedes elegir uno o varios de los proyectos que se hayan asignado a la instalación tras introducir una clave API. 
+Los gestores de sitios o los administradores globales pueden elegir uno o varios proyectos de «Contextos locales» para que aparezcan en el pie de página de cada sitio de tu instalación de Omeka S. Ve a la pestaña «Sitios» de la barra lateral, selecciona un sitio y ve a «Administración del sitio». En la pestaña «Configuración» de la página de administración del sitio, busca la sección «Local Contexts». Desde aquí puedes elegir uno o varios de los proyectos que se hayan asignado a la instalación tras introducir una clave API. 
 
 ![Imagen](modulesfiles/localcontexts_site.png)
 
@@ -100,11 +100,11 @@ El contenido del pie de página de «Contextos locales» aparecerá dentro de un
 
 Se pueden asignar uno o varios proyectos de Local Contexts para completar un valor de metadatos, ya sea en uno o en todos los idiomas. Puedes elegir cualquier campo de metadatos proporcionado por cualquier vocabulario de tu instalación. 
 
-Ve a la interfaz de edición del elemento y busca la pestaña «Avanzado» en la parte superior de la pantalla. En esta página verás una sección de Local Contexts que te permite asignar un proyecto de un menú desplegable a una propiedad de metadatos elegida de otro menú desplegable. 
+Ve a la interfaz de edición del elemento y busca la pestaña «Avanzado» en la parte superior de la pantalla. En esta página verás una sección de Local Contexts que te permite asignar un proyecto de un menú desplegable a una propiedad de metadatos seleccionada en otro menú desplegable. 
 
 ![Imagen](modulesfiles/localcontexts_itemEdit.png)
 
-Al guardar los cambios, verás los avisos y etiquetas visuales introducidos como valores independientes en la propiedad que hayas elegido, junto con una etiqueta de idioma de dos o cuatro letras extraída de los metadatos del proyecto de Local Contexts. 
+Al guardar los cambios, verás los «Avisos» y las «Etiquetas» introducidos como valores independientes en la propiedad que hayas elegido, junto con una etiqueta de idioma de dos o cuatro letras extraída de los metadatos del proyecto de Local Contexts. 
 
 ![Imagen](modulesfiles/localcontexts_itemAdmin.png)
 
@@ -112,7 +112,7 @@ Los valores de metadatos se introducen en formato JSON:
 
 ![Imagen](modulesfiles/localcontexts_itemAdmin2.png)
 
-Ten en cuenta que el [módulo Metadata Browse](metadatabrowse.md) puede entrar en conflicto con Local Contexts en las entradas de metadatos, al añadir enlaces al texto de los «Avisos» y las «Etiquetas». Puedes seguir utilizando «Metadata Browse» para permitir a los usuarios explorar todos los elementos que pertenezcan a los mismos proyectos, pero te recomendamos que desmarques la casilla «Enlaces directos» en la configuración del módulo. 
+Ten en cuenta que el [módulo Metadata Browse](metadatabrowse.md) puede entrar en conflicto con Local Contexts en las entradas de metadatos, al añadir enlaces al texto de los «Avisos» y las «Etiquetas». Puedes seguir utilizando «Metadata Browse» para permitir a los usuarios explorar todos los elementos con los mismos proyectos, pero te recomendamos desmarcar la casilla «Enlaces directos» en la configuración del módulo. 
 
 ### Aplicar proyectos a las páginas del sitio
 

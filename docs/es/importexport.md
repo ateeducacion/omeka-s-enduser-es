@@ -1,6 +1,6 @@
 # Importación y exportación
 
-Existen numerosos métodos para importar a un sitio de Omeka S o exportar desde él. Los módulos de terceros pueden añadir más funcionalidades; aquí solo documentamos los métodos respaldados por el equipo de Omeka. 
+Existen numerosos métodos para importar a un sitio de Omeka S o exportar desde él. Los módulos de terceros pueden añadir más funcionalidades; aquí solo documentamos los métodos compatibles con el equipo de Omeka. 
 
 ## Conectarse a otro sitio de Omeka
 
@@ -8,13 +8,13 @@ Existen numerosos métodos para importar a un sitio de Omeka S o exportar desde 
 
 Puedes utilizar el [módulo Omeka Classic Importer](modules/omekaCimporter.md) para importar elementos y colecciones desde un sitio Classic. Este módulo solo importa elementos y sus metadatos (incluidas las etiquetas), archivos adjuntos y colecciones (como conjuntos de elementos). No importará el contenido de «Simple Page» ni el de «Exhibit Builder».
 
-Si se han instalado complementos o módulos equivalentes tanto en el sitio de origen como en el de destino, Omeka Classic Importer puede importar metadatos específicos de los módulos. Por ejemplo, los datos de geolocalización proporcionados por el módulo «Mapping» en S y el complemento «Geolocation» en Classic se importarán automáticamente; los elementos [Texto PDF](https://omeka.org/classic/plugins/PdfText/){target=_blank} se pueden importar y asignar a campos [Texto extraído](https://omeka.org/s/modules/ExtractText/){target=_blank}.
+Si se han instalado complementos o módulos equivalentes tanto en el sitio de origen como en el de destino, Omeka Classic Importer puede importar metadatos específicos de los módulos. Por ejemplo, los datos de geolocalización proporcionados por el módulo «Mapping» en S y el complemento «Geolocation» en Classic se importarán automáticamente; los elementos [Texto de PDF](https://omeka.org/classic/plugins/PdfText/){target=_blank} se pueden importar y asignar a campos [Texto extraído](https://omeka.org/s/modules/ExtractText/){target=_blank}.
 
-Actualmente no es posible exportar directamente desde un sitio de Omeka S a un sitio de Classic. Consulte a continuación las opciones para exportar e importar mediante hojas de cálculo. 
+Actualmente no es posible exportar directamente desde un sitio de Omeka S a un sitio de Classic. Consulte a continuación las opciones para exportar e importar mediante hoja de cálculo. 
 
 ### Importación de S a S
 
-Puede utilizar el [módulo Omeka S Item Importer](modules/ositemimporter.md) para importar elementos y conjuntos de elementos de una instalación de Omeka S a otra. No es posible importar sitios ni sus páginas. Recomendamos configurar el sitio de destino de la forma más similar posible al sitio de origen, lo que incluye instalar y activar los mismos módulos, así como instalar cualquier vocabulario utilizado, antes de realizar la importación.
+Puedes utilizar el [módulo Omeka S Item Importer](modules/ositemimporter.md) para importar elementos y conjuntos de elementos de una instalación de Omeka S a otra. No es posible importar sitios ni sus páginas. Recomendamos configurar el sitio de destino de la forma más similar posible al sitio de origen, lo que incluye instalar y activar todos los mismos módulos, así como instalar cualquier vocabulario utilizado, antes de realizar la importación.
 
 ### Importar o exportar plantillas de recursos 
 
@@ -42,7 +42,7 @@ Omeka S también cuenta con módulos para importar recursos desde:
 
 ### Importación desde una hoja de cálculo
 
-Omeka S puede aceptar datos en cualquier formato de hoja de cálculo (tabular), ya sea un archivo CSV, un archivo de Excel o un ODS. Utiliza el [módulo de importación CSV](modules/csvimport.md) para añadir elementos, conjuntos de elementos, archivos multimedia y usuarios a tu sitio de Omeka S desde una hoja de cálculo. Esto incluye datos exportados desde muchas bases de datos y plataformas diferentes. 
+Omeka S puede aceptar datos en cualquier formato de hoja de cálculo (tabular), ya sea un archivo CSV, un archivo de Excel o un ODS. Utiliza el [módulo de importación CSV](modules/csvimport.md) para añadir elementos, conjuntos de elementos, archivos multimedia y usuarios a tu sitio de Omeka S desde una hoja de cálculo. Esto incluye datos exportados desde numerosas bases de datos y plataformas diferentes. 
 
 En primer lugar, comprueba si existe un módulo conector o de importación para la plataforma desde la que deseas exportar. Omeka S dispone de módulos para Zotero, Zenodo, Fedora, DSpace, CKAN, Dataverse e Invenio. Si no hay ningún módulo específico, exporta los datos desde tu plataforma de origen a una hoja de cálculo. Es posible que tengas que modificar o depurar los datos antes de importarlos a Omeka S. 
 
@@ -52,7 +52,7 @@ Es posible exportar recursos desde Omeka S utilizando un script de Python para c
 
 [Omeka-s-csv.py](https://github.com/omeka/omeka-s-csv.py){target=_blank} es un script de Python que exporta datos de instalaciones de Omeka S en formato CSV.
 
-Las hojas de cálculo generadas tendrán encabezados de columna para los términos de metadatos en orden alfabético: `dcterms:description`, `dcterms:title`, etc. 
+Las hojas de cálculo resultantes tendrán encabezados de columna para los términos de metadatos en orden alfabético: `dcterms:description`, `dcterms:title`, etc. 
 
 También habrá una sección de columnas `o:`, que incluye el identificador interno de Omeka S (`o:id`), los identificadores internos de los archivos multimedia adjuntos a los elementos (`o:media`), la configuración de privacidad (`o:is_public`, con los valores «TRUE» o «FALSE»), las fechas de creación y modificación, los propietarios, los sitios y otros datos de los recursos. Al final aparecerán las columnas `thumbnail`, que contienen las URL de las miniaturas de los archivos multimedia generadas por la instalación. 
 
@@ -66,7 +66,7 @@ Es probable que los usuarios de Linux ya tengan Python instalado, y los paquetes
 
 #### Exportación
 
-En una terminal, dentro de la carpeta donde se encuentra `omeka-s-csv.py` en tu sistema, ejecuta el script:
+En un terminal, dentro de la carpeta donde se encuentra `omeka-s-csv.py` en tu sistema, ejecuta el script:
 
 ```
 python3 omeka-s-csv.py
@@ -80,11 +80,11 @@ A continuación, se te pedirá una clave de API. Las claves son necesarias para 
 
 Por último, aparecerá un mensaje pidiéndote que introduzcas un «separador», un carácter que se utilizará para separar varios datos dentro de una misma celda CSV. Es importante que el separador elegido sea un carácter que no aparezca en los datos reales. La opción predeterminada es el carácter «barra vertical» (`|`), que suele ser una opción segura. Para utilizar esa opción predeterminada, pulsa «Intro»; de lo contrario, escribe el carácter separador que desees utilizar en su lugar.
 
-A continuación, el script se ejecutará y mostrará un mensaje indicando su progreso. Los resultados exportados se guardarán en archivos dentro de la misma carpeta que el archivo `omeka-s-csv.py`: `items.csv`, `item_sets.csv` y `media.csv`.
+A continuación, se ejecutará el script y mostrará un mensaje indicando su progreso. Los resultados exportados se guardarán en archivos situados en la misma carpeta que el archivo `omeka-s-csv.py`: `items.csv`, `item_sets.csv` y `media.csv`.
 
 ### Acceder a los datos mediante la API
 
-Puedes utilizar la API de tu propio sitio S para extraer los datos según sea necesario, en lugar de exportar una hoja de cálculo para un uso puntual. Ten en cuenta que puedes [solicitar diferentes formatos a través de la API](https://omeka.org/s/docs/developer/api/rest_api/#responses){target=_blank}, incluidos `jsonld` y `rdfxml`. [Para obtener más información sobre la API, consulta la sección de documentación para desarrolladores.](https://omeka.org/s/docs/developer/api/){target=_blank}
+Puedes utilizar la API de tu propio sitio S para extraer datos según sea necesario, en lugar de exportar una hoja de cálculo para un uso puntual. Ten en cuenta que puedes [solicitar diferentes formatos a través de la API](https://omeka.org/s/docs/developer/api/rest_api/#responses){target=_blank}, incluidos `jsonld` y `rdfxml`. [Para obtener más información sobre la API, consulta la sección de documentación para desarrolladores.](https://omeka.org/s/docs/developer/api/){target=_blank}
 
 ### Acceder a los datos mediante el módulo «Formatos de salida»
 

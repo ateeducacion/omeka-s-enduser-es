@@ -10,13 +10,13 @@ Omeka S utiliza [Transifex.com](https://www.transifex.com){target=_blank} para g
 ### Únete a un equipo de traducción o crea uno
 Una vez que te hayas registrado, visita la [página del proyecto Omeka S](https://explore.transifex.com/omeka/omeka-s/){target=_blank} y haz clic en el botón «unirse a este proyecto».
 
-Aquí podrás elegir entre todos los idiomas en los que ya se está trabajando. Si quieres empezar a trabajar en la traducción a un nuevo idioma que no aparece en la lista, primero tendrás que solicitarlo. Haz clic en «Cancelar», desplázate hasta la parte inferior de la página, haz clic en el enlace «Solicitar idioma» y selecciona el idioma en el que quieras trabajar.
+Aquí podrás elegir entre todos los idiomas en los que ya se está trabajando. Si quieres empezar a trabajar en la traducción a un nuevo idioma que no aparece en la lista, primero tendrás que solicitarlo. Haz clic en «Cancelar», desplázate hasta la parte inferior de la página, haz clic en el enlace «Solicitar idioma» y selecciona el idioma en el que quieres trabajar.
 
 Por otro lado, si alguien ya ha creado un equipo para el idioma en el que quieres trabajar, haz clic en el nombre del idioma y, en la siguiente pantalla, haz clic en el botón «Unirse a este equipo». Dependerá del coordinador aprobar tu solicitud para formar parte del equipo.
 
 Una vez que el coordinador te haya aceptado en el equipo, puedes ir al panel de control de Omeka S y hacer clic en el botón «Traducir» para empezar a traducir.
 
-Si quieres comprobar tu traducción o necesitas crear un archivo mo a partir de tu archivo po, puedes hacerlo con msgfmt, del [paquete GNU gettext](http://www.gnu.org/software/gettext/){target=_blank}.
+Si quieres revisar tu traducción o necesitas crear un archivo mo a partir de tu archivo po, puedes hacerlo con msgfmt, incluido en el [paquete GNU gettext](http://www.gnu.org/software/gettext/){target=_blank}.
 
 Para cuestiones específicas de Transifex, consulta su [documentación](http://docs.transifex.com/){target=_blank}.
 
@@ -25,9 +25,9 @@ Para cuestiones específicas de Transifex, consulta su [documentación](http://d
 La mayoría de las cadenas que hay que traducir en Omeka son sencillas y pueden traducirse directamente. Sin embargo, hay algunos casos especiales que deben tratarse con cuidado.
 
 ### Marcadores de posición
-Algunas cadenas contienen texto con el aspecto de `%s` o `%1$s`. Estos fragmentos de texto de aspecto peculiar se denominan **marcadores de posición**. Los marcadores de posición se utilizan para permitir que Omeka inserte en una cadena traducida cierta información variable, como el número de elementos de un sitio de Omeka.
+Algunas cadenas contienen texto con el formato `%s` o `%1$s`. Estos fragmentos de texto de aspecto peculiar se denominan **marcadores de posición**. Los marcadores de posición se utilizan para permitir que Omeka inserte en una cadena traducida información variable, como el número de elementos de un sitio de Omeka.
 
 Si una cadena de origen contiene marcadores de posición, debes incluirlos en tu traducción. Puedes mover los marcadores de posición dentro de la cadena e incluso cambiar el orden de los marcadores numerados, pero todos los marcadores de posición de la cadena de origen deben aparecer en la traducción.
 
 ### HTML y URL
-Algunas cadenas contienen código HTML o URL incrustados. Puedes traducir y modificar el texto en inglés sin formato de estas cadenas, pero debes conservar todas las etiquetas HTML y las URL.
+Algunas cadenas contienen código HTML o URL incrustados. Puedes traducir y modificar el texto en inglés sin formato de estas cadenas, pero debes conservar todas las etiquetas HTML o URL.
