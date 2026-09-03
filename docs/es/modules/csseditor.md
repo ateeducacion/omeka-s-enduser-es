@@ -2,7 +2,7 @@
 
 El [módulo Editor de CSS](https://omeka.org/s/modules/CSSEditor){target=_blank} te permite escribir código CSS desde la interfaz de administración de Omeka S.
 
-Una vez activado en la sección [Módulos](https://omeka.org/s/docs/user-manual/modules/){target=_blank} del panel de administración, el Editor de CSS se utiliza de forma individual para cada sitio web.
+Una vez activado en la sección [Módulos](https://omeka.org/s/docs/user-manual/modules/){target=_blank} del panel de administración, el editor de CSS se utiliza de forma específica para cada sitio web.
 
 Si eres nuevo en el uso de CSS, te recomendamos los siguientes recursos gratuitos para dar tus primeros pasos:
 
@@ -18,7 +18,7 @@ Si el Editor de CSS está activo, aparecerá un enlace al Editor de CSS en el me
 
 ![Menú contextual de un sitio de Omeka S con la entrada del Editor de CSS mostrada como página activa.](modulesfiles/csseditor_contextmenu.jpg)
 
-El primer área de texto grande es donde debes escribir tus estilos personalizados. Utiliza esa área de texto como si fuera un archivo de hoja de estilos. Esto cargará una línea en cada página pública de tu sitio de Omeka S seleccionado, en la sección «head», que tendrá este aspecto:
+El primer área de texto grande es donde debes escribir tus estilos personalizados. Utiliza esa área de texto como si fuera un archivo de hoja de estilos. Esto cargará una línea en el encabezado de cada página pública del sitio de Omeka S que hayas elegido, con el siguiente aspecto:
 
 ` <link href="/yoursiteslug/css-editor" media="screen" rel="stylesheet" type="text/css"> `
 
@@ -30,11 +30,11 @@ El Editor de CSS también te permite incluir hojas de estilo externas introducie
 
 Para eliminar hojas de estilo externas, borra el contenido de los campos de texto o haz clic en el icono de la papelera si hay varios campos de hojas de estilo.
 
-![Campo de hoja de estilo externa en la interfaz del módulo Editor de CSS, con el botón de eliminación (icono de la papelera) resaltado.](modulesfiles/csseditor_remove.jpg)
+![Campo de hoja de estilo externa en la interfaz del módulo Editor de CSS, con el botón para eliminar (icono de la papelera) resaltado.](modulesfiles/csseditor_remove.jpg)
 
 ## Tutorial: Cómo utilizar una fuente web de Google
 
-Puedes hacer que tu sitio de Omeka S sea más distintivo utilizando una fuente personalizada. [Google ofrece una biblioteca gratuita de fuentes web](https://fonts.google.com/){target=_blank}, y este tutorial te mostrará cómo aplicar una fuente web a un sitio de Omeka S utilizando el tema «Predeterminado» a través de la interfaz del Editor de CSS.
+Puedes hacer que tu sitio de Omeka S sea más distintivo utilizando una fuente personalizada. [Google ofrece una biblioteca gratuita de fuentes web](https://fonts.google.com/){target=_blank}, y este tutorial te mostrará cómo aplicar una fuente web a un sitio de Omeka S utilizando el tema «Predeterminado» a través de la interfaz del editor de CSS.
 
 A modo de referencia, el tema «Predeterminado» tiene este aspecto inicialmente, utilizando la fuente «Open Sans».
 
@@ -54,5 +54,5 @@ Este tutorial sustituirá «Open Sans» por la familia tipográfica «Lato».
   ![Sección «Especificar en CSS» con la regla `font-family` («font-family: 'Lato', sans-serif;») resaltada.](modulesfiles/csseditor_tutorial5.jpg)<br>
 6. Para este tutorial, vas a establecer Lato como la fuente predeterminada del sitio. Para ello, en el área de texto grande «CSS» del Editor de CSS, configura la familia de fuentes del elemento `body` utilizando la regla que acabas de copiar.
   ![Área de texto CSS dentro de la interfaz del módulo Editor de CSS, con la regla de familia de fuentes del elemento `body` pegada («body {font-family: "Lato", sans-serif;}»).](modulesfiles/csseditor_tutorial6.jpg)<br>
-7. Haz clic en el botón «Guardar» situado en la esquina superior derecha. Ahora el tema «Predeterminado» debería tener este aspecto.
+7. Haz clic en el botón «Guardar» situado en la esquina superior derecha. Ahora, el tema «Predeterminado» debería tener este aspecto.
 ![Sitio de Omeka S con el tema «Predeterminado», con todo el texto mostrado en la fuente «Lato»](modulesfiles/csseditor_after.jpg)

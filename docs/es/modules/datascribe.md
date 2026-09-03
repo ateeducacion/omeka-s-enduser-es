@@ -4,10 +4,10 @@ El [módulo DataScribe](https://omeka.org/s/modules/DataScribe){target=_blank} a
 
 ![Interfaz de transcripción de Datascribe](modulesfiles/datascribe_admin.png)
 
-Los investigadores suelen recopilar fuentes, como formularios gubernamentales o registros institucionales, con la intención de transcribirlas en conjuntos de datos que puedan analizarse o visualizarse. Este módulo permite a los investigadores identificar la estructura de los datos dentro de sus fuentes, acelerar la transcripción de sus fuentes y estructurar de forma fiable sus transcripciones en un formato apto para el análisis computacional. Los investigadores pueden convertir las fuentes en tablas de datos almacenadas como números, fechas, categorías y mucho más. Dado que el módulo DataScribe se basa en Omeka S, permite a los investigadores mostrar las transcripciones junto con las imágenes originales y los metadatos, realizar transcripciones de forma colaborativa y publicar sus resultados en la web.
+Los investigadores suelen recopilar fuentes, como formularios gubernamentales o registros institucionales, con la intención de transcribirlas en conjuntos de datos que puedan analizarse o visualizarse. Este módulo permite a los investigadores identificar la estructura de los datos dentro de sus fuentes, agilizar la transcripción de las mismas y estructurar de forma fiable sus transcripciones en un formato apto para el análisis computacional. Los investigadores pueden convertir las fuentes en tablas de datos almacenados como números, fechas, categorías y mucho más. Dado que el módulo DataScribe se basa en Omeka S, permite a los investigadores mostrar las transcripciones junto con las imágenes originales y los metadatos, realizar transcripciones de forma colaborativa y publicar sus resultados en la web.
 
 !!! nota
-	Las instrucciones detalladas para el usuario, los tutoriales y los casos prácticos están disponibles en [la wiki de este módulo](https://github.com/omeka-s-modules/Datascribe/wiki/){target=_blank}, que se encuentra en [el repositorio de GitHub del módulo](https://github.com/omeka-s-modules/Datascribe){target=_blank}. Esta página del manual incluirá un enlace a dicho repositorio para obtener más información cuando esté disponible. 
+  En [la wiki de este módulo](https://github.com/omeka-s-modules/Datascribe/wiki/){target=_blank}, que se encuentra en [el repositorio de GitHub del módulo](https://github.com/omeka-s-modules/Datascribe){target=_blank}. Esta página del manual incluirá un enlace a dicho repositorio para obtener más información cuando esté disponible. 
 
 ## Permisos
 
@@ -29,7 +29,7 @@ La interfaz de transcripción de DataScribe admite actualmente los siguientes ti
 - image/png
 - image/svg+xml.
 
-Si dispone de archivos TIFF o PDF, deberá convertirlos a uno de los formatos anteriores.
+Si tienes archivos TIFF o PDF, tendrás que convertirlos a uno de los formatos anteriores.
 
 ## Terminología
 
@@ -39,9 +39,9 @@ DataScribe es un módulo que utiliza elementos y conjuntos de elementos de Omeka
 
 **Conjunto de datos**: un grupo de documentos con el mismo esquema de datos (estructura de tabla, conjunto de filas y columnas, etc.). Un conjunto de datos puede recoger toda la información registrada en un documento histórico, o solo una parte del documento. Los conjuntos de datos se crean utilizando conjuntos de elementos en Omeka S. Los conjuntos de datos están formados por elementos.
 
-**Los elementos de DataScribe** se corresponden con los elementos de Omeka S; se trata de una correlación uno a uno. Cada elemento de DataScribe también existe como elemento en la instalación de Omeka S. El elemento de Omeka S es donde se pueden encontrar los metadatos (información) sobre la fuente, los derechos, etc. de cada elemento. Los archivos multimedia que se visualizan durante la transcripción están adjuntos a los elementos de Omeka S. Tenga en cuenta que un elemento de DataScribe puede formar parte de más de un conjunto de datos. Al transcribir, un elemento tiene al menos un registro.
+**Los elementos de DataScribe** se corresponden con los elementos de Omeka S: se trata de una correlación uno a uno. Cada elemento de DataScribe también existe como elemento en la instalación de Omeka S. El elemento de Omeka S es donde se pueden encontrar los metadatos (información) sobre la fuente, los derechos, etc., de cada elemento. Los archivos multimedia que se visualizan al transcribir están adjuntos a los elementos de Omeka S. Tenga en cuenta que un elemento de DataScribe puede formar parte de más de un conjunto de datos. Al transcribir, un elemento tiene al menos un registro.
 
-Los **registros** son datos individuales de un elemento. Un único registro de DataScribe aparecerá como una fila cuando se exporten los datos transcritos. En términos de flujo de trabajo general, la transcripción se realiza a nivel de registro y la revisión, a nivel de elemento. No obstante, los transcriptores pueden dejar notas y marcar registros concretos para que se les preste atención, incluso cuando el elemento completo no esté listo para su revisión.
+**Los registros** son datos individuales correspondientes a un elemento. Un único registro de DataScribe aparecerá como una fila cuando se exporten los datos transcritos. En términos de flujo de trabajo general, la transcripción se realiza a nivel de registro y la revisión, a nivel de elemento. No obstante, los transcriptores pueden dejar notas y marcar registros individuales para que se les preste atención, incluso cuando el elemento completo aún no esté listo para su revisión.
 
 **Transcriptor**: cualquier usuario de Omeka S (de cualquier nivel) puede ser designado transcriptor de DataScribe. Este usuario podrá transcribir los elementos que se le hayan asignado a través de proyectos. 
 
@@ -54,11 +54,11 @@ Consulta esta guía en la wiki: [El panel de control de DataScribe](https://gith
 ## Crear un proyecto
 
 !!! Nota
-  La wiki del módulo contiene información sobre [la planificación de proyectos y cómo conceptualizar la configuración de DataScribe para tus materiales](https://raw.githubusercontent.com/wiki/omeka-s-modules/Datascribe/Site-docs/support/projectplanning.md){target=_blank}. Es recomendable que leas esa información y planifiques tus proyectos, formularios y conjuntos de datos antes de instalar DataScribe o empezar a trabajar con él. 
+  La wiki del módulo contiene información sobre [la planificación de proyectos y cómo conceptualizar la configuración de DataScribe para tus materiales](https://raw.githubusercontent.com/wiki/omeka-s-modules/Datascribe/Site-docs/support/projectplanning.md){target=_blank}. Es posible que te interese leerla y planificar tus proyectos, formularios y conjuntos de datos antes de instalar DataScribe o empezar a trabajar con él. 
 
-El primer paso para trabajar en DataScribe es crear un nuevo proyecto. Cuando inicias sesión en una instalación y accedes al panel de control de DataScribe, es posible que veas todos los proyectos que otros usuarios han creado en DataScribe (si tu nivel de permisos es lo suficientemente alto). Sin embargo, la sección «Mis proyectos» del panel de control estará vacía. Hay un botón en la esquina superior derecha que te permitirá «Añadir un nuevo proyecto».
+El primer paso para trabajar en DataScribe es crear un nuevo proyecto. Cuando inicies sesión en una instalación y accedas al panel de control de DataScribe, es posible que veas todos los proyectos que otros usuarios han creado en DataScribe (si tu nivel de permisos es lo suficientemente alto). Sin embargo, la sección «Mis proyectos» del panel de control estará vacía. Hay un botón en la esquina superior derecha que te permitirá «Añadir un nuevo proyecto».
 
-![captura de pantalla del panel de control de DataScribe en la que se muestra que el usuario no es propietario ni forma parte de ningún proyecto en este momento, con el botón «Añadir un nuevo proyecto» visible en la esquina superior derecha](modulesfiles/datascribe_buildproject2.png)
+![captura de pantalla del panel de control de DataScribe en la que se muestra que el usuario no posee ni pertenece actualmente a ningún proyecto, con el botón «Añadir nuevo proyecto» visible en la esquina superior derecha](modulesfiles/datascribe_buildproject2.png)
 
 Todos los proyectos deben tener un nombre, que se configura en la pestaña «Configuración» (y se puede editar más adelante). También puedes, si lo deseas, añadir una descripción a tu proyecto. 
 
@@ -66,44 +66,44 @@ Debes decidir si tu proyecto va a ser público (visible para otras personas de l
 
 ![Captura de pantalla de la página de configuración de un nuevo proyecto en DataScribe con la pestaña «Configuración» activa y los campos del formulario para el nombre y la descripción del proyecto. En la esquina superior derecha, el cursor se encuentra sobre un símbolo de ojo tachado y aparece una información sobre herramientas con el texto «Hacer público»](modulesfiles/datascribe_buildproject3.png)
 
-A continuación, debes añadir usuarios al proyecto. Si eres tanto el creador del proyecto como quien trabaja en él, este paso incluirá añadirte a ti mismo como usuario, incluso si no hay nadie más trabajando en el proyecto contigo. A pesar de ser el propietario del proyecto, no te conviertes automáticamente en usuario del mismo. Esto significa que los proyectos pueden ser configurados por personas que gestionan la instalación de Omeka S, pero que no forman necesariamente parte de los equipos de cada proyecto.
+A continuación, debes añadir usuarios al proyecto. Si eres tanto el creador del proyecto como quien trabaja en él, este paso incluirá añadirte a ti mismo como usuario, aunque no haya nadie más trabajando en el proyecto contigo. A pesar de ser el propietario del proyecto, no te conviertes automáticamente en usuario del mismo. Esto significa que los proyectos pueden ser configurados por personas que gestionan la instalación de Omeka S, pero que no forman necesariamente parte de los equipos de cada proyecto.
 
 En la parte derecha de la pantalla aparecerá un menú que muestra todos los usuarios de la instalación de Omeka S. Puedes utilizar los elementos del menú alfabético (que se puede desplegar haciendo clic en el triángulo) para navegar y buscar usuarios, o bien utilizar el campo «Filtrar usuarios» para buscar usuarios por nombre. Una vez que encuentres al usuario que deseas añadir, haz clic en su nombre para añadirlo al proyecto.
 
-![Captura de pantalla de la página de configuración de un nuevo proyecto de DataScribe con la pestaña «Usuarios» activa y un menú en la parte derecha que muestra 72 usuarios potenciales para añadir al proyecto](modulesfiles/datascribe_buildproject1.png)
+![Captura de pantalla de la página de configuración de un nuevo proyecto en DataScribe con la pestaña «Usuarios» activa y un menú en la parte derecha que muestra 72 usuarios potenciales para añadir al proyecto](modulesfiles/datascribe_buildproject1.png)
 
 Una vez que hayas añadido un usuario al proyecto, debes establecer su función en el proyecto. Todos los usuarios comienzan automáticamente como «Transcriptor» y hay un menú desplegable que se puede utilizar para cambiar su función en el proyecto a «Revisor» si es necesario.
 
-Añádete a ti mismo si tienes pensado utilizar tu cuenta de usuario actual para trabajar como transcriptor o revisor. Si eres supervisor o administrador global y solo vas a administrar el proyecto, no es necesario que te añadas: siempre tendrás acceso a todos los proyectos de la instalación. 
+Añádete a ti mismo si tienes pensado utilizar tu cuenta de usuario actual para trabajar como transcriptor o revisor. Si eres «Supervisor» o «Administrador global» y solo tienes previsto administrar el proyecto, no es necesario que te añadas: siempre tendrás acceso a todos los proyectos de la instalación. 
 
-Finaliza el proceso de creación del proyecto haciendo clic en el botón «Añadir» situado en la esquina superior derecha. De este modo, el proyecto se añadirá a DataScribe y se te redirigirá al panel de control del nuevo proyecto.
+Completa el proceso de añadir un proyecto haciendo clic en el botón «Añadir» situado en la esquina superior derecha. De este modo, el proyecto se añadirá a DataScribe y se te redirigirá al panel de control del nuevo proyecto.
 
 ![Captura de pantalla de la página «Nuevo proyecto» de DataScribe.](modulesfiles/datascribe_buildproject4.png)
 
-Verás un banner verde en la parte superior de la pantalla que te indicará que el proyecto se ha creado correctamente.  Desde aquí, puede utilizar el botón «Editar proyecto», situado en la esquina superior derecha, para volver atrás y modificar cualquiera de los detalles del proyecto que haya configurado inicialmente o para añadir usuarios adicionales. También puede pasar a la siguiente fase de la creación del proyecto y añadir un nuevo conjunto de datos.
+Verás un banner verde en la parte superior de la pantalla que te indicará que el proyecto se ha creado correctamente.  Desde aquí puedes utilizar el botón «Editar proyecto» situado en la esquina superior derecha para volver atrás y modificar cualquiera de los detalles del proyecto que hayas configurado inicialmente o para añadir usuarios adicionales. También puedes pasar a la siguiente fase de la creación del proyecto y añadir un nuevo conjunto de datos.
 
 ## Crear un formulario
 
 Los formularios proporcionan el marco para la transcripción estructurada en DataScribe. Al crear formularios para tus conjuntos de datos, tómate un tiempo para examinar tus fuentes y pensar en cómo quieres organizar tus formularios. Con algunas fuentes, puede que merezca la pena crear varios formularios para capturar subconjuntos distintos de datos en la misma página.
 
-DataScribe utiliza conjuntos de elementos de Omeka S como base para los conjuntos de datos. Los conjuntos de datos son un grupo de documentos con el mismo marco de datos (estructura de tabla, conjunto de filas y columnas, etc.). Un conjunto de datos puede capturar toda la información registrada en un documento histórico, o solo una parte del mismo. Cada conjunto de datos tiene un formulario de transcripción.
+DataScribe utiliza conjuntos de elementos de Omeka S como base para los conjuntos de datos. Los conjuntos de datos son un grupo de documentos con el mismo marco de datos (estructura de tabla, conjunto de filas y columnas, etc.). Un conjunto de datos puede capturar toda la información registrada en un documento histórico o solo una parte del documento. Cada conjunto de datos tiene un formulario de transcripción.
 
-Tendrás que crear un conjunto de elementos único para cada tipo de formulario que pretendas crear. Por ejemplo, si dispones de datos con variaciones a lo largo del tiempo —como los «Bills of Mortality» o el censo de EE. UU.—, tendrás que crear diferentes conjuntos de elementos para cada variación del formulario que desees capturar.
+Tendrás que crear un conjunto de elementos único para cada tipo de formulario que pretendas crear. Por ejemplo, si tienes datos con variaciones a lo largo del tiempo —como los «Bills of Mortality» o el censo de EE. UU.—, tendrás que crear diferentes conjuntos de elementos para cada variación del formulario que desees capturar.
 
 Este tutorial le guiará a través del proceso de planificación y creación de un formulario a partir de una fuente histórica con datos estructurados. El tutorial utiliza el [Directorio de Liverpool de Gore de 1860](https://archive.org/details/goresliverpooldi1860lond){target=_blank} como ejemplo, pero puedes sustituirlo por tus propias fuentes si lo deseas.
 
 ### Evalúa la fuente
 
-Antes de empezar a crear tu formulario en DataScribe, revisa la fuente y hazte estas preguntas:
+Antes de empezar a crear tu formulario en DataScribe, examina la fuente y hazte estas preguntas:
 
 -   ¿Qué información necesito recopilar para los análisis que quiero realizar?
 -   ¿Qué resultados serán más útiles para ese análisis?
 
-Revisa la fuente original. Anota todos los posibles puntos de datos que aparecen en la página. A continuación, decide cuáles son relevantes para tus preguntas y, por lo tanto, deben incluirse en tu(s) formulario(s).
+Revisa la fuente original. Anota todos los posibles datos que aparecen en la página. A continuación, decide cuáles son relevantes para tus preguntas y, por lo tanto, deben incluirse en tu(s) formulario(s).
 
 ![Ejemplo de página de un directorio digitalizado](modulesfiles/datascribe_goresliverpooldirectory1860_p40.png)
 
-En esta página del _Gore's Liverpool Directory_, hay al menos 11 puntos de datos potenciales: número de página, apellido, nombre, tipo de entrada (persona, empresa, etc.), descripción, número de calle, nombre de la calle, otra información de la dirección, número de calle de la segunda dirección, nombre de la calle de la segunda dirección y otra información sobre la segunda dirección. La forma de organizarlos depende de ti y puede guiarse por tus preguntas de investigación.
+En esta página del _Gore’s Liverpool Directory_ hay al menos 11 posibles datos: número de página, apellido, nombre, tipo de entrada (persona, empresa, etc.), descripción, número de la calle, nombre de la calle, otra información de la dirección, número de la calle de la segunda dirección, nombre de la calle de la segunda dirección, otra información de la segunda dirección. La forma de organizarlos depende de ti y puede guiarse por tus preguntas de investigación.
 
 ### Emparejar puntos de datos y campos del formulario
 
@@ -111,13 +111,13 @@ Crearás tu formulario en DataScribe, que cuenta con un conjunto definido de opc
 
 |Campo |Tipo de entrada |Opciones|
 --- | --- | --- |
-|Casilla de selección |Casilla de selección | Marcar la casilla como seleccionada por defecto|
-|Fecha|Menús desplegables|Establecer el año mínimo y máximo. Establecer el año, mes y/o día por defecto|
-|Fecha y hora|Menús desplegables|Establecer el año mínimo y máximo. Establecer el año, el mes, el día, la hora, los minutos y/o los segundos por defecto|
+|Casilla de selección |Casilla de selección | Establecer la casilla marcada por defecto|
+|Fecha|Menús desplegables|Establece el año mínimo y máximo. Establece el año, el mes y/o el día por defecto|
+|Fecha y hora|Menús desplegables|Establece el año mínimo y máximo. Establece el año, el mes, el día, la hora, los minutos y/o los segundos por defecto|
 |Número|Solo números. Decimales con punto, no con coma.|Establecer el valor mínimo y máximo.|
 |Botón de opción|Hacer clic en un botón de opción|Introducir las opciones para el botón de opción escribiendo cada una en una nueva línea|
-|Seleccionar|Menú desplegable|Introducir las opciones para el botón de selección escribiendo cada una en una nueva línea|
-|Texto|Campo de texto de una sola línea|Establecer una longitud mínima o máxima|
+|Seleccionar|Menú desplegable|Introduce las opciones para el botón de selección escribiendo cada una en una nueva línea|
+|Texto|Campo de texto de una sola línea|Establece una longitud mínima o máxima|
 |Área de texto|Área de texto grande|Establece el número de filas para la altura del campo
 Hora|Menús desplegables|Establece la hora, los minutos y/o los segundos por defecto|
 
@@ -125,40 +125,40 @@ Además, puedes marcar cualquier campo como obligatorio. Si un transcriptor deja
 
 Se debe designar un campo como campo principal, que actuará como identificador del registro.
 
-Utiliza la hoja de cálculo o tu propio documento para decidir qué campos quieres utilizar al crear tu formulario o formularios. Es posible que tengas que crear varios formularios para capturar mejor los datos de una fuente.
+Utiliza la hoja de cálculo o tu propio documento para decidir qué campos quieres utilizar a la hora de crear tu formulario o formularios. Es posible que tengas que crear varios formularios para capturar mejor los datos de una fuente.
 
 Un formulario para la página de ejemplo podría ser el siguiente:
 
-| Datos de la fuente | Tipo de campo | Ajustes opcionales | Notas |
+| Datos en la fuente | Tipo de campo | Ajustes opcionales | Notas |
 | :----------------|:----------------|:------------------|:----- |
 | Nombre (R, P)  | Texto | | ¿Separar en nombre y apellidos? ¿O un solo campo para ambos? |
-| Tipo de anuncio | Lista desplegable o botón de opción |  | Particular, empresa, organización, etc. |
-| Descripción     | Área de texto | | Escribir tal y como aparece en el directorio, por ejemplo, «agentes de seguros» o «estanco júnior»  |
-| Número de calle | Número | | Si se indica |
-| Nombre de la calle    | Texto | | ¿Se puede concatenar con el número en la exportación? |
-| Zona | Texto o menú desplegable  | | ¿Está lo suficientemente estandarizado como para crear un campo de selección? |
+| Tipo de entrada  | Seleccionar o botón de radio |  | Particular, empresa, organización, etc. |
+| Descriptor     | Área de texto | | Escribir tal y como aparece en el directorio, por ejemplo, «agentes de seguros» o «estrencho de tabaco júnior»  |
+| Número de calle  | Número | | Si se indica |
+| Nombre de la calle    | Texto | | Se puede concatenar con el número en la exportación |
+| Zona | Texto o menú desplegable | | ¿Está lo suficientemente estandarizado como para crear un campo de selección? |
 
-Nota: Los campos obligatorios están marcados con R. Los campos principales están marcados con P.
+Nota: Los campos obligatorios están marcados con una «R». Los campos principales están marcados con una «P».
 
 ### Crea un formulario siguiendo tu plan
 
 Puedes crear un formulario para tu conjunto de datos al añadirlo o editarlo. En la pestaña del generador de formularios, utiliza el plan que has elaborado como guía para añadir bloques de campos al formulario.
 
-Esta imagen muestra el formulario descrito anteriormente en proceso de creación. El usuario ha guardado el formulario al menos una vez, por lo que los campos «Nombre» y «Tipo de anuncio» tienen la etiqueta correcta en lugar de simplemente «Nuevo campo». El bloque del descriptor está abierto para mostrar la orientación que se ha añadido a la descripción del campo, tal y como se sugiere en las notas anteriores.
+Esta imagen muestra el formulario descrito anteriormente en proceso de creación. El usuario ha guardado el formulario al menos una vez, por lo que los campos «Nombre» y «Tipo de anuncio» tienen la etiqueta correcta en lugar de simplemente «Nuevo campo». El bloque del descriptor está abierto para mostrar la indicación que se ha añadido a la descripción del campo, tal y como se sugiere en las notas anteriores.
 
-![Imagen tal y como se describe. La indicación dice: «Escriba tal y como aparece en el directorio, es decir, “agentes de seguros”» ](modulesfiles/datascribe_buildform.png)
+![Imagen tal y como se describe. La indicación dice: «Escribir tal y como aparece en el directorio, es decir, “agentes de seguros”» ](modulesfiles/datascribe_buildform.png)
 
 ### Importación y exportación de formularios
 
-En un proyecto de DataScribe, es posible que necesites utilizar el mismo formulario o uno similar para varios conjuntos de datos. En lugar de crear el mismo formulario una y otra vez, puedes exportarlo desde un conjunto de datos existente y reutilizarlo. Esto resulta especialmente útil cuando los formularios son largos.
+En un proyecto de DataScribe, es posible que necesites utilizar el mismo formulario o uno similar para varios conjuntos de datos. En lugar de crear el mismo formulario una y otra vez, puedes exportarlo desde un conjunto de datos existente y reutilizarlo. Esto resulta especialmente útil cuando se trata de formularios más largos.
 
-Ten en cuenta que solo puedes importar un formulario al añadir un nuevo conjunto de datos. No puedes importar un formulario a un conjunto de datos ya existente. 
+Ten en cuenta que solo puedes importar un formulario al añadir un nuevo conjunto de datos. No es posible importar un formulario a un conjunto de datos ya existente. 
 
-<div style="padding:68.15% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1192402311?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Formularios de exportación e importación en DataScribe"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div style="padding:68.15% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1192402311?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Exportar e importar formularios en DataScribe"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 #### Exportar un formulario de conjunto de datos
 
-Ve al conjunto de datos en el que ya has creado el formulario que deseas utilizar o modificar. Desplázate hasta la parte inferior de la página del conjunto de datos. En el panel de la derecha hay un apartado titulado «Exportar formulario». Debajo del encabezado hay un enlace con el texto «Haz clic para exportar el formulario (JSON)».
+Ve al conjunto de datos en el que ya hayas creado el formulario que deseas utilizar o modificar. Desplázate hasta la parte inferior de la página del conjunto de datos. En el panel de la derecha hay un encabezado que dice «Exportar formulario». Debajo del encabezado hay un enlace con el texto «Haz clic para exportar el formulario (JSON)».
 
 Haz clic en el enlace para descargar el formulario. El título predeterminado de cualquier formulario exportado es «form_export»: si tienes pensado utilizar el formulario más de una vez, o vas a exportar varios formularios, cambia el nombre del archivo al descargarlo.
 
@@ -180,9 +180,9 @@ Cuando accedas para editar tu nuevo conjunto de datos, deberías ver ahora el fo
 
 La sincronización actualiza el conjunto de datos con los elementos que se encuentran actualmente en el conjunto de elementos de Omeka S. Asegúrate de sincronizar tus conjuntos de datos y conjuntos de elementos con frecuencia, especialmente cada vez que se añadan o eliminen elementos del conjunto de elementos de la instalación de Omeka S.
 
-Por ejemplo, es posible que hayas iniciado un proyecto y hayas creado un formulario que se ajuste a un conjunto de elementos repleto de elementos aparentemente similares, como páginas del censo. Entonces descubres que, en algún momento, se ha producido un cambio en el formato de cada página. Puedes crear un segundo conjunto de elementos, mover los elementos posteriores del primer conjunto al segundo, copiar (exportar y volver a importar) tu primer formulario y modificarlo para adaptarlo al segundo formato que has descubierto, sincronizar el proyecto para que muestre los elementos actuales de cada conjunto de elementos y continuar transcribiendo los elementos posteriores. 
+Por ejemplo, es posible que hayas iniciado un proyecto y hayas creado un formulario que se ajuste a un conjunto de elementos que parecen similares, como páginas del censo. Entonces descubres que, en algún momento, se produjo un cambio en el formato de cada página. Puedes crear un segundo conjunto de elementos, mover los elementos posteriores del primer conjunto al segundo, copiar (exportar y volver a importar) tu primer formulario y modificarlo para adaptarlo al segundo formato que has descubierto, sincronizar el proyecto para que muestre los elementos actuales de cada conjunto de elementos y continuar transcribiendo los elementos posteriores. 
 
-Una vez creado el conjunto de datos, se te redirigirá a la página de exploración del conjunto de datos. Debería aparecer un mensaje en el área de trabajo principal que diga: «No se han encontrado elementos. Sincroniza este conjunto de datos».
+Una vez que hayas creado el conjunto de datos, se te redirigirá a la página de exploración del conjunto de datos. Debería aparecer un mensaje en el área de trabajo principal que diga «No se han encontrado elementos. Sincroniza este conjunto de datos».
 
 Para sincronizar tu conjunto de datos, tienes dos opciones.
 
@@ -194,15 +194,15 @@ En segundo lugar, puedes utilizar el menú desplegable «Más acciones», situad
 
 ![Página de nuevo conjunto de datos creado sin elementos y con el menú desplegable «Más acciones» abierto. Una flecha grande señala la opción «sincronizar conjunto de datos» en el menú desplegable.](modulesfiles/datascribe_syncDataset2.png)
 
-Actualiza la página del conjunto de datos para comprobar los elementos. El proceso de sincronización actualiza el conjunto de datos para que coincida con los elementos del conjunto de elementos de Omeka S de origen. 
+Actualiza la página del conjunto de datos para comprobar los elementos. El proceso de sincronización actualiza el conjunto de datos para que coincida con los elementos del conjunto de elementos de origen de Omeka S. 
 
-Ten en cuenta que cualquier elemento que se haya eliminado del conjunto de elementos de Omeka S se borrará del conjunto de datos de DataScribe, junto con cualquier registro que se haya creado para dichos elementos.
+Ten en cuenta que cualquier elemento que se haya eliminado del conjunto de elementos de Omeka S se eliminará del conjunto de datos de DataScribe, junto con cualquier registro que se haya creado para dichos elementos.
 
-Por último, recuerda que la sincronización no envía ninguna información de DataScribe a Omeka S. Los datos de DataScribe (guardados en formularios) permanecen en las propias entradas de la base de datos del módulo y no se transfieren a los metadatos visibles de los elementos de Omeka S. 
+Por último, recuerda que la sincronización no envía ninguna información de DataScribe a Omeka S. Los datos de DataScribe (guardados en formularios) permanecen en las entradas de la propia base de datos del módulo y no se transfieren a los metadatos visibles de los elementos de Omeka S. 
 
 ## Transcribir un elemento
 
-[En la wiki hay información más detallada sobre la transcripción](https://github.com/omeka-s-modules/Datascribe/wiki/Transcribing-data){target=_blank}.
+[Hay información más detallada sobre la transcripción en la wiki](https://github.com/omeka-s-modules/Datascribe/wiki/Transcribing-data){target=_blank}.
 
 Para empezar a transcribir, ve a la página «Elementos» de tu conjunto de datos. Verás todos los elementos de ese conjunto de datos. Una vez que filtres los elementos «bloqueados para mí», podrás hacer clic en cualquiera de ellos.
 
@@ -210,9 +210,9 @@ Se te redirigirá a la página «Registros». Los registros de las transcripcion
 
 ### La pantalla de transcripción
 
-En la parte central derecha se encuentra el formulario que debes rellenar según la imagen que aparece en la parte central izquierda de la pantalla. Un asterisco indica que ese campo es obligatorio.
+En la parte central derecha se encuentra el formulario que debes rellenar siguiendo la imagen que aparece en la parte central izquierda de la pantalla. Un asterisco indica que ese campo es obligatorio.
 
-En «Directrices» hay instrucciones específicas que el gestor del proyecto puede dejar para que las sigan los transcriptores mientras trabajan.
+Bajo «Directrices» hay instrucciones específicas que el gestor del proyecto puede dejar para que los transcriptores las sigan mientras trabajan.
 
 En la parte derecha de la pantalla hay un panel llamado «Acciones del registro», destinado a notas adicionales para los transcriptores o revisores.
 
@@ -220,7 +220,7 @@ En la parte superior izquierda hay tres botones para ajustar la pantalla y mejor
 
 En la esquina superior derecha, haz clic en «Guardar y...» para permanecer en el registro si guardas periódicamente o para volver a la página de registros.
 
-De vuelta en la página de registros, hay un menú desplegable en el panel derecho, debajo de «Acciones del elemento», para el «Estado del envío». Haz clic en él para seleccionar «Enviar para revisión» y ya está.
+De vuelta en la página de registros, hay un menú desplegable en el panel lateral derecho, debajo de «Acciones del elemento», para «Estado del envío». Haz clic en él para seleccionar «Enviar para revisión» y ya está.
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1192402313?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Cómo transcribir con DataScribe"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
@@ -230,9 +230,9 @@ De vuelta en la página de registros, hay un menú desplegable en el panel derec
 
 ## Revisar transcripciones
 
-[Hay información más detallada sobre la revisión de transcripciones en la wiki](https://github.com/omeka-s-modules/Datascribe/wiki/Reviewing-transcriptions){target=_blank}.
+[En la wiki hay información más detallada sobre cómo revisar transcripciones](https://github.com/omeka-s-modules/Datascribe/wiki/Reviewing-transcriptions){target=_blank}.
 
-Los revisores comprueban las transcripciones una vez que los transcriptores han completado la transcripción de un elemento de DataScribe y la han enviado para su revisión. Podrás aprobar la transcripción o devolverla al transcriptor para que la corrija.
+Los revisores comprueban las transcripciones una vez que los transcriptores han completado la transcripción de un elemento de DataScribe y la han enviado para su revisión. Deberás aprobar la transcripción o devolverla al transcriptor para que la corrija.
 
 Hay varias formas de encontrar los registros que hay que revisar. La forma más sencilla es ir a «Mis proyectos» y seleccionar «Todos los elementos que necesitan revisión» en el conjunto de datos que desees revisar. Una vez en la página del conjunto de datos, puedes filtrar los elementos que necesitan revisión.
 
@@ -244,19 +244,19 @@ Puedes ordenar estos elementos por título, por la fecha en que se enviaron para
 
 Una vez que encuentres el elemento que debes revisar, selecciona el título del elemento para ver la página de registros. Las directrices de tu proyecto deben determinar la relación entre los registros y los elementos.
 
-Un icono de exclamación roja junto a cualquier número de registro indica un problema con los campos obligatorios de los registros. Otros problemas de transcripción, como errores ortográficos, campos omitidos accidentalmente o secciones ilegibles, requieren que revises todo el formulario.
+Un icono de exclamación rojo junto a cualquier número de registro indica un problema con los campos obligatorios de los registros. Otros problemas de transcripción, como errores ortográficos, campos omitidos accidentalmente o secciones ilegibles, requieren que revises todo el formulario.
 
 Es posible desplazarse por la tabla de registros para ver las entradas sin la imagen del elemento, pero esto depende del nivel de revisión que exijan las directrices del proyecto.
 
-En este punto, revisar una transcripción es muy similar a transcribirla. Haz clic en el icono del lápiz para acceder al formulario de DataScribe.
+En este punto, revisar una transcripción se parece mucho a transcribirla. Haz clic en el icono del lápiz para ir al formulario de DataScribe.
 
-Puedes marcar «Necesita revisión» y dejar notas en el registro. Si estás transcribiendo varios registros por objeto, las «Acciones del registro» situadas a la derecha permitirán a los revisores marcar el registro específico.
+Puedes marcar «Necesita revisión» y dejar notas en el registro. Si estás transcribiendo varios registros por artículo, las «Acciones del registro» situadas a la derecha permitirán a los revisores marcar el registro específico.
 
-Puedes dejar notas a nivel de elemento en «Acciones del elemento». Desde aquí, haz clic en «Guardar… y volver a los registros».
+Puedes dejar notas a nivel de artículo en «Acciones del artículo». Desde aquí, haz clic en «Guardar… y volver a los registros».
 
-Establecer un estado de revisión para el elemento es el último paso. El elemento debe marcarse como «aprobado» o «no aprobado». En «Estado de revisión», selecciona «Marcar como aprobado» o «Marcar como no aprobado».
+El último paso consiste en establecer el estado de revisión del elemento. El elemento debe marcarse como «aprobado» o «no aprobado». En «Estado de revisión», selecciona «Marcar como aprobado» o «Marcar como no aprobado».
 
-Si el elemento no está aprobado, debes dejar una nota en el elemento o en el registro para indicar al transcriptor qué errores debe corregir y que marque únicamente las áreas que necesitan revisión cuando vuelva a enviar el elemento.
+Si el elemento no está aprobado, debes dejar una nota en el elemento o en el registro para indicar al transcriptor qué errores debe corregir y que marque únicamente las áreas que necesitan revisión cuando se vuelva a enviar el elemento.
 
 Haz clic en «Guardar» para asegurarte de que se guardan los cambios.
 
@@ -266,19 +266,19 @@ Haz clic en «Guardar» para asegurarte de que se guardan los cambios.
 
 Puedes empezar a exportar tu conjunto de datos en cuanto tengas al menos un elemento aprobado. Primero debes validar el conjunto de datos. Para ello, ve al menú desplegable «Más acciones» situado en la esquina superior derecha de la ventana del navegador. Selecciona «Validar conjunto de datos».
 
-Al hacer clic en esta opción, se abre un panel deslizante que explica en qué consiste la validación. Para validar el conjunto de datos, haz clic en el botón que aparece en el panel. Puedes actualizar la página y comprobar la marca de tiempo de la validación más reciente en el panel «Metadatos del conjunto de datos» para asegurarte de que se ha ejecutado correctamente.
+Al hacer clic en esta opción, se abre un panel emergente que explica en qué consiste la validación. Para validar el conjunto de datos, haz clic en el botón del panel emergente. Puedes actualizar la página y comprobar la marca de tiempo de la validación más reciente en el panel «Metadatos del conjunto de datos» para asegurarte de que se ha ejecutado correctamente.
 
 <div style="padding:73.62% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1192400871?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="DataScribe - Exportar datos"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-Una vez validados los datos, puedes exportar tu conjunto de datos. En el menú desplegable «Más acciones», selecciona «Exportar conjunto de datos». Haz clic en el botón «Exportar conjunto de datos» y espera a que finalice la tarea. Puedes ver la marca de tiempo de la última exportación en el panel de metadatos del conjunto de datos.
+Una vez validados los datos, puedes exportar tu conjunto de datos. En el menú desplegable «Más acciones», selecciona «Exportar conjunto de datos».» Haz clic en el botón «Exportar conjunto de datos» y espera a que finalice la tarea. Puedes ver la marca de tiempo de la última exportación en el panel de metadatos del conjunto de datos.
 
 ![Panel de metadatos del conjunto de datos con flechas azules que señalan las opciones «Última validación», «Última exportación» y «Descargar conjunto de datos»](modulesfiles/datascribe_exportData.png)
 
-Para acceder a la exportación, utiliza el enlace «Haz clic para descargar el conjunto de datos (CSV)» situado en la parte inferior de la barra lateral de metadatos del conjunto de datos. Si haces clic en el enlace, se abrirán los datos en formato CSV en la ventana de tu navegador. Para guardar el archivo, haz clic con el botón derecho del ratón o pulsa Control + clic y utiliza el menú de tu navegador para guardar el archivo vinculado en tu ordenador.
+Para acceder a la exportación, utiliza el enlace «Haz clic para descargar el conjunto de datos (CSV)» situado en la parte inferior de la barra lateral de metadatos del conjunto de datos. Si haces clic en el enlace, se abrirán los datos en formato CSV en la ventana de tu navegador. Para guardar el archivo, haz clic con el botón derecho del ratón o pulsa Control y haz clic, y utiliza el menú de tu navegador para guardar el archivo enlazado en tu ordenador.
 
 Cada exportación de DataScribe contiene columnas con el número de elemento de Omeka, el número de elemento de DataScribe, el número de registro de DataScribe y la posición del registro en DataScribe.
 
-![Fragmento de un archivo CSV exportado visualizado en Excel que muestra las columnas con la metainformación de Omeka y DataScribe](modulesfiles/datascribe_exportDataExcsv.png)
+![Fragmento de un CSV exportado visualizado en Excel que muestra las columnas con la metainformación de Omeka y DataScribe](modulesfiles/datascribe_exportDataExcsv.png)
 
 ## Importar un conjunto de datos existente 
 

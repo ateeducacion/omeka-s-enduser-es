@@ -4,23 +4,23 @@ El [módulo «Extraer metadatos»](https://omeka.org/s/modules/ExtractMetadata){
 
 El módulo añade una nueva pestaña «Extraer metadatos» a cada página de multimedia, lo que te permitirá extraer manualmente cualquier metadato incrustado que se encuentre en el archivo. También añade un campo «Extraer metadatos» a la página de edición por lotes. Cuando está activado, funciona automáticamente con los archivos recién subidos. 
 
-Un buen flujo de trabajo consiste en instalar y configurar el módulo, extraer de forma masiva los metadatos de los archivos existentes en la base de datos, asignarlos a los campos de metadatos multimedia que elijas y, a continuación, dejar que el módulo siga extrayendo metadatos de los archivos en el futuro.
+Un buen flujo de trabajo consiste en instalar y configurar el módulo, extraer de forma masiva los metadatos de los archivos existentes en tu base de datos, asignarlos a los campos de metadatos multimedia que elijas y, a continuación, simplemente dejar que el módulo siga extrayendo metadatos de los archivos en el futuro.
 
 ## Configuración del módulo
 
 Al configurar el módulo, puedes:
 
 - Ver y activar/desactivar extractores: puedes elegir entre cinco extractores diferentes, entre los que se incluyen ExifTool, Tika, Exif, getID3 y OHMS (véase más abajo).
-- Ver y activar/desactivar mapeadores: puedes optar por no activar ningún mapeador o por activar JSON Pointer.
-- Configurar la tabla de correspondencias de metadatos para el mapeador JSON Pointer (si está habilitado). Si decides utilizar el mapeador JSON Pointer, tendrás que definir la tabla de correspondencias de metadatos. 
+- Ver y activar/desactivar mapeadores: puedes optar por no activar ningún mapeador o activar JSON Pointer.
+- Configurar la correspondencia de metadatos para el mapeador JSON Pointer (si está habilitado). Si decides utilizar el mapeador JSON Pointer, deberás definir la correspondencia de metadatos. 
  1. Haz clic en el botón «Añadir mapa +».
     1. Selecciona el recurso, el extractor y la propiedad en los menús desplegables.
-    1. Introduzca un puntero con el formato definido por el [estándar IETF](https://datatracker.ietf.org/doc/html/rfc6901){target=_blank}.
+    1. Introduzca un puntero con el formato de un puntero JSON tal y como se define en el [estándar IETF](https://datatracker.ietf.org/doc/html/rfc6901){target=_blank}.
     1. Si deseas sustituir los valores de metadatos mediante este puntero, asegúrate de marcar la casilla situada a la derecha de estos campos.
 
 Cuando hayas terminado de configurar el módulo, haz clic en el botón «Enviar» situado en la esquina superior derecha de la pantalla.
 
-![Vista de configuración del módulo «Extract Metadata» con la tabla de correspondencias del puntero JSON y el botón «Enviar» indicado por una flecha de color verde azulado](../modules/modulesfiles/extractmetadata_config.png)
+![Vista de configuración del módulo «Extract Metadata» con la tabla de correspondencias del puntero JSON y el botón «Enviar» indicado con una flecha de color verde azulado](../modules/modulesfiles/extractmetadata_config.png)
 
 ## Añadir archivos multimedia
 
@@ -37,7 +37,7 @@ Puedes ver los metadatos extraídos en las páginas de los archivos multimedia, 
 Un usuario puede editar los metadatos de los archivos multimedia asociados a los elementos editando directamente el elemento concreto o utilizando las funciones de edición por lotes.
 
 ### Edición de elementos
-Al editar un archivo multimedia o un elemento, el usuario puede elegir entre varias acciones, a las que se accede a través de la pestaña «Extraer metadatos» en la vista de edición del elemento. Selecciona una de las cuatro opciones del menú desplegable.
+Al editar un recurso multimedia o un elemento, el usuario puede elegir entre varias acciones, a las que se accede a través de la pestaña «Extraer metadatos» en la vista de edición del elemento. Selecciona una de las cuatro opciones del menú desplegable.
 
 - Actualizar metadatos: (re)extraer metadatos de los archivos
 - Actualizar y asignar metadatos: (re)extraer metadatos de los archivos y asignarlos a los valores de los recursos
@@ -68,11 +68,11 @@ Se utiliza para extraer metadatos EXIF que suelen encontrarse en archivos JPEG y
 
 ### getID3
 
-Se utiliza para extraer muchos tipos de metadatos de diversos tipos de archivos. Utiliza la biblioteca PHP [getID3](https://github.com/JamesHeinrich/getID3){target=_blank}, que se incluye con este módulo.
+Se utiliza para extraer muchos tipos de metadatos de muchos tipos de archivos. Utiliza la biblioteca PHP [getID3](https://github.com/JamesHeinrich/getID3){target=_blank}, que se incluye con este módulo.
  
 ### Tika
 
-Se utiliza para extraer diversos tipos de metadatos de distintos tipos de archivos. Requiere el kit de herramientas de análisis de contenido [Apache Tika](https://tika.apache.org/){target=_blank}. Es necesario tener instalado Java y configurar la ruta al archivo `tika-app-*.jar` en `config/module.config.php`, en la sección `[extract_metadata_extractor_config][tika][jar_path]`.
+Se utiliza para extraer diversos tipos de metadatos de diversos tipos de archivos. Requiere el kit de herramientas de análisis de contenido [Apache Tika](https://tika.apache.org/){target=_blank}. Es necesario tener instalado Java y configurar la ruta al archivo `tika-app-*.jar` en `config/module.config.php`, en la sección `[extract_metadata_extractor_config][tika][jar_path]`.
 
 ### OHMS
 

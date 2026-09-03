@@ -12,26 +12,26 @@ Los sitios estáticos pueden resultar útiles como copia de seguridad y registro
 
 ### Requisitos y permisos
 
-Cualquier usuario con permisos específicos para el sitio puede crear y gestionar exportaciones. 
+Cualquier usuario con permisos específicos del sitio puede crear y gestionar exportaciones. 
 
 !!! Nota
-  Si utilizas la versión 1.0.0 de Static Site Export, debes usar una versión de Hugo anterior a la v0.146.0. Para las versiones de Static Site Export posteriores a la 1.0.0, debes usar Hugo v0.146.0 o posterior.
+  Si utilizas la versión 1.0.0 de Static Site Export, debes utilizar una versión de Hugo anterior a la v0.146.0. Para las versiones de Static Site Export posteriores a la 1.0.0, debes utilizar Hugo, como mínimo, en su versión v0.146.0 o posterior.
 
 ## Configuración
 
-Tras instalar este módulo, deberás añadir una «Ruta al directorio de sitios» en la página de configuración del módulo. Se trata de la ruta al directorio donde se guardarán tus sitios estáticos en el servidor. La ruta debe existir y el servidor web debe tener permisos de escritura en ella.
+Tras instalar este módulo, deberás añadir una «Ruta del directorio de sitios» en la página de configuración del módulo. Se trata de la ruta al directorio donde se guardarán tus sitios estáticos en el servidor. La ruta debe existir y el servidor web debe tener permisos de escritura en ella.
 
 ![La página de configuración del módulo, donde el administrador global establecerá el directorio en el que se guardarán las exportaciones de los sitios.](modulesfiles/sse_config.png)
 
 ## Exportar un sitio
 
-Tras instalar y configurar este módulo, acceda a un sitio de Omeka en la interfaz de administración, haga clic en «Exportación de sitio estático» en el menú de navegación y pulse el botón «Exportar nuevo sitio estático».
+Tras instalar y configurar este módulo, ve a un sitio de Omeka en la interfaz de administración, haz clic en «Exportación de sitio estático» en el menú de navegación y, a continuación, haz clic en el botón «Exportar nuevo sitio estático».
 
-En esta página configurarás la exportación de la siguiente manera: 
+En esta página configurarás la exportación: 
 
 - introduciendo una «URL base»: si tienes previsto publicar el sitio simplificado en línea, 
 - seleccionando un «Tema»: por el momento, Omeka S solo ofrece un tema plano que se asemeja a nuestro tema «Predeterminado». 
-- indicando si se desea «Incluir recursos privados»: si esta opción no se marca, tu sitio solo incluirá los recursos disponibles para los visitantes que no hayan iniciado sesión. Si se marca, los recursos incluidos en el sitio pero visibles únicamente para los usuarios que hayan iniciado sesión también estarán disponibles en la exportación (como si fueran públicos). 
+- indicando si se desea «Incluir recursos privados»: si no se marca esta opción, tu sitio incluirá únicamente los recursos disponibles para los visitantes que no hayan iniciado sesión. Si se marca, los recursos incluidos en el sitio pero visibles solo para los usuarios que hayan iniciado sesión también estarán disponibles en la exportación (como si fueran públicos). 
 
 
 Tras configurar la exportación, haz clic en el botón «Iniciar exportación». La nueva exportación será la primera de la lista. Haz clic en el icono «Detalles» para obtener información sobre la exportación, incluido el estado de la tarea de exportación. La exportación habrá finalizado cuando el estado aparezca como «Completada».
@@ -44,15 +44,15 @@ Ten en cuenta que la exportación ejecuta varios comandos de uso común en tu se
 
 ![La tabla de exportaciones con la barra lateral abierta, en la que se muestra la información de la exportación.](modulesfiles/sse_info.png)
 
-La exportación se guardará como un archivo ZIP que aparecerá en la carpeta que hayas establecido en la configuración del módulo. Esta será relativa a tu ruta de instalación. Puedes acceder al archivo ZIP de la exportación y descargarlo mediante tu navegador o desde la línea de comandos. 
+La exportación será un archivo ZIP que aparecerá en la carpeta que hayas establecido en la configuración del módulo. Esta será relativa a tu ruta de instalación. Puedes acceder al archivo ZIP de la exportación y descargarlo mediante tu navegador o desde la línea de comandos. 
 
 ![La tabla de exportaciones con la barra lateral abierta, mostrando una confirmación de la eliminación de una exportación.](modulesfiles/sse_delete.png)
 
 ## Implementa tu sitio con Hugo
 
-Puedes descomprimir la exportación y compilar tu sitio utilizando Hugo, ya sea de forma local o en línea. 
+Puedes descomprimir la exportación y compilar tu sitio con Hugo, ya sea localmente o en línea. 
 
-Tras exportar un sitio estático, puedes descomprimir el archivo ZIP resultante y utilizar inmediatamente [Hugo](https://gohugo.io/){target=_blank} para generar el sitio, ejecutar un servidor de pruebas local y visualizar el sitio:
+Tras exportar un sitio web estático, puedes descomprimir el archivo ZIP resultante y utilizar inmediatamente [Hugo](https://gohugo.io/){target=_blank} para generar el sitio, ejecutar un servidor de pruebas local y visualizar el sitio:
 
 ```
 cd /ruta/a/sitios-estáticos/
@@ -61,6 +61,6 @@ cd <nombre-de-la-exportación>/
 hugo server
 ```
 
-Una vez completada la compilación, sigue las instrucciones que aparecen en tu terminal y accede al servidor web especificado desde tu navegador. Si tu sitio es muy grande, es posible que tengas que desactivar el comportamiento predeterminado de «vigilar los cambios y volver a generar» ejecutando `hugo server --watch=false`.
+Una vez completada la compilación, sigue las instrucciones que aparecen en tu terminal y accede al servidor web especificado desde tu navegador. Si tu sitio web es muy grande, es posible que tengas que desactivar el comportamiento predeterminado de «vigilar los cambios y volver a generar» ejecutando `hugo server --watch=false`.
 
-Cuando estés listo para implementar tu sitio, ejecuta `hugo` en el directorio de tu proyecto. Consulta la documentación de Hugo para obtener más información sobre cómo utilizar la  [interfaz de línea de comandos (CLI)](https://gohugo.io/commands/){target=_blank} para gestionar tu sitio web, y cómo [alojar y desplegar](https://gohugo.io/host-and-deploy/){target=_blank} tu sitio web.
+Cuando estés listo para implementar tu sitio, ejecuta `hugo` en el directorio de tu proyecto. Consulta la documentación de Hugo para obtener más información sobre cómo utilizar la  [interfaz de línea de comandos (CLI)](https://gohugo.io/commands/){target=_blank} para gestionar tu sitio web, y cómo [alojar y publicar](https://gohugo.io/host-and-deploy/){target=_blank} tu sitio web.

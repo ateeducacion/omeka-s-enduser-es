@@ -6,15 +6,15 @@ Este módulo añadirá un visor OHMS a los lugares donde se puede incrustar cont
 
 ![Una visualización pública de un visor OHMS en una página de Omeka, con un pequeño vídeo en la parte superior, una transcripción a la izquierda y un índice a la derecha.](modulesfiles/ohmsembed_public.png)
 
-Los archivos XML de OHMS se pueden subir a los elementos de Omeka como archivos multimedia. Sin este módulo, aparecerán como archivos adjuntos disponibles para su descarga. Con este módulo instalado y activado, se mostrarán como reproducciones de vídeo/audio con transcripciones, índices, etc. 
+Los archivos XML de OHMS se pueden subir a los elementos de Omeka como archivos multimedia. Sin este módulo, aparecerán como archivos adjuntos disponibles para su descarga. Con este módulo instalado y activado, se mostrarán como reproductores de vídeo/audio con transcripciones, índices, etc. 
 
 El reproductor multimedia OHMS puede aparecer en las páginas de elementos y de archivos multimedia, y puede colocarse en las páginas del sitio de Omeka mediante el bloque de página «Incrustar multimedia».
 
-Preparar tu instalación de Omeka para recibir archivos OHMS puede requerir algo de trabajo e incluye algunos pasos opcionales para mejorar el proceso. Lee detenidamente los siguientes pasos antes de realizar cualquier acción, para que puedas configurar tu instalación correctamente en función de tus necesidades específicas. 
+Preparar tu instalación de Omeka para recibir archivos OHMS puede requerir cierto trabajo e incluye algunos pasos opcionales para mejorar el proceso. Lee detenidamente los siguientes pasos antes de realizar cualquier acción, para que puedas configurar tu instalación correctamente en función de tus necesidades específicas. 
 
 ## Crear archivos OHMS
 
-Para crear paquetes OHMS con tus entrevistas, debes utilizar la aplicación OHMS disponible en el [sitio web de OHMS](https://www.oralhistoryonline.org/){target=_blank}, lo que requiere solicitar una cuenta gratuita y trabajar con la aplicación web. 
+Para crear paquetes OHMS con tus entrevistas, debes utilizar la aplicación OHMS disponible en el [sitio web de OHMS](https://www.oralhistoryonline.org/){target=_blank}, lo que requiere solicitar una cuenta gratuita y trabajar con la aplicación basada en la web. 
 
 La aplicación OHMS generará archivos XML que contienen toda la información creada en dicha herramienta. 
 
@@ -32,15 +32,15 @@ Esto significa que debes:
 - exportar los archivos XML que se van a generar a Omeka
 - y, a continuación, adjuntar dichos archivos XML a los elementos correspondientes que ya hayas creado.
 
-Las ventajas de este enfoque incluyen la sencillez del autoalojamiento y el control sobre tu propiedad intelectual, además de las características de los datos enlazados (Linked Data), los tipos de datos y los vocabularios controlados que puedes utilizar para añadir metadatos específicos de los archivos multimedia directamente en Omeka.
+Las ventajas de este enfoque incluyen la sencillez del autoalojamiento y el control sobre tu propiedad intelectual, además de las características de los datos enlazados (propiedades, tipos de datos y vocabularios controlados) que puedes utilizar para añadir metadatos específicos de los archivos multimedia directamente en Omeka.
 
 Una vez que hayas subido tu archivo de audio o vídeo a un elemento, tendrás que localizar la URL directa del archivo. Ve a tu elemento y, a continuación, haz clic en el archivo multimedia que desees utilizar. En la descripción situada en la parte derecha de la pantalla, localiza la sección «Derivados del archivo». El enlace «Original» será el que debas proporcionar a la aplicación OHMS. Puedes hacer clic con el botón derecho del ratón para copiar esta URL.
 
-![Panel derecho de la descripción del contenido multimedia, centrado en la sección «Derivados del archivo», que muestra el enlace al archivo original.](modulesfiles/ohmsembed_original.png)
+![Panel derecho de la descripción del contenido multimedia, centrado en la sección «Derivados del archivo», donde se muestra el enlace al archivo original.](modulesfiles/ohmsembed_original.png)
 
 En la aplicación OHMS, utiliza «Host» como opción de «Media File Host». Introduce la URL del archivo original de la instalación de Omeka S como «Media URL». 
 
-![Imagen de la pantalla del editor de metadatos de OHMS, centrada en la sección «Media and Technical», que muestra la opción «Host» seleccionada entre las disponibles y la URL de un archivo original en la propiedad «Media URL»](modulesfiles/ohmsembed_ohms_mediahost.png)
+![Imagen de la pantalla del Editor de metadatos de OHMS, con el foco en la sección «Multimedia y aspectos técnicos», en la que se muestra la opción «Host» seleccionada entre las disponibles y la URL de un archivo original en la propiedad «URL del archivo multimedia»](modulesfiles/ohmsembed_ohms_mediahost.png)
 
 Cuando el paquete de historia oral esté completo, exporta tu archivo XML de OHMS como de costumbre.
 
@@ -50,24 +50,24 @@ Cuando vuelvas al elemento correspondiente de Omeka S y subas el archivo XML com
 
 ## Añadir archivos OHMS a Omeka
 
-El editor de OHMS genera un archivo XML que contiene los metadatos, el índice y la transcripción que acompañan a la historia oral. El archivo debe añadirse a un elemento de Omeka S como archivo multimedia para que aparezca el visor de OHMS. 
+El editor de OHMS genera un archivo XML que contiene los metadatos, el índice y la transcripción que acompañan a la historia oral. El archivo debe añadirse a un elemento de Omeka S como recurso multimedia para que aparezca el visor de OHMS. 
 
-Por lo general, el formato XML no se encuentra entre los tipos de archivos multimedia y las extensiones de archivo permitidos en una instalación de Omeka S. Primero tendrás que habilitarlo. 
+Por lo general, el formato XML no figura entre los tipos de recursos multimedia y extensiones de archivo permitidos en una instalación de Omeka S. Primero tendrás que habilitarlo. 
 
 ### Habilitar la subida de archivos XML
 
 Ve a la página de Configuración de tu instalación y navega hasta la sección Seguridad. 
 
-- Añade `text/xml` a la lista de **Tipos de medios permitidos**.
+- Añade `text/xml` a la lista de **Tipos de archivos multimedia permitidos**.
 - Añade `xml` a la lista de **Extensiones de archivo permitidas**. 
 
-![Vista de la configuración de seguridad para «Tipos de medios permitidos» y «Extensiones de archivo permitidas» con XML añadido a las listas.](../modules/modulesfiles/ohmsembed_xmlsettings.png)
+![Vista de la configuración de seguridad para **Tipos de medios permitidos** y **Extensiones de archivo permitidas** con XML añadido a las listas.](../modules/modulesfiles/ohmsembed_xmlsettings.png)
 
 Cuando hayas terminado, haz clic en el botón «Guardar» situado en la esquina superior derecha de la pantalla.
 
 ### Configurar la extracción de metadatos (opcional)
 
-Mediante el módulo [Extraer metadatos](extractmetadata.md), puedes rellenar los campos de metadatos de tus elementos de Omeka con información de los archivos XML: título, fecha, duración, fuente, etc. 
+Mediante el módulo [Extract Metadata](extractmetadata.md), puedes rellenar los campos de metadatos de tus elementos de Omeka con información procedente de los archivos XML: título, fecha, duración, fuente, etc. 
 
 En primer lugar, actualiza el módulo «Extract Metadata» a la versión 1.2.0 o posterior. Esto añadirá un extractor específico de OHMS a las herramientas disponibles (la herramienta de extracción de OHMS forma parte, de hecho, de este módulo, y no aparecerá si OHMS Embed no está instalado y activado). 
 
@@ -79,9 +79,9 @@ A continuación, para asignar la información de los metadatos XML a tus element
 
 También te sugerimos que utilices una plantilla de recursos para tus archivos OHMS, lo que te ayudará a planificar los campos de metadatos seleccionados.
 
-![Página de configuración del módulo «Extract Metadata» en la que se muestra la pestaña «JSON Pointer crosswalk». Se enumeran varios punteros OHMS: por ejemplo, el «/id» de OHMS asignado al «Identificador» de Dublin Core del recurso multimedia.](modulesfiles/ohmsembed_EMcrosswalk.png)
+![Página de configuración del módulo «Extract Metadata» en la que se muestra la pestaña «JSON Pointer crosswalk». Se enumeran varios punteros OHMS: por ejemplo, «/id» de OHMS mapeado al «Identificador» de Dublin Core del recurso multimedia.](modulesfiles/ohmsembed_EMcrosswalk.png)
 
-A continuación se muestra una lista de los posibles punteros generados por la aplicación OHMS (asegúrate de incluir la barra en la interfaz de Omeka):
+A continuación se muestra una lista de posibles punteros generados por la aplicación OHMS (asegúrate de incluir la barra en la interfaz de Omeka):
 
 | Metadatos | Puntero |
 |-----------------------------|-----------------------------|
@@ -111,13 +111,13 @@ A continuación se muestra una lista de los posibles punteros generados por la a
 | URL de la organización | `/repository_url` |
 | Agradecimientos | `/funding` |
 | Notas del usuario | `/user_notes` |
-| Archivo multimedia | `/nombre_archivo` |
-| ID del archivo multimedia | `/id_archivo_multimedia` |
-| URL del archivo multimedia | `/url_archivo_multimedia` |
+| Archivo multimedia | `/file_name` |
+| ID del archivo multimedia | `/media_id` |
+| URL del archivo multimedia | `/media_url` |
 | Formato del archivo multimedia | `/fmt` |
-| Ubicación del XML de OHMS | `/ubicacion_xml` |
-| Nombre de archivo XML de OHMS | `/xmlfilename` |
-| Versión de OHMS | `/version` |
+| Ubicación del XML de OHMS | `/xmllocation` |
+| Nombre del archivo XML de OHMS | `/xmlfilename` |
+| Versión OHMS | `/version` |
 | ID de registro del CMS | `/cms_record_id` |
 | ID de registro | `/id` |
 | Fecha de registro | `/dt` |
@@ -126,9 +126,9 @@ A continuación se muestra una lista de los posibles punteros generados por la a
 ### Subir archivos XML
 
 !!! Nota
-  Si utilizas el módulo [Extract Text](extracttext.md), es posible que desees desactivarlo antes de subir un archivo XML. El contenido de estos archivos no es legible para los usuarios. Si deseas que el contenido de tus textos OHMS (transcripciones, traducciones, índices, etc.) sea buscable por texto en tu sitio de Omeka, puedes extraer el texto con este módulo; sin embargo, todo el código XML quedará visible como metadatos en tus elementos y archivos multimedia. Puedes ocultar este campo utilizando el [módulo «Ocultar propiedades»](https://omeka.org/s/modules/HideProperties/){target=_blank}, lo que afectará a este campo en todos los recursos. 
+  Si utilizas el módulo [Extract Text](extracttext.md), es posible que desees desactivarlo antes de subir un archivo XML. El contenido de estos archivos no es legible para los usuarios. Si deseas que el contenido de tus textos de OHMS (transcripciones, traducciones, índices, etc.) sea buscable por texto en tu sitio de Omeka, puedes extraer el texto con este módulo; sin embargo, todo el código XML quedará visible como metadatos en tus elementos y archivos multimedia. Puedes ocultar este campo utilizando el [módulo «Ocultar propiedades»](https://omeka.org/s/modules/HideProperties/){target=_blank}, lo que afectará a este campo en todos los recursos. 
 
-Puedes subir tus archivos XML de OHMS de forma individual a los elementos desde tu ordenador, o bien importar por lotes archivos OHMS a elementos nuevos o existentes mediante la [importación CSV](csvimport.md). 
+Puedes subir tus archivos XML de OHMS de forma individual a los elementos desde tu ordenador, o puedes importar por lotes archivos OHMS a elementos nuevos o existentes mediante la [importación CSV](csvimport.md). 
 
 !!! Nota
   Omeka S no podrá generar una miniatura del elemento a partir de archivos OHMS. Quizá te interese añadir una [miniatura personalizada](https://omeka.org/s/docs/user-manual/content/items/#thumbnail) desde la pestaña «Avanzado» de la interfaz de edición del elemento.
@@ -153,7 +153,7 @@ Selecciona varios elementos en la página de exploración de elementos de la int
 
 ## Incrustar el visor OHMS
 
-Una vez que hayas añadido tus archivos XML de OHMS a tus elementos de Omeka S, ya estás listo para mostrarlos en tus sitios web. 
+Una vez añadidos tus archivos XML de OHMS a tus elementos de Omeka S, ya estás listo para mostrarlos en tus sitios web. 
 
 ### Visor OHMS en las páginas de elementos y de medios
 
@@ -166,20 +166,20 @@ El visor OHMS se cargará en [las páginas de recursos (elementos y archivos mul
 
 ### Visor OHMS en las páginas del sitio
 
-Puedes utilizar el [bloque de página «Incrustación de medios»](https://omeka.org/s/docs/user-manual/sites/site_pages/#media-embed) para colocar el visor OHMS directamente en las páginas del sitio. 
+Puedes utilizar el [«bloque de página “Incrustación de medios”»](https://omeka.org/s/docs/user-manual/sites/site_pages/#media-embed) para colocar el visor OHMS directamente en las páginas del sitio. 
 
 ![Edición de página que muestra el bloque «Incrustación de medios» con su configuración.](modulesfiles/ohmsembed_mediaEmbed.png)
 
-Debes seleccionar el archivo XML como medio adjunto; no elijas el vídeo o el audio que hayas importado al mismo elemento. Asegúrate también de que la opción «Incrustar multimedia» esté seleccionada en el menú desplegable «Visualización multimedia».
+Debes seleccionar el archivo XML como medio adjunto; no elijas el vídeo o el audio que hayas incorporado al mismo elemento. Asegúrate también de que la opción «Incrustar medio» esté seleccionada en el menú desplegable «Visualización de medios».
 
 ![Vista de la página con el bloque «Incrustar multimedia», con el visor OHMS en la primera columna y un ejemplo de código HTML en la segunda columna](modulesfiles/ohmsembed_public_mediaembed.png)
 
-El visor OHMS se mostrará como una columna alta y estrecha si la «Disposición» está configurada en «Vertical», y se mostrará a ancho completo si la «Disposición» está configurada en «Horizontal». 
+El visor OHMS se mostrará como una columna alta y estrecha si el diseño está configurado en «Vertical», y se mostrará a ancho completo si el diseño está configurado en «Horizontal». 
 
-![Vista de elemento de Omeka S con el visor OHMS](modulesfiles/ohmsembed_public_itemshow.png)
+![Vista de «Mostrar elemento» de un elemento de Omeka S con el visor OHMS](modulesfiles/ohmsembed_public_itemshow.png)
 
 #### Uso del visor OHMS
 
 El visor OHMS de Omeka S cuenta con varios controles públicos: un botón para alternar entre el índice y la transcripción y/o la traducción, si dichos elementos están disponibles; un icono de información que muestra los metadatos del contenido multimedia; y una opción para pasar a la vista de pantalla completa.
 
-![Controles de la interfaz pública del visor OHMS de Omeka S que muestran un selector entre índice/transcripción/traducciones, el icono «i» y el botón de pantalla completa](../modules/modulesfiles/ohmsembed_public_controllers.png)
+![Controles de la interfaz pública del visor OHMS de Omeka S que muestran un selector entre índice, transcripción y traducciones, así como el icono «i» y el botón de pantalla completa](../modules/modulesfiles/ohmsembed_public_controllers.png)

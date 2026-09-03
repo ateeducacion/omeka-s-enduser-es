@@ -1,10 +1,10 @@
-# Value Suggest
+# Sugerencia de valores
 
-El [módulo «Sugerencias de valores»](https://omeka.org/s/modules/ValueSuggest){target=_blank} añade una función de autocompletado a las propiedades de las plantillas de recursos y recurre a vocabularios controlados publicados (véase al final de esta página la lista completa) para ayudar a los usuarios a rellenarlas. Los usuarios pueden, por ejemplo, rellenar el campo «Tema» de Dublin Core con términos de los encabezados temáticos de la Biblioteca del Congreso. 
+El [módulo «Sugerencia de valores»](https://omeka.org/s/modules/ValueSuggest){target=_blank} añade una función de autocompletado a las propiedades de las plantillas de recursos y recurre a vocabularios controlados publicados (véase al final de esta página la lista completa) para ayudar a los usuarios a rellenarlas. Los usuarios pueden, por ejemplo, rellenar el campo «Tema» de Dublin Core con términos de los encabezados temáticos de la Biblioteca del Congreso. 
 
-Cuando un usuario edita los metadatos de un recurso (un elemento, un material multimedia o un conjunto de elementos) que utiliza la plantilla de recursos habilitada para Sugerencia de valores, puede elegir entre las opciones de un vocabulario. Funciona como un [tipo de datos](../content/resource-template.md#tipos-de-datos), pero funciona como una modificación de un campo de texto: el usuario puede empezar a escribir y seleccionar una sugerencia del menú desplegable, o ignorar el menú y escribir una entrada textual.
+Cuando un usuario edita los metadatos de un recurso (un elemento, un material multimedia o un conjunto de elementos) que utiliza la plantilla de recursos habilitada para «Value Suggest», puede elegir entre las opciones de un vocabulario. Funciona como un [tipo de datos](../content/resource-template.md#tipos-de-datos), pero funciona como una modificación de un campo de texto: el usuario puede empezar a escribir y seleccionar una sugerencia del menú desplegable, o ignorar el menú y escribir una entrada textual.
 
-Value Suggest incluye de serie muchos vocabularios populares; consulta la lista que aparece a continuación. Algunos ejemplos: VIAF, PBCore para información editorial, RDA para multimedia, RightsStatements y licencias Creative Commons. El módulo ofrece términos en varios idiomas. 
+Value Suggest incluye de serie muchos vocabularios populares; consulta la lista que aparece a continuación. Algunos ejemplos: VIAF, PBCore para información editorial, RDA para multimedia, RightsStatements y las licencias Creative Commons. El módulo ofrece términos en varios idiomas. 
 
 Este módulo también permite que cualquier campo [sugiera valores ya almacenados en esa propiedad en toda la instalación de Omeka](#internal-suggestions). Puedes optar por limitar los valores sugeridos a aquellos procedentes de recursos con la misma clase, o a los de recursos que utilicen la misma plantilla de recurso, para reducir el número de sugerencias y hacerlas más relevantes. 
 
@@ -12,12 +12,12 @@ Esta función contribuye a fomentar la coherencia en la introducción de metadat
 
 ## Sugerir valores a través de plantillas de recursos
 
-Los vocabularios de «Value Suggest» se aplican a través de las plantillas de recursos. Para obtener más información sobre las plantillas de recursos, consulta la [documentación sobre plantillas de recursos](../content/resource-template.md).
+Los vocabularios de Value Suggest se aplican a través de las plantillas de recursos. Para obtener más información sobre las plantillas de recursos, consulta la [documentación sobre plantillas de recursos](../content/resource-template.md).
 
 1. Desde la página «Plantillas de recursos» del panel de administración, añade una nueva [plantilla](../content/resource-template.md) o edita una ya existente.
-1. Añade la propiedad para la que deseas ofrecer un vocabulario de «Sugerencia de valores». 
+1. Añade la propiedad para la que deseas ofrecer un vocabulario de «Value Suggest». 
 1. Una vez añadida la propiedad a la plantilla, haz clic en el icono del lápiz/editar correspondiente a dicha propiedad.
-1. En la parte inferior del panel que se abre a la derecha, despliega el menú desplegable «Tipo de datos». Debajo de las opciones estándar, verás las opciones de «Value Suggest». Selecciona el vocabulario que quieras utilizar en el menú desplegable. Ten en cuenta que en este panel puedes añadir etiquetas alternativas y comentarios para la propiedad.
+1. En la parte inferior del panel que se abre a la derecha, abre el menú desplegable «Tipo de datos». Debajo de las opciones estándar, verás las opciones de Value Suggest. Selecciona el vocabulario que desees utilizar en el menú desplegable. Ten en cuenta que puedes añadir etiquetas alternativas y comentarios para la propiedad en este panel.
 1. Haz clic en el botón «Aplicar cambios» situado en la parte inferior del panel para asignar los valores a la propiedad. 
 1. Guarda los cambios en la plantilla de recurso. 
 
@@ -29,41 +29,41 @@ Al hacer clic en el título de una plantilla de recurso para ver sus detalles, e
 
 ## Sugerir valores para recursos
 
-Cuando se utiliza una plantilla de recurso de «Sugerencia de valores» para un elemento, un medio o un conjunto de elementos, las propiedades designadas sugerirán automáticamente valores del vocabulario especificado en la plantilla. 
+Cuando se utiliza una plantilla de recurso de «Value Suggest» para un elemento, un medio o un conjunto de elementos, las propiedades designadas sugerirán automáticamente valores del vocabulario especificado en la plantilla. 
 
-Los usuarios deben empezar a escribir en el cuadro de texto abierto de esa propiedad específica para activar la función de sugerencia automática. Puede producirse un ligero retraso, pero aparecerá un menú desplegable con opciones extraídas directamente de la lista de autoridad o del vocabulario que hayas asociado a esa propiedad. En algunos casos, el texto que introduzcas buscará valores en segundo plano: por ejemplo, ROR mostrará nombres de organizaciones con acrónimos coincidentes; ORCID mostrará nombres de investigadores que coincidan con un identificador ORCID que hayas introducido. 
+Los usuarios deben empezar a escribir en el cuadro de texto abierto de esa propiedad específica para activar la función de sugerencia automática. Puede haber un ligero retraso, pero aparecerá un menú desplegable con opciones extraídas directamente de la lista de autoridad o del vocabulario que hayas asociado a esa propiedad. En algunos casos, el texto que introduzcas buscará valores en segundo plano: por ejemplo, ROR mostrará nombres de organizaciones con acrónimos coincidentes; ORCID mostrará nombres de investigadores que coincidan con un identificador ORCID que hayas introducido. 
 
 ![Propiedad del elemento «Tema» con «moda» escrito en el campo. Un menú desplegable sugiere automáticamente términos, entre ellos «diseño de moda», que es el seleccionado.](../modules/modulesfiles/ValSug-ItemProperty1.png)
 
 Pasa el cursor por encima de las opciones del menú desplegable para ver una descripción de ese vocabulario.
 
-![Propiedad del elemento «Material» con «litografía» escrito en el campo. Un menú desplegable sugiere automáticamente términos, entre ellos «litografías en color», que es el seleccionado. El texto de ayuda, que aparece en una pequeña ventana superpuesta, dice: «Litografías impresas en varios colores».](../modules/modulesfiles/ValSug-ItemProperty2.png)
+![Propiedad del elemento «Material» con «litografía» escrito en el campo. Un menú desplegable sugiere automáticamente términos, entre ellos «litografías en color», que es la opción seleccionada. El texto de ayuda, que aparece en una pequeña ventana superpuesta, dice: «Litografías impresas en varios colores».](../modules/modulesfiles/ValSug-ItemProperty2.png)
 
 Tras seleccionar un valor, debería aparecer un recuadro con una URL debajo del valor. Este enlace dirigirá a los visitantes a una página web con información adicional sobre el valor seleccionado. Este recuadro se puede eliminar haciendo clic en la «X».
 
 ![Propiedad del objeto «Tipo de obra» con «Ilustraciones de moda (características de maquetación)» seleccionada. Debajo, en rojo, aparece un hipervínculo a Getty Collections, con una pequeña «X» roja.](../modules/modulesfiles/ValSug-ItemProperty3.png)
 
-### Aplicar vocabularios de forma masiva
+### Aplicación por lotes de vocabularios
 
-También puedes aplicar los vocabularios de Value Suggest como tipos de datos a los **valores de propiedad existentes** de los recursos, independientemente de si utilizan o no una plantilla de recursos. Esto **no** establecerá un tipo de datos de Value Suggest en la propiedad de los recursos para su uso futuro, tal y como lo hace una plantilla de recursos. 
+También puedes aplicar los vocabularios de Value Suggest como tipos de datos a los **valores de propiedad existentes** de los recursos, independientemente de si utilizan o no una plantilla de recurso. Esto **no** establecerá un tipo de datos de Value Suggest en la propiedad de los recursos para su uso futuro, como lo hace una plantilla de recurso. 
 
-Esto permite convertir un valor de texto o URI existente en un valor reconocido de Value Suggest procedente de uno de sus vocabularios. Por ejemplo, es posible que hayas introducido manualmente URIs de RightsStatements en el campo de derechos de autor de muchos elementos y ahora desees convertir esos valores en una de las entradas estructuradas del «tipo de datos» RightsStatements de Value Suggest para que coincidan con futuras entradas. 
+Esto permite convertir un valor de texto o URI existente en un valor reconocido de Value Suggest procedente de uno de sus vocabularios. Por ejemplo, puede que hayas introducido manualmente URIs de RightsStatements en el campo de derechos de autor de muchos elementos y ahora desees convertir esos valores en una de las entradas estructuradas del «tipo de datos» RightsStatements de Value Suggest para que coincidan con futuras entradas. 
 
 Esta conversión puede funcionar con valores de texto. Value Suggest busca que la cadena de texto coincida con un formato de URL (por ejemplo, «https://creativecommons.org/licenses/by/4.0/»). Si tus valores están en formato URI, Value Suggest buscará que coincida bien el valor URI o bien la cadena de texto de la etiqueta.
 
 Para ello, selecciona los recursos deseados y edítalos por lotes. Busca el botón «Convertir tipo de datos» cerca de la parte inferior del formulario, en la sección «Valores». Selecciona la propiedad (por ejemplo, «Derechos» en Dublin Core) y, a continuación, elige el vocabulario de Value Suggest en el menú desplegable «Tipo de datos» (por ejemplo, Creative Commons o RightsStatements). 
 
-![La pantalla de edición por lotes muestra la opción «Convertir tipo de datos» desplegada, con la propiedad «Derechos» en la primera selección y «Creative Commons» en la segunda.](../modules/modulesfiles/ValSug-BatchConvert.png)
+![La pantalla de edición por lotes muestra la opción «Convertir tipo de datos» desplegada, con la propiedad «Derechos» en la primera selección y «Creative Commons» en la segunda selección.](../modules/modulesfiles/ValSug-BatchConvert.png)
 
-Al convertir un valor existente a un tipo de datos de Value Suggest, **la etiqueta estructurada no se importará** del vocabulario de origen a tus campos de metadatos. Si se utilizan URI, se conservarán las etiquetas existentes; si los campos de etiqueta están vacíos, se mantendrán así. Si se utilizan valores de texto, se conservará el URI y se convertirá en un URI, pero el campo de etiqueta quedará vacío.
+Al convertir un valor existente a un tipo de datos de Value Suggest, **la etiqueta estructurada no se importará** desde el vocabulario de origen a tus campos de metadatos. Si se utilizan URI, se conservarán las etiquetas existentes; si los campos de etiqueta están vacíos, también se mantendrán así. Si se utilizan valores de texto, se conservará el URI y se convertirá en un URI, pero el campo de etiqueta quedará vacío.
 
 Puede comprobar si la conversión del tipo de datos se ha realizado correctamente al consultar el elemento en la interfaz de administración. El valor original, ya sea texto (sin enlace) o URI (enlace con un icono de sitio web externo a la derecha), debería aparecer ahora como un enlace sin icono. 
 
-Recomendamos comprobar que la conversión se ha realizado correctamente entrando en el modo de edición de los recursos una vez finalizado el proceso y verificando que, al hacer clic en el valor, se muestra el menú desplegable «Sugerencias de valor» correcto. En ese momento, podrá seleccionar la etiqueta adecuada proporcionada por el vocabulario. 
+Recomendamos comprobar que la conversión se ha realizado correctamente entrando en el modo de edición de los recursos una vez finalizado el proceso y verificando que, al hacer clic en el valor, se muestra el menú desplegable «Sugerencias de valor» correcto. En ese momento, podrás seleccionar la etiqueta adecuada proporcionada por el vocabulario. 
 
 ## Sugerencias internas
 
-Este módulo ofrece la posibilidad de sugerir valores almacenados actualmente en tu instalación de Omeka, es decir, cuando un recurso ya tiene el valor en una propiedad:
+Este módulo ofrece la posibilidad de sugerir valores almacenados actualmente en tu instalación de Omeka, es decir, aquellos que un recurso ya tiene asignados en una propiedad:
 
 - Omeka: Propiedad (valores de la misma propiedad, por ejemplo, `dcterms:creator`)
 - Omeka: Propiedad / Plantilla de recurso (valores de la misma propiedad que están siendo utilizados por elementos que comparten la misma plantilla de recurso, por ejemplo, «Recurso base»)
@@ -96,16 +96,16 @@ Este módulo incluye los siguientes vocabularios:
 - Tesauros del patrimonio cultural de España
 - UNESCO
 - Vocabularios del Ministerio de Cultura
-- Tesauro de la Universidad de Barcelona (THUB).
+- Tesauro de la Universitat de Barcelona (THUB).
 
 Ten en cuenta que los [vocabularios de NDE Termennetwerk ya están disponibles como un módulo independiente](ndetermennetwerk.md). Dicho módulo requiere que Value Suggest esté instalado y activo.
 
 !!! nota
-  Algunos vocabularios aparecen en varios idiomas en la lista siguiente: por ejemplo, «Homosaurus» (en inglés) aparece por separado de la traducción al neerlandés de «Homosaurus» que se encuentra en el [módulo NDE Termennetwerk](ndetermennetwerk.md). Busca en la lista y consulta los servicios para ver qué idiomas admiten. Hemos indicado aquí los idiomas de los servicios que ofrecen principalmente un idioma (distinto del inglés).
+	Algunos vocabularios aparecen en varios idiomas en la lista siguiente: por ejemplo, «Homosaurus» (en inglés) aparece por separado de la traducción al neerlandés de «Homosaurus» que se encuentra en el [módulo NDE Termennetwerk](ndetermennetwerk.md). Busca en la lista y consulta los servicios para ver qué idiomas admiten. Hemos indicado aquí los idiomas de los servicios que ofrecen principalmente un idioma (distinto del inglés).
 
 ### [Creative Commons (CC)](https://creativecommons.org/share-your-work/cclicenses/)
 
-- Ofrece una forma estandarizada de conceder al público permiso para utilizar sus obras creativas al amparo de la ley de derechos de autor.
+- Proporciona una forma estandarizada de conceder al público permiso para utilizar sus obras creativas en el marco de la legislación sobre derechos de autor.
 
 ### [Dublin Core (Términos de metadatos DCMI)](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/){target=_blank}
 
@@ -116,7 +116,7 @@ Ten en cuenta que los [vocabularios de NDE Termennetwerk ya están disponibles c
 
 ### [Gemeinsame Normdatei (GND)](http://lobid.org/gnd){target=_blank} (`de`)
 
-- El GND contiene entradas normalizadas para personas, entidades, congresos, áreas geográficas, palabras clave y títulos de obras.
+- El GND contiene entradas normalizadas sobre personas, entidades, congresos, áreas geográficas, palabras clave y títulos de obras.
 
 ### [GeoNames](http://www.geonames.org/){target=_blank}
 
@@ -137,13 +137,13 @@ Ten en cuenta que los [vocabularios de NDE Termennetwerk ya están disponibles c
 
 ### [IdRef](https://www.idref.fr/){target=_blank} (`fr`)
 
-- La base de datos nacional francesa de identificadores para la investigación (todos los repositorios)
+- Base de datos nacional francesa de identificadores para la investigación (todos los repositorios)
 - Nombres de personas
 - Colectividades (corporaciones)
 - Congresos
-- Temas (todos)
-- Temas [RAMEAU](https://rameau.bnf.fr){target=_blank} (Répertoire d’autorité-matière encyclopédique et alphabétique unifié, o Lista unificada enciclopédica y alfabética de autoridades de materia)
-- Términos de materia [F-MeSH](http://mesh.inserm.fr/FrenchMesh){target=_blank} (versión francesa de los encabezamientos de materia médica)
+- Términos de materia (todos)
+- Términos de materia [RAMEAU](https://rameau.bnf.fr){target=_blank} (Répertoire d’autorité-matière encyclopédique et alphabétique unifié, o Lista unificada enciclopédica y alfabética de autoridades de materia)
+- Términos de materia [F-MeSH](http://mesh.inserm.fr/FrenchMesh){target=_blank} (versión francesa de los términos de materia médicos)
 - Nombres geográficos
 - Apellidos
 - Títulos
@@ -158,12 +158,12 @@ Ten en cuenta que los [vocabularios de NDE Termennetwerk ya están disponibles c
 - Términos de materia
 - Fichero de autoridad de nombres (LCNAF)
 - Clasificación
-- Términos de materia infantiles
-- Términos de género/forma (LCGFT)
-- Tesauro de medios de interpretación musical
+- Términos de materia para niños
+- Términos de género y forma (LCGFT)
+- Tesauro de soportes de interpretación musical
 - Términos de grupos demográficos
 - Tesauro de materiales gráficos
-- Tesauro etnográfico de la AFS
+- Tesauro etnográfico AFS
 - Organizaciones de patrimonio cultural
 - Idiomas ISO 639-1
 - Idiomas ISO 639-2
@@ -188,7 +188,7 @@ Ten en cuenta que los [vocabularios de NDE Termennetwerk ya están disponibles c
 - Categoría 09: Objetos recreativos
 - Categoría 10: Objetos inclasificables.
 
-### [Nuevo índice temático](https://thes.bncf.firenze.sbn.it/){target=_blank} (`it`)
+### [Nuevo Sujetario](https://thes.bncf.firenze.sbn.it/){target=_blank} (`it`)
 
 - Agentes: Organismos
 - Agentes: Organizaciones
@@ -286,13 +286,13 @@ Ten en cuenta que los [vocabularios de NDE Termennetwerk ya están disponibles c
 
 - Género.
 
-#### Vocabularios de valores del marco RDA/ONIX
+#### Vocabularios de valores del Marco RDA/ONIX
 
 - Carácter
 - Modo de extensión
 - Requisito de extensión
 - Finalización de la extensión
-- Formato de alojamiento
+- Formato de almacenamiento
 - Dimensionalidad de la imagen
 - Movimiento de la imagen
 - Interacción
@@ -309,27 +309,27 @@ Ten en cuenta que los [vocabularios de NDE Termennetwerk ya están disponibles c
 
 ### [Registro de Organizaciones de Investigación (ROR)](https://ror.org/){target=_blank}
 
-- El Registro de Organizaciones de Investigación (ROR) es un registro global, gestionado por la comunidad, de identificadores abiertos y persistentes para organizaciones de investigación.
+- El Registro de Organizaciones de Investigación (ROR) es un registro global, gestionado por la comunidad, de identificadores abiertos y persistentes para organizaciones de investigación y financiación.
 
 ### [Tesauros del patrimonio cultural de España](http://tesauros.mecd.es/tesauros){target=_blank} (`es`)
 
-- Diccionario de Bienes Culturales
-- Diccionario de Materias
-- Diccionario de Técnicas
-- Diccionario de Contextos Culturales
-- Diccionario Geográfico
-- Diccionario de Toponimia Histórica
-- Diccionario de Cerámica
-- Diccionario de Numismática
-- Diccionario de Mobiliario.
+- Diccionario de bienes culturales
+- Diccionario de materias
+- Diccionario de técnicas
+- Diccionario de contextos culturales
+- Diccionario geográfico
+- Diccionario de toponimia histórica
+- Diccionario de cerámica
+- Diccionario de numismática
+- Diccionario de mobiliario.
 
 ### [UNESCO](http://skos.um.es/){target=_blank} (`es`)
 
 - Tesauro
-- Nomenclatura de Ciencia y Tecnología
-- Biblioteca Digital Floridablanca.
+- Nomenclatura de ciencia y tecnología
+- Biblioteca digital Floridablanca.
 
-### [Los vocabularios del Ministerio de Cultura](http://data.culture.fr/thesaurus/){target=_blank} (`fr`)
+### [Vocabularios del Ministerio de Cultura](http://data.culture.fr/thesaurus/){target=_blank} (`fr`)
 
 - Categorías técnicas y ámbitos - Inventario/MH
 - Ámbitos archivísticos para la indexación de circulares
@@ -337,46 +337,46 @@ Ten en cuenta que los [vocabularios de NDE Termennetwerk ya están disponibles c
 - Inscripciones, marcas, emblemas y punzones - Inventario/MH
 - Lista de autoridad «Acciones» para la indexación de los archivos locales
 - Lista de autoridad «Contexto histórico» para la indexación de los archivos locales
-- Lista de autoridad «Tipología documental» para la indexación de los archivos locales
-- Lista de autoridades «Autores» - Joconde
-- Lista de autoridades «Ámbitos» - Joconde
-- Lista de autoridades «Descubrimiento» - Joconde
-- Lista de autoridades «Denominación» - Joconde
-- Lista de autoridades «Génesis» - Joconde
+- Lista de autoridad: Tipología documental para la indexación de los archivos locales
+- Lista de autoridad: Autores - Joconde
+- Lista de autoridad: Ámbitos - Joconde
+- Lista de autoridades: Descubrimiento - Joconde
+- Lista de autoridades: Denominación - Joconde
+- Lista de autoridades: Génesis - Joconde
 - Lista de autoridades: Inscripciones - Joconde
 - Lista de autoridades: Lugares - Joconde
-- Lista de autoridades: Localización - Joconde
-- Lista de autoridades: Períodos - Joconde
-- Lista de autoridades: Representación - Joconde
-- Lista de autoridades: Fuentes de la representación - La Gioconda
-- Lista de autoridades: Técnicas – La Gioconda
+- Lista de autoridades de «Localización» - Joconde
+- Lista de autoridades de «Períodos» - Joconde
+- Lista de autoridades de «Representación» - Joconde
+- Lista de autoridades de «Fuentes de la representación» - Joconde
+- Lista de autoridades de «Técnicas» - Joconde
 - Lista de autoridades: Uso - La Gioconda
 - Lista de autoridades: Escuelas - La Gioconda
-- Lista de autoridades: Épocas - Mona Lisa
+- Lista de autoridades: Épocas - La Gioconda
 - Material de la cubierta - Inventario/MH
-- Material de la estructura y ejecución - Inventario/MH
+- Material de la obra gruesa y ejecución - Inventario/MH
 - Materiales y técnicas del patrimonio mueble - Inventario/MH
 - Nomenclaturas HADOC
-- Referencial de accesibilidad de los archivos públicos
+- Referencial de comunicabilidad de los archivos públicos
 - Etapa de creación de los objetos muebles - Inventario/MH
 - Régimen de propiedad de los bienes culturales - Inventario/MH
 - Técnicas fotográficas
-- Tesauro de la designación de los objetos muebles
-- Tesauro de la designación de las obras arquitectónicas y los espacios acondicionados
+- Tesauro de designación de objetos muebles
+- Tesauro de designación de obras arquitectónicas y espacios acondicionados
 - Tesauro temático para la indexación de los archivos locales
-- Tipo de cubierta - Inventario/MH
+- Tipo de cobertura - Inventario/MH
 - Tipo de protección MH - Inventario/MH
-- Vocabulario de las actividades de las entidades generadoras de archivos
-- Vocabulario de las alteraciones
-- Vocabulario de los ámbitos de actuación u objetos de las entidades generadoras de archivos
+- Vocabulario de actividades de las entidades productoras de archivos
+- Vocabulario de alteraciones
+- Vocabulario de ámbitos de actuación u objetos de las entidades productoras de archivos
 - Vocabulario de técnicas fotográficas.
 
-### [Tesauro de la Universidad de Barcelona (THUB)](https://vocabularis.crai.ub.edu/ca/thub){target=_blank} (`es`)
+### [Tesauro de la Universitat de Barcelona (THUB)](https://vocabularis.crai.ub.edu/ca/thub){target=_blank} (`es`)
  
 - Tesauro de la Universidad de Barcelona (THUB).
 
 ## Solicitar más vocabularios
 
-Puedes solicitar que se añadan nuevos vocabularios a este módulo. Ponte en contacto con el equipo de Omeka en [el repositorio de GitHub dedicado al módulo](https://github.com/omeka-s-modules/ValueSuggest){target=_blank}, creando una incidencia y compartiendo los vocabularios que te gustaría que se añadieran. 
+Puedes solicitar que se añadan nuevos vocabularios a este módulo. Ponte en contacto con el equipo de Omeka en [el repositorio de GitHub dedicado al módulo](https://github.com/omeka-s-modules/ValueSuggest){target=_blank}, creando una incidencia y indicando los vocabularios que te gustaría que se añadieran. 
 
 Quizá te interese utilizar o crear una bifurcación de [el módulo NDE Termennetwerk](https://github.com/omeka-s-modules/NdeTermennetwerk/){target=_blank}, que es una bifurcación de este módulo diseñada específicamente para proporcionar [términos de la Red Neerlandesa del Patrimonio Digital](https://termennetwerk.netwerkdigitaalerfgoed.nl/en){target=_blank}. 

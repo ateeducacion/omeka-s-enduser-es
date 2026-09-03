@@ -7,8 +7,8 @@ Para obtener más información, consulta los siguientes informes:
 - Omeka S versión 4.x, diciembre de 2025.
 	- [Informe de conformidad con la accesibilidad, según las normas internacionales VPAT 2.5 revisadas (PDF)](files/OmekaS4x_ACR.pdf){target=_blank}
 	- [Informe de conformidad con la accesibilidad, según las normas internacionales VPAT 2.5 revisadas (DOCX)](files/OmekaS4x_ACR.docx){target=_blank} 
-- Omeka S versión 3.x [Informe de conformidad con las normas de accesibilidad, según las normas internacionales VPAT 2.4 revisadas (PDF)](files/OmekaS3x_ACR.pdf){target=_blank}, octubre de 2020.
-- Omeka S versión 2.x [Informe de conformidad con las normas de accesibilidad, según VPAT 2.0 (PDF)](files/VPAT_OmekaS2-0-1.pdf){target=_blank}, agosto de 2019.
+- Omeka S versión 3.x [Informe de conformidad con las normas de accesibilidad, basado en las normas internacionales VPAT 2.4 revisadas (PDF)](files/OmekaS3x_ACR.pdf){target=_blank}, octubre de 2020.
+- Omeka S versión 2.x [Informe de conformidad con la accesibilidad, según VPAT 2.0 (PDF)](files/VPAT_OmekaS2-0-1.pdf){target=_blank}, agosto de 2019.
 - Omeka S versión 1.x [Informe de conformidad con la accesibilidad, según VPAT 2.0 (PDF)](files/VPAT2.0-OmekaS1-1.pdf){target=_blank}, abril de 2018.
 
 ## Hoja de ruta
@@ -20,7 +20,7 @@ Según el actual Informe de conformidad con la accesibilidad, durante 2026 el eq
 -   Mejora del orden de enfoque en la interfaz de administración
 -   Mejora de los roles y atributos de las relaciones en toda la interfaz de administración
 
-Consulte la [lista actual de incidencias](https://github.com/omeka/omeka-s/issues?q=is%3Aissue%20state%3Aopen%20label%3Aa11y){target=_blank} en el repositorio de GitHub del software principal.
+Consulta la [lista actual de incidencias](https://github.com/omeka/omeka-s/issues?q=is%3Aissue%20state%3Aopen%20label%3Aa11y){target=_blank} en el repositorio de GitHub del software principal.
 
 ## Características
 
@@ -33,7 +33,7 @@ Los temas de Omeka S creados por el equipo de Omeka cuentan con las siguientes c
 -   [ARIA](http://www.w3.org/WAI/intro/aria){target=_blank} (Aplicaciones de Internet enriquecidas accesibles): puntos de referencia para desplazarse por el contenido de la página con la tecla Tab, cuando no se utiliza el ratón o se emplea un lector de pantalla.
 -   Marcado semántico HTML5.
 
-Ten en cuenta que, aunque el código central de Omeka S cumple con los estándares mencionados, las instalaciones de Omeka S que hayan sido personalizadas o que utilicen módulos y temas que no sean de RRCHNM pueden carecer de algunas o de todas estas opciones. Aunque animamos a los desarrolladores a tener en cuenta la accesibilidad, no podemos garantizar que su código incluya puntos de referencia ARIA, SkipNav u otras medidas de accesibilidad.
+Ten en cuenta que, aunque el código central de Omeka S cumple con los estándares mencionados, las instalaciones de Omeka S que hayan sido personalizadas o que utilicen módulos y temas ajenos a RRCHNM pueden carecer de algunas o de todas estas opciones. Aunque animamos a los desarrolladores a tener en cuenta la accesibilidad, no podemos garantizar que su código incluya puntos de referencia ARIA, SkipNav u otras medidas de accesibilidad.
 
 ### Back-end (vista administrativa)
 

@@ -5,18 +5,18 @@
 Una instalación nueva de Omeka S incluye varios tipos de página prediseñados y listos para compartir:
 
 - Al añadir un nuevo sitio, puedes elegir directamente un tema instalado o dejar que utilice el tema «Predeterminado». 
-- La navegación de tu primer sitio S incluirá de serie una página «Explorar» para recorrer los elementos. Puedes añadir rápidamente la página «Bienvenida» preinstalada, que muestra algunos estilos de formato de texto. 
+- La navegación de tu primer sitio S incluirá una página «Explorar» para recorrer los elementos. Puedes añadir rápidamente la página «Bienvenida» preinstalada, que muestra algunos estilos de formato de texto. 
 - Una vez que añadas tu primer elemento, podrás ver la «[página de vista del elemento](content/items.md#public-views-for-items)». Personalízala desde el botón «Configurar páginas de recursos» de la pestaña «Tema». Existe un diseño de página independiente para ver los archivos multimedia adjuntos a los elementos.
-- Cuando empieces a clasificar los elementos en conjuntos de elementos, podrás añadir una página similar «Explorar conjuntos de elementos» a tu navegación y personalizar una página similar de «vista de conjunto de elementos». 
+- Cuando empieces a clasificar los elementos en conjuntos de elementos, podrás añadir una página similar denominada «Explorar conjuntos de elementos» a tu navegación y personalizar una página similar de «vista de conjunto de elementos». 
 - Dependiendo del tema que elijas, estas páginas de recursos pueden tener sus propios bloques preconfigurados. La mayoría de los temas mostrarán por defecto: 
   - para los elementos: una incrustación a tamaño completo del archivo multimedia, los metadatos del elemento ordenados por esquema, una lista de conjuntos de elementos y páginas del sitio en las que aparece el elemento, y a continuación una lista de todos los archivos multimedia adjuntos al elemento con pequeñas miniaturas;
 	- para los archivos multimedia: una representación a tamaño completo del archivo multimedia, seguida de los metadatos del mismo; 
   - para los conjuntos de elementos: los metadatos del conjunto de elementos, seguidos de una cuadrícula de navegación o una lista del contenido del conjunto.
-- Las páginas para navegar por elementos y conjuntos de elementos incluyen un enlace a [un formulario de búsqueda avanzada](search.md#public-views), al igual que la barra de búsqueda situada en la parte superior de tu sitio.
+- Las páginas para navegar por elementos y conjuntos de elementos incluyen cada una un enlace a [un formulario de búsqueda avanzada](search.md#public-views), al igual que la barra de búsqueda situada en la parte superior de tu sitio.
 
-En Omeka S, construyes tus [sitios](sites/index.md) página a página, utilizando los recursos que has añadido a tu instalación. Deberías empezar a planificar tu sitio antes de comenzar a añadir recursos a gran escala, pero te sugerimos que experimentes con algunos elementos y conjuntos de elementos de muestra para hacerte una idea de cómo los gestiona Omeka.
+En Omeka S, se crean los [sitios](sites/index.md) página a página, utilizando los recursos que se han añadido a la instalación. Es recomendable empezar a planificar el sitio antes de comenzar a añadir recursos a gran escala, pero sugerimos experimentar con algunos elementos y conjuntos de elementos de muestra para familiarizarse con la forma en que Omeka los gestiona.
 
-A continuación se incluyen algunas preguntas e ideas que te servirán de guía a la hora de planificar tus sitios en Omeka S.
+A continuación, te ofrecemos algunas preguntas e ideas que te servirán de guía a la hora de planificar tus sitios en Omeka S.
 
 ## Público objetivo y objetivos del sitio
 
@@ -37,16 +37,16 @@ Puedes utilizar [conjuntos de elementos](content/item-sets.md) para agrupar los 
 **¿Qué quieres que hagan tus datos?**
 ¿Qué propiedades vas a querer describir de forma coherente en tu sitio? ¿Quieres que algunas de ellas se muestren con una etiqueta diferente —por ejemplo, «autor» en lugar de «creador» para los libros? Utiliza una [plantilla de recurso](content/resource-template.md) y cambia la etiqueta de la propiedad.
 
-En Omeka S, los elementos y los conjuntos de elementos pueden utilizar otros recursos —elementos, conjuntos de elementos y archivos multimedia— como propiedades; por ejemplo, puedes crear un elemento para William Shakespeare y hacer que ese elemento complete la propiedad «creador» de un elemento «Hamlet». ¿Cómo pueden tus recursos aprovechar esta funcionalidad?
+En Omeka S, los elementos y los conjuntos de elementos pueden utilizar otros recursos —elementos, conjuntos de elementos y archivos multimedia— como propiedades; por ejemplo, puedes crear un elemento para William Shakespeare y hacer que ese elemento complete la propiedad «creador» de un elemento llamado «Hamlet». ¿Cómo pueden tus recursos aprovechar esta funcionalidad?
 
-¿Quieres utilizar un conjunto de términos (vocabulario controlado) para determinados elementos? Quizás te interese utilizar [Custom Vocab](modules/customvocab.md). ¿O prefieres utilizar una lista de términos creada por la Biblioteca del Congreso o el Getty? En ese caso, podrías utilizar [Value Suggest](modules/valuesuggest.md).
+¿Quieres utilizar un conjunto de términos (vocabulario controlado) para determinados elementos? Quizás te interese utilizar [Vocabulario personalizado](modules/customvocab.md). ¿O prefieres utilizar una lista de términos creada por la Biblioteca del Congreso o el Getty? En ese caso, podrías utilizar [Value Suggest](modules/valuesuggest.md).
 
 ## Creación de un sitio
 Con Omeka S, puedes crear tus sitios desde cero o configurar rápidamente nuestras páginas integradas. También es fácil utilizar varios sitios para alcanzar tus objetivos. 
 
-**¿Qué páginas quieres incluir?** ¿Qué tipo de contenido quieres que aparezca en estas páginas? ¿Cómo quieres organizarlas? Intenta esbozar un menú de ejemplo o unos esquemas funcionales para el sitio. Echa un vistazo a sitios de ejemplo de otras organizaciones o personas. Úsalos como guía mientras creas tus páginas.
+**¿Qué páginas quieres incluir?** ¿Qué tipo de contenido quieres que aparezca en estas páginas? ¿Cómo quieres organizarlas? Intenta esbozar un menú de muestra o diagramas de estructura para el sitio. Echa un vistazo a sitios de ejemplo de otras organizaciones o personas. Úsalos como guía mientras creas tus páginas.
 
-Las páginas se componen de [bloques](sites/site_pages.md#page-blocks) que se pueden reorganizar y que pueden incluir texto, imágenes y mucho más. ¿Qué tipo de contenido quieres que aparezca en las páginas que crees? ¿Cómo quieres que los usuarios accedan a tus colecciones y las interpreten?
+Las páginas se componen de [bloques](sites/site_pages.md#page-blocks) que se pueden reorganizar y que pueden incluir texto, imágenes y mucho más. ¿Qué tipo de contenido quieres que aparezca en las páginas que crees? ¿Cómo quieres que la gente acceda a tus colecciones y las interprete?
 
 **¿Cómo quieres interactuar con los visitantes de tu sitio web?** ¿Quieres [recopilar](modules/collecting.md) recursos de tus visitantes? ¿Permitirles que [compartan](modules/sharing.md) tu contenido en las redes sociales? 
 
@@ -58,25 +58,25 @@ El equipo de Omeka y nuestra comunidad de desarrolladores de código abierto han
 ### Publicación de colecciones digitales
 
 - Descripción de recursos 
- - [Extraer metadatos](https://omeka.org/s/modules/ExtractMetadata/){target=_blank}: Extrae metadatos incrustados de archivos, como los datos EXIF de las fotografías.
-    - [Extraer texto](https://omeka.org/s/modules/ExtractText/){target=_blank}: Extrae texto de archivos (PDF, documentos de Word, imágenes) para que se puedan buscar.   
+ - [Extraer metadatos](https://omeka.org/s/modules/ExtractMetadata/){target=_blank}: extrae metadatos incrustados de archivos, como los datos EXIF de las fotografías.
+    - [Extraer texto](https://omeka.org/s/modules/ExtractText/){target=_blank}: extrae texto de archivos (PDF, documentos de Word, imágenes) para que se puedan buscar.   
     - [Vocabulario personalizado](https://omeka.org/s/modules/CustomVocab/){target=_blank}: Describe tus recursos utilizando vocabularios que tú mismo crees.
     - [Sugerencias de valores](https://omeka.org/s/modules/ValueSuggest/){target=_blank}: Describe tus recursos utilizando valores sugeridos automáticamente por servicios de vocabulario controlado. 
     - [Tipos de datos numéricos](https://omeka.org/s/modules/NumericDataTypes/){target=_blank}: Añade tipos de datos para números y fechas. 
 - Importación de recursos
     - [Importación CSV](https://omeka.org/s/modules/CSVImport/){target=_blank}: Importa y actualiza contenido (elementos, conjuntos de elementos, archivos multimedia, usuarios) desde un archivo CSV, TSV u ODS. 
-    - [Carga lateral de archivos](https://omeka.org/s/modules/FileSideload/){target=_blank}: Añade archivos que ya se encuentran en tu servidor a los elementos. 
- - Otros importadores incluyen DSpace, Fedora, Dataverse, Invenio, Zenodo, Zotero o colecciones existentes de Omeka Classic o S.
+    - [Carga lateral de archivos](https://omeka.org/s/modules/FileSideload/){target=_blank}: Añade a los elementos archivos que ya se encuentran en tu servidor. 
+    - Otros importadores incluyen DSpace, Fedora, Dataverse, Invenio, Zenodo, Zotero o colecciones existentes de Omeka Classic o S.
 - Aumentar la visibilidad
     - [Mapeo](https://omeka.org/s/modules/Mapping/){target=_blank}: Geolocaliza tus elementos en una o varias ubicaciones mapeadas.
     - [Compartir](https://omeka.org/s/modules/Sharing/){target=_blank}: Ofrece metadatos OpenGraph para que tus enlaces de Omeka S se muestren de forma óptima en las redes sociales.
-    - [Metadatos de recursos](https://omeka.org/s/modules/ResourceMeta/){target=_blank}: Haz que los metadatos de tus recursos sean legibles por máquina.
+    - [Resource Meta](https://omeka.org/s/modules/ResourceMeta/){target=_blank}: Haz que los metadatos de tus recursos sean legibles por máquina.
     - [Identificadores persistentes](https://omeka.org/s/modules/PersistentIdentifiers/){target=_blank}: Crea, importa o asigna DOI o ARK a los elementos.
     - [Presentación IIIF](https://omeka.org/s/modules/IiifPresentation/){target=_blank}: Ofrece tus recursos utilizando la API de presentación IIIF.
 - Visualización de recursos
     - [Búsqueda por facetas](https://omeka.org/s/modules/FacetedBrowse/){target=_blank}: Añade herramientas de búsqueda más detalladas a tus colecciones.
-    - [Búsqueda por metadatos](https://omeka.org/s/modules/MetadataBrowse/){target=_blank}: Busca recursos que compartan los mismos metadatos.
-    - [Desreferenciador de URI](https://omeka.org/s/modules/UriDereferencer/){target=_blank}: Muestra metadatos de control de autoridad a partir de URI externos. 
+    - [Búsqueda por metadatos](https://omeka.org/s/modules/MetadataBrowse/){target=_blank}: Explora recursos que compartan los mismos metadatos.
+    - [Desreferenciador de URI](https://omeka.org/s/modules/UriDereferencer/){target=_blank}: Muestra metadatos de control de autoridad a partir de URI externas. 
 
 Además de estos grupos básicos de módulos, quizá te interesen los siguientes tipos específicos de funcionalidades.
 
@@ -91,12 +91,12 @@ Además de estos grupos básicos de módulos, quizá te interesen los siguientes
     - [Ver recursos privados](https://omeka.org/s/modules/ViewPrivateResources/){target=_blank}: Permitir que los usuarios con roles inferiores vean los recursos privados.
 - Visualización de datos
     - [Visualización de datos](https://omeka.org/s/modules/Datavis/){target=_blank}: Visualiza información sobre tus colecciones y elementos.
-    - [Cartografía](https://omeka.org/s/modules/Mapping/){target=_blank}: Geolocaliza tus elementos en una o varias ubicaciones cartografiadas; incluye una línea temporal para mostrar los elementos cronológicamente.
+    - [Cartografía](https://omeka.org/s/modules/Mapping/){target=_blank}: Geolocaliza tus elementos en una o más ubicaciones cartografiadas; incluye una línea de tiempo para mostrar los elementos cronológicamente.
 
 ### Contribuciones de la comunidad
 
 - Contribuciones públicas
-    - [Recopilación](https://omeka.org/s/modules/Collecting/){target=_blank}: Añade formularios de recopilación a tus sitios. Se integra con Cartografía, Tipos de datos de Numerica, Vocabulario personalizado y Sugerencias de valores.
+    - [Recopilación](https://omeka.org/s/modules/Collecting/){target=_blank}: Añade formularios de recopilación a tus sitios. Se integra con Cartografía, Tipos de datos Numerica, Vocabulario personalizado y Sugerencias de valores.
 - Transcripción
     - [Scripto](https://omeka.org/s/modules/Scripto/){target=_blank}: Transcribe y traduce los elementos.
     - [DataScribe](https://omeka.org/s/modules/Datascribe/){target=_blank}: Permite a los visitantes de la comunidad transcribir datos estructurados.
@@ -105,7 +105,7 @@ Además de estos grupos básicos de módulos, quizá te interesen los siguientes
 
 - Descripción de recursos
     - [Mapping](https://omeka.org/s/modules/Mapping/){target=_blank}: Añade información de ubicación a tus elementos y sitios.
-    - [Tipos de datos numéricos](https://omeka.org/s/modules/NumericDataTypes/){target=_blank}: Añade tipos de datos para números y fechas. Permite la creación de líneas temporales junto con la función de cartografía.
+    - [Tipos de datos numéricos](https://omeka.org/s/modules/NumericDataTypes/){target=_blank}: Añade tipos de datos para números y fechas. Permite la creación de líneas de tiempo en combinación con Mapping.
    
 ### Trabajar con otros sistemas digitales
 

@@ -1,6 +1,6 @@
 # Compartir
 
-El [módulo «Compartir»](https://omeka.org/s/modules/Sharing){target=_blank} te permite añadir botones a las páginas del sitio web para que los visitantes puedan compartir e incrustar contenido de tu sitio en redes sociales o por correo electrónico. La función de compartir también incluye los metaelementos [Open Graph](https://ogp.me/){target=_blank} y [oEmbed](https://oembed.com/){target=_blank} en la etiqueta `<head>` de cada página de elemento de tu sitio, de modo que se muestren tarjetas de vista previa cuando se comparta en redes sociales. 
+El [módulo «Compartir»](https://omeka.org/s/modules/Sharing){target=_blank} te permite añadir botones a las páginas de tu sitio web para que los visitantes puedan compartir e incrustar contenido de tu sitio en redes sociales o por correo electrónico. La función de compartir también incluye los metaelementos [Open Graph](https://ogp.me/){target=_blank} y [oEmbed](https://oembed.com/){target=_blank} en la etiqueta `<head>` de cada página de elemento de tu sitio, de modo que se muestren tarjetas de vista previa al compartir el contenido en redes sociales. 
 
 Actualmente, el módulo «Compartir» admite las siguientes opciones:
 
@@ -11,7 +11,7 @@ Actualmente, el módulo «Compartir» admite las siguientes opciones:
 - Correo electrónico
 - Códigos de incrustación.
 
-Una vez que se ha instalado y activado la función «Compartir» en una instalación de Omeka S, estará disponible para todos los sitios de dicha instalación.
+Una vez que se ha instalado y activado la función «Compartir» para una instalación de Omeka S, estará disponible para todos los sitios de dicha instalación.
 
 «Sharing» añade un nuevo [bloque de página](../sites/site_pages.md#page-blocks) a las páginas del sitio, y un [bloque de recursos para configurar](../sites/site_theme.md#configure-resource-pages) en el tema del sitio; estos bloques son opcionales, dependiendo de la configuración del sitio.
 
@@ -19,13 +19,13 @@ Una vez que se ha instalado y activado la función «Compartir» en una instalac
 
 ![Sección «Sharing» en la configuración del sitio](../modules/modulesfiles/sharing.png)
 
-La configuración de «Sharing» se realiza sitio por sitio. Accede a un sitio y haz clic en «Configuración del sitio». Habrá una sección denominada «Compartir» con tres opciones:
+La configuración de «Sharing» se establece para cada sitio por separado. Accede a un sitio y haz clic en «Configuración del sitio». Habrá una sección titulada «Compartir» con tres opciones:
 
 **Botones para compartir**: muestra una serie de casillas de selección, una para cada servicio u opción (Facebook, Twitter, etc.). Puedes desmarcar todas las casillas de los servicios para desactivar la función de compartir en un solo sitio. 
 
 **Ubicación de los botones para compartir**: establece la ubicación de los botones para compartir, ya sea en la parte superior del contenido (debajo de la navegación y el encabezado de la página) o en la parte inferior (justo encima del pie de página). También puedes optar por mostrar los botones para compartir únicamente a través de bloques: [bloques de página para páginas individuales](../sites/site_pages.md#page-blocks) y bloques de recursos configurados en la [página de configuración de recursos](../sites/site_theme.md#configure-resource-pages) del tema del sitio. 
 
-**Botón único**: en lugar de mostrar botones con los logotipos de cada servicio seleccionado anteriormente, muestra un único botón con un icono de «Compartir» que, al hacer clic en él, abre las opciones del servicio. Esto sustituirá todas las instancias de los botones para compartir en todo el sitio. 
+**Botón único**: En lugar de mostrar botones con los logotipos de cada servicio seleccionado anteriormente, muestra un único botón con un icono de «Compartir» que, al hacer clic en él, abre las opciones del servicio. Esto sustituirá todas las instancias de los botones para compartir en todo el sitio. 
 
 Asegúrate de que las casillas correctas estén marcadas para tu sitio. Asegúrate de guardar los cambios. 
 
@@ -33,11 +33,11 @@ Asegúrate de que las casillas correctas estén marcadas para tu sitio. Asegúra
 
 Si has optado por mostrar los botones para compartir mediante bloques, puedes configurarlos en dos lugares: en cada página utilizando un bloque de página, y en los elementos y archivos multimedia en «Configurar páginas de recursos». Coloca estos bloques en las ubicaciones que elijas. 
 
-Si tiene la opción de «Compartir» configurada para mostrarse en la «Parte superior» o en la «Parte inferior» de su sitio web, aún así puede utilizar los bloques. Tenga en cuenta que esto hará que los botones de «Compartir» aparezcan dos veces: una vez en la parte superior o inferior de cada página, según su configuración, y otra vez dondequiera que se encuentren los bloques. 
+Si tiene la opción «Compartir» configurada para mostrarse en la «Parte superior» o en la «Parte inferior» de su sitio web, aún así puede utilizar los bloques. Tenga en cuenta que esto hará que los botones para compartir aparezcan dos veces: una vez en la parte superior o inferior de cada página según su configuración, y otra vez dondequiera que se encuentren los bloques. 
 
 ### Elementos incrustados
 
-El módulo enviará metaetiquetas Open Graph y oEmbed independientemente de la configuración de tu sitio. 
+El módulo enviará metaetiquetas Open Graph y oEmbed independientemente de la configuración de tu sitio web. 
 
 En el caso de Open Graph, tendrá un aspecto similar al siguiente:
 
@@ -50,10 +50,10 @@ Las etiquetas pueden incluir:
 - `og:description`, que refleja el contenido de `dcterms:description` de cualquier recurso, si procede, o el [campo utilizado para la descripción del recurso](../content/resource-template.md#other-options)
 - `og:title`, que refleja `dcterms:title` o el campo utilizado para el título del recurso
 - `og:image`, que puede ser el archivo multimedia principal o la miniatura predeterminada, según el tipo de archivo multimedia
-- `og:type`, que actualmente es siempre `content="website"`
+- `og:type`, que en este momento es siempre `content="website"`
 - `og:url`, la URL de la página actual.
 
-Estos campos no se envían en las páginas de conjuntos de elementos ni en las de archivos multimedia. Los archivos multimedia (audio y vídeo) no se enviarán; solo se enviará una imagen en miniatura. 
+Estos campos no se envían en las páginas de conjuntos de elementos ni en las de archivos multimedia. Los archivos multimedia (audio y vídeo) no se enviarán, solo una imagen en miniatura. 
 
 oEmbed aparecerá como una única etiqueta en el `<head>` de todas las páginas públicas de Omeka S, incluidas las de elementos, medios y las de búsqueda y navegación: 
 
@@ -69,12 +69,12 @@ Los iconos para compartir de los servicios y opciones habilitados se mostrarán 
 
 ![Todos los botones de compartir disponibles se muestran encima del título de un elemento, justo debajo del encabezado de la página](../modules/modulesfiles/sharing_buttons.png)
 
-Ten en cuenta que, si tienes la opción «Compartir» configurada para mostrarse en la «Parte superior» o en la «Parte inferior» de tu sitio, y además utilizas la página «Compartir» y/o bloques de recursos, los botones para compartir aparecerán dos veces: una vez en la parte superior o inferior de cada página, según tu configuración, y otra vez dondequiera que se encuentren los bloques. 
+Ten en cuenta que, si tienes la opción «Compartir» configurada para mostrarse en la «Parte superior» o en la «Parte inferior» de tu sitio web, y además utilizas la página «Compartir» y/o bloques de recursos, los botones para compartir aparecerán dos veces: una vez en la parte superior o inferior de cada página, según tu configuración, y otra vez dondequiera que se encuentren los bloques. 
 
 Si has elegido la opción «Botón único», el botón se mostrará según los colores y la configuración del tema. Puedes modificar el tamaño y el color con el [Editor CSS](csseditor.md). Aquí se muestra en la barra lateral derecha, como un botón negro con un icono blanco, por encima del resto de la información:
 
 ![Compartir como un único botón en la página de un elemento público, en la barra lateral derecha, encima del resto de la información.](../modules/modulesfiles/sharing_singleButton.png)
 
-Por defecto, el módulo compartirá el título de la página, el nombre del sitio y el nombre de la instalación, y a continuación un enlace en el que los visitantes pueden hacer clic para acceder al recurso compartido. 
+Por defecto, el módulo compartirá el título de la página, el nombre del sitio y el nombre de la instalación, seguido de un enlace en el que los visitantes pueden hacer clic para acceder al recurso compartido. 
 
 ![Un ejemplo de tuit para la página, en el que aparece el título de la página seguido de un punto, luego el título del sitio seguido de un punto, a continuación el título de la instalación y, por último, la URL del sitio](../modules/modulesfiles/sharing_tweet.png)

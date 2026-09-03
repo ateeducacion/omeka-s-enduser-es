@@ -1,12 +1,12 @@
 # Exportaciones
 
-El [módulo «Exportaciones»](https://omeka.org/s/modules/ExtractText){target=_blank} permite generar una exportación de la información sobre los recursos, los activos y otros elementos de tu instalación de Omeka S. El módulo puede generar archivos CSV o JSON-LD con metadatos e información interna sobre tus elementos, conjuntos de elementos o archivos multimedia, así como plantillas de recursos, vocabularios, activos, tareas, sitios y páginas de sitios, usuarios e información añadida por los módulos. 
+El [módulo de exportaciones](https://omeka.org/s/modules/ExtractText){target=_blank} permite generar una exportación con información sobre los recursos, los activos y otros elementos de tu instalación de Omeka S. El módulo puede generar archivos CSV o JSON-LD con metadatos e información interna sobre tus elementos, conjuntos de elementos o archivos multimedia, así como plantillas de recursos, vocabularios, activos, tareas, sitios y páginas de sitio, usuarios e información añadida por los módulos. 
 
 ![La tabla «Exportaciones», que muestra información sobre exportaciones anteriores.](modulesfiles/exports_sidebar.png)
 
 ## Requisitos del sistema
 
-El módulo requiere que dos carpetas de tu instalación tengan permisos de escritura. Una es una carpeta temporal donde se recopilan los archivos de exportación, y se configura en tus ajustes. La otra es la ubicación permanente donde se almacenarán los resultados de la exportación y estarán disponibles para su descarga. Esta carpeta se encontrará dentro de la carpeta `/files` de su instalación y se llamará «exports». 
+El módulo requiere que dos carpetas de tu instalación tengan permisos de escritura. Una es una carpeta temporal donde se recopilan los archivos de exportación, y se configura en tus ajustes. La otra es la ubicación permanente donde se almacenarán los archivos de exportación y estarán disponibles para su descarga. Esta carpeta se encontrará dentro de la carpeta `/files` de su instalación y se llamará «exports». 
 
 El módulo no creará la carpeta `/files/exports` durante la instalación, sino cuando inicie su primera exportación. Si se encuentra con errores, es posible que tenga que cambiar los permisos de su directorio `/files` para permitir esta creación, o bien crear manualmente el directorio `/files/exports` y configurar sus permisos. 
 
@@ -35,13 +35,13 @@ En este momento, la pantalla solo ofrece una opción. Es posible que en futuras 
 
 ![La segunda página del módulo te permite configurar la exportación para seleccionar un tipo concreto de información.](modulesfiles/exports_create.png)
 
-En la página siguiente, configurarás la exportación para extraer información de las entradas que hayas elegido en la base de datos de la instalación. 
+En la página siguiente configurarás la exportación para extraer información de las entradas que hayas elegido en la base de datos de la instalación. 
 
 **Etiqueta**: Aunque el módulo rellena un nombre por defecto para esta exportación, puedes especificar uno más fácil de recordar, como el tipo de información que estás exportando. 
 
 **Tipo de recurso**: Selecciona un tipo de información para exportar. Los tres tipos principales de recursos entre los que puedes elegir son elementos, conjuntos de elementos o archivos multimedia. Puedes utilizar una consulta para filtrar tipos específicos de estos recursos, por ejemplo, por plantilla de recurso, clase, valor de metadatos, etc. 
 
-También puedes elegir otra información de la base de datos de tu instalación, incluidos los datos almacenados por los módulos. Esto puede incluir información sobre importaciones anteriores realizadas mediante la importación de CSV o el importador de elementos de Omeka S, jerarquías de Hierarchy, vocabularios, plantillas de recursos y mucho más. 
+También puede seleccionar otra información de la base de datos de su instalación, incluidos los datos almacenados por los módulos. Esto puede incluir información sobre importaciones anteriores realizadas mediante «CSV Import» o «Omeka S Item Importer», jerarquías de «Hierarchy», vocabularios, plantillas de recursos y mucho más. 
 
 ![La lista de información disponible para la exportación.](modulesfiles/exports_resourceTypes.png)
 
@@ -67,21 +67,21 @@ Las opciones, sin contar las opciones adicionales añadidas por los módulos, in
   - Usuarios
   - Vocabularios.
 
-**Consulta de elementos o consulta de recursos:** Una vez que hayas elegido una opción para exportar, puedes filtrar los resultados mediante consultas. Puedes crear una consulta utilizando la barra lateral de selección para recursos (elementos, tipos de elementos y archivos multimedia). Para otros tipos de recursos, puedes introducir manualmente una consulta de texto. Por ejemplo, puede introducir lo siguiente para filtrar sus activos según el propietario:
+**Consulta de elementos o consulta de recursos:** Una vez que hayas elegido una opción para exportar, puedes filtrar los resultados mediante consultas. Puedes crear una consulta utilizando la barra lateral de selección para recursos (elementos, tipos de elementos y archivos multimedia). Para otros tipos de recursos, puedes introducir manualmente una consulta de texto. Por ejemplo, puedes introducir lo siguiente para filtrar tus activos según el propietario:
 
 ```
 owner_id=2
 ```
 
-**Formato**: Puede exportar la información a un archivo CSV o JSON-LD (extensiones de archivo `.csv` o `.json`). Cualquiera de las dos opciones se comprimirá en un archivo ZIP para su descarga. 
+**Formato**: Puedes exportar la información a un archivo CSV o a un archivo JSON-LD (extensiones de archivo `.csv` o `.json`). Cualquiera de las dos opciones se comprimirá en un archivo ZIP para su descarga. 
 
-**Referencia por**: Este campo es una opción para las exportaciones en formato CSV. Para los recursos, puedes rellenar los campos con URL absolutas (como «https://yourinstallation.org/api/items/123») o solo con identificadores internos. Esto afectará a los campos de los archivos, como los relacionados con derivados multimedia (que podrían tener un aspecto similar a «https://yourinstallation.org/files/large/123abc.png»).
+**Referencia por**: Este campo es una opción para las exportaciones en CSV. Para los recursos, puedes rellenar los campos con URL absolutas (como «https://yourinstallation.org/api/items/123») o solo con ID internos. Esto afectará a los campos de los archivos, como los campos con derivados multimedia (que podrían tener un aspecto similar a «https://yourinstallation.org/files/large/123abc.png»).
 
-**Separador multivalor**: Este campo es una opción para las exportaciones a CSV. El carácter predeterminado es la barra vertical (|). Puedes cambiarlo si lo deseas. Otros separadores habituales son las comas y los puntos y comas; recomendamos elegir un carácter que no aparezca en el conjunto de datos. 
+**Separador de valores múltiples**: Este campo es una opción para las exportaciones CSV. El carácter predeterminado es la barra vertical (|). Puedes cambiarlo si lo deseas. Otros separadores habituales son las comas y los puntos y comas; recomendamos elegir un carácter que no aparezca en el conjunto de datos. 
 
 ![La tabla de exportaciones con una barra verde en la parte superior que indica que se está realizando una exportación.](modulesfiles/exports_inprogress.png)
 
-Una vez iniciada la exportación, volverás a la tabla de exportaciones anteriores. Verás una barra verde en la parte superior de la pantalla que indica que la tarea ha comenzado, con un enlace para consultar el estado de la misma. Si actualizas esta página, verás la tabla con el estado de la exportación indicado. También puedes encontrar esta información en la página «Tareas», a la que se accede desde la barra lateral. 
+Una vez iniciada la exportación, volverás a la tabla de exportaciones anteriores. Verás una barra verde en la parte superior de la pantalla que indica que la tarea ha comenzado, junto con un enlace para consultar el estado de la misma. Si actualizas esta página, verás la tabla con el estado de la exportación indicado. También puedes encontrar esta información en la página «Tareas», a la que se accede desde la barra lateral. 
 
 ## La tabla de exportaciones
 
@@ -91,7 +91,7 @@ Cuando se complete una exportación, verás un icono de descarga en la fila de l
 
 Una vez que hayas creado las exportaciones, puedes ver información sobre ellas haciendo clic en el icono de los tres puntos en la fila de la tabla. Esto abrirá una barra lateral en la que podrás revisar la configuración que has utilizado. 
 
-Puedes volver a ejecutar una exportación con el icono de copia (dos páginas idénticas) o eliminar su registro de la base de datos de la instalación (y cualquier archivo que haya creado) con el icono de eliminar (papelera). Esto abrirá una ventana de confirmación. 
+Puedes volver a ejecutar una exportación con el icono de copia (dos páginas idénticas) o eliminar su registro de la base de datos de la instalación (y cualquier archivo que haya creado) con el icono de eliminar (papelera). Al hacerlo, aparecerá una ventana de confirmación. 
 
 ## Archivos exportados
 

@@ -7,8 +7,8 @@ Para instalar Omeka S (última versión 4.2), necesitarás un servidor que ejecu
 - Apache (con [AllowOverride](https://httpd.apache.org/docs/2.4/mod/core.html#allowoverride){target=_blank} configurado en «All» y [mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html){target=_blank} habilitado)
 - MySQL, versión mínima 5.7.9 **o** MariaDB, versión mínima 10.2.6
 - PHP, versión mínima 8.1, con las siguientes extensiones instaladas:
-  - [PDO](https://www.php.net/manual/en/book.pdo.php){target=_blank}
-	- [pdo_mysql](http://php.net/manual/en/ref.pdo-mysql.php){target=_blank}
+	- [PDO](https://www.php.net/manual/en/book.pdo.php){target=_blank}
+  - [pdo_mysql](http://php.net/manual/en/ref.pdo-mysql.php){target=_blank}
 	- [mbstring](https://www.php.net/manual/en/book.mbstring.php){target=_blank}, y
   - [xml](https://www.php.net/manual/en/book.xml.php){target=_blank}. 
 - **PHP 8.4 no es compatible con Omeka S 4.1 ni versiones anteriores**, pero sí lo es a partir de Omeka S 4.2 y versiones posteriores. 
@@ -24,7 +24,7 @@ Para instalar Omeka S (última versión 4.2), necesitarás un servidor que ejecu
 ### Instalación desde el archivo descargado
 
 !!! Nota
-  Antes de instalar Omeka S, debes crear una base de datos MySQL y un usuario. Omeka S debe tener una base de datos dedicada; no puedes utilizar un prefijo de una base de datos utilizada por otro sistema o por otra instalación de Omeka S o Classic. Para obtener más información sobre cómo crear una base de datos y un usuario, consulta la documentación de soporte de tu proveedor de alojamiento o habla con tu administrador de sistemas.
+  Antes de instalar Omeka S, debes crear una base de datos MySQL y un usuario. Omeka S debe disponer de una base de datos dedicada; no puedes utilizar un prefijo de una base de datos que ya esté en uso por otro sistema o por otra instalación de Omeka S o Classic. Para obtener más información sobre cómo crear una base de datos y un usuario, consulta la documentación de soporte de tu proveedor de alojamiento o habla con tu administrador de sistemas.
 
 1. [Descarga la última versión desde la página de versiones](https://omeka.org/s/download/){target=_blank}.
 1. Descomprime el archivo ZIP descargado en tu ordenador.
@@ -41,12 +41,12 @@ A continuación, en tu navegador web, accede a la página de administración de 
 
 ### Instalación con un solo clic
 
-Los proveedores de alojamiento que utilicen [Softaculous](https://softaculous.com/){target=_blank} e [Installatron](https://installatron.com/){target=_blank} deberían ofrecer la instalación con un solo clic de Omeka Classic y Omeka S. Consulta sus bases de datos de aplicaciones:
+Las empresas de alojamiento que utilicen [Softaculous](https://softaculous.com/){target=_blank} e [Installatron](https://installatron.com/){target=_blank} deberían ofrecer la instalación con un solo clic de Omeka Classic y Omeka S. Consulta sus catálogos de aplicaciones:
 
 - [Omeka Classic](https://www.softaculous.com/softaculous/apps/educational/Omeka){target=_blank} y [Omeka S](https://www.softaculous.com/softaculous/apps/others/Omeka_S){target=_blank} en Softaculous
 - [Omeka Classic](https://installatron.com/omeka?locale=en){target=_blank} y [Omeka S](https://installatron.com/omekas?locale=en){target=_blank} en Installatron.
 
-El proceso de instalación con un solo clic a través de Softaculous te permite crear una base de datos y un usuario al mismo tiempo, y edita el archivo `config/database.ini` por ti.
+El proceso de instalación con un solo clic a través de Softaculous te permite crear una base de datos y un usuario al mismo tiempo, y edita por ti el archivo `config/database.ini`.
 
 Entre las sugerencias de alojamiento de nuestros usuarios se incluyen:
 
@@ -84,7 +84,7 @@ Puedes modificar estos ajustes en cualquier momento en la sección [Configuraci�
 
 ### Comprueba y configura la ruta de PHP
 
-Omeka S utiliza tareas en segundo plano para algunas operaciones de larga duración que se realizan sobre muchos elementos o que, por cualquier otro motivo, pueden tardar mucho tiempo. Omeka S utiliza la CLI de PHP (interfaz de línea de comandos) para ejecutar estas tareas, es decir, el comando `php`. Una ruta de PHP no válida puede causar diversos problemas en tu instalación de Omeka Classic. 
+Omeka S utiliza tareas en segundo plano para algunas operaciones de larga duración que se realizan sobre muchos elementos o que, por cualquier otro motivo, pueden tardar mucho tiempo. Omeka S utiliza la CLI de PHP (interfaz de línea de comandos) para ejecutar estas tareas, es decir, el comando `php`. Una ruta de PHP incorrecta puede provocar diversos problemas en tu instalación de Omeka Classic. 
 
 Por defecto, Omeka S intentará detectar automáticamente la ruta a la CLI de PHP en el servidor, pero en algunos servidores esta detección no funciona, o bien hay varios comandos `php` diferentes entre los que elegir. 
 
@@ -94,14 +94,14 @@ Utiliza la [página de información del sistema](admin-dashboard.md#system-infor
 
 ![Los botones de «Información del sistema» para obtener la ruta de PHP y la versión de ImageMagick.](files/systeminfo_buttons.png)
 
-Consulta [Opciones de configuración](configuration.md) para obtener más información sobre cómo modificar la generación de miniaturas, configurar manualmente la ruta de PHP y mucho más. 
+Consulta [Opciones de configuración](configuration.md) para obtener información sobre cómo modificar la generación de miniaturas, configurar manualmente la ruta de PHP y mucho más. 
 
 ### Trabajar con tu instalación
 
 Una vez que hayas configurado correctamente todos los componentes técnicos de tu instalación de Omeka S, lo primero que querrás hacer es: añadir otros usuarios; crear plantillas de recursos, vocabularios y conjuntos de elementos; crear uno o más sitios; y, a continuación, añadir elementos y asignar esos recursos a tus sitios. Continúa leyendo el manual de usuario para obtener más información sobre estas partes de Omeka S.
 
 !!! nota
-  Si ya tienes una instalación de Omeka Classic u Omeka S, quizá te interese echar un vistazo a módulos como el [Importador de Omeka Classic](modules/omekaCimporter.md), el [Importador de elementos de Omeka S](modules/ositemimporter.md) o el [Módulo de importación CSV](modules/csvimport.md), que pueden ayudarte a copiar otros tipos de datos.
+  Si ya tienes una instalación de Omeka Classic o S, quizá te interese echar un vistazo a módulos como el [Importador de Omeka Classic](modules/omekaCimporter.md), el [Omeka S Item Importer](modules/ositemimporter.md) o el [módulo de importación CSV](modules/csvimport.md), que pueden ayudarte a copiar otros tipos de datos.
 
 ## Actualización
 
@@ -112,10 +112,10 @@ Una vez que hayas configurado correctamente todos los componentes técnicos de t
 1. Haz una copia de tu archivo `.htaccess` (en el directorio raíz) si lo has modificado, por ejemplo, al [activar el registro de errores](errorLogging.md).
 1. Haz una copia de tus directorios `/modules` y `/themes`.
 1. Haz una copia de tu directorio `/files`.
-1. Elimina todos los archivos de Omeka S y sustitúyelos por los archivos del archivo zip actualizado.
+1. Elimina todos los archivos de Omeka S y sustitúyelos por los archivos del archivo ZIP actualizado.
 1. Sustituye tus archivos originales `/config/local.config.php`, `/config/database.ini` y `.htaccess`.
 1. Sustituye tus directorios originales `/modules`, `/themes` y `/files`.
-    - En el caso de actualizaciones de versión importantes, es posible que también tengas que instalar una versión actualizada de tus módulos y temas. Las notas de la versión del núcleo indicarán si es probable que se requieran esas actualizaciones. Una vez que hayas completado las migraciones mediante tu navegador, los módulos y temas que requieran nuevas versiones aparecerán claramente marcados en sus respectivas páginas. La página «Módulos» de tu instalación te indicará qué hay que actualizar; la página «Temas» de cualquiera de tus sitios web indicará los temas activos que necesitan actualizarse. 
+    - En el caso de actualizaciones de versión importantes, es posible que también tengas que instalar una versión actualizada de tus módulos y temas. Las notas de la versión del núcleo indicarán si es probable que se requieran esas actualizaciones. Una vez que completes las migraciones mediante tu navegador, los módulos y temas que requieran nuevas versiones aparecerán claramente marcados en sus respectivas páginas. La página «Módulos» de tu instalación te indicará qué hay que actualizar; la página «Temas» de cualquiera de tus sitios web te mostrará los temas activos que necesitan actualizarse. 
 1. En tu navegador web, ve a la página de administración de tu sitio web (`/myomekas/admin`) y ejecuta las migraciones que sean necesarias.
 
 ### Actualización desde GitHub
@@ -127,7 +127,7 @@ Omeka S no es compatible con sistemas operativos propietarios o de código cerra
 
 Sigue las instrucciones de instalación estándar. Para que funcione, tendrás que realizar los siguientes cambios de [configuración](configuration.md) en el archivo `config/local.config.php`.
 
-En primer lugar, es posible que tengas que configurar la ruta de PHP si Omeka S no detecta automáticamente la ubicación de tus utilidades de PHP en tu servidor local. Abre el archivo `local.config.php` y busca la línea 12:
+En primer lugar, es posible que haya que configurar la ruta de PHP si Omeka S no puede detectar automáticamente la ubicación de tus utilidades de PHP en tu servidor local. Abre el archivo `local.config.php` y busca la línea 12:
 ```
     'cli' => [
  'phpcli_path' => null,
@@ -141,8 +141,8 @@ En segundo lugar, debes configurar Omeka S para que utilice la utilidad de gener
     'service_manager' => [
  'aliases' => [
  'Omeka\File\Store' => 'Omeka\File\Store\Local',
- 'Omeka\File\Thumbnailer' => 'Omeka\File\Thumbnailer\ImageMagick',
-        ],
+            'Omeka\File\Thumbnailer' => 'Omeka\File\Thumbnailer\ImageMagick',
+ ],
     ],
 ```
 Modifica el valor de `Omeka\File\Thumbnailer` como se indica a continuación, en función de lo que esté disponible en tu sistema:
@@ -151,4 +151,4 @@ Modifica el valor de `Omeka\File\Thumbnailer` como se indica a continuación, en
 - Sustituye el generador de miniaturas predeterminado por `Omeka\File\Thumbnailer\Imagick` y habilita Imagick en el archivo `php.ini` de tu servidor a través de la interfaz de administración del servidor o directamente en el propio archivo.
 - Mantén el generador de miniaturas predeterminado `Omeka\File\Thumbnailer\ImageMagick`, pero instala la herramienta de línea de comandos `imagemagick` y cambia el valor de `imagemagick_dir` por su directorio. Para instalar ImageMagick, consulta la documentación de tu servidor.
 
-Si aparece el error «no input file specified», es posible que tengas que editar el archivo `.htaccess`. Comenta la línea 8: `RewriteRule !\.(php[0-9]?|phtml|phps)$ - [NC,C]`. Es posible que también tengas que comentar las líneas que siguen al bloque de comentarios de la línea 17 («The following rewrites») y sustituirlas por `RewriteRule ^(.*)$ index.php`. 
+Si aparece el error «no input file specified», es posible que tengas que editar el archivo `.htaccess`. Comenta la línea 8: «RewriteRule !\.(php[0-9]?|phtml|phps)$ - [NC,C]`. Es posible que también tengas que comentar las líneas que siguen al bloque de comentarios de la línea 17 («The following rewrites») y sustituirlas por `RewriteRule ^(.*)$ index.php`. 

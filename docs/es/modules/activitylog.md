@@ -19,12 +19,12 @@ La tabla incluye las siguientes columnas:
 - **Usuario**: El usuario que ha provocado el evento y su rol. Cuando no haya ningún usuario conectado (como en el caso de las contribuciones realizadas mediante los formularios públicos del módulo [Collecting](collecting.md)), este campo aparecerá en blanco. 
 - **IP**: La dirección IP del usuario en el momento del evento
 - **Nombre del evento**: El tipo de evento que ha desencadenado el usuario
-- **Recurso**: El ID del recurso que ha modificado el usuario. Si se trata de varios recursos, como en una acción masiva, en los datos aparecerán los ID de todos los recursos afectados. 
-- **Mensajes**: Cualquier mensaje que describa el evento, en forma de lista.
+- **Recurso**: El ID del recurso que ha modificado el usuario. Si se trata de varios recursos, como en una acción masiva, se mostrarán en los datos los ID de todos los recursos afectados. 
+- **Mensajes**: cualquier mensaje que describa el evento, en forma de lista.
 
-Se puede ver un evento con más detalle haciendo clic en el enlace «Ver datos del evento» que aparece en cada entrada de la tabla. Esto abrirá el panel de la derecha para mostrar una versión técnica de los datos guardados en la base de datos correspondientes al evento. 
+Se puede ver un evento con más detalle haciendo clic en el enlace «Ver datos del evento» de cada entrada de la tabla. Esto abrirá el panel lateral derecho para mostrar una versión técnica de los datos guardados en la base de datos correspondientes al evento. 
 
-![La tabla de eventos del módulo «Registro de actividad», con los datos del evento mostrados en el panel de la derecha.](modulesfiles/activityLog_eventData.png)
+![La tabla de eventos del módulo «Registro de actividad», con los datos del evento mostrados en el panel lateral derecho.](modulesfiles/activityLog_eventData.png)
 
 Por ejemplo, un evento en el que se eliminan varios elementos (ID 123, 124 y 125) de un sitio (ID 01) dirá:
 
@@ -55,13 +55,13 @@ Los usuarios con permiso para ver el «Registro de actividad» pueden filtrar lo
 
 ![La tabla de eventos del módulo «Registro de actividad», con el panel lateral derecho mostrando las opciones de filtrado de la tabla.](modulesfiles/activityLog_filter.png)
 
-- El filtrado por nombre de evento te permitirá acotar la búsqueda según los tipos de cambios realizados: creación, eliminación, actualización, actualización por lotes, cambios en la configuración, etc.
+- El filtrado por nombre de evento te permitirá acotar los resultados según los tipos de cambios realizados: creación, eliminación, actualización, actualización por lotes, cambios en la configuración, etc.
 
 ![La tabla de eventos del módulo «Registro de actividad», con el panel lateral derecho mostrando las opciones de filtrado de eventos para la tabla.](modulesfiles/activityLog_filterName.png)
 
 - El filtrado por recurso te permitirá seleccionar entre los recursos de la instalación: elemento, medio, conjunto de elementos, sitio, página, etc.
 
-![La tabla de eventos del módulo «Registro de actividad», con el panel deslizante de la derecha mostrando las opciones de filtrado por recurso para la tabla.](modulesfiles/activityLog_filterResource.png)
+![La tabla de eventos del módulo «Registro de actividad», con el panel lateral derecho mostrando las opciones de filtrado por recurso de la tabla.](modulesfiles/activityLog_filterResource.png)
 
 - El filtrado por usuario te permitirá elegir entre la lista de usuarios que han realizado cambios en la instalación dentro del intervalo de recopilación del «Registro de actividad».
 
@@ -71,7 +71,7 @@ Los usuarios con permiso para ver el «Registro de actividad» pueden filtrar lo
 
 ![La tabla de eventos del módulo «Registro de actividad», con el panel lateral derecho mostrando las opciones de filtrado por fecha de la tabla.](modulesfiles/activityLog_filterDate.png)
 
-Los usuarios pueden filtrar los eventos utilizando los distintos filtros disponibles (verás el recuento de cada entrada entre paréntesis):
+Los usuarios pueden filtrar los eventos utilizando los múltiples filtros disponibles (verás el recuento de cada entrada entre paréntesis):
 
 - **ID**: Filtrar eventos por ID de evento
 - **Usuario**: Filtrar eventos por usuario

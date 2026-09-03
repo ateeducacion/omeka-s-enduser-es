@@ -6,7 +6,7 @@ Existen dos opciones diferentes para capturar los mensajes de error. Tendrás qu
 
 ## Mostrar detalles de los errores
 
-Una opción es habilitar la visualización de los detalles de los errores en la propia página. De este modo, las páginas del tipo «Omeka S ha detectado un error» mostrarán el mensaje de error y sus detalles en lugar de un mensaje genérico, y también se mostrarán en las páginas los errores y advertencias a nivel de PHP si se producen.
+Una opción consiste en habilitar la visualización de los detalles de los errores en la propia página. De este modo, las páginas del tipo «Omeka S ha detectado un error» mostrarán el mensaje de error y sus detalles en lugar de un mensaje genérico, y también se mostrarán en las páginas los errores y advertencias a nivel de PHP si se producen.
 
 Para habilitar esta visualización, edita tu archivo `.htaccess`. El archivo `.htaccess` se encuentra en la carpeta principal de tu instalación de Omeka S.
 
