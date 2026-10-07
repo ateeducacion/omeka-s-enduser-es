@@ -2,20 +2,20 @@
 
 El [módulo «Extraer metadatos»](https://omeka.org/s/modules/ExtractMetadata){target=_blank} permite a los administradores del sitio extraer los metadatos incrustados de los archivos multimedia. 
 
-El módulo añade una nueva pestaña «Extraer metadatos» a cada página de multimedia, lo que te permitirá extraer manualmente cualquier metadato incrustado que se encuentre en el archivo. También añade un campo «Extraer metadatos» a la página de edición por lotes. Cuando está activado, funciona automáticamente con los archivos recién subidos. 
+El módulo añade una nueva pestaña «Extraer metadatos» a cada página multimedia, lo que te permitirá extraer manualmente cualquier metadato incrustado que se encuentre en el archivo. También añade un campo «Extraer metadatos» a la página de edición por lotes. Cuando está activado, funciona automáticamente con los archivos recién subidos. 
 
-Un buen flujo de trabajo consiste en instalar y configurar el módulo, extraer de forma masiva los metadatos de los archivos existentes en tu base de datos, asignarlos a los campos de metadatos multimedia que elijas y, a continuación, simplemente dejar que el módulo siga extrayendo metadatos de los archivos en el futuro.
+Un buen flujo de trabajo consiste en instalar y configurar el módulo, extraer por lotes los metadatos de los archivos existentes en tu base de datos, asignarlos a los campos de metadatos multimedia que elijas y, a continuación, simplemente dejar que el módulo siga extrayendo metadatos de los archivos en el futuro.
 
 ## Configuración del módulo
 
 Al configurar el módulo, puedes:
 
 - Ver y activar/desactivar extractores: puedes elegir entre cinco extractores diferentes, entre los que se incluyen ExifTool, Tika, Exif, getID3 y OHMS (véase más abajo).
-- Ver y activar/desactivar mapeadores: puedes optar por no activar ningún mapeador o activar JSON Pointer.
-- Configurar la correspondencia de metadatos para el mapeador JSON Pointer (si está habilitado). Si decides utilizar el mapeador JSON Pointer, deberás definir la correspondencia de metadatos. 
+- Ver y activar/desactivar mapeadores: puedes optar por no activar ningún mapeador o por activar JSON Pointer.
+- Configurar la tabla de correspondencias de metadatos para el mapeador JSON Pointer (si está habilitado). Si decides utilizar el mapeador JSON Pointer, tendrás que definir la tabla de correspondencias de metadatos. 
  1. Haz clic en el botón «Añadir mapa +».
     1. Selecciona el recurso, el extractor y la propiedad en los menús desplegables.
-    1. Introduzca un puntero con el formato de un puntero JSON tal y como se define en el [estándar IETF](https://datatracker.ietf.org/doc/html/rfc6901){target=_blank}.
+    1. Introduzca un puntero con el formato definido por el [estándar IETF](https://datatracker.ietf.org/doc/html/rfc6901){target=_blank}.
     1. Si deseas sustituir los valores de metadatos mediante este puntero, asegúrate de marcar la casilla situada a la derecha de estos campos.
 
 Cuando hayas terminado de configurar el módulo, haz clic en el botón «Enviar» situado en la esquina superior derecha de la pantalla.
@@ -37,7 +37,7 @@ Puedes ver los metadatos extraídos en las páginas de los archivos multimedia, 
 Un usuario puede editar los metadatos de los archivos multimedia asociados a los elementos editando directamente el elemento concreto o utilizando las funciones de edición por lotes.
 
 ### Edición de elementos
-Al editar un recurso multimedia o un elemento, el usuario puede elegir entre varias acciones, a las que se accede a través de la pestaña «Extraer metadatos» en la vista de edición del elemento. Selecciona una de las cuatro opciones del menú desplegable.
+Al editar un archivo multimedia o un elemento, el usuario puede elegir entre varias acciones, a las que se accede a través de la pestaña «Extraer metadatos» en la vista de edición del elemento. Selecciona una de las cuatro opciones del menú desplegable.
 
 - Actualizar metadatos: (re)extraer metadatos de los archivos
 - Actualizar y asignar metadatos: (re)extraer metadatos de los archivos y asignarlos a los valores de los recursos
@@ -72,7 +72,7 @@ Se utiliza para extraer muchos tipos de metadatos de muchos tipos de archivos. U
  
 ### Tika
 
-Se utiliza para extraer diversos tipos de metadatos de diversos tipos de archivos. Requiere el kit de herramientas de análisis de contenido [Apache Tika](https://tika.apache.org/){target=_blank}. Es necesario tener instalado Java y configurar la ruta al archivo `tika-app-*.jar` en `config/module.config.php`, en la sección `[extract_metadata_extractor_config][tika][jar_path]`.
+Se utiliza para extraer diversos tipos de metadatos de distintos tipos de archivos. Requiere el kit de herramientas de análisis de contenido [Apache Tika](https://tika.apache.org/){target=_blank}. Es necesario tener instalado Java y configurar la ruta al archivo `tika-app-*.jar` en `config/module.config.php`, en la sección `[extract_metadata_extractor_config][tika][jar_path]`.
 
 ### OHMS
 
@@ -80,15 +80,15 @@ Añadido por el [módulo OHMS Embed](ohmsembed.md). Se utiliza para extraer los 
 
 ## Mapeadores
 
-Los mapeadores asocian los metadatos extraídos a los valores de los recursos. Ten en cuenta que es necesario habilitar un mapeador en la página de configuración del módulo. Este módulo incluye un mapeador. La mejor práctica para utilizar este módulo con otros mapeadores sería crear una bifurcación del código del módulo; consulta [nuestra documentación para desarrolladores para obtener más detalles](https://omeka.org/s/docs/developer/modules/){target=_blank}.
+Los mapeadores asignan los metadatos extraídos a los valores de los recursos. Ten en cuenta que es necesario habilitar un mapeador en la página de configuración del módulo. Este módulo incluye un mapeador. La mejor práctica para utilizar este módulo con otros mapeadores sería crear una bifurcación del código del módulo; consulta [nuestra documentación para desarrolladores para obtener más detalles](https://omeka.org/s/docs/developer/modules/){target=_blank}.
 
 ### Punteros JSON
 
-Puedes asignar los metadatos extraídos a las propiedades de metadatos de los archivos multimedia o de los elementos utilizando [punteros JSON](https://datatracker.ietf.org/doc/html/rfc6901){target=_blank}. Debes definir tu propia tabla de correspondencias de metadatos en la página de configuración del módulo, en la pestaña «Tabla de correspondencias de punteros JSON».
+Puedes asignar los metadatos extraídos a propiedades de metadatos de medios o elementos utilizando [punteros JSON](https://datatracker.ietf.org/doc/html/rfc6901){target=_blank}. Debes definir tu propia tabla de correspondencias de metadatos en la página de configuración del módulo, en la pestaña «Tabla de correspondencias de punteros JSON».
 
 Quizá te interese extraer primero los metadatos de unos cuantos archivos y ver a qué información se puede apuntar, para luego probar algunas opciones sobre cuál es la mejor forma de asignarlos.
 
-Un ejemplo habitual es asignar la fecha de creación de un archivo JPEG a la propiedad «Fecha de creación» de Dublin Core. El puntero apunta al valor `DateTimeOriginal` de los metadatos Exif, que puede consultar si accede a un elemento multimedia y consulta la pestaña «Extraer metadatos». 
+Un ejemplo habitual es asignar la fecha de creación de un archivo JPEG a la propiedad «Fecha de creación» de Dublin Core. El puntero apunta al valor `DateTimeOriginal` de los metadatos Exif, que puedes consultar si accedes a un elemento multimedia y vas a la pestaña «Extraer metadatos». 
 
 Configura el mapeador de la siguiente manera:
 + Recurso: [Multimedia o Elemento]

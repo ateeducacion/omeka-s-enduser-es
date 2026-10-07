@@ -1,8 +1,8 @@
 # Página de inicio
 
-Omeka S permite a los usuarios crear varios sitios distintos dentro de una misma instalación que no tienen por qué estar conectados entre sí. Cada instalación cuenta, por defecto, con una página de inicio que muestra todos los sitios de la instalación. Para acceder a esta página, hay que ir a la URL principal de tu instalación de Omeka S; si tu [panel de administración](admin-dashboard.md) estaba en `yourdomain.org/omekas/admin`, entonces encontrarás esta página en `yourdomain.org/omekas/`.
+Omeka S permite a los usuarios crear varios sitios distintos dentro de una misma instalación que no tienen por qué estar conectados entre sí. Cada instalación cuenta, por defecto, con una página de inicio en la que aparecen todos los sitios de la instalación. Para acceder a esta página, hay que ir a la URL principal de tu instalación de Omeka S; si tu [panel de administración](admin-dashboard.md) estaba en `yourdomain.org/omekas/admin`, entonces encontrarás esta página en `yourdomain.org/omekas/`.
 
-La página muestra todos los sitios que un usuario tiene permiso para ver, junto con los resúmenes y las miniaturas de los sitios, si existen. Si un usuario no ha iniciado sesión, solo verá los sitios públicos. Por el contrario, un administrador global que haya iniciado sesión verá todos los sitios existentes en la instalación.
+La página muestra todos los sitios que un usuario tiene permiso para ver, junto con los resúmenes y las miniaturas de los sitios, si existen. Si alguien no ha iniciado sesión, solo verá los sitios públicos. Por el contrario, un administrador global que haya iniciado sesión verá todos los sitios existentes en la instalación.
 
 ![Página de inicio de la instalación de «Stackable Sandbox» en la que se muestran siete sitios, tres de los cuales incluyen resúmenes.](files/frontpage-basic.png)
 

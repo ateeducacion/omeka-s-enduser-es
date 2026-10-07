@@ -1,8 +1,8 @@
 # Importador de elementos de Omeka S
 
-El [módulo «Omeka S Item Importer»](https://omeka.org/s/modules/Osii){target=_blank} permite importar elementos de una instalación de Omeka S a otra. Este importador puede duplicar elementos, sus archivos multimedia y sus conjuntos de elementos, pero no puede duplicar la información del sitio ni de las páginas. 
+El [módulo «Importador de elementos de Omeka S»](https://omeka.org/s/modules/Osii){target=_blank} permite importar elementos de una instalación de Omeka S a otra. Este importador puede duplicar elementos, sus archivos multimedia y sus conjuntos de elementos, pero no puede duplicar la información del sitio ni de las páginas. 
 
-La transferencia de datos de una instalación a otra conlleva un riesgo significativo de pérdida de datos, pero una planificación y preparación minuciosas por parte del usuario de la instalación receptora pueden evitar que esto ocurra.
+La transferencia de datos de una instalación a otra conlleva un riesgo significativo de pérdida de datos, pero una planificación y preparación minuciosas por parte del usuario de la instalación receptora pueden evitar que esto suceda.
 
 ## Preparación para la importación
 
@@ -14,14 +14,14 @@ Para minimizar la pérdida de datos, la instalación local debe prepararse cuida
  - [Tipos de datos numéricos](numericdatatypes.md)
  - [Sugerencia de valores](valuesuggest.md)
 - [Importar cualquier plantilla de recurso](../content/resource-template.md#import-a-resource-template) utilizada por la instalación remota.
-- Instalar y activar los importadores de medios utilizados originalmente por la instalación remota, como [Carga lateral de archivos](filesideload.md).
-- [Comprueba que los módulos que consumen muchos recursos, como «Extract Text», estén configurados para una importación masiva](extracttext.md) (es decir, desactiva Tesseract para el reconocimiento de imágenes y otros extractores hasta que finalice la importación; después, utilízalos en lotes más pequeños). 
+- Instalar y activar los importadores de medios utilizados originalmente por la instalación remota, como [File Sideload](filesideload.md).
+- [Comprueba que los módulos que consumen muchos recursos, como «Extract Text», estén configurados para una importación masiva](extracttext.md) (es decir, desactiva Tesseract para el reconocimiento de imágenes y otros extractores hasta que finalice la ingesta; después, utilízalos en lotes más pequeños). 
 
 Una vez que toda esa infraestructura esté en marcha, la instalación local estará lista para comenzar a importar elementos.
 
 ## Añadir una importación
 
-Inicia el proceso de importación haciendo clic en el botón «Añadir una importación» en la página de inicio del módulo en la interfaz administrativa. A continuación, se te mostrarán dos tipos de ajustes de configuración: remotos y locales.
+Inicia el proceso de importación haciendo clic en el botón «Añadir una importación» en la página de inicio del módulo en la interfaz de administración. A continuación, se te mostrarán dos tipos de ajustes de configuración: remotos y locales.
 
 ### Configuración remota
 
@@ -53,15 +53,15 @@ Aunque se trate de un error, esta URL es el punto final raíz.
 
 **Conjunto de elementos**: Si lo deseas, selecciona uno o varios conjuntos de elementos a los que se asignarán los elementos importados.
 
-**Excluir medios**: Marque esta casilla si desea que la importación excluya los medios. Si no se marca, los medios se importarán con normalidad. Si decide cambiar esta configuración más adelante, deberá realizar una nueva instantánea y procesar una nueva importación para que dichos cambios surtan efecto. No existe la posibilidad de sincronización automática continua de los datos.
+**Excluir medios**: Marca esta casilla si deseas que la importación excluya los medios. Si no se marca, los medios se importarán con normalidad. Si decides cambiar esta configuración más adelante, tendrás que realizar una nueva instantánea y procesar una nueva importación para que se apliquen dichos cambios. No existe la posibilidad de sincronización automática y continua de los datos.
 
 **Excluir conjuntos de elementos**: Marca esta casilla si deseas que la importación excluya los conjuntos de elementos (dentro de los parámetros de tu consulta, si se ha definido una consulta). Si no se marca, los conjuntos de elementos de la instalación remota se importarán con normalidad. 
 
-**Conservar recursos eliminados**: Marca esta casilla si, durante la importación, deseas conservar localmente los recursos de una importación anterior que hayan sido eliminados de la instantánea remota actual. Si se marca, los recursos eliminados permanecerán localmente, pero ya no serán gestionados por esta importación. Si no se marca, los recursos eliminados se borrarán localmente de forma habitual.
+**Conservar recursos eliminados**: Marca esta casilla si, durante la importación, deseas conservar localmente los recursos de una importación anterior que hayan sido eliminados de la instantánea remota actual. Si se marca, los recursos eliminados permanecerán localmente, pero ya no serán gestionados por esta importación. Si no se marca, los recursos eliminados se borrarán localmente como de costumbre.
 
-**Añadir URL del sitio remoto**: Si deseas indicar la fuente general del elemento importado, introduce la URL del sitio del que proceden los recursos importados. Si se introduce, se añadirá a cada recurso importado y se guardará como un valor mediante la propiedad `osii:source_site`. Es posible que desee utilizar una URL específica de un sitio de Omeka, como `http://your-domain-name.edu/omeka-s/s/sitename/`, en lugar de la URL de instalación base que aparece aquí; pero tenga en cuenta que todos los elementos se importarán con este enlace, independientemente de si forman parte de algún sitio concreto o no. 
+**Añadir URL del sitio remoto**: Si deseas indicar la fuente general del elemento importado, introduce la URL del sitio del que proceden los recursos importados. Si se introduce, se añadirá a cada recurso importado y se guardará como un valor mediante la propiedad `osii:source_site`. Es posible que prefieras utilizar una URL específica de un sitio de Omeka, como `http://your-domain-name.edu/omeka-s/s/sitename/`, en lugar de la URL de instalación base que aparece aquí; pero ten en cuenta que todos los elementos se importarán con este enlace, independientemente de si forman parte de algún sitio concreto o no. 
 
-**Añadir URL del recurso remoto**: Marque esta casilla si desea añadir la URL canónica del elemento remoto a cada elemento importado, guardándola como un valor mediante la propiedad `osii:source_resource`. Esto proporcionará un enlace directo al elemento original a través de la API, con el formato `http://your-domain-name.edu/omeka-s/api/items/1234`, en lugar de un enlace a la página de visualización del elemento en un sitio concreto. 
+**Añadir URL del recurso remoto**: Marca esta casilla si deseas añadir la URL canónica del elemento remoto a cada elemento importado; se guardará como un valor mediante la propiedad `osii:source_resource`. Esto proporcionará un enlace directo al elemento original a través de la API, con el formato `http://your-domain-name.edu/omeka-s/api/items/1234`, en lugar de un enlace a la página de visualización del elemento en un sitio concreto. 
 
 Guarda tus opciones de configuración haciendo clic en el botón «Enviar» situado en la esquina superior derecha de la interfaz. Una vez configurada esta importación, se guarda para su futura edición y actualización. 
 
@@ -69,7 +69,7 @@ Guarda tus opciones de configuración haciendo clic en el botón «Enviar» situ
 
 ## Gestionar importaciones
 
-Una vez configurada una importación, el usuario accede a una interfaz con tres áreas:
+Una vez configurada una importación, se redirige al usuario a una interfaz con tres áreas:
 
 - **Área de asignación**: ofrece opciones para asignar los datos de la instalación remota a la instalación local
 - **Acciones de importación**: ofrece las opciones de acción para el proceso de importación y permite acceder a los resultados de dichas acciones
@@ -87,11 +87,11 @@ Ve a la sección «Acciones de importación» de la barra lateral. La sección �
 
 El indicador de estado de la instantánea cambiará de «[n/a]» a «En curso». La importación puede tardar algún tiempo, dependiendo del alcance del universo que se vaya a examinar. Puede hacer clic en el enlace «Actualizar estado» para comprobar el progreso. Si el estado cambia a «Error», puede hacer clic en «Ver tarea» para inspeccionar el procesamiento de la instantánea.
 
-![Sección de acciones de importación con el estado de la instantánea en «En curso»](../modules/modulesfiles/osii_SnapshotInProgress.png)
+![Sección de acciones de importación con el estado de la instantánea como «En curso»](../modules/modulesfiles/osii_SnapshotInProgress.png)
 
-Si lo deseas, tienes la opción de «Detener la instantánea». El estado de la instantánea cambiará a «Deteniendo». Haz clic en «Actualizar estado» hasta que el estado haya cambiado a «Detenido».
+Si lo deseas, tienes la opción de «Detener la instantánea». El estado de la instantánea cambiará a «Deteniéndose». Haz clic en «Actualizar estado» hasta que el estado haya cambiado a «Detenida».
 
-Una vez que hayas realizado correctamente una instantánea, el estado cambiará a «Completado», y el panel principal de la interfaz mostrará una gran cantidad de metadatos sobre la instantánea. Utilízala para conciliar las diferencias entre las instalaciones remotas y locales, en la medida que desees.
+Una vez que hayas obtenido una instantánea correctamente, el estado cambiará a «Completada», y el panel principal de la interfaz mostrará una gran cantidad de metadatos sobre la instantánea. Utilízala para conciliar las diferencias entre las instalaciones remotas y locales, en la medida que desees.
 
 ### Preparar la importación
 
@@ -101,17 +101,17 @@ Situada en el panel principal de la interfaz, el área de asignación ofrece a l
 
 ![Tabla de resumen de gestión de importaciones con pestañas para Recursos, Tipos de datos, Plantillas, Ingestores multimedia, Propiedades y Clases](../modules/modulesfiles/osii_ManageImportOverview.png)
 
-- **Pestaña «Tipos de datos»**: Esta vista muestra los tipos de datos remotos y su recuento de valores. El usuario puede seleccionar, en un menú desplegable, los tipos de datos disponibles localmente (por ejemplo, literal, recurso, URI, `numeric:timestamp`) para asignar la instalación local a la instalación remota. Si detectas que hay tipos de datos disponibles de forma remota que no lo están a nivel local, deberás añadirlos a tu instalación antes de continuar para evitar la pérdida de datos. Si un tipo de datos remoto no está asignado a uno local, los valores no se importarán. Se pueden añadir tipos de datos mediante módulos como [Tipos de datos numéricos](numericdatatypes.md) y [Sugerencia de valores](valuesuggest.md).
+- **Pestaña «Tipos de datos»**: Esta vista muestra los tipos de datos remotos y su recuento de valores. El usuario puede seleccionar, en un menú desplegable, los tipos de datos disponibles localmente (por ejemplo, literal, recurso, URI, `numeric:timestamp`) para asignar la instalación local a la instalación remota. Si detectas que hay tipos de datos disponibles de forma remota que no lo están a nivel local, deberás añadirlos a tu instalación antes de continuar para evitar la pérdida de datos. Si un tipo de datos remoto no está mapeado a uno local, los valores no se importarán. Los tipos de datos se pueden añadir mediante módulos como [Tipos de datos numéricos](numericdatatypes.md) y [Sugerencia de valores](valuesuggest.md).
 
-- **Pestaña Plantillas**: Esta vista muestra las plantillas de recursos remotos y su número. El usuario puede seleccionar, en un menú desplegable, las plantillas de recursos disponibles localmente para asignar la instalación local a la instalación remota. Ten en cuenta que la instalación local puede duplicar las plantillas remotas realizando [exportaciones e importaciones](../content/resource-template.md#share-resource-templates). Este puede ser un buen momento para crear o modificar plantillas con el fin de reflejar mejor los elementos que desea importar. 
+- **Pestaña «Plantillas»**: Esta vista muestra las plantillas de recursos remotos y su número. El usuario puede seleccionar, en un menú desplegable, las plantillas de recursos disponibles localmente para asignar la instalación local a la instalación remota. Ten en cuenta que la instalación local puede duplicar las plantillas remotas realizando [exportaciones e importaciones](../content/resource-template.md#share-resource-templates). Este puede ser un buen momento para crear o modificar plantillas con el fin de reflejar mejor los elementos que deseas importar. 
 
-- **Pestaña «Ingestores de medios»**: Esta vista muestra una lista de los ingestores de medios remotos e indica si están disponibles en la instalación local. Los medios solo se importarán si su ingestor está disponible. Ten en cuenta que algunos de estos ingestionadores se pueden añadir instalando y activando módulos, como [File Sideload](filesideload.md). 
+- **Pestaña «Ingestores de medios»**: Esta vista muestra una lista de los ingestores de medios remotos e indica si están disponibles en la instalación local. Los medios solo se importarán si su ingestor está disponible. Ten en cuenta que algunos de estos ingesters se pueden añadir instalando y activando módulos, como [File Sideload](filesideload.md). 
 
 - **Pestaña «Propiedades»**: Esta vista incluye una lista de las propiedades remotas e indica si están presentes en la instalación local. Los valores solo se importarán si sus respectivas propiedades están presentes en la instalación local. Si detectas que hay propiedades disponibles de forma remota que no lo están localmente, deberás [añadir sus vocabularios a tu instalación](../content/vocabularies.md#add-a-vocabulary) antes de continuar para evitar la pérdida de datos. Ten en cuenta que es posible que veas algunas propiedades en rojo en la instalación remota: son aquellas que no estaban disponibles en versiones anteriores o que han quedado obsoletas en versiones posteriores del vocabulario. Es posible que tengas que buscar e instalar la misma versión específica de ese vocabulario en tu instalación local. 
 
-![Tabla de gestión de importaciones con la tabla de inventario de propiedades, en la que se muestran dos recuadros rectangulares en rojo que indican las propiedades presentes y ausentes en la instalación local](../modules/modulesfiles/osii_PropertyInventory.png)
+![Tabla de gestión de importaciones con la tabla de inventario de propiedades, en la que dos recuadros rojos resaltan las propiedades que están presentes y las que no lo están en la instalación local](../modules/modulesfiles/osii_PropertyInventory.png)
 
-- **Pestaña «Clases»**: Esta vista muestra una lista de las clases remotas e indica si están instaladas en la instalación local. Si no es así, los elementos se importarán sin clases. Si detecta que hay clases disponibles de forma remota que no lo están localmente, deberá añadirlas a su instalación antes de continuar para evitar la pérdida de datos. Las clases se añaden a través de [vocabularios](../content/vocabularies.md). Ten en cuenta que es posible que veas algunas clases en rojo en la instalación remota: son aquellas que no estaban disponibles en versiones anteriores o que han quedado obsoletas en versiones posteriores del vocabulario. Es posible que tengas que buscar e instalar la misma versión específica de ese vocabulario en tu instalación local. 
+- **Pestaña «Clases»**: Esta vista muestra una lista de las clases remotas e indica si están instaladas en la instalación local. Si no es así, los elementos se importarán sin clases. Si detectas que hay clases disponibles de forma remota que no lo están localmente, deberás añadirlas a tu instalación antes de continuar para evitar la pérdida de datos. Las clases se añaden a través de [vocabularios](../content/vocabularies.md). Ten en cuenta que es posible que veas algunas clases en rojo en la instalación remota: son aquellas que no estaban disponibles en versiones anteriores o que han quedado obsoletas en versiones posteriores del vocabulario. Es posible que tengas que buscar e instalar la misma versión específica de ese vocabulario en tu instalación local. 
 
 Tras asignar los elementos del modelo de datos, haz clic en el botón «Enviar» situado en la esquina superior derecha de la página. Recibirás un mensaje de confirmación indicando que la importación se ha preparado correctamente. 
 
@@ -125,23 +125,23 @@ Una vez hecho esto, realice una nueva instantánea. Debería ver un número dife
 
 ### Importar la instantánea
 
-En la sección «Información de la instantánea» del panel «Acciones de importación», encontrarás la información de importación. Inicialmente, el «Estado» de la importación debería indicar [n/a]. Haz clic en el enlace «Importar instantánea» para iniciar la importación. Al igual que en el proceso de creación de instantáneas, el estado de la importación cambiará a «En curso» y puede tardar algún tiempo en completarse. Haz clic en el enlace «Actualizar estado» para comprobar el progreso. Del mismo modo, puedes detener una importación en curso haciendo clic en «Detener importación». Si el estado cambia a «Error», puedes hacer clic en el enlace «Ver tarea» para revisar el problema y cualquier mensaje de registro.
+En la sección «Información de la instantánea» del panel «Acciones de importación», encontrarás la información de importación. Inicialmente, el «Estado» de la importación debería indicar [n/a]. Haz clic en el enlace «Importar instantánea» para iniciar la importación. Al igual que con el proceso de creación de instantáneas, el estado de la importación cambiará a «En curso» y puede tardar algún tiempo en completarse. Haz clic en el enlace «Actualizar estado» para comprobar el progreso. Del mismo modo, puedes detener una importación en curso haciendo clic en «Detener importación». Si el estado cambia a «Error», puedes hacer clic en el enlace «Ver tarea» para revisar el problema y cualquier mensaje de registro.
 
 ![Sección de acciones de importación de la barra lateral derecha con el enlace «Importar instantánea» resaltado con un rectángulo rojo](../modules/modulesfiles/osii_ImportSnapshot.png)
 
-Una vez que el estado de la importación pase a «Completada», podrás hacer clic en «Ver elementos», «Ver archivos multimedia» o «Ver conjuntos de elementos» de la importación. Además, la importación completada recibirá una marca de tiempo que indicará el momento en que se realizó la importación.
+Una vez que el estado de la importación pase a «Completada», podrás hacer clic en «Ver elementos», «Ver archivos multimedia» o «Ver conjuntos de elementos» de la importación. Además, la importación completada recibirá una marca de tiempo que indicará el momento en que se realizó.
 
 ## Revisar una importación
 
-Una vez que hayas iniciado con éxito una importación, la pantalla principal del módulo mostrará esa acción en una tabla de importaciones intentadas. Esa tabla incluye la etiqueta de la importación, el punto final raíz, el estado de la instantánea, el estado de la importación y el propietario de la importación.
+Una vez que hayas iniciado con éxito una importación, la pantalla principal del módulo mostrará esa acción en una tabla de importaciones intentadas. Esa tabla incluye el nombre de la importación, el punto final raíz, el estado de la instantánea, el estado de la importación y el propietario de la importación.
 
 ### Editar una importación
 
-Aunque una importación pueda haber sido técnicamente satisfactoria, es posible que se haya producido alguna pérdida de datos debido a la asignación entre la instalación remota y la local. Puede editar la importación para subsanar esa pérdida de datos. Inicie el proceso de edición haciendo clic en el icono del lápiz situado a la derecha de la etiqueta de la importación que desee. A continuación, tendrá la oportunidad de actualizar sus configuraciones, volver a realizar la instantánea, actualizar sus asignaciones y volver a ejecutar la importación.
+Aunque una importación pueda haberse realizado con éxito desde el punto de vista técnico, es posible que se haya producido alguna pérdida de datos debido a la asignación entre la instalación remota y la instalación local. Puede editar la importación para subsanar esa pérdida de datos. Inicie el proceso de edición haciendo clic en el icono del lápiz situado a la derecha de la etiqueta de la importación que desee. A continuación, tendrás la oportunidad de actualizar tus configuraciones, volver a tomar la instantánea, actualizar tus asignaciones y volver a ejecutar la importación.
 
 ### Repetir una importación
 
-Es posible que tengas una importación que debas volver a ejecutar para capturar nuevos recursos de la instalación remota. En este caso, puedes editar la importación para volver a tomar la instantánea y ejecutar una nueva importación.
+Es posible que tengas una importación que deba volver a ejecutarse para capturar nuevos recursos de la instalación remota. En este caso, puedes editar la importación para volver a tomar la instantánea y ejecutar una nueva importación.
 
 La importación no es una sincronización bidireccional, por lo que los cambios realizados en los elementos locales no se transfieren a los elementos remotos. Ten en cuenta también que el módulo no conserva los cambios locales tras las importaciones posteriores. Los elementos importados siempre reflejarán su estado en la instalación remota en el momento de la instantánea. **No ejecutes una importación posterior si necesitas conservar los cambios locales.**
 

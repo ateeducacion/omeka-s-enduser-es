@@ -1,16 +1,16 @@
 # Resource Meta
 
-El [módulo Resource Meta](https://omeka.org/s/modules/ResourceMeta/){target=_blank} permite a los usuarios que lo hayan instalado mostrar los metadatos de los recursos (elementos, conjuntos de elementos y archivos multimedia) como elementos [`<meta>` en el código HTML](https://www.w3schools.com/tags/tag_meta.asp){target=_blank} de las páginas de su sitio web. Los valores de metadatos se aplican a través de [plantillas de recursos](../content/resource-template.md): una propiedad de metadatos en una plantilla, como `dcterms:creator`, puede configurarse para que se muestre como una etiqueta meta, por ejemplo, `<meta name="dcterms.creator" content="Shakespeare, William">` dentro de la etiqueta `<head>` de la página pública. 
+El [módulo Resource Meta](https://omeka.org/s/modules/ResourceMeta/){target=_blank} permite a los usuarios que lo hayan instalado mostrar metadatos de recursos (elementos, conjuntos de elementos y contenidos multimedia) como elementos [`<meta>` en el código HTML](https://www.w3schools.com/tags/tag_meta.asp){target=_blank} de las páginas de su sitio web. Los valores de metadatos se aplican a través de [plantillas de recursos](../content/resource-template.md): una propiedad de metadatos en una plantilla, como `dcterms:creator`, puede configurarse para que se muestre como una etiqueta meta, por ejemplo, `<meta name="dcterms.creator" content="Shakespeare, William">` dentro de la etiqueta `<head>` de la página pública. 
 
-Los ajustes de Resource Meta pueden ser consultados por usuarios de cualquier nivel, y pueden ser modificados por usuarios con permisos de editor, supervisor y administrador global. 
+Los usuarios de todos los niveles pueden ver la configuración de Resource Meta, y los usuarios con permisos de Editor, Supervisor y Administrador global pueden modificarla. 
 
-![Una página de elemento público que muestra los valores de metadatos en la página y en el código HTML.](modulesfiles/resourcemeta.png)
+![Una página de elemento pública que muestra los valores de metadatos en la página y en el código HTML.](modulesfiles/resourcemeta.png)
 
-Los elementos meta se utilizan para la optimización en motores de búsqueda y la indexación del contenido más relevante de la página. Este módulo ofrece elementos meta de uso habitual para la indexación y la visibilidad de los recursos académicos, incluidos BE Press, Highwire Press, EPrints y PRISM, así como elementos y términos de Dublin Core para otros tipos de recursos.
+Los elementos meta se utilizan para la optimización en motores de búsqueda y la indexación del contenido más relevante de la página. Este módulo ofrece elementos meta de uso común para la indexación y la visibilidad de los recursos académicos, incluidos BE Press, Highwire Press, EPrints y PRISM, así como elementos y términos de Dublin Core para otros tipos de recursos.
 
 ## Asignación de metadatos a metaetiquetas
 
-Selecciona «Resource Meta» en la pestaña «Módulos» del menú de navegación de la izquierda. Verás una lista de todas las plantillas de recursos de la instalación en una página, con una indicación del número de metaetiquetas que ya se han aplicado a las propiedades de cada plantilla (el «Recuento de nombres de meta»). 
+Selecciona «Resource Meta» en la pestaña «Módulos» del menú de navegación de la izquierda. Verás todas las plantillas de recursos de la instalación enumeradas en una página, con una indicación del número de metaetiquetas que ya se han aplicado a las propiedades de cada plantilla (el «Recuento de nombres de metaetiquetas»). 
 
 ![La página de configuración que muestra las plantillas de recursos de una instalación y su configuración actual de metadatos.](modulesfiles/resourcemeta_homepage.png)
 
@@ -27,9 +27,9 @@ Cada campo de la plantilla de recurso se puede asignar a uno o más elementos me
 - EPrints
 - PRISM.
 
-Puedes asignar automáticamente las propiedades de «Términos de Dublin Core» de tus plantillas de recursos a las metaetiquetas de «Términos de Dublin Core» mediante el botón «Asignar dcterms», situado en la parte superior de la pantalla. De lo contrario, deberás seleccionar las metaetiquetas manualmente del menú desplegable disponible. Puede asignar los términos de Dublin Core automáticamente y, a continuación, añadir más etiquetas manualmente; por ejemplo, puede asignar el campo `dcterms:title` a otros campos de título, incluidos `bepress_citation_title` y `citation_title` de Highwire Press. Tenga en cuenta que al pulsar el botón «Asignar dcterms» se borrarán las asignaciones existentes. 
+Puedes asignar automáticamente las propiedades de Dublin Core Terms de tus plantillas de recursos a las metaetiquetas de Dublin Core Terms mediante el botón «Map dcterms» situado en la parte superior de la pantalla. De lo contrario, deberás seleccionar las metaetiquetas manualmente en el menú desplegable disponible. Puede asignar los términos de Dublin Core automáticamente y, a continuación, añadir más etiquetas manualmente; por ejemplo, puede asignar el campo `dcterms:title` a otros campos de título, incluidos `bepress_citation_title` y `citation_title` de Highwire Press. Tenga en cuenta que al pulsar el botón «Asignar dcterms» se borrarán las asignaciones existentes. 
 
-Para borrar todas las asignaciones actuales, pulsa «Borrar». Para deshacer ese borrado, pulsa «Restablecer». Asegúrate de guardar tus cambios. 
+Para borrar todas las asignaciones actuales, pulsa «Borrar». Para deshacer ese borrado, pulsa «Restablecer». Asegúrate de guardar los cambios. 
 
 ![Configuración de metadatos de una plantilla de recurso en proceso de edición, en la que se muestran múltiples asignaciones en varias propiedades.](modulesfiles/resourcemeta_edit2.png)
 
@@ -43,4 +43,4 @@ Si utilizas Omeka para poner a disposición recursos académicos, por ejemplo, c
 
 Por poner otro ejemplo, si deseas que tus elementos de Omeka sean [indexados e importados por Zotero](https://zotero-manual.github.io/adding-items/#generic-translators){target=_blank}, quizá te interese utilizar Highwire Press, Dublin Core y PRISM. 
 
-Para los metaelementos que facilitan los recursos de Omeka para su visualización dinámica en redes sociales, instala el [módulo Sharing](sharing.md).
+Para los metaelementos que sirven para mostrar de forma dinámica los recursos de Omeka en redes sociales, instala el [módulo Sharing](sharing.md).

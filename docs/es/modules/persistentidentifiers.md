@@ -1,6 +1,6 @@
 # Identificadores persistentes 
 
-El [módulo «Identificadores persistentes»](https://omeka.org/s/modules/PersistentIdentifiers/){target=_blank} permite a los usuarios crear o importar identificadores persistentes (PID) y asignarlos a los elementos de Omeka S. Estos PID pueden generarse («acuñarse») y asignarse al crear un elemento, a través de la pantalla de edición del elemento o durante ediciones por lotes. Pueden eliminarse de forma individual o por lotes. Los PID existentes pueden extraerse de los metadatos del elemento. 
+El [módulo «Identificadores persistentes»](https://omeka.org/s/modules/PersistentIdentifiers/){target=_blank} permite a los usuarios crear o importar identificadores persistentes (PID) y asignarlos a elementos de Omeka S. Estos PID pueden generarse («acuñarse») y asignarse al crear un elemento, a través de la pantalla de edición del elemento o durante ediciones por lotes. Pueden eliminarse de forma individual o por lotes. Los PID existentes pueden extraerse de los metadatos del elemento. 
 
 Una vez asignado, al acceder al PID de un elemento en el navegador se redirige a una página de destino estable, no específica del sitio, que contiene los metadatos del elemento, los archivos multimedia y los sitios a los que está asignado.
 
@@ -17,23 +17,23 @@ Los servicios de PID disponibles actualmente en este módulo son:
 
 Tras la instalación, «Identificadores persistentes» aparecerá en el menú de navegación de la izquierda, en la sección «Módulos». Este enlace está disponible para los usuarios con permisos de administrador global y supervisor. 
 
-La página «Configuración» que se encuentra aquí contiene ajustes generales:
+La página «Configuración» que se encuentra aquí contiene los ajustes generales:
 
 + **Servicio de PID**: Selecciona cuál de los servicios de PID disponibles deseas utilizar para la generación o extracción. Solo se puede utilizar un servicio de PID a la vez para generar y asignar PID a los elementos. 
-+ **Asignar PID a nuevos elementos**: Marque esta casilla para que se aplique automáticamente a todos los nuevos elementos en Omeka S, tanto si se crean en Omeka S como si se importan. Esto generará nuevos PID o extraerá los PID existentes y los asignará, dependiendo de su configuración.
-+ **Campos con PID existentes**: Una lista de campos de metadatos que pueden contener valores de PID. Cuando se crea o se importa un elemento, el módulo comprobará si hay PID en estos campos. Si los encuentra, se asignará el PID existente al elemento (en lugar de generar uno nuevo). Utiliza el formato `dcterms:identifier,bibframe:identifier`, etc.
++ **Asignar PID a nuevos elementos**: Marca esta casilla para que se aplique automáticamente a cada nuevo elemento en Omeka S, tanto si se crea en Omeka S como si se importa. Esto generará nuevos PID o extraerá los PID existentes y los asignará, dependiendo de tu configuración.
++ **Campos con PID existentes**: Una lista de campos de metadatos que pueden contener valores de PID. Cuando se crea o se importa un elemento, el módulo comprobará si hay PID en estos campos. Si se encuentra alguno, se asignará el PID existente al elemento (en lugar de generar uno nuevo). Utiliza el formato `dcterms:identifier,bibframe:identifier`, etc.
 + **Campo opcional para almacenar PID**: si se activa, el PID también se escribirá en esta propiedad de metadatos de cada elemento correspondiente cuando se genere o se encuentre. 
 
 ![Opciones de configuración para los ajustes generales tal y como se enumeran más arriba.](../modules/modulesfiles/PID_settings.png)
 
-!!! nota
-  En función de la configuración anterior, debes ajustar tu flujo de trabajo y el de los demás usuarios: al crear un elemento, asegúrate de introducir el PID existente antes de guardarlo por primera vez. Es posible que te interese mantener desactivada la opción «Asignar PID a nuevos elementos», salvo en circunstancias especiales. Recuerda que los usuarios con un nivel inferior al de «Supervisor» no tendrán acceso a esta configuración y no podrán desactivarla; además, dejarla activada podría generar PID de forma involuntaria. 
+!!! Nota
+  En función de la configuración anterior, debes ajustar tu flujo de trabajo y el de los demás usuarios: al crear un elemento, asegúrate de introducir el PID existente antes de guardarlo por primera vez. Es posible que te interese mantener desactivada la opción «Asignar PID a nuevos elementos», salvo en circunstancias especiales. Recuerda que los usuarios con un nivel inferior al de «Supervisor» no tendrán acceso a esta configuración y no podrán desactivarla; además, dejarla activada puede generar PID de forma involuntaria. 
 
 ## Configuración de EZID
 
 El proceso de configuración de EZID requiere:
 
-+ **NAAN y espacio de nombres «Shoulder»**: el número de la Autoridad de Asignación de Nombres (NAAN) y el valor «Shoulder» del ARK, asignados de forma única a una organización, que aparecerán en cada ARK generado. 
++ **NAAN y espacio de nombres «Shoulder»**: el número de la Autoridad de Asignación de Nombres (NAAN) y el valor «Shoulder» del ARK asignados de forma única a una organización, que aparecerán en cada ARK generado. 
 + **Nombre de usuario de EZID**: El usuario de EZID que tiene permiso para crear y actualizar identificadores para el espacio de nombres anterior. 
 + **Contraseña de EZID**: La contraseña del usuario de EZID mencionado anteriormente. Ten en cuenta que, por motivos de seguridad, esta contraseña no se guarda en el formulario, por lo que, si se realizan cambios en el **NAAN y el espacio de nombres asociado** o en el **nombre de usuario de EZID**, también deberás volver a introducir la contraseña antes de pulsar «Enviar».
 
@@ -45,7 +45,7 @@ La configuración de DataCite requiere:
 
 + **Prefijo DOI del repositorio**: el prefijo asignado al repositorio de generación y gestión de DOI de una institución. 
 + **ID del repositorio de DataCite**: el identificador único asignado al repositorio de DOI de una institución. 
-+ **Contraseña de DataCite**: La contraseña asociada al **ID del repositorio de DataCite** anterior. Ten en cuenta que, por motivos de seguridad, esta contraseña no se guarda en el formulario, por lo que, si se realizan cambios en cualquier campo de la pantalla de configuración de DataCite, también deberás volver a introducir la contraseña antes de pulsar «Enviar».
++ **Contraseña de DataCite**: La contraseña asociada al **ID del repositorio de DataCite** mencionado anteriormente. Ten en cuenta que, por motivos de seguridad, esta contraseña no se guarda en el formulario, por lo que, si se realizan cambios en cualquier campo de la pantalla de configuración de DataCite, también deberás volver a introducir la contraseña antes de pulsar «Enviar».
 
 ![Opciones de configuración específicas de DataCite, tal y como se enumeran más arriba.](../modules/modulesfiles/PID_DataCiteconfig.png)
 
@@ -53,7 +53,7 @@ La configuración de DataCite requiere:
 
 DataCite requiere cinco valores de metadatos descriptivos para generar un DOI: Título, Creador, Editor, Año de publicación y Tipo de recurso. 
 
-Todos estos campos deben asignarse a un campo de metadatos existente que se seleccione de la lista de vocabularios disponibles en su instancia de Omeka S. La propiedad «Tipo de recurso general» debe ajustarse exactamente al [`ResourceTypeGeneral` vocabulario controlado](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#101-resourcetypegeneral){target=_blank} exactamente.
+Todos estos campos deben asignarse a un campo de metadatos existente que selecciones de la lista de vocabularios disponibles en tu instancia de Omeka S. La propiedad «Tipo de recurso general» debe ajustarse exactamente al [`ResourceTypeGeneral` vocabulario controlado](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#101-resourcetypegeneral){target=_blank} exactamente.
 
 ![Opciones de configuración específicas de DataCite, tal y como se enumeran más arriba.](../modules/modulesfiles/PID_DataCiteconfig2.png)
 
@@ -71,24 +71,24 @@ Para generar ARK de forma local, deberá solicitar un número de autoridad de as
 
 En el módulo, introduce la información de tu registro NAAN: 
 
-+ **NAAN**: El número de autoridad de asignación de nombres (NAAN) de tu organización, asignado por la ARK Alliance.
-+ **Shoulder**: Prefijo betanumérico opcional de dos caracteres que se añade tras el NAAN. Resulta útil para subdividir el ARK, por ejemplo, por proyecto o unidad. Se genera automáticamente si se deja en blanco. El «shoulder» también se puede modificar en el futuro, o volver a generar borrando el campo, para permitir múltiples subdivisiones del «shoulder».
++ **NAAN**: El número de autoridad de asignación de nombres (NAAN) de tu organización, tal y como lo ha asignado la ARK Alliance.
++ **Shoulder**: Prefijo betanumérico opcional de dos caracteres que se añade después del NAAN. Resulta útil para subdividir el ARK, por ejemplo, por proyecto o unidad. Se genera automáticamente si se deja en blanco. El «shoulder» también se puede modificar en el futuro, o volver a generar borrando el campo, para permitir múltiples subdivisiones del «shoulder».
 
 Una vez generados, estos ARK creados localmente deben redirigir inmediatamente a una página de destino estable, genérica e independiente del sitio web para su recurso Omeka correspondiente, con metadatos y cualquier contenido multimedia. Ejemplo: `http://n2t.net/ark:/99999/ABC123456789`.
 
-## Acuñar PID
+## Generar PID
 
-Para acuñar un PID desde la página de edición del elemento, ve a la pestaña «Avanzado» y haz clic en «Acuñar PID». 
+Para generar un PID desde la página de edición del elemento, ve a la pestaña «Avanzado» y haz clic en «Generar PID». 
 
-![Acuñar PID a través de la pestaña «Avanzado» de Editar elemento](../modules/modulesfiles/PID_mint.png)
+![Generación de PID a través de la pestaña «Avanzado» de Editar elemento](../modules/modulesfiles/PID_mint.png)
 
 Al cabo de unos instantes, debería aparecer el ARK o el DOI. 
 
 El botón «Generar PID» debería aparecer ahora como «Eliminar PID». Haz clic ahí para eliminar el PID si lo deseas.
 
-![Eliminación de PID a través de la pestaña «Avanzado» de la edición de un elemento](../modules/modulesfiles/PID_remove.png)
+![Eliminación de PID a través de la pestaña «Avanzado» de «Editar elemento»](../modules/modulesfiles/PID_remove.png)
 
-Si seleccionas «Eliminar PID», se abrirá un panel a la derecha advirtiéndote de que esto eliminará el PID y romperá cualquier enlace entrante. Haz clic en «Confirmar eliminación de PID» para eliminar el PID.
+Si seleccionas «Eliminar PID», se abrirá un panel a la derecha advirtiéndote de que esto eliminará el PID y romperá cualquier enlace entrante. Haz clic en «Confirmar eliminación del PID» para eliminar el PID.
 
 ![Ventana emergente solicitando la confirmación de la eliminación del PID](../modules/modulesfiles/PID_confirmremove.png)
 
@@ -96,7 +96,7 @@ Haz clic en «Guardar» antes de salir de la página, tanto al crear como al eli
 
 ## Acciones por lotes
 
-Puedes editar por lotes los PID desde la página «Elementos». Selecciona los elementos que desees editar y, a continuación, ve a la pantalla de edición por lotes.
+Puedes editar PID por lotes desde la página «Elementos». Selecciona los elementos que desees editar y, a continuación, pasa a la pantalla de edición por lotes.
 
 Cerca de la parte inferior de la pantalla, deberías ver una fila titulada «Identificadores persistentes». Aquí puedes «crear» o «eliminar» PID para todos los elementos seleccionados. Si estás realizando una edición en bloque de otros campos y deseas que los PID no se vean afectados, puedes seleccionar «[sin acción]».
 

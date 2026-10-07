@@ -17,7 +17,7 @@ Añade los siguientes vocabularios como tipos de datos:
 - Tesauro histórico-cultural
 - Tesauro histórico-cultural - Materiales
 - Tesauro histórico-cultural - Estilos y períodos
-- EuroVoc - tesauro de la Unión Europea
+- EuroVoc: tesauro de la Unión Europea
 - GeoNames: nombres geográficos de los Países Bajos, Bélgica y Alemania
 - GTAA: géneros
 - GTAA: temas

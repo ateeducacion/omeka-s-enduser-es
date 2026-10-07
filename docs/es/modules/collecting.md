@@ -1,8 +1,8 @@
 # Recopilación
 
-El [módulo «Recopilación»](https://omeka.org/s/modules/Collecting/){target=_blank} te permite recopilar contribuciones públicas a través de tus sitios. Los usuarios pueden subir archivos o enviar entradas de texto junto con algunos metadatos identificativos, que los administradores de tu sitio pueden moderar y aprobar para su inclusión.
+El [módulo «Recopilación»](https://omeka.org/s/modules/Collecting/){target=_blank} te permite recopilar aportaciones públicas a través de tus sitios. Los usuarios pueden subir archivos o enviar entradas de texto junto con algunos metadatos identificativos, que los administradores de tu sitio pueden moderar y aprobar para su inclusión.
 
-Una vez activado en la pestaña [Módulos](index.md) del panel de administración, el módulo «Recopilación» se configura para cada sitio web de forma individual. Añade una sección a la página «Configuración del sitio» e incluye un enlace debajo de cada sitio para acceder a los formularios de «Recopilación». Los formularios se añaden a las páginas del sitio mediante [bloques de página](../sites/site_pages.md#page-blocks).
+Una vez activado en la pestaña [Módulos](index.md) del panel de administración, el módulo «Recopilación» se configura para cada sitio web de forma individual. Añade una sección a la página de configuración del sitio y un enlace debajo de cada sitio para acceder a los formularios de recopilación. Los formularios se añaden a las páginas del sitio mediante [bloques de página](../sites/site_pages.md#page-blocks).
 
 Collecting se integra con los módulos [Custom Vocab](../modules/customvocab.md), [Mapping](../modules/mapping.md) y [Numeric Data Types](../modules/numericdatatypes.md).
 
@@ -10,9 +10,9 @@ Collecting se integra con los módulos [Custom Vocab](../modules/customvocab.md)
 
 Si Collecting está activo, aparecerá una pestaña de Collecting en el menú contextual de cada sitio.
 
-![Una flecha roja señala la pestaña «Collecting» del sitio «Parques Nacionales»](modulesfiles/collecting_nav.png)
+![Una flecha roja señala la pestaña de Collecting del sitio «Parques Nacionales»](modulesfiles/collecting_nav.png)
 
-Al hacer clic en ella, accederás a una lista de tus formularios de recogida para ese sitio. Si acabas de instalar el módulo, la página «Formularios de recogida» mostrará el mensaje «Este sitio no tiene formularios de recogida». Para añadir un nuevo formulario, haz clic en el botón «Añadir nuevo formulario» situado en la esquina superior derecha de la ventana.
+Al hacer clic en ella, accederás a una lista de tus formularios de «Collecting» para ese sitio. Si acabas de instalar el módulo, la página «Formularios de Collecting» mostrará el mensaje «Este sitio no tiene formularios de Collecting». Para añadir un nuevo formulario, haz clic en el botón «Añadir nuevo formulario» situado en la esquina superior derecha de la ventana.
 
 ![Pestaña «Recopilación», sin formularios; la flecha roja señala el botón «Añadir nuevo»](modulesfiles/collecting_addnew.png)
 
@@ -27,13 +27,13 @@ La página «Añadir formulario de recogida» tiene dos secciones: la primera co
  - «El usuario establece su propio anonimato»: los usuarios pueden decidir si contribuyen de forma anónima y si sus elementos pueden publicarse.
      - «Los campos "Público" y "Nombre de usuario" son visibles públicamente»: tanto el nombre del usuario como sus elementos se harán públicos.
  - «Los campos "Público" y "Nombre de usuario" son privados»: ambos campos permanecen privados.
-- **Texto de confirmación**: el mensaje que se muestra en una nueva página si el elemento se recoge con éxito.
-- **Texto del correo electrónico**: si se recoge una dirección de correo electrónico del usuario en el formulario, este recibirá un mensaje de confirmación sobre el envío de su entrada.
+- **Texto de éxito**: el mensaje que se muestra en una nueva página si el elemento se recoge correctamente.
+- **Texto del correo electrónico**: si se recoge una dirección de correo electrónico del usuario en el formulario, este recibirá un mensaje de confirmación sobre el envío de su elemento.
 
-### Solicitudes
-Las solicitudes se enumeran en una tabla que indica su **Tipo** y el **Texto** que se muestra en el formulario público. Estas indicaciones conforman el formulario que verán los visitantes del sitio (además de la etiqueta, mencionada anteriormente).
+### Indicaciones
+Las indicaciones se enumeran en una tabla que muestra su **Tipo** y el **Texto** que se muestra en el formulario público. Estas indicaciones conforman el formulario que verán los visitantes del sitio (además de la etiqueta, mencionada anteriormente).
 
-Para añadir una nueva indicación, haz clic en el botón «Añadir indicación» situado justo debajo del encabezado «Indicaciones». Se abrirá un panel lateral con un menú desplegable para seleccionar un tipo de indicación.
+Para añadir una nueva indicación, haz clic en el botón «Añadir indicación» situado justo debajo del encabezado «Indicaciones». Esto abrirá un panel lateral con un menú desplegable para seleccionar un tipo de indicación.
 
 Una vez seleccionado, las opciones correspondientes a ese tipo se cargarán en la barra lateral para que puedas editarlas, con un botón «Guardar cambios» en la parte inferior de las opciones.
 
@@ -44,14 +44,14 @@ El módulo Collecting dispone de tipos de indicaciones con las siguientes opcion
 **Propiedad del elemento**: selecciona una propiedad de los vocabularios de la instalación para que el visitante la utilice al describir el elemento.
 
 - Propiedad: selecciona una propiedad de los vocabularios (por ejemplo: Descripción).
-- Texto de la indicación: si deseas que el texto de la indicación sea diferente de la etiqueta de la propiedad.
+- Texto de la indicación: si deseas que el texto de la indicación sea distinto de la etiqueta de la propiedad.
 - Tipo de entrada: longitud y tipo de cuadro de entrada. Elige entre:
   - Cuadro de texto (una línea).
-  - Cuadro de texto (varias líneas).
-  - Menú de selección (desplegable): introduce las opciones para el menú en el campo «Seleccionar opciones de menú» que aparecerá, con una opción por línea.
-	- Recurso de elemento (menú desplegable): ofrecerá al usuario la posibilidad de elegir entre elementos existentes para añadirlos como valor de la propiedad. Puedes pegar cualquier cosa después de «admin/» en la URL de una búsqueda avanzada para cargar elementos específicos.
-	- Si tienes instalado [Custom Vocab](../modules/customvocab.md), aparecerá un menú desplegable adicional que te permitirá seleccionar entre tus vocabularios personalizados existentes. Este se mostrará como un menú desplegable para los usuarios en la parte pública del formulario.
-	- Si tienes instalado [Tipos de datos numéricos](../modules/numericdatatypes.md), también dispondrás de las siguientes opciones:
+	- Cuadro de texto (varias líneas).
+  - Menú de selección (desplegable): introduce las opciones del menú en el campo «Seleccionar opciones de menú» que aparecerá, con una opción por línea.
+  - Recurso de elemento (desplegable): ofrecerá al usuario la posibilidad de elegir entre los elementos existentes para añadirlos como valor de la propiedad. Puedes pegar cualquier cosa después de `admin/` en la URL de una búsqueda avanzada para cargar elementos específicos.
+  - Si tienes instalado [Custom Vocab](../modules/customvocab.md), un menú desplegable adicional te permitirá seleccionar entre tus vocabularios personalizados existentes. Esto se cargará como un menú desplegable para los usuarios en la parte pública del formulario.
+  - Si tienes instalado [Tipos de datos numéricos](../modules/numericdatatypes.md), también dispondrás de las siguientes opciones:
 		 - Marca de tiempo numérica
  - Intervalo numérico
  - Duración numérica
@@ -79,16 +79,16 @@ Tipo de archivo multimedia:
  - Cuadro de texto (una línea)
  - Cuadro de texto (varias líneas)
  - Menú de selección (desplegable): introduce las opciones del menú en el campo «Seleccionar opciones del menú» que aparecerá, con una opción por línea.
- - Marca la casilla «¿Obligatorio?» si el campo de entrada es obligatorio.
+ - Marca la casilla «¿Obligatorio?» si el campo es obligatorio.
 
 **Nombre de usuario** para convertirse en el propietario del elemento. Si la persona que utiliza el formulario es un usuario que ha iniciado sesión en la instalación de Omeka S, este campo se rellenará automáticamente.
 
 - Texto de la solicitud: si deseas que el texto de la solicitud sea distinto de la etiqueta de la propiedad.
 - Marca la casilla «¿Obligatorio?» si la solicitud es obligatoria.
 
-**Correo electrónico del usuario**: donde la persona que añade el elemento puede indicar su correo electrónico. Si se deja en blanco, no recibirá un correo electrónico con el texto del campo «Texto del correo electrónico».
+**Correo electrónico del usuario**: campo en el que la persona que añade el elemento puede indicar su dirección de correo electrónico. Si se deja en blanco, no recibirá un correo electrónico con el texto del campo «Texto del correo electrónico».
 
-- Texto de la solicitud: si desea que el texto de la solicitud sea diferente de la etiqueta de la propiedad.
+- Texto del campo: si desea que el texto del campo sea distinto de la etiqueta de la propiedad.
 - Marca la casilla «¿Obligatorio?» si el mensaje es obligatorio.
 
 **Datos privados del usuario**: recopila información adicional del usuario que se mantendrá privada.
@@ -100,16 +100,16 @@ Tipo de archivo multimedia:
  - Menú de selección (desplegable): introduce las opciones del menú en el campo «Opciones del menú de selección» que aparecerá, con una opción por línea.
  - Marca la casilla «¿Obligatorio?» si el mensaje de solicitud es obligatorio.
 
-**Público para el usuario**: recopila información adicional del usuario que puede hacerse pública
+**Público del usuario**: recopila información adicional del usuario que puede hacerse pública.
 
 - Texto del mensaje de solicitud: si deseas que el mensaje de solicitud sea distinto del nombre de la propiedad.
 - Tipo de entrada: longitud y tipo de cuadro de entrada. Elige entre:
  - Cuadro de texto (una línea)
  - Cuadro de texto (varias líneas)
- - Menú desplegable: introduce las opciones del menú en el campo «Seleccionar opciones de menú» que aparecerá, con una opción por línea.
+ - Menú desplegable: introduce las opciones del menú en el campo «Seleccionar opciones del menú» que aparecerá, con una opción por línea.
  - Marca la casilla «¿Obligatorio?» si el campo es obligatorio.
 
-**HTML**: inserta un bloque de texto HTML en el formulario para ofrecer orientación adicional, información, etc. El campo «Texto de la indicación» para esta indicación cuenta con opciones de formato WYSIWYG.
+**HTML**: Inserta un bloque de texto HTML en el formulario para ofrecer orientación adicional, información, etc. El campo «Texto de la indicación» de este campo cuenta con opciones de formato WYSIWYG.
 
 ## Gestionar formularios
 
@@ -117,7 +117,7 @@ Una vez que tengas al menos un formulario de recopilación, aparecerá en la pá
 
 La página del formulario tiene dos pestañas: «Información del formulario» y «Elementos recopilados».
 
-La pestaña «Información del formulario» muestra los datos existentes sobre la etiqueta, el tipo de anonimato y el conjunto de elementos, junto con una tabla de todas las indicaciones, en orden, con su tipo, texto e indicación de si son obligatorias.
+La pestaña «Información del formulario» muestra los datos existentes sobre la etiqueta, el tipo de anonimato y el conjunto de elementos, junto con una tabla de todas las indicaciones, en orden, con su tipo, texto y si la indicación es obligatoria.
 
 ![Página de información del formulario «Compartir una cita»](modulesfiles/collecting_forminfo.png)
 
@@ -126,9 +126,9 @@ Para editar el formulario, haz clic en el botón «Editar formulario» situado e
 
 ![Indicaciones con una flecha roja que señala la columna de botones de edición](modulesfiles/collecting_edit2.png)
 
-Puedes reorganizar el orden de las preguntas arrastrándolas y soltándolas mediante el icono de tres líneas situado en el extremo izquierdo de la etiqueta «Tipo de pregunta».
+Puedes reorganizar el orden de las indicaciones arrastrándolas y soltándolas mediante el icono de tres líneas situado en el extremo izquierdo de la etiqueta «Tipo de indicación».
 
-![Preguntas con una flecha roja que apunta al icono para arrastrar y soltar](modulesfiles/collecting_dragthis.png)
+![Indicaciones con una flecha roja que señala el icono para arrastrar y soltar](modulesfiles/collecting_dragthis.png)
 
 ## Configuración del sitio
 
@@ -142,49 +142,49 @@ En esta sección hay dos campos:
 
 ![En el formulario de recogida, las palabras «Acepto las condiciones de uso» sobre un botón que dice «Enviar». La frase «Condiciones de uso» es un enlace.](modulesfiles/collecting-ToSlink.png)
 
-Al hacer clic en la frase «Condiciones de servicio», se abrirá una nueva ventana para que las personas que rellenen el formulario no pierdan la información que hayan introducido.
+Al hacer clic en la frase «Condiciones de uso», se abrirá una nueva ventana para que las personas que rellenan el formulario no pierdan la información que han introducido.
 
-**URL de las condiciones de servicio** es un campo de entrada para un enlace a una página externa existente con las condiciones de servicio.
+**URL de las condiciones de uso** es un campo de entrada para un enlace a una página externa existente con las condiciones de uso.
 
 **Dirección de correo electrónico de envío** te permite configurar una dirección personalizada desde la que se enviarán los correos electrónicos de envío. Si se deja en blanco, estos correos se enviarán desde la dirección de correo electrónico del administrador que figura en la [Configuración global](../admin/settings.md) de la instalación de Omeka S.
 
 **Dirección de correo electrónico de notificación** te permite establecer la dirección de correo electrónico de un miembro del personal a la que se enviarán las notificaciones de nuevos envíos. Si se deja en blanco, no se enviará ningún correo electrónico de notificación.
 
-!!! nota
-  Si tienes problemas para enviar correos electrónicos desde tu instalación de Omeka S, consulta con tu proveedor de alojamiento. Algunas configuraciones de alojamiento pueden requerir que el nombre de dominio del correo electrónico del administrador coincida con el nombre de dominio de la instalación (si tu dominio es `yourinstall.org`, el correo electrónico del administrador debe ser `user@yourinstall.org`). Omeka S utiliza la utilidad `sendmail` subyacente del servidor para enviar correos electrónicos.
+!!! Nota
+  Si tienes problemas para enviar correos electrónicos desde tu instalación de Omeka S, consulta con tu proveedor de alojamiento. Algunas configuraciones de alojamiento pueden requerir que el nombre de dominio del correo electrónico del administrador coincida con el nombre de dominio de la instalación (si tu dominio es `yourinstall.org`, el correo electrónico del administrador debe ser `user@yourinstall.org`). Omeka S utiliza la utilidad `sendmail` del servidor para enviar correos electrónicos.
 
 ## Configuración global
 
-«Collecting» exigirá a los usuarios que rellenen un formulario reCaptcha para poder enviarlo, si has añadido una clave reCaptcha en la [Configuración global](../admin/settings.md). Esto puede ser una forma útil de evitar el spam.
+La función «Recopilación» exigirá a los usuarios que rellenen un formulario reCaptcha para poder enviarlo, si has añadido una clave reCaptcha en la [Configuración global](../admin/settings.md). Esto puede ser una forma útil de evitar el spam.
 
 ## Añadir a las páginas del sitio
 
-Para añadir un formulario de «Collecting» a una página:
+Para añadir un formulario de recopilación a una página:
 
 1. Ve a la página en la que quieres que aparezca el formulario (o añade una nueva página para el formulario).
 1. En la barra lateral **Añadir nuevo bloque**, selecciona el bloque **Recopilación**.
-1. En el bloque Recopilación, haz clic en la casilla correspondiente al formulario que quieras incluir. Puedes añadir más de un formulario a la página marcando más de una casilla. O bien, puedes separar los formularios añadiendo bloques de página independientes, con un formulario por bloque.
+1. En el bloque Recopilación, haz clic en la casilla correspondiente al formulario que quieras incluir. Puedes añadir más de un formulario a la página marcando más de una casilla. O bien, puedes separar los formularios añadiendo bloques de página independientes, un formulario por bloque.
 
 ![Bloque «Recopilación» con un formulario, cuya casilla está marcada](modulesfiles/collecting_pageblock.png)
 
-En la página pública, el bloque de formulario aparecerá como un elemento `<form>` con un ID de `collecting_form_X`, donde X es el ID del formulario. Las preguntas aparecen en elementos `<div class="field">`; las preguntas obligatorias también tendrán la clase «required». Dentro de cada pregunta hay un `<div class="field-meta">` para el texto de la pregunta y un `<div class="inputs">` para el campo de respuesta. Puedes utilizar el [módulo CSS Editor](../modules/csseditor.md) para controlar cómo se muestran estos elementos.
+En la página pública, tu bloque de formulario aparecerá como un elemento `<form>` con un ID de `collecting_form_X`, donde X es el ID del formulario. Las preguntas aparecen en elementos `<div class="field">`; las preguntas obligatorias también tendrán la clase «required». Dentro de cada pregunta hay un `<div class="field-meta">` para el texto de la pregunta y un `<div class="inputs">` para el campo de respuesta. Puedes utilizar el [módulo Editor de CSS](../modules/csseditor.md) para controlar cómo se muestran estos elementos.
 
 A continuación se muestra una captura de pantalla del [formulario de recopilación de covid19-archive.org](https://covid-19archive.org/s/archive/page/Share){target=_blank}: 
 
-![Un ejemplo de formulario de recopilación titulado «Comparte tu historia». Incluyen enlaces a otro formulario en español y a otro para la recogida de archivos de audio o vídeo. Los campos son: título (obligatorio), subida de archivos y un campo de texto que pregunta «¿Qué tipo de objeto es este?» (obligatorio).](modulesfiles/collecting_publicformexample.png)
+![Un ejemplo de formulario de recopilación titulado «Comparte tu historia». Incluyen enlaces a otro formulario en español y a uno para la recogida de archivos de audio o vídeo. Los campos son: título (obligatorio), carga de archivos y un campo de texto que pregunta «¿Qué tipo de objeto es este?» (obligatorio).](modulesfiles/collecting_publicformexample.png)
 
 
 ## Gestión de los elementos recopilados
 
-Los elementos añadidos a través de un formulario de recopilación aparecerán en la sección «Elementos» del panel de administración, pero quizá te resulte más fácil gestionarlos desde la pestaña «Recopilación» del sitio web a través del cual se recopilaron.
+Los elementos añadidos a través de un formulario de recopilación aparecerán en la sección «Elementos» del panel de administración, pero quizá te resulte más fácil gestionarlos desde la pestaña «Recopilación» del sitio a través del cual se recopilaron.
 
 Para ver los elementos recopilados con un formulario específico, ve a la pestaña «Recopilación» en el menú contextual del sitio y haz clic en el nombre del formulario. A continuación, haz clic en la pestaña **Elementos recopilados**.
 
 ![Pestaña «Elementos recopilados» con varios elementos](modulesfiles/collecting_items.png)
 
-Esta pestaña contiene una tabla con los elementos recopilados ordenados por Título, Fecha de envío, Revisado por, Estado y tres puntos suspensivos.
+Esta pestaña contiene una tabla con los elementos recopilados ordenados por título, fecha de envío, revisado por, estado y tres puntos suspensivos.
 
-Para ver la información recopilada, incluyendo el nombre de usuario, el correo electrónico, etc., de cualquier elemento, haz clic en los tres puntos de «Más información». Al hacer clic en el título de un elemento, se te redirigirá a la página de edición del mismo (en la sección «Elementos», no en «Recopilación»).
+Para ver la información recopilada, incluyendo el nombre de usuario, el correo electrónico, etc., de cualquier elemento, haz clic en los tres puntos de «más información». Al hacer clic en el título de un elemento, se te redirigirá a la página de edición del mismo (en la sección «Elementos», no en «Recopilación»).
 
 Un elemento recopilado puede tener uno de estos tres estados: «Necesita revisión», «Público» y «Privado». Para cambiar el estado de un elemento, selecciona el estado deseado en el menú desplegable y, a continuación, haz clic en el botón «Actualizar estados» situado en la esquina superior derecha.
 
