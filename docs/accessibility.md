@@ -12,7 +12,7 @@ For more information, please review the following reports:
 - Omeka S version 1.x [Accessibility Conformance Report, using VPAT 2.0 (PDF)](files/VPAT2.0-OmekaS1-1.pdf){target=_blank}, April 2018.
 
 ## Roadmap
-Based on the current Accessibilty Conformance Report, during 2026 the Omeka Team is working on the following elements:
+Based on the current Accessibility Conformance Report, during 2026 the Omeka Team is working on the following elements:
 
 -   Keyboard-navigable alternatives to drag and drop interfaces
 -   Screen reader-friendly and keyboard-navigable tooltips
@@ -44,4 +44,4 @@ The administrative dashboard of Omeka S has the following features for accessibi
 
 ## Accessibility Issues
 
-If you encounter an issue with accessiblity with the Omeka S core software or Omeka Team developed addons, please report your findings either via a [Forum post](https://forum.omeka.org/c/omeka-s/accessibility/36){target=_blank} or by making an issue in the appropriate GitHub repository.
+If you encounter an issue with accessibility with the Omeka S core software or Omeka Team developed addons, please report your findings either via a [Forum post](https://forum.omeka.org/c/omeka-s/accessibility/36){target=_blank} or by making an issue in the appropriate GitHub repository.
