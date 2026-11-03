@@ -12,7 +12,7 @@ Para obtener más información, consulta los siguientes informes:
 - Omeka S versión 1.x [Informe de conformidad con la accesibilidad, según VPAT 2.0 (PDF)](files/VPAT2.0-OmekaS1-1.pdf){target=_blank}, abril de 2018.
 
 ## Hoja de ruta
-Según el actual Informe de conformidad con la accesibilidad, durante 2026 el equipo de Omeka está trabajando en los siguientes elementos:
+Según el actual Informe de conformidad en materia de accesibilidad, durante 2026 el equipo de Omeka está trabajando en los siguientes elementos:
 
 -   Alternativas navegables mediante teclado a las interfaces de arrastrar y soltar
 -   Información sobre herramientas compatible con lectores de pantalla y navegable mediante teclado
