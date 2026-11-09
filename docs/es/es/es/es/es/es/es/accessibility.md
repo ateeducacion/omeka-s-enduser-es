@@ -1,1 +1,47 @@
-# Declaración de accesibilidad El equipo de Omeka se compromete a hacer de Omeka S una opción accesible para crear colecciones y exposiciones en línea. Estamos trabajando para que el código principal sea accesible y seguiremos haciendo de la accesibilidad para personas con discapacidad una prioridad a medida que desarrollemos el código. Omeka se esfuerza por adherirse a los [estándares de diseño web del W3C](http://www.w3.org/standards/){target=_blank} y por cumplir con la [Sección 508](http://www.section508.gov/){target=_blank} de la Ley de Estadounidenses con Discapacidades. Para obtener más información, consulte los siguientes informes: - Omeka S versión 4.x, diciembre de 2050.informe de conformidad de accesibilidad, utilizando VPAT 2.5 Revised International Standards (PDF)](files/OmekaS4x_ACR.pdf){target=_blank} - [Informe de conformidad de accesibilidad, utilizando VPAT 2.5 Revised International Standards (DOCX)](files/OmekaS4x_ACR.docx){target=_blank} - Omeka S versión 3.x [Informe de conformidad de accesibilidad, utilizando VPAT 2.4 Revised International Standards (PDF)](files/OmekaS3x_ACR.pdf){target=_blank}, octubre de 2020 - Omeka S versión 2.x [Informe de conformidad de accesibilidad, utilizando VPAT versión 2.0 (PDF)](files/VPAT_OmekaS2-0-1.pdf){target=_blank}, agosto de 2019. - Omeka S versión 1.x [Informe de conformidad de accesibilidad utilizando VPAT versión 1.1 (PDF)](files/VPAT2.0-OmekaS1-1.pdf){target=_blank}, abril de 2018. Las siguientes declaraciones se aplican a Omeka S versión 1.0.1 y superiores: ## Front end (Vista pública) Los temas de Omeka S producidos por el equipo de Omeka tienen las siguientes características para mejorar la accesibilidad: - [ARIA](http://www.w3.org/WAI/intro/aria){target=_blank} (Accessible Rich Internet Applications) puntos de referencia para desplazarse por el contenido de la página mediante pestañas, cuando no se utiliza un ratón o un lector de pantalla. - Marcado HTML5 semántico. Tenga en cuenta que, aunque el código básico de Omeka S se ajusta a las normas anteriores, las instalaciones de Omeka S que se hayan personalizado o que utilicen módulos y temas que no sean de RRCHNM pueden carecer de algunas o de todas estas opciones. Aunque animamos a los desarrolladores a tener en cuenta la accesibilidad, no podemos garantizar que su código incluya ARIA Landmarks, SkipNav u otras consideraciones de accesibilidad. ## Back end (Administrative view) El panel administrativo de Omeka S tiene las siguientes características de accesibilidad: - ARIA landmarks para lectores de pantalla en el Admin Dashboard, designando la cabecera, la navegación, el contenido principal y los pies de página. - Marcado HTML5 semántico ## Problemas de accesibilidad Si encuentras un problema de accesibilidad con el software principal de Omeka S o con los complementos desarrollados por el equipo de Omeka, por favor informa de tus hallazgos a través de un [mensaje en el foro](https://forum.omeka.org/c/omeka-s/accessibility/36) o haciendo un problema en el repositorio de Github correspondiente
+# Declaración de accesibilidad
+
+El equipo de Omeka se compromete a hacer de Omeka S una opción accesible para crear colecciones y exposiciones en línea. Estamos trabajando para que el código base sea accesible y seguiremos dando prioridad a la accesibilidad para las personas con discapacidad a medida que desarrollemos el código. Omeka se esfuerza por cumplir con los [estándares de diseño web del W3C](http://www.w3.org/standards/){target=_blank} y por ajustarse a la [Sección 508](http://www.section508.gov/){target=_blank} de la Ley de Estadounidenses con Discapacidades.
+
+Para obtener más información, consulta los siguientes informes:
+
+- Omeka S versión 4.x, diciembre de 2025.
+	- [Informe de conformidad con la accesibilidad, según las normas internacionales VPAT 2.5 revisadas (PDF)](files/OmekaS4x_ACR.pdf){target=_blank}
+	- [Informe de conformidad con la accesibilidad, según las normas internacionales VPAT 2.5 revisadas (DOCX)](files/OmekaS4x_ACR.docx){target=_blank} 
+- Omeka S versión 3.x [Informe de conformidad con las normas de accesibilidad, según las normas internacionales VPAT 2.4 revisadas (PDF)](files/OmekaS3x_ACR.pdf){target=_blank}, octubre de 2020.
+- Omeka S versión 2.x [Informe de conformidad con la accesibilidad, según VPAT 2.0 (PDF)](files/VPAT_OmekaS2-0-1.pdf){target=_blank}, agosto de 2019.
+- Omeka S versión 1.x [Informe de conformidad con la accesibilidad, según VPAT 2.0 (PDF)](files/VPAT2.0-OmekaS1-1.pdf){target=_blank}, abril de 2018.
+
+## Hoja de ruta
+Según el actual Informe de conformidad en materia de accesibilidad, durante 2026 el equipo de Omeka está trabajando en los siguientes elementos:
+
+-   Alternativas navegables mediante teclado a las interfaces de arrastrar y soltar
+-   Información sobre herramientas compatible con lectores de pantalla y navegable mediante teclado
+-   Avisos de estado de las interacciones compatibles con lectores de pantalla
+-   Orden de enfoque mejorado en la interfaz de administración
+-   Mejora de los roles y atributos de las relaciones en toda la interfaz de administración
+
+Consulta la [lista actual de incidencias](https://github.com/omeka/omeka-s/issues?q=is%3Aissue%20state%3Aopen%20label%3Aa11y){target=_blank} en el repositorio de GitHub del software principal.
+
+## Características
+
+Las siguientes indicaciones se aplican a la versión 1.0.1 y posteriores de Omeka S:
+
+### Interfaz de usuario (vista pública)
+
+Los temas de Omeka S creados por el equipo de Omeka cuentan con las siguientes características para mejorar la accesibilidad:
+
+-   [ARIA](http://www.w3.org/WAI/intro/aria){target=_blank} (Aplicaciones de Internet enriquecidas accesibles): puntos de referencia para desplazarse por el contenido de la página con la tecla Tab, cuando no se utiliza el ratón o se emplea un lector de pantalla.
+-   Marcado semántico HTML5.
+
+Ten en cuenta que, aunque el código base de Omeka S cumple con los estándares mencionados, las instalaciones de Omeka S que hayan sido personalizadas o que utilicen módulos y temas ajenos a RRCHNM pueden carecer de algunas o de todas estas opciones. Aunque animamos a los desarrolladores a tener en cuenta la accesibilidad, no podemos garantizar que su código incluya puntos de referencia ARIA, SkipNav u otras medidas de accesibilidad.
+
+### Back-end (vista administrativa)
+
+El panel de control administrativo de Omeka S cuenta con las siguientes características de accesibilidad:
+
+-   Puntos de referencia ARIA para lectores de pantalla en el panel de control administrativo, que identifican el encabezado, la navegación, el contenido principal y los pies de página.
+-   Marcado semántico HTML5.
+
+## Problemas de accesibilidad
+
+Si detectas algún problema de accesibilidad en el software principal de Omeka S o en los complementos desarrollados por el equipo de Omeka, por favor, informa de ello mediante una [publicación en el foro](https://forum.omeka.org/c/omeka-s/accessibility/36){target=_blank} o creando una incidencia en el repositorio de GitHub correspondiente.
