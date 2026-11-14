@@ -14,7 +14,7 @@ Los formatos de salida disponibles para este módulo son:
 
 ## Configuración
 
-Este módulo no tiene opciones de configuración a nivel de instalación. Cuando está activo, aparece automáticamente en los siguientes lugares de las interfaces administrativas: en la parte inferior de la página de exploración de elementos, de las páginas de exploración de medios y de las páginas de exploración de conjuntos de elementos; y en la barra lateral de las páginas de vista de elementos individuales, de las páginas de vista de medios y de las páginas de vista de conjuntos de elementos. 
+Este módulo no tiene opciones de configuración a nivel de instalación. Cuando está activo, aparece automáticamente en los siguientes lugares de las interfaces de administración: en la parte inferior de la página de exploración de elementos, de las páginas de exploración de medios y de las páginas de exploración de conjuntos de elementos; y en la barra lateral de las páginas de vista de elementos individuales, de las páginas de vista de medios y de las páginas de vista de conjuntos de elementos. 
 
 ![Los botones del módulo que aparecen en la barra lateral de una página de visualización de archivos multimedia](modulesfiles/outputFormats_admin.png)
 
@@ -42,7 +42,7 @@ Cuando se selecciona una salida, el usuario verá un archivo disponible para des
 
 ## Problemas con los formatos de salida
 
-La conversión de los datos de su sitio web a estos formatos puede generar algunos errores. Por lo general, se trata de problemas de compatibilidad entre los metadatos de sus recursos y los formatos, o con la herramienta que utilizamos para crear dichos formatos. 
+La conversión de los datos de tu sitio a estos formatos puede generar algunos errores. Por lo general, se trata de problemas de compatibilidad entre los metadatos de tus recursos y los formatos, o con la herramienta que utilizamos para crear dichos formatos. 
 
 Recomendamos a los administradores que comprueben minuciosamente cada formato de salida y busquen errores antes de que los detecte el público. A continuación, edita los recursos según sea necesario para corregir los errores producidos. Algunos ejemplos son:
 

@@ -1,4 +1,4 @@
-# Obtención de mensajes de error
+# Recuperación de mensajes de error
 
 Si tienes problemas con tu instalación de Omeka S, puedes activar el seguimiento de errores para desarrolladores.
 
@@ -34,7 +34,7 @@ a
 
 `'log' => true,`
 
-Los errores se registrarán en el archivo `logs/application.log`. Si deseas cambiar esta ruta por otra, añade una línea debajo de `'log' => true,` con el siguiente formato:
+Los errores se registrarán en el archivo `logs/application.log`. Si deseas cambiar esta ruta por otra, añade una línea debajo de `'log' => true,` con el siguiente formato
 
 ```
 'path' => '/a/local/path',

@@ -1,11 +1,11 @@
 # Manual de usuario de Omeka S
 
-Omeka S es un sistema de publicación web destinado a universidades, galerías, bibliotecas, archivos y museos. Crea una red local de exposiciones comisariadas de forma independiente que comparten un conjunto de elementos y sus metadatos creado de forma colaborativa.
+Omeka S es un sistema de publicación web destinado a universidades, galerías, bibliotecas, archivos y museos. Crea una red local de exposiciones comisariadas de forma independiente que comparten un conjunto de elementos y sus metadatos, creado de forma colaborativa.
 
-Las secciones de este manual se corresponden con las secciones de navegación situadas en la parte izquierda del [panel de control administrativo](admin-dashboard.md) de una instalación de Omeka S: 
+Las secciones de este manual se corresponden con las secciones de navegación situadas en la parte izquierda del [panel de administración](admin-dashboard.md) de una instalación de Omeka S: 
 
 **Sitios**  
-Creación, edición y gestión de sitios, es decir, las partes de una instalación de Omeka S accesibles al público.
+Creación, edición y gestión de sitios, es decir, las partes de una instalación de Omeka S destinadas al público.
 
 **Recursos**  
 Creación, edición y gestión del contenido de una instalación: elementos, conjuntos de elementos, archivos multimedia, vocabularios y plantillas de recursos.

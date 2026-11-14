@@ -1,6 +1,6 @@
 # Compartir
 
-El [módulo «Compartir»](https://omeka.org/s/modules/Sharing){target=_blank} te permite añadir botones a las páginas del sitio web para que los visitantes puedan compartir e incrustar contenido de tu sitio en redes sociales o por correo electrónico. La función «Compartir» también incluye los metaelementos [Open Graph](https://ogp.me/){target=_blank} y [oEmbed](https://oembed.com/){target=_blank} en la etiqueta `<head>` de cada página de elemento de tu sitio, de modo que se muestren tarjetas de vista previa al compartir el contenido en las redes sociales. 
+El [módulo «Compartir»](https://omeka.org/s/modules/Sharing){target=_blank} te permite añadir botones a las páginas del sitio web que los visitantes pueden utilizar para compartir e incrustar contenido de tu sitio en redes sociales o por correo electrónico. La función «Compartir» también incluye los metaelementos [Open Graph](https://ogp.me/){target=_blank} y [oEmbed](https://oembed.com/){target=_blank} en la etiqueta `<head>` de cada página de elemento de tu sitio, de modo que se muestren tarjetas de vista previa al compartir el contenido en redes sociales. 
 
 Actualmente, el módulo «Compartir» admite las siguientes opciones:
 
@@ -11,7 +11,7 @@ Actualmente, el módulo «Compartir» admite las siguientes opciones:
 - Correo electrónico
 - Códigos de incrustación.
 
-Una vez que se ha instalado y activado la función «Compartir» para una instalación de Omeka S, estará disponible para todos los sitios de dicha instalación.
+Una vez que se ha instalado y activado la función «Compartir» en una instalación de Omeka S, estará disponible para todos los sitios de dicha instalación.
 
 «Sharing» añade un nuevo [bloque de página](../sites/site_pages.md#page-blocks) a las páginas del sitio, y un [bloque de recursos para configurar](../sites/site_theme.md#configure-resource-pages) en el tema del sitio; estos bloques son opcionales, dependiendo de la configuración del sitio.
 
@@ -25,7 +25,7 @@ La configuración de «Sharing» se realiza sitio por sitio. Accede a un sitio y
 
 **Ubicación de los botones para compartir**: establece la ubicación de los botones para compartir, ya sea en la parte superior del contenido (debajo de la navegación y el encabezado de la página) o en la parte inferior (justo encima del pie de página). También puedes optar por mostrar los botones para compartir únicamente a través de bloques: [bloques de página para páginas individuales](../sites/site_pages.md#page-blocks) y bloques de recursos configurados en la [página de configuración de recursos](../sites/site_theme.md#configure-resource-pages) del tema del sitio. 
 
-**Botón único**: En lugar de mostrar botones con los logotipos de cada servicio seleccionado anteriormente, muestra un único botón con un icono de «Compartir» que, al hacer clic en él, abre las opciones del servicio. Esto sustituirá todas las instancias de los botones para compartir en todo el sitio. 
+**Botón único**: en lugar de mostrar botones con los logotipos de cada servicio seleccionado anteriormente, muestra un único botón con un icono de «Compartir» que, al hacer clic en él, abre las opciones del servicio. Esto sustituirá todas las instancias de los botones para compartir en todo el sitio. 
 
 Asegúrate de que las casillas correctas estén marcadas para tu sitio. Asegúrate de guardar los cambios. 
 
@@ -49,7 +49,7 @@ Las etiquetas pueden incluir:
 
 - `og:description`, que refleja el contenido de `dcterms:description` de cualquier recurso, si procede, o el [campo utilizado para la descripción del recurso](../content/resource-template.md#other-options)
 - `og:title`, que refleja `dcterms:title` o el campo utilizado para el título del recurso
-- `og:image`, que puede ser el archivo multimedia principal o la miniatura predeterminada, según el tipo de archivo multimedia
+- `og:image`, que puede ser el archivo multimedia principal o la miniatura predeterminada en función del tipo de archivo multimedia
 - `og:type`, que actualmente es siempre `content="website"`
 - `og:url`, la URL de la página actual.
 

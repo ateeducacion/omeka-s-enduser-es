@@ -21,7 +21,7 @@ Para instalar Omeka S (última versión 4.2), necesitarás un servidor que ejecu
 
 ## Métodos de instalación
 
-### Instalación desde el archivo descargado
+### Instalación desde la descarga
 
 !!! nota
   Antes de instalar Omeka S, debes crear una base de datos MySQL y un usuario. Omeka S debe tener una base de datos dedicada; no puedes utilizar un prefijo para una base de datos utilizada por otro sistema o por una instalación de Omeka S o Classic. Para obtener más información sobre cómo crear una base de datos y un usuario, consulta la documentación de soporte de tu proveedor de alojamiento o habla con tu administrador del sistema.
@@ -66,7 +66,7 @@ En la sección **Crear el primer usuario**:
 
 - Introduce una dirección de **correo electrónico** y vuelve a escribirla para confirmarla
 - Confirma la **contraseña** y vuelve a escribirla en el siguiente campo para confirmarla
-- Introduce un **nombre de visualización** para el usuario.
+- Introduce un **nombre de usuario** para el usuario.
 
 Ten en cuenta que puedes modificar todos estos datos más adelante en la sección de gestión de [Usuarios](admin/users.md) de tu instalación.
 
@@ -84,7 +84,7 @@ Puedes modificar estos ajustes en cualquier momento en la sección [Configuraci�
 
 ### Probar y configurar la ruta de PHP
 
-Omeka S utiliza tareas en segundo plano para algunas operaciones de larga duración que se realizan sobre muchos elementos o que, por cualquier otro motivo, pueden tardar mucho tiempo. Omeka S utiliza la CLI de PHP (interfaz de línea de comandos) para ejecutar estas tareas, es decir, el comando `php`. Una ruta de PHP incorrecta puede provocar diversos problemas en tu instalación de Omeka Classic. 
+Omeka S utiliza tareas en segundo plano para algunas operaciones de larga duración que se realizan sobre muchos elementos o que, por cualquier otro motivo, pueden tardar mucho tiempo. Omeka S utiliza la CLI de PHP (interfaz de línea de comandos) para ejecutar estas tareas, concretamente el comando `php`. Una ruta de PHP incorrecta puede provocar diversos problemas en tu instalación de Omeka Classic. 
 
 Por defecto, Omeka S intentará detectar automáticamente la ruta a la CLI de PHP en el servidor, pero en algunos servidores esta detección no funciona, o bien hay varios comandos `php` diferentes entre los que elegir. 
 
@@ -101,7 +101,7 @@ Consulta [Opciones de configuración](configuration.md) para obtener informació
 Una vez que hayas configurado correctamente todos los componentes técnicos de tu instalación de Omeka S, lo primero que querrás hacer es: añadir otros usuarios; crear plantillas de recursos, vocabularios y conjuntos de elementos; crear uno o más sitios; a continuación, añadir elementos y asignar esos recursos a tus sitios. Sigue leyendo el manual de usuario para obtener más información sobre estas partes de Omeka S.
 
 !!! nota
-  Si ya tienes una instalación de Omeka Classic o S, quizá te interese echar un vistazo a módulos como el [Importador de Omeka Classic](modules/omekaCimporter.md), el [Importador de elementos de Omeka S](modules/ositemimporter.md) o el [Módulo de importación CSV](modules/csvimport.md), que pueden ayudarte a copiar otros tipos de datos.
+  Si ya tienes una instalación de Omeka Classic u Omeka S, quizá te interese echar un vistazo a módulos como el [Importador de Omeka Classic](modules/omekaCimporter.md), el [Importador de elementos de Omeka S](modules/ositemimporter.md) o el [Módulo de importación CSV](modules/csvimport.md), que pueden ayudarte a copiar otros tipos de datos.
 
 ## Actualización
 
@@ -127,7 +127,7 @@ Omeka S no es compatible con sistemas operativos propietarios o de código cerra
 
 Sigue las instrucciones de instalación estándar. Para que funcione, tendrás que realizar los siguientes cambios de [configuración](configuration.md) en el archivo `config/local.config.php`.
 
-En primer lugar, es posible que haya que configurar la ruta de PHP si Omeka S no puede detectar automáticamente la ubicación de tus utilidades de PHP en tu servidor local. Abre el archivo `local.config.php` y busca la línea 12:
+En primer lugar, es posible que tengas que configurar la ruta de PHP si Omeka S no detecta automáticamente la ubicación de tus utilidades de PHP en tu servidor local. Abre el archivo `local.config.php` y busca la línea 12:
 ```
     'cli' => [
  'phpcli_path' => null,

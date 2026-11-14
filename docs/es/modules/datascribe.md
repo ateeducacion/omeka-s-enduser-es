@@ -11,9 +11,9 @@ Los investigadores suelen recopilar fuentes, como formularios gubernamentales o 
 
 ## Permisos
 
-DataScribe añade funcionalidades exclusivamente al panel de administración de Omeka S. Los usuarios deben haber iniciado sesión para añadir transcripciones a los formularios de datos estructurados. A un usuario de Omeka S de cualquier nivel se le puede asignar un rol específico para el panel de control de DataScribe: transcriptor o revisor. Solo los administradores globales y los supervisores pueden asignar usuarios a estos roles, crear nuevos proyectos de DataScribe y gestionarlos.
+DataScribe añade funcionalidades exclusivamente al panel de administración de Omeka S. Los usuarios deben haber iniciado sesión para añadir transcripciones a los formularios de datos estructurados. A cualquier usuario de Omeka S, independientemente de su nivel, se le puede asignar un rol específico para el panel de control de DataScribe: transcriptor o revisor. Solo los administradores globales y los supervisores pueden asignar usuarios a estos roles, crear nuevos proyectos de DataScribe y gestionarlos.
 
-Los proyectos de DataScribe con visibilidad «pública» pueden ser vistos por cualquier usuario que haya iniciado sesión; los proyectos «privados» solo pueden ser vistos por usuarios con nivel de supervisor o de administrador global. 
+Los proyectos de DataScribe con visibilidad «pública» pueden ser vistos por cualquier usuario que haya iniciado sesión; los proyectos «privados» siguen siendo visibles para los usuarios con nivel de supervisor o de administrador global. 
 
 ## Requisitos
 
@@ -39,7 +39,7 @@ DataScribe es un módulo que utiliza elementos y conjuntos de elementos de Omeka
 
 **Conjunto de datos**: un grupo de documentos con la misma estructura de datos (estructura de tabla, conjunto de filas y columnas, etc.). Un conjunto de datos puede recoger toda la información registrada en un documento histórico, o solo una parte del documento. Los conjuntos de datos se crean utilizando conjuntos de elementos en Omeka S. Los conjuntos de datos están formados por elementos.
 
-**Los elementos de DataScribe** se corresponden con los elementos de Omeka S: se trata de una correlación uno a uno. Cada elemento de DataScribe también existe como elemento en la instalación de Omeka S. El elemento de Omeka S es donde se pueden encontrar los metadatos (información) sobre la fuente, los derechos, etc., de cada elemento. Los archivos multimedia que se visualizan durante la transcripción están adjuntos a los elementos de Omeka S. Ten en cuenta que un elemento de DataScribe puede formar parte de más de un conjunto de datos. Al transcribir, un elemento tiene al menos un registro.
+**Los elementos de DataScribe** se corresponden con los elementos de Omeka S: se trata de una correspondencia uno a uno. Cada elemento de DataScribe existe también como elemento en la instalación de Omeka S. El elemento de Omeka S es donde se pueden encontrar los metadatos (información) sobre la fuente, los derechos, etc., de cada elemento. Los archivos multimedia que se visualizan durante la transcripción están adjuntos a los elementos de Omeka S. Ten en cuenta que un elemento de DataScribe puede formar parte de más de un conjunto de datos. Al transcribir, un elemento tiene al menos un registro.
 
 **Los registros** son datos individuales de un elemento. Un único registro de DataScribe aparecerá como una fila cuando se exporten los datos transcritos. En términos de flujo de trabajo general, la transcripción se realiza a nivel de registro y la revisión, a nivel de elemento. No obstante, los transcriptores pueden dejar notas y marcar registros concretos para que se les preste atención, incluso cuando el elemento completo no esté listo para su revisión.
 
@@ -56,9 +56,9 @@ Consulta esta guía en la wiki: [El panel de control de DataScribe](https://gith
 !!! Nota
   La wiki del módulo contiene información sobre [la planificación de proyectos y cómo conceptualizar la configuración de DataScribe para tus materiales](https://raw.githubusercontent.com/wiki/omeka-s-modules/Datascribe/Site-docs/support/projectplanning.md){target=_blank}. Es recomendable que leas esa información y planifiques tus proyectos, formularios y conjuntos de datos antes de instalar DataScribe o empezar a trabajar con él. 
 
-El primer paso para trabajar en DataScribe es crear un nuevo proyecto. Cuando inicias sesión en una instalación y accedes al panel de control de DataScribe, es posible que veas todos los proyectos que otros usuarios han creado en DataScribe (si tu nivel de permisos es lo suficientemente alto). Sin embargo, la sección «Mis proyectos» del panel de control estará vacía. En la esquina superior derecha hay un botón que te permitirá «Añadir un nuevo proyecto».
+El primer paso para trabajar en DataScribe es crear un nuevo proyecto. Cuando inicies sesión en una instalación y accedas al panel de control de DataScribe, es posible que veas todos los proyectos que otros usuarios han creado en DataScribe (si tu nivel de permisos es lo suficientemente alto). Sin embargo, la sección «Mis proyectos» del panel de control estará vacía. En la esquina superior derecha hay un botón que te permitirá «Añadir un nuevo proyecto».
 
-![Captura de pantalla del panel de control de DataScribe en la que se muestra que el usuario no es propietario ni forma parte de ningún proyecto en este momento, con el botón «Añadir nuevo proyecto» visible en la esquina superior derecha](modulesfiles/datascribe_buildproject2.png)
+![Captura de pantalla del panel de control de DataScribe que muestra que el usuario no es propietario ni forma parte de ningún proyecto en este momento, con el botón «Añadir nuevo proyecto» visible en la esquina superior derecha](modulesfiles/datascribe_buildproject2.png)
 
 Todos los proyectos deben tener un nombre, que se configura en la pestaña «Configuración» (y se puede editar más adelante). También puedes, si lo deseas, añadir una descripción a tu proyecto. 
 
@@ -86,7 +86,7 @@ Verás un banner verde en la parte superior de la pantalla que te indicará que 
 
 Los formularios proporcionan el marco para la transcripción estructurada en DataScribe. Al crear formularios para tus conjuntos de datos, tómate un tiempo para examinar tus fuentes y pensar en cómo quieres organizar tus formularios. Con algunas fuentes, puede que merezca la pena crear varios formularios para capturar subconjuntos distintos de datos en la misma página.
 
-DataScribe utiliza los conjuntos de elementos de Omeka S como base para los conjuntos de datos. Los conjuntos de datos son un grupo de documentos con el mismo marco de datos (estructura de tabla, conjunto de filas y columnas, etc.). Un conjunto de datos puede capturar toda la información registrada en un documento histórico, o solo una parte del mismo. Cada conjunto de datos tiene un formulario de transcripción.
+DataScribe utiliza los conjuntos de elementos de Omeka S como base para los conjuntos de datos. Los conjuntos de datos son un grupo de documentos con el mismo marco de datos (estructura de tabla, conjunto de filas y columnas, etc.). Un conjunto de datos puede capturar toda la información registrada en un documento histórico, o solo una parte del documento. Cada conjunto de datos tiene un formulario de transcripción.
 
 Tendrás que crear un conjunto de elementos único para cada tipo de formulario que pretendas crear. Por ejemplo, si dispones de datos con variaciones a lo largo del tiempo —como los «Bills of Mortality» o el censo de EE. UU.—, tendrás que crear diferentes conjuntos de elementos para cada variación del formulario que desees capturar.
 
@@ -136,7 +136,7 @@ Un formulario para la página de ejemplo podría ser el siguiente:
 | Descriptor     | Área de texto | | Escribir tal y como aparece en el directorio, por ejemplo, «agentes de seguros» o «estanco júnior»  |
 | Número de calle  | Número | | Si se indica |
 | Nombre de la calle    | Texto | | Se puede concatenar con el número en la exportación |
-| Zona | Texto o menú desplegable | | ¿Está lo suficientemente estandarizado como para crear un campo de selección? |
+| Zona | Texto o menú desplegable | | ¿Está lo suficientemente estandarizado como para crear un campo de menú desplegable? |
 
 Nota: Los campos obligatorios están marcados con una «R». Los campos principales están marcados con una «P».
 
@@ -150,7 +150,7 @@ Esta imagen muestra el formulario descrito anteriormente en proceso de creación
 
 ### Importación y exportación de formularios
 
-En un proyecto de DataScribe, es posible que necesites utilizar el mismo formulario o uno similar para varios conjuntos de datos. En lugar de crear el mismo formulario una y otra vez, puedes exportarlo desde un conjunto de datos existente y reutilizarlo. Esto resulta especialmente útil cuando los formularios son largos.
+En un proyecto de DataScribe, es posible que necesites utilizar el mismo formulario o uno similar para varios conjuntos de datos. En lugar de crear el mismo formulario una y otra vez, puedes exportarlo desde un conjunto de datos existente y reutilizarlo. Esto resulta especialmente útil cuando se trata de formularios más largos.
 
 Ten en cuenta que solo puedes importar un formulario al añadir un nuevo conjunto de datos. No puedes importar un formulario a un conjunto de datos ya existente. 
 
@@ -186,7 +186,7 @@ Una vez creado el conjunto de datos, se te redirigirá a la página de exploraci
 
 Para sincronizar tu conjunto de datos, tienes dos opciones.
 
-En primer lugar, puedes hacer clic en la frase «Sincronizar este conjunto de datos», situada en el centro del panel de control del conjunto de datos, y luego volver a hacer clic en el panel de la derecha para confirmar la sincronización. La primera sincronización rellenará el conjunto de datos con elementos del conjunto de elementos de origen.
+En primer lugar, puedes hacer clic en la frase «Sincronizar este conjunto de datos», situada en el centro del panel de control del conjunto de datos, y luego volver a hacer clic en el panel lateral derecho para confirmar la sincronización. La primera sincronización rellenará el conjunto de datos con elementos del conjunto de elementos de origen.
 
 ![Página de nuevo conjunto de datos creado sin elementos. Una flecha grande señala el enlace «sincronizar este conjunto de datos».](modulesfiles/datascribe_syncDataset1.png)
 
@@ -232,7 +232,7 @@ De vuelta en la página de registros, hay un menú desplegable en el panel later
 
 [En la wiki hay información más detallada sobre cómo revisar transcripciones](https://github.com/omeka-s-modules/Datascribe/wiki/Reviewing-transcriptions){target=_blank}.
 
-Los revisores comprueban las transcripciones una vez que los transcriptores han completado la transcripción de un elemento de DataScribe y la han enviado para su revisión. Podrás aprobar la transcripción o devolverla al transcriptor para que la corrija.
+Los revisores comprueban las transcripciones una vez que los transcriptores han completado la transcripción de un elemento de DataScribe y la han enviado para su revisión. Deberás aprobar la transcripción o devolverla al transcriptor para que la corrija.
 
 Hay varias formas de encontrar los registros que hay que revisar. La forma más sencilla es ir a «Mis proyectos» y seleccionar «Todos los elementos que necesitan revisión» en el conjunto de datos que desees revisar. Una vez en la página del conjunto de datos, puedes filtrar los elementos que necesitan revisión.
 
@@ -250,9 +250,9 @@ Es posible desplazarse por la tabla de registros para ver las entradas sin la im
 
 En este punto, revisar una transcripción se parece mucho a transcribirla. Haz clic en el icono del lápiz para ir al formulario de DataScribe.
 
-Puedes marcar «Necesita revisión» y dejar notas en el registro. Si estás transcribiendo varios registros por artículo, las «Acciones del registro» situadas a la derecha permitirán a los revisores marcar el registro específico.
+Puedes marcar «Necesita revisión» y dejar notas en el registro. Si estás transcribiendo varios registros por elemento, las «Acciones del registro» situadas a la derecha permitirán a los revisores marcar el registro específico.
 
-Puedes dejar notas a nivel de artículo en «Acciones del artículo». Desde aquí, haz clic en «Guardar… y volver a los registros».
+Puedes dejar notas a nivel de elemento en «Acciones del elemento». Desde aquí, haz clic en «Guardar… y volver a los registros».
 
 El último paso consiste en establecer el estado de revisión del elemento. El elemento debe marcarse como «aprobado» o «no aprobado». En «Estado de revisión», selecciona «Marcar como aprobado» o «Marcar como no aprobado».
 

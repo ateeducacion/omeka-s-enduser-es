@@ -31,17 +31,17 @@ Puedes utilizar esos ajustes para:
 - Seleccionar el tipo de miniatura para el archivo adjunto. Las opciones son [grande, mediana o cuadrada](../configuration.md#thumbnails).
 - Decidir qué título del archivo adjunto mostrar. Las opciones de configuración incluyen «título del elemento», «título del archivo multimedia» o «sin título».
 - Decidir si se muestra o no un pie de foto del archivo adjunto, tal y como se haya configurado en los archivos adjuntos.
-	- Si has seleccionado mostrar el título y/o el pie de foto, puedes decidir si superponer o no el título/pie de foto sobre la imagen adjunta. Visualiza y actualiza la página pública para ver cómo queda. Ten en cuenta que seleccionar esta opción puede requerir algunos ajustes en el CSS de tu tema.
+	- Si has seleccionado mostrar el título y/o el pie de foto, puedes decidir si superponer o no el título o el pie de foto sobre la imagen adjunta. Visualiza y actualiza la página pública para ver cómo queda. Ten en cuenta que seleccionar esta opción puede requerir algunos ajustes en el CSS de tu tema.
 - Establece la alineación del título o pie de foto. Las opciones de configuración son: izquierda, derecha y centrada.
 - Decide si deseas estirar la imagen del elemento adjunto para que ocupe todo el espacio de la diapositiva. Las opciones son: Ninguna, Rellenar ancho, Rellenar altura y Rellenar toda la diapositiva.
 - Establece un ancho de «punto de ruptura» para el carrusel. Por encima de este número de píxeles de ancho, aparecerá el número de elementos que hayas elegido por diapositiva; por debajo, solo se mostrará un elemento a la vez. Esto es para garantizar la compatibilidad con dispositivos móviles, pero puede depender del número de elementos que muestres y del tamaño de las miniaturas que hayas elegido. Si tienes un elemento por diapositiva, ignora este ajuste. Puedes dejarlo en blanco. 
 - Establece el tiempo que la diapositiva del carrusel permanece en pausa antes de pasar automáticamente al siguiente elemento. La duración se expresa en milisegundos (por lo tanto, un valor de «1000» cambiaría de diapositiva una vez por segundo). **Establece la duración en 0 para desactivar el avance automático**.
-- Establece si las diapositivas deben avanzar en un bucle infinito, de modo que, una vez que el carrusel haya recorrido todos los elementos adjuntos, el ciclo comience de nuevo.
-- Decide si deseas aplicar un efecto de fundido entre las diapositivas adjuntas que se suceden. Nota: Esta opción solo funciona cuando has configurado tu carrusel para mostrar 1 elemento por página (y no cuando se activa el punto de ruptura).
+- Establece si las diapositivas deben avanzar en un bucle infinito, de modo que, una vez que el carrusel haya recorrido todos los elementos adjuntos, el ciclo vuelva a comenzar.
+- Decide si deseas aplicar un fundido entre las diapositivas adjuntas que se suceden. Nota: Esta opción solo funciona cuando has configurado tu carrusel para mostrar 1 elemento por página (y no cuando se activa el punto de ruptura).
 
 ## Vistas públicas
 
-En tu página pública, el carrusel tendrá automáticamente la misma altura que tu elemento más alto, incluyendo el título y el texto de la leyenda, en función de la configuración avanzada anterior. Tendrá el ancho que permita el bloque de la página según tu [diseño y configuración de la página](../sites/site_pages.md).
+En tu página pública, el carrusel tendrá automáticamente la misma altura que tu elemento más alto, incluyendo el título y el texto de la leyenda, dependiendo de la configuración avanzada anterior. Tendrá el ancho que permita el bloque de la página según tu [diseño y configuración de la página](../sites/site_pages.md).
 
 !!! nota
   Es posible que tu carrusel tenga un aspecto y un comportamiento diferentes en dispositivos móviles y de menor tamaño que en la pantalla de un ordenador. Asegúrate de visualizar tu página pública en diferentes configuraciones para garantizar que los visitantes del sitio puedan acceder a los elementos. 

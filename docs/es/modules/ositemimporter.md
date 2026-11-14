@@ -2,7 +2,7 @@
 
 El [módulo «Importador de elementos de Omeka S»](https://omeka.org/s/modules/Osii){target=_blank} permite importar elementos de una instalación de Omeka S a otra. Este importador puede duplicar elementos, sus archivos multimedia y sus conjuntos de elementos, pero no puede duplicar la información del sitio ni de las páginas. 
 
-La transferencia de datos de una instalación a otra conlleva un riesgo significativo de pérdida de datos, pero una planificación y preparación minuciosas por parte del usuario de la instalación receptora pueden evitar que esto suceda.
+La transferencia de datos de una instalación a otra conlleva un riesgo significativo de pérdida de datos, pero una planificación y preparación minuciosas por parte del usuario de la instalación receptora pueden evitar que esto ocurra.
 
 ## Preparación para la importación
 
@@ -53,11 +53,11 @@ Aunque se trate de un error, esta URL es el punto final raíz.
 
 **Conjunto de elementos**: Si lo deseas, selecciona uno o varios conjuntos de elementos a los que se asignarán los elementos importados.
 
-**Excluir medios**: Marca esta casilla si deseas que la importación excluya los medios. Si no se marca, los medios se importarán con normalidad. Si decides cambiar esta configuración más adelante, tendrás que realizar una nueva instantánea y procesar una nueva importación para que se apliquen dichos cambios. No existe la posibilidad de sincronización automática y continua de los datos.
+**Excluir medios**: Marca esta casilla si deseas que la importación excluya los medios. Si no se marca, los medios se importarán con normalidad. Si decides cambiar esta configuración más adelante, tendrás que realizar una nueva instantánea y procesar una nueva importación para que se apliquen dichos cambios. No existe la posibilidad de sincronización automática continua de los datos.
 
-**Excluir conjuntos de elementos**: Marca esta casilla si deseas que la importación excluya los conjuntos de elementos (dentro de los parámetros de tu consulta, si se ha definido una consulta). Si no se marca, los conjuntos de elementos de la instalación remota se importarán con normalidad. 
+**Excluir conjuntos de elementos**: Marca esta casilla si deseas que la importación excluya los conjuntos de elementos (dentro de los parámetros de tu consulta, si se ha configurado una consulta). Si no se marca, los conjuntos de elementos de la instalación remota se importarán con normalidad. 
 
-**Conservar recursos eliminados**: Marca esta casilla si, durante la importación, deseas conservar localmente los recursos de una importación anterior que hayan sido eliminados de la instantánea remota actual. Si se marca, los recursos eliminados permanecerán localmente, pero ya no serán gestionados por esta importación. Si no se marca, los recursos eliminados se borrarán localmente como de costumbre.
+**Conservar recursos eliminados**: Marca esta casilla si, durante la importación, deseas conservar localmente los recursos de una importación anterior que hayan sido eliminados de la instantánea remota actual. Si se marca, los recursos eliminados permanecerán localmente, pero ya no serán gestionados por esta importación. Si no se marca, los recursos eliminados se borrarán localmente de forma habitual.
 
 **Añadir URL del sitio remoto**: Si deseas indicar la fuente general del elemento importado, introduce la URL del sitio del que proceden los recursos importados. Si se introduce, se añadirá a cada recurso importado y se guardará como un valor mediante la propiedad `osii:source_site`. Es posible que prefieras utilizar una URL específica de un sitio de Omeka, como `http://your-domain-name.edu/omeka-s/s/sitename/`, en lugar de la URL de instalación base que aparece aquí; pero ten en cuenta que todos los elementos se importarán con este enlace, independientemente de si forman parte de algún sitio concreto o no. 
 
@@ -77,7 +77,7 @@ Una vez configurada una importación, se redirige al usuario a una interfaz con 
 
 Tras la configuración inicial de una importación, el usuario encontrará un mensaje en el área principal de la interfaz que dice: «La preparación de la importación no está disponible en este momento». 
 
-![Pantalla de resultado de «Importación añadida correctamente» con las secciones «Acciones de importación» y «Metadatos de importación» en la barra lateral derecha](../modules/modulesfiles/osii_ImportSuccessfullyAdded.png)
+![Pantalla de resultado «Importación añadida correctamente» con las secciones «Acciones de importación» y «Metadatos de importación» en la barra lateral derecha](../modules/modulesfiles/osii_ImportSuccessfullyAdded.png)
 
 ### Realizar la instantánea
 
@@ -99,9 +99,9 @@ Situada en el panel principal de la interfaz, el área de asignación ofrece a l
 
 - **Pestaña «Recursos»**: Esta vista ofrece una visión general de los recursos dentro del universo de importación, tanto en la instalación remota como en la local.
 
-![Tabla de resumen de gestión de importaciones con pestañas para Recursos, Tipos de datos, Plantillas, Ingestores multimedia, Propiedades y Clases](../modules/modulesfiles/osii_ManageImportOverview.png)
+![Tabla de resumen de «Manage Import» con pestañas para Recursos, Tipos de datos, Plantillas, Ingestores multimedia, Propiedades y Clases](../modules/modulesfiles/osii_ManageImportOverview.png)
 
-- **Pestaña «Tipos de datos»**: Esta vista muestra los tipos de datos remotos y su recuento de valores. El usuario puede seleccionar, en un menú desplegable, los tipos de datos disponibles localmente (por ejemplo, literal, recurso, URI, `numeric:timestamp`) para asignar la instalación local a la instalación remota. Si detectas que hay tipos de datos disponibles de forma remota que no lo están a nivel local, deberás añadirlos a tu instalación antes de continuar para evitar la pérdida de datos. Si un tipo de datos remoto no está mapeado a uno local, los valores no se importarán. Los tipos de datos se pueden añadir mediante módulos como [Tipos de datos numéricos](numericdatatypes.md) y [Sugerencia de valores](valuesuggest.md).
+- **Pestaña «Tipos de datos»**: Esta vista muestra los tipos de datos remotos y su recuento de valores. El usuario puede seleccionar, en un menú desplegable, los tipos de datos disponibles localmente (por ejemplo, literal, recurso, URI, `numeric:timestamp`) para asignar la instalación local a la instalación remota. Si detectas que hay tipos de datos disponibles de forma remota que no lo están localmente, deberás añadirlos a tu instalación antes de continuar para evitar la pérdida de datos. Si un tipo de datos remoto no está mapeado a uno local, los valores no se importarán. Los tipos de datos se pueden añadir mediante módulos como [Tipos de datos numéricos](numericdatatypes.md) y [Sugerencia de valores](valuesuggest.md).
 
 - **Pestaña «Plantillas»**: Esta vista muestra las plantillas de recursos remotos y su número. El usuario puede seleccionar, en un menú desplegable, las plantillas de recursos disponibles localmente para asignar la instalación local a la instalación remota. Ten en cuenta que la instalación local puede duplicar las plantillas remotas realizando [exportaciones e importaciones](../content/resource-template.md#share-resource-templates). Este puede ser un buen momento para crear o modificar plantillas con el fin de reflejar mejor los elementos que deseas importar. 
 
@@ -109,7 +109,7 @@ Situada en el panel principal de la interfaz, el área de asignación ofrece a l
 
 - **Pestaña «Propiedades»**: Esta vista incluye una lista de las propiedades remotas e indica si están presentes en la instalación local. Los valores solo se importarán si sus respectivas propiedades están presentes en la instalación local. Si detectas que hay propiedades disponibles de forma remota que no lo están localmente, deberás [añadir sus vocabularios a tu instalación](../content/vocabularies.md#add-a-vocabulary) antes de continuar para evitar la pérdida de datos. Ten en cuenta que es posible que veas algunas propiedades en rojo en la instalación remota: son aquellas que no estaban disponibles en versiones anteriores o que han quedado obsoletas en versiones posteriores del vocabulario. Es posible que tengas que buscar e instalar la misma versión específica de ese vocabulario en tu instalación local. 
 
-![Tabla de gestión de importaciones con la tabla de inventario de propiedades, en la que dos recuadros rojos resaltan las propiedades que están presentes y las que no lo están en la instalación local](../modules/modulesfiles/osii_PropertyInventory.png)
+![Tabla de gestión de importaciones con la tabla de inventario de propiedades, en la que dos recuadros rectangulares en rojo resaltan las propiedades que están presentes y las que no lo están en la instalación local](../modules/modulesfiles/osii_PropertyInventory.png)
 
 - **Pestaña «Clases»**: Esta vista muestra una lista de las clases remotas e indica si están instaladas en la instalación local. Si no es así, los elementos se importarán sin clases. Si detectas que hay clases disponibles de forma remota que no lo están localmente, deberás añadirlas a tu instalación antes de continuar para evitar la pérdida de datos. Las clases se añaden a través de [vocabularios](../content/vocabularies.md). Ten en cuenta que es posible que veas algunas clases en rojo en la instalación remota: son aquellas que no estaban disponibles en versiones anteriores o que han quedado obsoletas en versiones posteriores del vocabulario. Es posible que tengas que buscar e instalar la misma versión específica de ese vocabulario en tu instalación local. 
 

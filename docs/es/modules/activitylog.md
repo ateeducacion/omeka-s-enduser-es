@@ -16,13 +16,13 @@ La tabla incluye las siguientes columnas:
 
 - **ID**: El identificador interno del evento
 - **Fecha**: La fecha y hora del evento, según la zona horaria de la instalación
-- **Usuario**: El usuario que provocó el evento y su rol. Cuando no haya ningún usuario conectado (como en el caso de las contribuciones realizadas mediante los formularios públicos del módulo [Collecting](collecting.md)), este campo aparecerá en blanco. 
+- **Usuario**: El usuario que ha provocado el evento y su rol. Cuando no haya ningún usuario conectado (como en el caso de las contribuciones realizadas mediante los formularios públicos del módulo [Collecting](collecting.md)), este campo aparecerá en blanco. 
 - **IP**: La dirección IP del usuario en el momento del evento
 - **Nombre del evento**: El tipo de evento que ha desencadenado el usuario
 - **Recurso**: El ID del recurso que ha modificado el usuario. Si se trata de varios recursos, como en una acción masiva, se mostrarán en los datos los ID de todos los recursos afectados. 
 - **Mensajes**: Cualquier mensaje que describa el evento, en forma de lista.
 
-Se puede ver un evento con más detalle haciendo clic en el enlace «Ver datos del evento» que aparece en cada entrada de la tabla. Esto abrirá el panel lateral derecho para mostrar una versión técnica de los datos guardados en la base de datos correspondientes al evento. 
+Se puede ver un evento con más detalle haciendo clic en el enlace «Ver datos del evento» en cada entrada de la tabla. Esto abrirá el panel lateral derecho para mostrar una versión técnica de los datos guardados en la base de datos correspondientes al evento. 
 
 ![La tabla de eventos del módulo «Registro de actividad», con los datos del evento mostrados en el panel lateral derecho.](modulesfiles/activityLog_eventData.png)
 

@@ -2,9 +2,9 @@
 
 El [módulo «Extraer metadatos»](https://omeka.org/s/modules/ExtractMetadata){target=_blank} permite a los administradores del sitio extraer los metadatos incrustados de los archivos multimedia. 
 
-El módulo añade una nueva pestaña «Extraer metadatos» a cada página multimedia, lo que te permitirá extraer manualmente cualquier metadato incrustado que se encuentre en el archivo. También añade un campo «Extraer metadatos» a la página de edición por lotes. Cuando está activado, funciona automáticamente con los archivos recién subidos. 
+El módulo añade una nueva pestaña «Extraer metadatos» a cada página de multimedia, lo que te permitirá extraer manualmente cualquier metadato incrustado que se encuentre en el archivo. También añade un campo «Extraer metadatos» a la página de edición por lotes. Cuando está activado, funciona automáticamente con los archivos recién subidos. 
 
-Un buen flujo de trabajo consiste en instalar y configurar el módulo, extraer por lotes los metadatos de los archivos existentes en tu base de datos, asignarlos a los campos de metadatos multimedia que elijas y, a continuación, simplemente dejar que el módulo siga extrayendo metadatos de los archivos en el futuro.
+Un buen flujo de trabajo consiste en instalar y configurar el módulo, extraer de forma masiva los metadatos de los archivos existentes en tu base de datos, asignarlos a los campos de metadatos multimedia que elijas y, a continuación, simplemente dejar que el módulo siga extrayendo metadatos de los archivos en el futuro.
 
 ## Configuración del módulo
 
@@ -72,19 +72,19 @@ Se utiliza para extraer muchos tipos de metadatos de muchos tipos de archivos. U
  
 ### Tika
 
-Se utiliza para extraer diversos tipos de metadatos de distintos tipos de archivos. Requiere el kit de herramientas de análisis de contenido [Apache Tika](https://tika.apache.org/){target=_blank}. Es necesario tener instalado Java y configurar la ruta al archivo `tika-app-*.jar` en `config/module.config.php`, en la sección `[extract_metadata_extractor_config][tika][jar_path]`.
+Se utiliza para extraer diversos tipos de metadatos de diversos tipos de archivos. Requiere el kit de herramientas de análisis de contenido [Apache Tika](https://tika.apache.org/){target=_blank}. Es necesario tener instalado Java y configurar la ruta al archivo `tika-app-*.jar` en `config/module.config.php`, en la sección `[extract_metadata_extractor_config][tika][jar_path]`.
 
 ### OHMS
 
-Añadido por el [módulo OHMS Embed](ohmsembed.md). Se utiliza para extraer los metadatos generados por el Oral History Metadata Synchronizer Editor y contenidos en el archivo XML generado por dicho sistema. El extractor OHMS puede utilizar punteros JSON para asignar los metadatos a los recursos de Omeka. Para obtener más información, consulta el [módulo OHMS Embed](ohmsembed.md). 
+Añadido por el [módulo OHMS Embed](ohmsembed.md). Se utiliza para extraer metadatos generados por el Oral History Metadata Synchronizer Editor y contenidos en el archivo XML generado por dicho sistema. El extractor OHMS puede utilizar punteros JSON para asignar los metadatos a los recursos de Omeka. Para obtener más información, consulta el [módulo OHMS Embed](ohmsembed.md). 
 
 ## Mapeadores
 
-Los mapeadores asignan los metadatos extraídos a los valores de los recursos. Ten en cuenta que es necesario habilitar un mapeador en la página de configuración del módulo. Este módulo incluye un mapeador. La mejor práctica para utilizar este módulo con otros mapeadores sería crear una bifurcación del código del módulo; consulta [nuestra documentación para desarrolladores para obtener más detalles](https://omeka.org/s/docs/developer/modules/){target=_blank}.
+Los mapeadores asignan los metadatos extraídos a los valores de los recursos. Ten en cuenta que un mapeador debe estar habilitado en la página de configuración del módulo. Este módulo incluye un mapeador. La mejor práctica para utilizar este módulo con otros mapeadores sería crear una bifurcación del código del módulo; consulta [nuestra documentación para desarrolladores para obtener más detalles](https://omeka.org/s/docs/developer/modules/){target=_blank}.
 
 ### Punteros JSON
 
-Puedes asignar los metadatos extraídos a propiedades de metadatos de medios o elementos utilizando [punteros JSON](https://datatracker.ietf.org/doc/html/rfc6901){target=_blank}. Debes definir tu propia tabla de correspondencias de metadatos en la página de configuración del módulo, en la pestaña «Tabla de correspondencias de punteros JSON».
+Puedes asignar los metadatos extraídos a las propiedades de metadatos de los medios o elementos utilizando [punteros JSON](https://datatracker.ietf.org/doc/html/rfc6901){target=_blank}. Debes definir tu propia tabla de correspondencias de metadatos en la página de configuración del módulo, en la pestaña «Tabla de correspondencias de punteros JSON».
 
 Quizá te interese extraer primero los metadatos de unos cuantos archivos y ver a qué información se puede apuntar, para luego probar algunas opciones sobre cuál es la mejor forma de asignarlos.
 

@@ -59,7 +59,7 @@ El generador de miniaturas predeterminado es `Omeka\File\Thumbnailer\ImageMagick
 
 También puedes configurar el generador de miniaturas como `Omeka\File\Thumbnailer\NoThumbnail`, lo que impedirá que tu instalación de Omeka S genere miniaturas. 
 
-[GD](https://secure.php.net/manual/en/intro.image.php){target=_blank} es una biblioteca gráfica básica que se instala por defecto con PHP. Solo puede crear miniaturas para formatos de imagen habituales (jpeg, gif, png). 
+[GD](https://secure.php.net/manual/en/intro.image.php){target=_blank} es una biblioteca gráfica básica que se instala por defecto con PHP. Solo puede crear miniaturas para formatos de imagen comunes (jpeg, gif, png). 
 
 [Imagick e ImageMagick](https://www.imagemagick.org){target=_blank} son la misma biblioteca y pueden crear miniaturas para más de 200 formatos. Imagick está integrado en PHP e ImageMagick es la versión de línea de comandos. 
 
@@ -78,13 +78,13 @@ Puedes utilizar la [página «Información del sistema»](admin-dashboard.md#sys
 
 ## Ruta de PHP
 
-Omeka S utiliza tareas en segundo plano para algunas operaciones de larga duración que se aplican a muchos elementos o que, por cualquier otro motivo, pueden tardar mucho tiempo en completarse. Omeka S utiliza la CLI de PHP (interfaz de línea de comandos) para ejecutar estas tareas, es decir, el comando `php`. Una ruta de PHP no válida puede causar diversos problemas en tu instalación de Omeka. 
+Omeka S utiliza tareas en segundo plano para algunas operaciones de larga duración que se realizan sobre muchos elementos o que, por cualquier otro motivo, pueden tardar mucho tiempo. Omeka S utiliza la CLI de PHP (interfaz de línea de comandos) para ejecutar estas tareas, es decir, el comando `php`. Una ruta de PHP no válida puede causar diversos problemas en tu instalación de Omeka. 
 
 Omeka 4.0 y versiones posteriores requieren la versión 7.4 o posterior de PHP.
 
 Por defecto, Omeka S intentará detectar automáticamente la ruta a la CLI de PHP en el servidor, pero en algunos servidores esta detección no funciona, o hay varios comandos `php` diferentes entre los que elegir. 
 
-Utiliza la [página de información del sistema](admin-dashboard.md#system-information) para comprobar que tu instalación ha identificado la ruta correcta a PHP. Si aparece un error al hacer clic en el botón, eso puede indicar que debes configurar los ajustes manualmente.
+Utiliza la [página de información del sistema](admin-dashboard.md#system-information) para comprobar que tu instalación ha identificado la ruta correcta a PHP. Si aparece un error al hacer clic en el botón, esto puede indicar que debes configurar los ajustes manualmente.
 
 ![Los botones de «Información del sistema» para obtener la ruta de PHP y la versión de ImageMagick.](files/systeminfo_buttons.png)
 
@@ -102,7 +102,7 @@ Configura manualmente la ruta correcta en el archivo `local.config.php`, ubicado
     ],
 ```
 
-Sustituye la palabra «null» por una ruta, entre comillas simples («usr/local/bin/php»). Esta ruta suele tener un aspecto similar a `/usr/local/php80/bin/php`, `/usr/local/bin/php` o `/usr/local/bin/ea-php74`.
+Sustituye la palabra «null» por una ruta, entre comillas simples («usr/local/bin/php»). Esta ruta suele tener un formato similar a `/usr/local/php80/bin/php`, `/usr/local/bin/php` o `/usr/local/bin/ea-php74`.
 
 Estos son solo ejemplos; la ruta correcta dependerá de tu servidor. Busca en la documentación de ayuda o en la base de conocimientos de tu proveedor de alojamiento la ruta correcta de PHP; se trata de una pregunta frecuente en relación con una gran variedad de instalaciones de software. Si no encuentras nada, ponte en contacto con tu proveedor de alojamiento o con el administrador del sistema y pregúntales.
 

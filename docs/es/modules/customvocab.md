@@ -1,6 +1,6 @@
 # Vocabulario personalizado
 
-El [módulo «Vocabulario personalizado»](https://omeka.org/s/modules/CustomVocab){target=_blank} te permite crear un vocabulario controlado con tus propias entradas. Al tratarse de un nuevo [tipo de datos](../content/resource-template.md#data-types), podrás añadir el vocabulario a las propiedades de las plantillas de recursos. Al utilizar la plantilla para un elemento, la propiedad se cargará con un menú desplegable limitado a las opciones del vocabulario controlado, en lugar de un campo de entrada de texto.
+El [módulo «Vocabulario personalizado»](https://omeka.org/s/modules/CustomVocab){target=_blank} te permite crear un vocabulario controlado con tus propias entradas. Al tratarse de un nuevo [tipo de datos](../content/resource-template.md#data-types), podrás añadir el vocabulario a las propiedades de las plantillas de recursos. Al utilizar la plantilla para un elemento, la propiedad se cargará con un menú desplegable limitado a las opciones del vocabulario controlado, en lugar de un cuadro de entrada de texto.
 
 Por ejemplo, quizá quieras crear una lista específica de la institución con las ubicaciones que corresponden a las diferentes colecciones de tu campus, o una lista controlada de personas o lugares relacionados con tus fondos. Esto puede ayudar a reducir los errores tipográficos y las variaciones en los nombres, y te permite ofrecer [navegación por metadatos](../modules/metadatabrowse.md) para más campos.
 
@@ -8,7 +8,7 @@ Por ejemplo, quizá quieras crear una lista específica de la institución con l
 
 ## Crear un vocabulario personalizado
 
-Una vez que hayas instalado y activado el módulo, ve a la sección «Custom Vocab» en el menú de navegación de la izquierda, bajo «Módulos».
+Una vez que hayas instalado y activado el módulo, ve a la sección «Custom Vocab» en el menú de navegación de la izquierda, dentro de «Módulos».
 
 Haz clic en el botón «Añadir vocabulario nuevo» situado en la esquina superior derecha de la ventana.
 
@@ -40,7 +40,7 @@ Los vocabularios de tipo «elementos» no se pueden exportar ni importar, ya que
 
 ![Pestaña «Vocabulario personalizado» con la barra lateral abierta, mostrando las opciones para actualizar o exportar el vocabulario](../modules/modulesfiles/customVocab_updateExport.png)
 
-Al editar un vocabulario personalizado, puede cambiar la etiqueta, el idioma o los términos.
+Al editar un vocabulario personalizado, puedes cambiar la etiqueta, el idioma o los términos.
 
 ## Uso de un vocabulario personalizado
 
@@ -60,7 +60,7 @@ Ve a la pantalla de plantillas de recursos y añade una nueva plantilla o edita 
 1. Añade la propiedad a la que deseas aplicar el vocabulario personalizado.
 1. Edita la propiedad.
 1. En el panel que se abre a la derecha, ve a la sección «Otras opciones» y busca el menú desplegable «Tipo de datos».
-1. Desplázate por el menú desplegable y selecciona el vocabulario que desees utilizar.
+1. Desplázate por el menú desplegable y selecciona el vocabulario que quieras utilizar.
 1. Haz clic en «Aplicar cambios» en la parte inferior del panel.
 
 A continuación, guarda los cambios en la plantilla.
@@ -73,7 +73,7 @@ Al hacer clic en el título de una plantilla de recurso para ver sus detalles, e
 
 Cuando se utiliza esta plantilla de recurso para un elemento, un medio o un conjunto de elementos, la propiedad designada siempre se cargará como un menú desplegable con los valores del vocabulario personalizado. Recuerda que el vocabulario personalizado **requiere** que los usuarios lo utilicen. Si deseas ofrecer el vocabulario personalizado únicamente como una opción, añade un segundo tipo de datos o varios tipos de datos que ofrezcan alternativas, como un campo de texto sin formato. 
 
-En la siguiente imagen, la plantilla de recurso modificada anteriormente se carga para un nuevo elemento. El campo «Cobertura espacial» muestra el mensaje «Selecciona a continuación» y unas flechas que indican que el campo de la propiedad es un menú desplegable.
+En la siguiente imagen, la plantilla de recurso modificada anteriormente se carga para un nuevo elemento. El campo «Cobertura espacial» muestra el mensaje «Seleccionar a continuación» y unas flechas que indican que el campo de la propiedad es un menú desplegable.
 
 ![como se describe](../modules/modulesfiles/customVocab_item1.png)
 
@@ -83,13 +83,13 @@ La siguiente imagen muestra el menú desplegable abierto, en el que se muestran 
 
 ### Convertir tipos de datos
 
-También puedes aplicar vocabularios personalizados como tipos de datos a valores existentes en recursos ya creados, independientemente de si utilizan alguna plantilla de recurso o no. 
+También puedes aplicar vocabularios personalizados como tipos de datos a valores existentes en recursos ya creados, independientemente de si utilizan o no una plantilla de recurso. 
 
 Esto puede resultar útil en el caso de una importación CSV u otra ingesta en la que no se aplicara el tipo de datos correcto en su momento. O en el caso de que los valores introducidos manualmente puedan ahora relacionarse con un vocabulario controlado en línea (quizás uno que haya publicado la propia institución). 
 
-Selecciona varios recursos en la página de exploración de la interfaz de administración y, a continuación, elige la opción por lotes «Editar seleccionados» (o «Editar todos»). En la siguiente pantalla, busca la opción «Convertir tipo de datos» en la sección «Valores», cerca de la parte inferior del formulario. Esto te permitirá elegir una propiedad de entre todos los elementos seleccionados y aplicar un vocabulario personalizado como tipo de datos. 
+Selecciona varios recursos en la página de exploración de la interfaz de administración y, a continuación, elige la opción por lotes «Editar seleccionados» (o «Editar todo»). En la siguiente pantalla, busca la opción «Convertir tipo de datos» en la sección «Valores», cerca de la parte inferior del formulario. Esto te permitirá elegir una propiedad de entre todos los elementos seleccionados y aplicar un vocabulario personalizado como tipo de datos. 
 
-![La opción «Convertir tipo de datos» en la pantalla de edición por lotes, que muestra «Creador» como primera selección y el menú desplegable expandido para mostrar los vocabularios de «Vocabulario personalizado» en la segunda selección.](../modules/modulesfiles/customVocab_batchEdit.png)
+![La opción «Convertir tipo de datos» en la pantalla de edición por lotes, que muestra «Creador» como primera selección y el menú desplegable expandido para mostrar los vocabularios de Custom Vocab en la segunda selección.](../modules/modulesfiles/customVocab_batchEdit.png)
 
 Esta configuración del tipo de datos se aplicará a los valores existentes en la propiedad, si es posible. Los valores de texto, si coinciden exactamente con las entradas de una lista de vocabulario personalizado de texto, funcionarán. Las URI, si coinciden exactamente con las entradas de una lista de vocabulario personalizado de URI, también funcionarán. No se pueden asignar URI mediante etiquetas coincidentes. 
 

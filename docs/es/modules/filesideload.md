@@ -1,6 +1,6 @@
 # Carga lateral de archivos
 
-El [módulo «Carga lateral de archivos»](https://omeka.org/s/modules/FileSideload){target=_blank} permite importar archivos multimedia que ya estén almacenados en el servidor donde se encuentra tu instalación de Omeka S. Al subir archivos multimedia a tus elementos, aparecerán nuevas opciones: «Carga lateral» para seleccionar archivos individuales de tu servidor, o «Carga lateral de directorio» para seleccionar carpetas con varios archivos. 
+El [módulo «Carga lateral de archivos»](https://omeka.org/s/modules/FileSideload){target=_blank} permite importar archivos multimedia que ya están almacenados en el servidor donde se encuentra tu instalación de Omeka S. Al subir archivos multimedia a tus elementos, aparecerán nuevas opciones: «Carga lateral» para seleccionar archivos individuales de tu servidor, o «Carga lateral de directorio» para seleccionar carpetas con varios archivos. 
 
 La carga lateral de archivos es compatible con la [importación CSV](../modules/csvimport.md). Una vez instalado, las opciones de importación CSV incluirán la posibilidad de añadir archivos multimedia mediante los nombres de archivo de tu directorio de carga lateral. Asegúrate de desactivar la eliminación de archivos en el módulo de carga lateral de archivos cuando lo utilices junto con la importación CSV.
 
@@ -25,7 +25,7 @@ El módulo «File Sideload» tiene dos opciones de configuración.
 
 ![Una pantalla de configuración de ejemplo, con los campos que se enumeran a continuación. El campo «Directorio de carga lateral» se rellena con una ruta relativa que termina en la carpeta «/sideloadFiles». La casilla «¿Eliminar el archivo cargado lateralmente?» está marcada.](../modules/modulesfiles/filesideload_config2.png)
 
-**Directorio de carga lateral**: la ruta, **relativa a la raíz del servidor**, del directorio en el que se almacenan los archivos. Debería tener un aspecto similar a este:
+**Directorio de carga lateral**: la ruta, **relativa a la raíz del servidor**, del directorio en el que se almacenan los archivos. Debería tener un aspecto similar al siguiente:
 
 - `/var/www/html/tu-ruta-de-instalación/omeka-s/sideload-media`
 - `/home/tu_nombre_de_usuario/tu-sitio-web.org/omeka-s/sideload-files` (una ruta típica para alojamiento compartido)
@@ -43,9 +43,9 @@ Si utilizas una aplicación FTP, copia la ruta del sitio remoto que aparece en l
 
 Añadir un archivo de sideload a un elemento
 ------------------------------
-Una vez instalado y configurado el módulo «File Sideload», y con los archivos en el directorio, ya puedes utilizar el módulo para añadir archivos multimedia a los elementos.
+Una vez instalado y configurado el módulo «File Sideload», y con los archivos en el directorio, ya puedes utilizar el módulo para añadir contenido multimedia a los elementos.
 
-Al editar un elemento, ve a la pestaña «Multimedia». La barra lateral «Añadir archivos multimedia» incluye ahora dos botones para Sideload (debajo de las opciones principales).
+Al editar un elemento, ve a la pestaña «Multimedia». La barra lateral «Añadir contenido multimedia» incluye ahora dos botones para Sideload (debajo de las opciones principales).
 
 ![Se muestra la pestaña «Multimedia» de un elemento en el modo de edición. Ya se han añadido al campo principal dos entradas de Sideload en la barra lateral.](../modules/modulesfiles/filesideload_browse.png)
 
@@ -68,6 +68,6 @@ Recuerda que «Carga lateral de archivos» cuenta con una configuración válida
 
 ## Integración con la importación CSV
 
-Con la importación CSV, puedes añadir archivos multimedia a los elementos a través de File Sideload. Incluye una columna con los nombres de los archivos —no las URL completas— que apunten a los archivos de tu directorio de Sideload. Añade la asignación en Fuente multimedia > Sideload.
+Con la importación CSV, puedes añadir archivos multimedia a los elementos a través de File Sideload. Incluye una columna con los nombres de los archivos —no las URL completas— que apunten a los archivos de tu directorio de Sideload. Añade la asignación en «Fuente multimedia» > «Sideload».
 
 Al utilizar la importación CSV con tu directorio de carga lateral, te recomendamos que desmarques la opción de eliminación de archivos en la configuración del módulo de carga lateral de archivos. La importación CSV puede eliminar archivos de tu directorio de carga lateral incluso si una tarea de importación ha fallado o se ha bloqueado. Siempre debes comprobar manualmente los resultados de la importación CSV antes de eliminar los archivos que haya importado. 

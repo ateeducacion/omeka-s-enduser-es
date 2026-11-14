@@ -13,7 +13,7 @@ Este conector requiere acceso a la interfaz OAI-PMH de ArchivesSpace. Necesitar�
 
 ## Configurar tu instalación de ArchivesSpace
 
-En primer lugar, comprueba que tu sitio web de ArchivesSpace tenga [el punto final OAI habilitado](https://docs.archivesspace.org/architecture/oai-pmh/){target=_blank}. Normalmente, está habilitado de forma predeterminada. Puedes comprobar la configuración en la interfaz del personal (en `tuASurl/staff/oai_config/edit` o similar). 
+En primer lugar, comprueba que tu sitio web de ArchivesSpace tenga el [punto final OAI habilitado](https://docs.archivesspace.org/architecture/oai-pmh/){target=_blank}. Normalmente, está habilitado de forma predeterminada. Puedes comprobar la configuración en la interfaz del personal (en `tuASurl/staff/oai_config/edit` o similar). 
 
 El punto final `oai_url` que utiliza este módulo debe terminar en `oai?`. Comprueba que tu punto final OAI esté correctamente configurado y sea accesible visitando `tuOAIurl/oai?verb=Identify`. Deberías recibir una respuesta XML con información básica sobre la configuración OAI de tu ArchivesSpace. 
 
@@ -21,7 +21,7 @@ El punto final `oai_url` que utiliza este módulo debe terminar en `oai?`. Compr
 
 Recomendamos que tus colecciones estén diseñadas para adaptarse al modelo de datos de Omeka S. 
 
-Por lo general, todos los contenedores de ArchivesSpace (colecciones, series, subseries, archivos, etc.) deben importarse como conjuntos de elementos de Omeka, con el módulo «Hierarquía» instalado y activo para organizar dichos conjuntos de elementos en una jerarquía que se corresponda con la configuración de ArchivesSpace. 
+Por lo general, todos los contenedores de ArchivesSpace (colecciones, series, subseries, archivos, etc.) deben importarse como conjuntos de elementos de Omeka, con el módulo «Hierarchy» instalado y activo para organizar dichos conjuntos de elementos en una jerarquía que se ajuste a la configuración de ArchivesSpace. 
 
 Los objetos de ArchivesSpace de nivel más bajo deben ser «archivos» o «elementos». Estos dos tipos de objetos pueden importarse como elementos de Omeka, dependiendo de la colección y de tus intenciones. Si la colección ya está descrita hasta el nivel de elemento, utilizando el identificador «elemento» de ArchivesSpace, estos pueden importarse fácilmente como elementos de Omeka. 
 
@@ -31,13 +31,13 @@ Si la colección está descrita a un nivel superior, puede elegir si los «archi
 
 ArchivesSpace cuenta con un parámetro de configuración, activado por defecto, que permite que los metadatos de nivel superior se muestren en los objetos de nivel inferior: «Herencia». Cuando está activa, la salida OAI de ArchivesSpace envía información sin contexto. Es decir, el alcance a nivel de colección se duplicará en los metadatos de todos sus objetos de nivel inferior que no tengan su propio alcance, pero no se representará como «De la colección» en la OAI. 
 
-Por lo tanto, recomendamos desactivar esta opción al importar a Omeka, para garantizar que los metadatos no se repliquen fuera de contexto. Puedes consultar cómo desactivar esta configuración en tu instalación en la [documentación de ArchivesSpace](https://docs.archivesspace.org/architecture/public/#inheritance){target=_blank}. El [archivo que hay que editar se llama `config-defaults.rb`](https://github.com/archivesspace/archivesspace/blob/master/common/config/config-defaults.rb){target=_blank}. Los ajustes que realices aquí afectarán tanto a la interfaz de usuario pública como a la salida OAI. Es posible que tengas que solicitar a tu proveedor de alojamiento que edite este archivo. 
+Por lo tanto, recomendamos desactivar esta opción al importar a Omeka, para garantizar que los metadatos no se repliquen fuera de contexto. Puedes consultar cómo desactivar esta configuración en tu instalación en la [documentación de ArchivesSpace](https://docs.archivesspace.org/architecture/public/#inheritance){target=_blank}. El [archivo que hay que editar se llama `config-defaults.rb`](https://github.com/archivesspace/archivesspace/blob/master/common/config/config-defaults.rb){target=_blank}. Los ajustes que se realicen aquí afectarán tanto a la interfaz de usuario pública como a la salida OAI. Es posible que tengas que solicitar a tu proveedor de alojamiento que edite este archivo. 
 
-## Configura tu instalación de Omeka
+## Configurar tu instalación de Omeka
 
 El módulo ArchivesSpace no tiene opciones de configuración y no añade ningún ajuste específico del sitio. 
 
-Recomendamos instalar y activar el módulo «Hierarchy» para optimizar el uso de este conector. Se crearán jerarquías automáticamente para representar tu sistema de organización de ArchivesSpace y te ayudarán a gestionar los conjuntos de elementos que se crean con cada importación. 
+Recomendamos instalar y activar el módulo «Hierarchy» para optimizar el uso de este conector. Se crearán automáticamente jerarquías que representarán tu sistema organizativo de ArchivesSpace y te ayudarán a gestionar los conjuntos de elementos que se crean con cada importación. 
 
 ## Importar colecciones
 
@@ -58,7 +58,7 @@ En el formulario de importación, introduce la siguiente información:
 
 Haz clic en el botón «Importar». Si la información anterior se ha introducido correctamente, verás una nueva página con un banner verde en la parte superior que indica el número de tarea de la importación. 
 
-Puede realizar un seguimiento del estado de las importaciones accediendo a la pestaña «Importaciones anteriores» del ArchivesSpace Connector, o en la página [Tareas](../admin/jobs.md) del panel de administración.
+Puede realizar un seguimiento del estado de las importaciones accediendo a la pestaña «Importaciones anteriores» del ArchivesSpace Connector o en la página [Tareas](../admin/jobs.md) del panel de administración.
 
 !!! Nota
   ¿Tus tareas se inician pero no se completan? Es posible que tengas que [configurar la ruta de PHP](../configuration.md#php-path) para que tu sistema pueda ejecutar el proceso en segundo plano para crear los elementos.
@@ -75,7 +75,7 @@ A continuación, asegúrate de que la configuración específica de cada sitio p
 
 ## Importaciones anteriores
 
-La página «Importaciones anteriores» muestra una tabla con las conexiones existentes de ArchivesSpace, con el **ID de tarea** de la importación, una opción radial para **Deshacer** o **Volver a ejecutar** la importación, la **Colección de ArchivesSpace** del repositorio con un enlace a la salida OAI-PMH para su comparación (que se muestra como nombre de la colección si se encuentra), cualquier **Comentario** establecido para la importación, el número de **Recursos** importados con un enlace a los resultados de la búsqueda avanzada, la **Fecha** de la importación, el **Estado** de la importación y el **Propietario** que inició la importación.
+La página «Importaciones anteriores» muestra una tabla con las conexiones existentes de ArchivesSpace, con el **ID de tarea** de la importación, una opción radial para **Deshacer** o **Volver a ejecutar** la importación, la **Colección de ArchivesSpace** del repositorio con un enlace a la salida OAI-PMH para compararla (que se muestra como nombre de la colección si se encuentra), cualquier **Comentario** establecido para la importación, el número de **Recursos** importados con un enlace a los resultados de la búsqueda avanzada, la **Fecha** de la importación, el **Estado** de la importación y el **Propietario** que inició la importación.
 
 ![Tabla de importaciones anteriores.](modulesfiles/aspace_past.png)
 
@@ -83,7 +83,7 @@ Puedes ver la salida OAI directamente haciendo clic en los enlaces que aparecen 
 
 ## Actualizar recursos importados
 
-Para actualizar los recursos creados mediante el conector de ArchivesSpace, basta con marcar «Reejecutar» y, a continuación, hacer clic en «Enviar» en la página «Importaciones anteriores». Los recursos se actualizarán, no se volverán a importar. Esto te permite utilizar el conector para sincronizar datos entre las instalaciones de ArchivesSpace y Omeka S. Puedes volver a ejecutar más de una importación a la vez. 
+Para actualizar los recursos creados con el conector de ArchivesSpace, basta con marcar «Reejecutar» y, a continuación, hacer clic en «Enviar» en la página «Importaciones anteriores». Los recursos se actualizarán, no se volverán a importar. Esto te permite utilizar el conector para sincronizar datos entre las instalaciones de ArchivesSpace y Omeka S. Puedes volver a ejecutar más de una importación a la vez. 
 
 No puedes modificar la configuración de importación al volver a ejecutar una importación. 
 

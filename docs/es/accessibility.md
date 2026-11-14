@@ -8,7 +8,7 @@ Para obtener más información, consulta los siguientes informes:
 	- [Informe de conformidad con la accesibilidad, según las normas internacionales VPAT 2.5 revisadas (PDF)](files/OmekaS4x_ACR.pdf){target=_blank}
 	- [Informe de conformidad con la accesibilidad, según las normas internacionales VPAT 2.5 revisadas (DOCX)](files/OmekaS4x_ACR.docx){target=_blank} 
 - Omeka S versión 3.x [Informe de conformidad con las normas de accesibilidad, según las normas internacionales VPAT 2.4 revisadas (PDF)](files/OmekaS3x_ACR.pdf){target=_blank}, octubre de 2020.
-- Omeka S versión 2.x [Informe de conformidad con la accesibilidad, según VPAT 2.0 (PDF)](files/VPAT_OmekaS2-0-1.pdf){target=_blank}, agosto de 2019.
+- Omeka S versión 2.x [Informe de conformidad con las normas de accesibilidad, según VPAT 2.0 (PDF)](files/VPAT_OmekaS2-0-1.pdf){target=_blank}, agosto de 2019.
 - Omeka S versión 1.x [Informe de conformidad con la accesibilidad, según VPAT 2.0 (PDF)](files/VPAT2.0-OmekaS1-1.pdf){target=_blank}, abril de 2018.
 
 ## Hoja de ruta

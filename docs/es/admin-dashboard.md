@@ -5,7 +5,7 @@ El panel de control administrativo gestiona el contenido compartido por todos lo
 Este [vídeo tutorial](https://vimeo.com/455708039){target=_blank} te guía a través de las principales características del panel de control y te explica cómo navegar por tu instalación de Omeka S:
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/455708039?h=438143f0d3" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-<p><a href="https://vimeo.com/455708039">Navegación por Omeka S</a> de <a href="https://vimeo.com/omeka">Omeka</a> en <a href="https://vimeo.com">Vimeo</a>.</p>
+<p><a href="https://vimeo.com/455708039">Navegando por Omeka S</a> de <a href="https://vimeo.com/omeka">Omeka</a> en <a href="https://vimeo.com">Vimeo</a>.</p>
 
 ## Página principal de administración
 
@@ -64,7 +64,7 @@ En la esquina inferior derecha de cada página del panel de administración se m
 
 ![Ejemplo de página de información del sistema](files/systeminfo.png)
 
-En esta página puedes comprobar las versiones de las dependencias que utiliza Omeka, como PHP, ImageMagick y MySQL. Si un módulo concreto requiere que tu servidor proporcione algo, como una utilidad de PHP, puedes buscarlo aquí. También puedes consultar esta sección para comprobar si tu instalación de Omeka reconoce un módulo que hayas intentado instalar.
+En esta página puedes comprobar las versiones de las dependencias que utiliza Omeka, como PHP, ImageMagick y MySQL. Si un módulo concreto requiere que tu servidor proporcione algo, como una utilidad de PHP, puedes buscarlo aquí. También puedes consultar aquí si tu instalación de Omeka reconoce un módulo que hayas intentado instalar.
 
 Ten en cuenta que en la sección de PHP se indica el «Límite de subida de archivos», que es la cifra que aparece en la interfaz de subida de archivos multimedia y en la de subida de recursos. Ten en cuenta también que Omeka S te indicará de cuánto espacio libre en el servidor dispone. 
 

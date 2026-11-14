@@ -25,7 +25,7 @@ Para encontrar los términos que debes utilizar en los encabezados de tus column
 
 En la tabla de propiedades del vocabulario, hay una columna denominada **Término**. Utiliza el Término como encabezado de columna para la propiedad que desees asignar automáticamente en la importación CSV. Por ejemplo, «dcterms:abstract» se asignaría automáticamente a la propiedad «Abstract» de Dublin Core y «foaf:firstName» se asignaría automáticamente a la propiedad «firstName» de Friend of a Friend.
 
-![Flecha que señala la columna «Término» de las propiedades de Dublin Core.](../modules/modulesfiles/csvimport_automap2.png)
+![flecha que apunta a la columna «Término» de las propiedades de Dublin Core.](../modules/modulesfiles/csvimport_automap2.png)
 
 En la configuración inicial de la importación hay una opción para realizar la asignación automática con etiquetas simples; esto funcionará con columnas cuyos nombres coincidan con una etiqueta del vocabulario, por ejemplo «title» o «abstract», sin necesidad de especificar el término. Ten en cuenta que esta opción utiliza por defecto Dublin Core (`dcterms:title` y `dcterms:abstract`) antes de pasar a otros vocabularios instalados.
 
@@ -49,7 +49,7 @@ Inicia una importación haciendo clic en la pestaña «Importación CSV» situad
 
 - En el menú desplegable **Delimitador de columnas CSV**, elige la opción que delimita el texto largo en tu archivo, si procede:
 	- comillas dobles (predeterminado)
-  - comillas
+  - comillas simples
   - almohadilla (`#`).
 
 - En el menú desplegable **Tipo de importación**, selecciona lo que vas a importar:
@@ -59,9 +59,9 @@ Inicia una importación haciendo clic en la pestaña «Importación CSV» situad
   - Recursos mixtos (la hoja de cálculo puede incluir conjuntos de elementos, elementos y archivos multimedia; se requiere una columna que identifique el tipo de cada fila)
 	- Usuarios.
 
-- Marca la casilla **Asignar automáticamente con etiquetas simples**. La importación CSV asignará automáticamente los encabezados de columna con formato especial (en «prefijo:propiedad»); si marcas esta casilla, también asignará automáticamente cualquier encabezado de columna que coincida con las etiquetas de propiedades del vocabulario existentes (como «Título»). 
+- Marca la casilla **Asignar automáticamente con etiquetas simples**. La importación CSV asignará automáticamente los encabezados de columna con formato especial (en `prefijo:propiedad`); si marcas esta casilla, también asignará automáticamente cualquier encabezado de columna que coincida con las etiquetas de propiedades del vocabulario existentes (como «Título»). 
 
-- Los **comentarios** aparecerán en la página «Importaciones anteriores»; esto puede resultarte útil para anotar qué se está importando y cualquier configuración que hayas elegido en esta página, por ejemplo, si estás trabajando por lotes o si deseas deshacer una importación más adelante.
+- Los **comentarios** aparecerán en la página «Importaciones anteriores»; esto te puede resultar útil para anotar qué se está importando y cualquier configuración que hayas elegido en esta página, por ejemplo, si estás trabajando por lotes o si deseas deshacer una importación más adelante.
 
 ![Configuración de importación tal y como se describe, sin entradas](../modules/modulesfiles/csvimport_settings.png)
 
@@ -150,7 +150,7 @@ Esto abrirá un panel en la parte derecha de la ventana del navegador con las si
 Asegúrate de hacer clic en el botón «Aplicar cambios» situado en la parte inferior del panel para guardar los cambios. Para eliminar la configuración de una opción de columna, vuelve a hacer clic en el icono de la llave inglesa y deshaz los cambios manualmente.
 
 #### Edición por lotes
-Cuando selecciones una o más filas de la tabla (columnas de tu archivo CSV), puedes utilizar el botón «Opciones de edición por lotes» para aplicar las opciones de columna descritas anteriormente —separador de valores múltiples, idioma, tipo de datos y privacidad de las propiedades— a varias columnas del CSV a la vez.
+Cuando selecciones una o más filas de la tabla (columnas de tu archivo CSV), puedes utilizar el botón «Opciones de edición por lotes» para aplicar las opciones de columna descritas anteriormente —separador de valores múltiples, idioma, tipo de datos y privacidad de las propiedades— a varias columnas CSV a la vez.
 
 ![una captura de pantalla de la pestaña «Asignación», con dos casillas de columna marcadas. En la parte derecha de la pantalla, un panel desplegable ofrece opciones para modificar la configuración.](modulesfiles/csvimport_batchOptions.png)
 
@@ -198,12 +198,12 @@ Si seleccionas una de estas opciones en el menú desplegable, aparecerán tres a
   - Saltar la fila e ignorar su contenido
 	- Crear un nuevo recurso con la información proporcionada.
 
-Además de lo anterior, la pestaña «Configuración avanzada» cuenta con una opción para establecer el número de filas que se procesarán por lote. Por defecto, está establecido en 20. Sin embargo, si se producen errores durante una importación, es posible que desee establecerlo en 5 o incluso en 1 para solucionar el problema y determinar el origen del error.
+Además de lo anterior, la pestaña «Configuración avanzada» incluye una opción para establecer el número de filas que se procesarán por lote. Por defecto, está establecido en 20. Sin embargo, si se producen errores durante una importación, es posible que desee establecerlo en 5 o incluso en 1 para solucionar el problema y determinar el origen del error.
 
 !!! Nota
 	Ten en cuenta que la opción «Añadir datos» te permitirá proporcionar varias filas con el mismo identificador; los valores de cada fila se añadirán junto a los anteriores.
 
-	La revisión, actualización y sustitución de datos **borrarán** los datos proporcionados en las filas anteriores de tu CSV, si las filas posteriores utilizan el mismo identificador. Si deseas importar varios valores (por ejemplo, dos valores de «Creador») en estos procesos, puedes: colocarlos en dos columnas de la misma fila, asignados a la misma propiedad; o bien, colocarlos en una sola celda y utilizar separadores de valores múltiples. No olvides especificar tu separador de valores múltiples en la pestaña «Configuración básica» y marcar la casilla «Usar separador de valores múltiples» en las opciones (icono de llave inglesa) de cada columna.
+	La revisión, actualización y sustitución de datos **borrarán** los datos proporcionados en las filas anteriores de tu CSV, si las filas posteriores utilizan el mismo identificador. Si deseas importar varios valores (por ejemplo, dos valores de «Creador») en estos procesos, puedes: colocarlos en dos columnas de la misma fila, asignados a la misma propiedad; o bien, colocarlos en una sola celda y utilizar separadores de valores múltiples. No olvides especificar tu separador de valores múltiples en la pestaña «Configuración básica» y marcar la casilla «Usar separador de valores múltiples» en las opciones (icono de la llave inglesa) de cada columna.
 
 ### Finalizar la importación
 Una vez que hayas completado las asignaciones, las opciones de columna y la configuración, haz clic en el botón «Importar» situado en la esquina superior derecha de la ventana del navegador. Esto debería iniciar la importación y redirigirte a la pestaña «Importaciones anteriores». Deberías ver un mensaje de confirmación en verde en la parte superior de la pantalla que diga «Importando en ID de tarea [número]».
@@ -245,7 +245,7 @@ El panel lateral ofrece varias opciones de asignación:
 
 - **Plantilla de recurso (por etiqueta)**: Establece la plantilla para un conjunto de elementos por su nombre. El nombre de la plantilla tal y como se ha introducido en la hoja de cálculo y el nombre de la plantilla en Omeka S deben coincidir exactamente.
 - **Clase de recurso (por término)**: Establece la clase de recurso para un conjunto de elementos. El término de la clase en la hoja de cálculo y en la instalación de Omeka S debe coincidir exactamente; consulta la pestaña «Vocabularios» de tu instalación. Por ejemplo, introduce «dctype:Dataset», «dcterms:Location», «bibo:Interview» o «foaf:Person», separando el prefijo del vocabulario y el término con dos puntos, sin espacios.
-- **Propietario (por dirección de correo electrónico)**: Establece el propietario de un conjunto de elementos mediante una dirección de correo electrónico. Debe ser la dirección de correo electrónico asociada a la cuenta del usuario en la instalación de Omeka S.
+- **Propietario (por dirección de correo electrónico)**: Establece el propietario de un conjunto de elementos mediante su dirección de correo electrónico. Debe ser la dirección de correo electrónico asociada a la cuenta del usuario en la instalación de Omeka S.
 - **Visibilidad pública/privada**: Establece la visibilidad del conjunto de elementos. Utiliza «privado» o «público» en la hoja de cálculo.
 
 ![Menú desplegable tal y como se describe](../modules/modulesfiles/csvimport_itemsMapgeneric.png)
@@ -260,12 +260,12 @@ Si tienes datos en una columna de tu archivo CSV que no deseas importar a tu ins
 
 Las opciones de columna son independientes de las asignaciones. Si añades opciones sin asignar también los datos de la columna a un recurso, un medio u otros datos, no se importará nada.
 
-Para acceder a las opciones de los datos de una columna de tu archivo CSV (representada por una fila en la tabla de importación), haz clic en el icono de la llave inglesa correspondiente al encabezado de esa columna.
+Para acceder a las opciones de los datos de una columna de tu archivo CSV (representada por una fila en la tabla de importación), haz clic en el icono de la llave inglesa situado junto al encabezado de esa columna.
 
 Esto abrirá un panel deslizante en la parte derecha de la ventana del navegador con las siguientes opciones:
 
 - **Usar separador de valores múltiples**: Marca esta casilla para utilizar el separador de valores múltiples para los datos de esta columna. El separador de valores múltiples se configura en la página inicial de importación, pero puedes cambiarlo en la pestaña «Configuración básica».  
-- **Idioma**: configura el idioma de esta columna utilizando la [etiqueta de idioma de la IETF](https://en.wikipedia.org/wiki/IETF_language_tag){target=_blank} correspondiente al idioma en el que está escrito el texto. Esto anulará lo que hayas introducido en la configuración básica.
+- **Idioma**: Establece el idioma de esta columna utilizando la [etiqueta de idioma de la IETF](https://en.wikipedia.org/wiki/IETF_language_tag){target=_blank} correspondiente al idioma en el que está escrito el texto. Esto anulará lo que hayas introducido en la configuración básica.
 - **Importar valores como privados**: Marca esta casilla para establecer como privados todos los valores de propiedad *de esta columna*.
 - **Tipo de datos**: Un menú desplegable con al menos tres opciones, que se corresponden con los [valores](../content/items.md#values) que se pueden utilizar al añadir propiedades a un elemento:
 	- Importar como texto (predeterminado).
@@ -297,7 +297,7 @@ Esta configuración se aplica a todo el archivo CSV que estás importando. Ten e
 - **Abierto/cerrado a nuevas entradas**: Establece si los usuarios que no sean el propietario (ni los administradores del sitio ni los globales) podrán añadir o editar los conjuntos de elementos.
 - **Separador de valores múltiples**: Introduce aquí el carácter separador de valores múltiples, si has utilizado alguno.
  - Las columnas de datos de tu archivo CSV deben estar separadas por comas; sin embargo, dentro de esas columnas puedes añadir un carácter especial para crear entradas múltiples, por ejemplo, un punto y coma.
-- **Idioma**: Establece el idioma de los valores de la hoja de cálculo utilizando la [etiqueta de idioma IETF](https://en.wikipedia.org/wiki/IETF_language_tag){target=_blank} adecuada.
+- **Idioma**: Establece el idioma de los valores de la hoja de cálculo utilizando la [etiqueta de idioma IETF](https://en.wikipedia.org/wiki/IETF_language_tag){target=_blank} correspondiente.
 
 ### Pestaña «Configuración avanzada» de la importación de conjuntos de elementos
 
@@ -325,14 +325,14 @@ Si seleccionas una de estas opciones del menú desplegable, aparecerán tres aju
   - Ejemplo: si los datos de la columna «Identificador de recurso» son «Título» y la primera fila de datos tiene por título «Un estudio en escarlata»,» y configura la propiedad «Identificador de recurso» como «Dublin Core: Título», las acciones se aplicarán a un recurso que ya se encuentre en tu instalación de Omeka S y cuya propiedad dc:title sea «Un estudio en escarlata».
   - Esto solo funcionará con coincidencias exactas.
   - Si tienes más de un recurso con datos coincidentes, solo se aplicará la acción al recurso más antiguo.
-- **Acción sobre recursos no identificados**: esta opción determina qué hacer cuando no existe ningún recurso coincidente en la instalación de Omeka S, pero la acción seleccionada solo se aplica a un recurso existente («Añadir», «Revisar», «Actualizar» o «Reemplazar»). Esta opción no se utiliza cuando la acción principal es «Crear» o «Eliminar». Tienes dos opciones (botones de opción):
+- **Acción sobre recursos no identificados**: esta opción determina qué hacer cuando no existe ningún recurso coincidente en la instalación de Omeka S, pero la acción seleccionada solo se aplica a un recurso existente («Añadir», «Revisar», «Actualizar» o «Sustituir»). Esta opción no se utiliza cuando la acción principal es «Crear» o «Eliminar». Tienes dos opciones (botones de opción):
   - Omitir la fila
   - Crear un nuevo recurso.
 
 !!! Nota
   Ten en cuenta que al «Añadir» datos podrás introducir varias filas con el mismo identificador; los valores de cada fila se añadirán junto a los anteriores.
 
-  Al «Revisar», «Actualizar» y «Sustituir» datos se **borrarán** los datos introducidos en filas anteriores de tu CSV, si las filas posteriores utilizan el mismo identificador. Si deseas importar varios valores (por ejemplo, dos valores de «Creador») en estos procesos, puedes: colocarlos en dos columnas de la misma fila, asignados a la misma propiedad; o bien, colocarlos en una sola celda y utilizar separadores de valores múltiples. No olvides especificar tu separador de valores múltiples en la pestaña «Configuración básica» y marcar la casilla «Usar separador de valores múltiples» en las opciones (icono de la llave inglesa) de cada columna.
+  Al «Revisar», «Actualizar» y «Sustituir» datos se **borrarán** los datos introducidos en filas anteriores de tu CSV, si las filas posteriores utilizan el mismo identificador. Si deseas importar varios valores (por ejemplo, dos valores de «Creador») en estos procesos, puedes: colocarlos en dos columnas de la misma fila, asignados a la misma propiedad; o bien, colocarlos en una sola celda y utilizar separadores de valores múltiples. No olvides especificar tu separador de valores múltiples en la pestaña «Configuración básica» y marcar la casilla «Usar separador de valores múltiples» en las opciones (icono de llave inglesa) de cada columna.
 
 ### Finalizar la importación
 Una vez que hayas completado las asignaciones, las opciones de las columnas y cualquier otra configuración, haz clic en el botón «Importar» situado en la esquina superior derecha de la ventana del navegador. Esto debería iniciar la importación y redirigirte a la pestaña «Importaciones anteriores». Deberías ver un mensaje de confirmación que diga «Importando en ID de tarea [número]».
@@ -352,7 +352,7 @@ Esta pestaña muestra una tabla con las columnas de tu hoja de cálculo como fil
 - un botón con el símbolo «+» para añadir o modificar una asignación
 - un botón con el símbolo de una llave inglesa para las opciones de las columnas de la hoja de cálculo
 - una columna que muestra las propiedades asignadas, ya sea de forma automática o manual
-- una papelera para eliminar las asignaciones existentes
+- una papelera para eliminar asignaciones existentes
 - una columna que muestra las opciones concretas seleccionadas.
 
 ![Asignaciones para una hoja de cálculo con diez columnas. Algunas de las columnas, como las denominadas «Descripción» y «Título», se han asignado automáticamente a propiedades de Dublin Core.](../modules/modulesfiles/csvimport_mediaMap1.png)
@@ -371,7 +371,7 @@ El panel deslizante ofrece varias opciones de asignación:
 
 ![Datos específicos del medio con menú desplegable](../modules/modulesfiles/csvimport_mediaMapData.png)
 
-**Datos genéricos** también cuenta con un menú desplegable en el que puedes seleccionar una de estas cuatro opciones:
+**Los datos genéricos** también cuentan con un menú desplegable en el que puedes seleccionar una de estas cuatro opciones:
 
 - **Plantilla de recurso (por etiqueta)**: Establece la plantilla para el recurso multimedia por su nombre. El nombre de la plantilla tal y como se ha introducido en la hoja de cálculo y el nombre de la plantilla en Omeka S deben coincidir exactamente.
 - **Clase de recurso (por término)**: Establece la clase de recurso para el material multimedia. El término de la clase en la hoja de cálculo y en la instalación de Omeka S debe coincidir exactamente; consulta la pestaña «Vocabularios» de tu instalación. Por ejemplo, introduzca «dctype:Dataset», «dcterms:Location», «bibo:Interview» o «foaf:Person» con dos puntos que separen el prefijo del vocabulario y el término, sin espacios.
@@ -380,7 +380,7 @@ El panel deslizante ofrece varias opciones de asignación:
 
 ![Menú desplegable tal y como se describe](../modules/modulesfiles/csvimport_itemsMapgeneric.png)
 
-**Fuente del archivo multimedia**: Para la columna de la hoja de cálculo que hace referencia al archivo multimedia que estás creando, selecciona el tipo de archivo multimedia en el menú desplegable:
+**Fuente del archivo multimedia**: Para la columna de tu hoja de cálculo que hace referencia al archivo multimedia que estás creando, selecciona de qué tipo de archivo se trata en el menú desplegable:
 
 - HTML
 - Imagen IIIF (enlace)
@@ -389,7 +389,7 @@ El panel deslizante ofrece varias opciones de asignación:
 - URL
 - YouTube (enlace).
 
-Pueden aparecer aquí otras opciones en función de tus módulos activos, como «Carga lateral de archivos». 
+Aquí pueden aparecer otras opciones en función de los módulos activos, como «Carga lateral de archivos». 
 
 Asegúrate de hacer clic en «Aplicar cambios» en la parte inferior del panel; de lo contrario, no se guardará nada de lo que hayas configurado aquí.
 
@@ -413,7 +413,7 @@ Esto abrirá un panel en la parte derecha de la ventana del navegador con las si
 - **Tipo de datos**: Un menú desplegable con al menos tres opciones, que se corresponden con los [valores](../content/items.md#values) que se pueden utilizar al añadir propiedades a un elemento:
 	- Importar como texto (por defecto).
   - Importar como referencia URL. Puedes establecer la etiqueta para el URI incluyendo el texto deseado tras un espacio, por ejemplo:  `http://example.com This Is The Label`.
-	- Importar como recurso de Omeka S. Esto creará [recursos enlazados](../content/media.md#omeka-resource). Si seleccionas esta opción, deberás elegir qué valores de propiedad deben coincidir para encontrar el recurso de Omeka deseado en tu instalación, en el siguiente menú desplegable **Propiedad de identificador de recurso**. Esta debe ser una propiedad única, por lo que «Título» puede no ser una buena opción. 
+	- Importar como recurso de Omeka S. Esto creará [recursos vinculados](../content/media.md#omeka-resource). Si seleccionas esta opción, deberás elegir qué valores de propiedad deben coincidir para encontrar el recurso de Omeka deseado en tu instalación, en el siguiente menú desplegable **Propiedad de identificador de recurso**. Esta debe ser una propiedad única, por lo que «Título» puede no ser una buena opción. 
 		- Puedes utilizar el ID interno de Omeka. El ID de un recurso es la secuencia numérica que aparece al final de la URL en la página de visualización o edición; así, para `/admin/item/11576`, el ID es 11576. También puedes ver el ID del recurso en el panel de la derecha de la página de visualización del recurso. Los elementos, los conjuntos de elementos y los archivos multimedia tienen todos un ID.
 		- Puedes incluir recursos (elementos o conjuntos de elementos) que se estén creando en el mismo archivo CSV, siempre y cuando los recursos a los que se enlaza ya se hayan creado en filas anteriores y puedan encontrarse mediante el valor de propiedad único indicado aquí. Si deseas hacerlo, te recomendamos establecer un número de lote bajo (incluso 1) en la pestaña «Configuración avanzada», para garantizar que los recursos se hayan creado por completo antes de que otro recurso nuevo intente vincularse a ellos. 
   - Si tienes instalados determinados módulos, como «Tipos de datos numéricos», es posible que dichos módulos ofrezcan opciones adicionales de tipos de datos.
@@ -438,8 +438,8 @@ Estos ajustes se aplican a todo el archivo CSV que estás importando. Ten en cue
  - Las columnas de datos de tu archivo CSV deben estar separadas por comas; sin embargo, dentro de esas columnas puedes añadir un carácter especial para crear entradas múltiples, por ejemplo, un punto y coma.
 - **Idioma**: Establece el idioma de los valores de la hoja de cálculo utilizando la [etiqueta de idioma IETF](https://en.wikipedia.org/wiki/IETF_language_tag){target=_blank} adecuada.
 
-### Ajustes avanzados de importación de archivos multimedia
-En esta pestaña hay dos opciones destinadas únicamente a un uso avanzado.
+### Configuración avanzada de la importación de archivos multimedia
+En esta pestaña hay dos opciones destinadas exclusivamente a usuarios avanzados.
 
 La configuración de «Acción» te permite cambiar la acción del proceso de una importación directa a una de las siguientes opciones:
 
@@ -447,8 +447,8 @@ La configuración de «Acción» te permite cambiar la acción del proceso de un
 - **Añadir datos al recurso**: Añade nuevos datos al recurso. 
 - **Revisar los datos del recurso**: sustituye los datos existentes en el recurso por los datos del archivo CSV, salvo si están vacíos.
 - **Actualizar los datos del recurso**: sustituye los datos existentes en el recurso por los datos del archivo CSV, incluso cuando la celda esté vacía.
-- **Sustituir todos los datos del recurso**: Elimina todas las propiedades del recurso y las rellena con la nueva información de la hoja.
-- **Eliminar el recurso**: Elimina todos los recursos que coincidan.
+- **Sustituir todos los datos del recurso**: elimina todas las propiedades del recurso y las rellena con la nueva información de la hoja.
+- **Eliminar el recurso**: elimina todos los recursos que coincidan.
 
 Si seleccionas una de estas opciones del menú desplegable, aparecerán tres ajustes adicionales en la pestaña. Estos ajustes ayudan al proceso a determinar sobre qué recursos se debe actuar.
 
@@ -463,7 +463,7 @@ Si seleccionas una de estas opciones del menú desplegable, aparecerán tres aju
   - Omitir la fila
   - Crear un nuevo recurso.
 
-Además de lo anterior, la pestaña «Configuración avanzada» incluye una opción para establecer el número de filas que se procesarán por lote. Por defecto, está configurado en 20. Sin embargo, si se producen errores durante una importación, es posible que desee establecerlo en 5 o incluso en 1 para solucionar el problema y determinar el origen del error.
+Además de lo anterior, la pestaña «Configuración avanzada» incluye una opción para establecer el número de filas que se procesarán por lote. Por defecto, está fijado en 20. Sin embargo, si se producen errores durante una importación, es posible que desee establecerlo en 5 o incluso en 1 para solucionar el problema y determinar el origen del error.
 
 !!! Nota
   Tenga en cuenta que al «Añadir» datos podrá proporcionar varias filas con el mismo identificador; los valores de cada fila se añadirán junto a los anteriores.
@@ -477,7 +477,7 @@ Una vez que hayas completado las asignaciones, las opciones de las columnas y cu
 Esta opción de recursos te permite importar una hoja con una combinación de tipos de recursos: elementos, conjuntos de elementos y archivos multimedia.
 
 ### Asignar a datos de Omeka S
-Esta pestaña muestra un menú desplegable inicial sobre una tabla en la que las columnas de tu hoja de cálculo aparecen como filas. Cada fila muestra:
+Esta pestaña muestra un menú desplegable inicial encima de una tabla en la que las columnas de tu hoja de cálculo aparecen como filas. Cada fila muestra:
 
 - una casilla de selección
 - el encabezado de la columna de la hoja de cálculo
@@ -491,7 +491,7 @@ Esta pestaña muestra un menú desplegable inicial sobre una tabla en la que las
 
 El menú desplegable situado encima de la tabla es donde se establece qué columna del archivo CSV indica si los datos de esa fila corresponden a un elemento, un conjunto de elementos o un recurso multimedia. No es necesario asignar estos datos en la tabla de esta pestaña. Los valores de esta columna pueden ser `elemento` o `elementos`, `conjunto de elementos` o `conjuntos de elementos` o `conjuntos de elementosets` o `conjuntos de elementos`, o `contenido multimedia`. Otros valores, o los campos vacíos, harán que la fila no se importe.
 
-Las filas con `contenido multimedia` en la columna de tipo de recurso deben indicar a qué elemento se van a adjuntar, tal y como se indica en la [sección «Medios» anterior](#import-media), y requieren que se incluya una fuente de medios.
+Las filas con `contenido multimedia` en la columna de tipo de recurso deben indicar a qué elemento se van a adjuntar, tal y como se indica en la [sección «Medios» anterior](#import-media), y requieren que se incluya una fuente multimedia.
 
 #### Opciones de asignación
 
@@ -562,9 +562,9 @@ Esto abrirá un panel deslizante en la parte derecha de la ventana del navegador
 Asegúrate de hacer clic en el botón «Aplicar cambios» situado en la parte inferior del panel. Para eliminar una configuración de opción de columna, haz clic de nuevo en el icono de la llave inglesa y deshaz los cambios manualmente.
 
 #### Edición por lotes
-Al seleccionar una o más filas de la tabla (columnas de tu archivo CSV), puedes utilizar el botón «Opciones de edición por lotes» para aplicar las opciones de columna descritas anteriormente a varias columnas del CSV a la vez.
+Cuando selecciones una o más filas de la tabla (columnas de tu archivo CSV), puedes utilizar el botón «Opciones de edición por lotes» para aplicar las opciones de columna descritas anteriormente a varias columnas del CSV a la vez.
 
-![Un panel desplegable ofrece opciones para cambiar la configuración por lotes.](../modules/modulesfiles/csvimport_batchOptions2.png)
+![Un panel desplegable ofrece opciones para modificar la configuración por lotes.](../modules/modulesfiles/csvimport_batchOptions2.png)
 
 Asegúrate de hacer clic en el botón «Aplicar cambios» situado en la parte inferior del panel para guardar los cambios.
 
@@ -576,7 +576,7 @@ Esta configuración se aplica a todo el archivo CSV que estás importando. Ten e
 
 - **Plantilla de recurso**: Selecciona una plantilla de recurso en el menú desplegable para aplicarla a los conjuntos de elementos importados. Puedes utilizar el campo de búsqueda situado en la parte superior del menú desplegable para filtrar los resultados o encontrar una plantilla concreta.
 - **Clase**: Selecciona una clase del menú desplegable para aplicarla a los conjuntos de elementos importados. Puedes utilizar el campo de búsqueda situado en la parte superior del menú desplegable para filtrar los resultados o encontrar una clase concreta.
-- **Propietario**: Establece el propietario de los conjuntos de elementos seleccionando un usuario del menú desplegable. Puedes utilizar el campo de búsqueda situado en la parte superior del menú desplegable para filtrar los resultados o encontrar un usuario concreto.
+- **Propietario**: Establece el propietario de los conjuntos de elementos seleccionando un usuario del menú desplegable. Puedes utilizar el campo de búsqueda situado en la parte superior del menú desplegable para filtrar los resultados o encontrar a un usuario concreto.
 - **Visibilidad**: Establece la visibilidad de los conjuntos de elementos importados como pública  o privada.
 - **Conjuntos de elementos abiertos/cerrados a nuevas incorporaciones**: Establece si los usuarios que no sean el propietario (ni los administradores del sitio ni los globales) podrán añadir o editar los conjuntos de elementos.
 - **Conjunto de elementos para elementos**: Selecciona de un menú desplegable entre los conjuntos de elementos existentes.
@@ -600,7 +600,7 @@ Si seleccionas una de estas opciones en el menú desplegable, aparecerán tres a
 
 ![Opciones descritas a continuación](../modules/modulesfiles/csvimport_mixedRAdvAct.png)
 
-- **Columna de identificador de recurso**: selecciona una opción del menú desplegable de las columnas de tu archivo CSV. Se trata de los datos de tu hoja de cálculo que se corresponden con los datos existentes en tu instalación de Omeka S.
+- **Columna de identificador de recurso**: Selecciona una opción del menú desplegable de las columnas de tu archivo CSV. Se trata de los datos de tu hoja de cálculo que se corresponden con los datos existentes en tu instalación de Omeka S.
 - **Propiedad de identificador de recurso**: Selecciona de un menú desplegable entre todas las propiedades de tu instalación de Omeka S. Debe ser la propiedad en la que ya tengas datos y que hayas utilizado para crear los datos de la columna anterior.
   - Ejemplo: si los datos de la columna «Identificador de recurso» son «Título» y la primera fila de datos tiene por título «Un estudio en escarlata», y configuras la propiedad «Identificador de recurso» como «Dublin Core: Título», las acciones se aplicarán a un recurso que ya se encuentre en tu instalación de Omeka S y cuya propiedad dc:title sea «Un estudio en escarlata».
 	- Esto solo funcionará con coincidencias exactas.
@@ -651,7 +651,7 @@ Los valores de rol que se deben utilizar en esta importación son los siguientes
 - `author`
 - `researcher`.
 
-![La misma tabla que la anterior, ahora con el panel de asignación abierto y el menú desplegable activado para mostrar las tres opciones «Correo electrónico», «Nombre para mostrar» y «Rol».](../modules/modulesfiles/csvimport_usersMap.png)
+![La misma tabla que la anterior, ahora con el panel de asignaciones abierto y el menú desplegable activado para mostrar las tres opciones «Correo electrónico», «Nombre para mostrar» y «Rol».](../modules/modulesfiles/csvimport_usersMap.png)
 
 Una vez completadas las asignaciones, haz clic en el botón «Importar».
 
@@ -718,9 +718,9 @@ Todo lo que aparece en la pestaña **Asignar datos a Omeka S** será igual. Cuan
 Para los datos de esta columna, debes incluir el nombre completo del archivo, incluida la extensión. Así, por ejemplo, si quieres importar un archivo JPG llamado «Jekyll_and_Hyde_Title», los datos de la columna «multimedia» del CSV que estés importando deberían ser `Jekyll_and_Hyde_Title.jpg`.
 
 ### Asignación
-Si tienes [Mapping](mapping.md#csv-import-integration) (versión mínima 1.1.0) instalado y activo, dispondrás de opciones adicionales en el panel lateral derecho al importar elementos. Ten en cuenta que estas opciones no aparecen para ningún otro tipo de importación, incluidos los recursos mixtos.
+Si tienes instalado y activo [Mapping](mapping.md#csv-import-integration) (versión mínima 1.1.0) instalado y activo, dispondrás de opciones adicionales en el panel lateral derecho al importar elementos. Ten en cuenta que estas opciones no aparecen para ningún otro tipo de importación, incluidos los recursos mixtos.
 
-![Añadir panel de mapeo con opciones adicionales para la latitud, la longitud y los límites del mapa](../modules/modulesfiles/csvimport_mapping1.png)
+![Añadir panel de asignación con opciones adicionales para la latitud, la longitud y los límites del mapa](../modules/modulesfiles/csvimport_mapping1.png)
 
 Para obtener más información, consulta la [sección de la página «Mapeo»](mapping.md#csv-import-integration).
 
@@ -734,7 +734,7 @@ Las opciones son:
 - Duración (ISO 8601)
 - Número (entero o decimal).
 
-![Panel de opciones de columna con el menú desplegable de tipos de datos abierto, que muestra las opciones para los tipos de datos numéricos, así como las opciones estándar](../modules/modulesfiles/csvimport_numericdata.png)
+![Panel de opciones de columna con el menú desplegable de tipos de datos abierto, en el que se muestran las opciones para los tipos de datos numéricos, así como las opciones estándar](../modules/modulesfiles/csvimport_numericdata.png)
 
 Al importar datos numéricos, estos deben tener un formato preciso. Comprueba siempre que tus datos se hayan importado correctamente en el formato elegido; la importación CSV dejará los valores en blanco si no se reconoce el formato. 
 

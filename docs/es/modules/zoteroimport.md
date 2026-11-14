@@ -6,9 +6,9 @@ El [módulo de importación de Zotero](https://omeka.org/s/modules/ZoteroImport)
 Para poder importar desde una biblioteca de Zotero, debes tener acceso a la API de dicha biblioteca. Para utilizar la importación de Zotero, necesitarás el ID del grupo o del usuario:
 
   * Los ID individuales se encuentran en la pestaña «Feeds/API» de la configuración de Zotero; hay una frase que dice: «Tu ID de usuario para utilizar en llamadas a la API es».
-  * Los ID de grupo se encuentran en la página de la biblioteca del grupo de Zotero, fijándote en la URL de la biblioteca; será `zotero.org/groups/<número>`. Si accedes a `https://api.zotero.org/groups/<número>`, deberías obtener información al respecto en esa página.
+  * Los ID de grupo se encuentran en la página de la biblioteca del grupo de Zotero, fijándote en la URL de la biblioteca; tendrá el formato `zotero.org/groups/<número>`. Si accedes a `https://api.zotero.org/groups/<número>`, deberías obtener información al respecto en esa página.
 
-Es posible que también necesites el ID de una colección concreta y una clave API para importar archivos. 
+Es posible que también necesites el ID de una colección específica y una clave API para importar archivos. 
 
 * Las claves de colección aparecen en la URL de la página de una colección; son la secuencia alfanumérica al final de la URL, después de «collections/».
 * Para generar una clave API, ve a «Configuración» en tu cuenta de Zotero, a la pestaña «Fuentes/API», y haz clic en el enlace *Crear nueva clave privada*.
@@ -26,7 +26,7 @@ Para importar desde una biblioteca de Zotero:
 * Introduce el ID de la biblioteca (que es el número de identificación del grupo o del usuario, tal y como se ha explicado anteriormente). 
 * Si se importa una colección, introduce la clave de la colección.
 * Introduce tu clave API para importar datos privados y/o archivos (opcional para la importación, pero necesario para importar archivos).
-* Marca la casilla para importar archivos. La clave API es necesaria para importar archivos.
+* Marca la casilla de verificación para importar archivos. La clave API es necesaria para importar archivos.
 	* Las capturas de pantalla de páginas HTML se importarán como archivos zip. 
 *  La opción «Añadidos después de» te permite importar únicamente aquellos elementos de Zotero añadidos a la biblioteca después de la fecha y hora que elijas. Puedes utilizar esta opción para actualizar una importación anterior sin volver a añadir los archivos que ya habías importado.
 
@@ -53,6 +53,6 @@ La página «Importaciones anteriores» muestra una tabla con las importaciones 
 
 Para deshacer una importación, haz clic en el botón «Deshacer» situado a la izquierda de la marca de tiempo **Elementos añadidos antes**. Se abrirá un cuadro de diálogo en la barra lateral en el que se te pedirá que confirmes que deseas deshacer la importación y eliminar todos los elementos importados. Haz clic en «Confirmar» para continuar. 
 
-![Página de importaciones anteriores con la barra lateral abierta para confirmar la anulación](modulesfiles/zoteroimport_undo.png)
+![Página de importaciones anteriores con el cuadro de diálogo lateral abierto para confirmar la anulación](modulesfiles/zoteroimport_undo.png)
 
 Las importaciones anteriores que ya se hayan anulado tendrán un estado de tarea de «Importación anulada».

@@ -8,7 +8,7 @@ El [módulo «Exportaciones»](https://omeka.org/s/modules/ExtractText){target=_
 
 El módulo requiere que dos carpetas de tu instalación tengan permisos de escritura. Una es una carpeta temporal donde se recopilan los archivos de exportación, y se configura en tu configuración. La otra es la ubicación permanente donde se almacenarán los resultados de la exportación y estarán disponibles para su descarga. Esta carpeta se encontrará dentro de la carpeta `/files` de tu instalación y se llamará «exports». 
 
-El módulo no creará la carpeta `/files/exports` durante la instalación, sino cuando inicie su primera exportación. Si se producen errores, es posible que tenga que cambiar los permisos de su directorio `/files` para permitir esta creación, o bien crear manualmente el directorio `/files/exports` y configurar sus permisos. 
+El módulo no creará la carpeta `/files/exports` durante la instalación, sino cuando inicie su primera exportación. Si se producen errores, es posible que tenga que cambiar los permisos del directorio `/files` para permitir su creación, o bien crear manualmente el directorio `/files/exports` y configurar sus permisos. 
 
 ### Permisos de usuario
 
@@ -67,15 +67,15 @@ Las opciones, sin contar las opciones adicionales añadidas por los módulos, in
   - Usuarios
   - Vocabularios.
 
-**Consulta de elementos o consulta de recursos:** Una vez que hayas elegido una opción para exportar, puedes filtrar los resultados mediante consultas. Puedes crear una consulta utilizando la barra lateral de selección para recursos (elementos, tipos de elementos y archivos multimedia). Para otros tipos de recursos, puedes introducir manualmente una consulta de texto. Por ejemplo, puede introducir lo siguiente para filtrar sus activos según el propietario:
+**Consulta de elementos o consulta de recursos:** Una vez que hayas elegido una opción para exportar, puedes filtrar los resultados mediante consultas. Puedes crear una consulta utilizando la barra lateral de selección para recursos (elementos, tipos de elementos y archivos multimedia). Para otros tipos de recursos, puedes introducir manualmente una consulta de texto. Por ejemplo, puedes introducir lo siguiente para filtrar tus activos según el propietario:
 
 ```
 owner_id=2
 ```
 
-**Formato**: Puede exportar la información a un archivo CSV o JSON-LD (extensiones de archivo `.csv` o `.json`). Cualquiera de las dos opciones se comprimirá en un archivo ZIP para su descarga. 
+**Formato**: Puedes exportar la información a un archivo CSV o JSON-LD (extensiones de archivo `.csv` o `.json`). Cualquiera de las dos opciones se comprimirá en un archivo ZIP para su descarga. 
 
-**Referencia por**: Este campo es una opción para las exportaciones en CSV. Para los recursos, puedes rellenar los campos con URL absolutas (como «https://yourinstallation.org/api/items/123») o solo con identificadores internos. Esto afectará a los campos de los archivos, como los campos con derivados multimedia (que podrían tener un aspecto similar a «https://yourinstallation.org/files/large/123abc.png»).
+**Referencia por**: Este campo es una opción para las exportaciones en formato CSV. Para los recursos, puedes rellenar los campos con URL absolutas (como «https://yourinstallation.org/api/items/123») o solo con identificadores internos. Esto afectará a los campos de los archivos, como los campos con derivados multimedia (que podrían tener un aspecto similar a «https://yourinstallation.org/files/large/123abc.png»).
 
 **Separador de valores múltiples**: Este campo es una opción para las exportaciones a CSV. El carácter predeterminado es la barra vertical (|). Puedes cambiarlo si lo deseas. Otros separadores habituales son las comas y los puntos y comas; recomendamos elegir un carácter que no aparezca en el conjunto de datos. 
 

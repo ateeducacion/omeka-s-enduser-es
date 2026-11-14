@@ -4,17 +4,17 @@ El [módulo «Anotación de imágenes»](https://omeka.org/s/modules/ImageAnnota
 
 Este módulo añade una nueva pestaña «Anotar imagen» a la interfaz de edición de archivos multimedia en el panel de administración, donde se puede dibujar sobre la imagen seleccionada. Los usuarios pueden dibujar rectángulos y añadir leyendas de texto específicas para cada área. También añade nuevos [bloques de recursos](../sites/site_theme.md#configure-resource-pages) para que las anotaciones se puedan ver en las páginas de visualización de elementos y archivos multimedia, así como nuevos [bloques de página](../sites/site_pages.md#page-blocks) para que las anotaciones se puedan añadir y mostrar en las páginas del sitio. 
 
-![Una página pública que muestra una imagen con una anotación. La imagen tiene dos selecciones rectangulares alrededor de las personas que aparecen en la fotografía; una es un rectángulo amarillo que indica que está activa, y una ventana emergente muestra el texto «Piloto James Ray» y un botón que dice «Cerrar».](modulesfiles/imageAnnotate_publicPage.png)
+![Una página pública que muestra una imagen con una anotación. La imagen tiene dos selecciones rectangulares alrededor de las personas que aparecen en la fotografía; una es un rectángulo amarillo que indica que está activa, y aparece una ventana emergente con el texto «Piloto James Ray» y un botón que dice «Cerrar».](modulesfiles/imageAnnotate_publicPage.png)
 
 En el caso de los archivos multimedia que generan miniaturas de imagen (como los PDF, que obtienen una miniatura de la primera página), puedes añadir anotaciones a la miniatura a tamaño completo que crea Omeka S. Ten en cuenta que, aunque puedes añadir anotaciones a elementos como las miniaturas de vídeo, tus anotaciones solo se verán en determinados contextos en los que no se muestre el archivo multimedia original. 
 
-Dependiendo de tu objetivo, puedes anotar los propios archivos multimedia adjuntos a los elementos, de modo que las anotaciones estén disponibles en toda la instalación, o bien anotar los archivos multimedia únicamente en el contexto de una página específica del sitio. Valora si deseas que la anotación esté ampliamente disponible (por ejemplo, para identificar a todas las personas de una fotografía) o si prefieres limitarla al contexto de una exposición o un ensayo (por ejemplo, para señalar a una persona concreta de interés). Si lo deseas, puedes combinar las anotaciones multimedia con las anotaciones específicas de cada página.
+Dependiendo de tu objetivo, puedes anotar los propios archivos multimedia adjuntos a los elementos, de modo que las anotaciones estén disponibles en toda la instalación, o bien anotar los archivos multimedia únicamente en el contexto de una página específica del sitio. Valora si deseas que la anotación esté ampliamente disponible (por ejemplo, para identificar a todas las personas de una fotografía) o si prefieres que se limite al contexto de una exposición o un ensayo (por ejemplo, para señalar a una persona concreta de interés). Si lo deseas, puedes combinar las anotaciones multimedia con las anotaciones específicas de cada página.
 
 Si solo deseas añadir anotaciones a las imágenes mientras creas exposiciones, puedes pasar directamente a la [sección sobre bloques de página](#page-blocks). 
 
 ### Permisos
 
-Los usuarios con el nivel de Autor o superior pueden anotar imágenes. Los autores solo pueden anotar los archivos multimedia de su propiedad; los usuarios con el nivel de Revisor o superior pueden anotar cualquier archivo multimedia de la instalación. 
+Los usuarios con nivel de Autor o superior pueden anotar imágenes. Los autores solo pueden anotar los archivos multimedia de su propiedad; los usuarios con nivel de Revisor o superior pueden anotar cualquier archivo multimedia de la instalación. 
 
 Cualquiera que tenga permiso para editar una página puede añadir bloques de página. 
 
@@ -36,7 +36,7 @@ Una vez guardadas las anotaciones, aparece la pestaña «Anotaciones de imagen»
 
 Si deseas modificar las anotaciones existentes, puedes volver a editar el contenido multimedia y modificar o eliminar las anotaciones que se hayan guardado. Puedes eliminar anotaciones individuales con el icono rojo de la papelera, o hacer clic en el botón «Restablecer anotaciones» para eliminar todas las anotaciones. 
 
-![La misma página y pestaña, en modo de edición, con un rectángulo resaltado en amarillo y su anotación visible. En la ventana emergente de la anotación aparece ahora un icono rojo de papelera. El cursor se encuentra sobre el botón, mostrando la información sobre herramientas «Eliminar». También aparece un botón «Restablecer anotaciones» debajo de la imagen.](modulesfiles/imageAnnotate_mediaReset.png)
+![La misma página y pestaña, en modo de edición, con un rectángulo resaltado en amarillo y su anotación visible. En la ventana emergente de la anotación aparece ahora un icono de papelera roja. El cursor se encuentra sobre el botón, mostrando la información sobre herramientas «Eliminar». También aparece un botón «Restablecer anotaciones» debajo de la imagen.](modulesfiles/imageAnnotate_mediaReset.png)
 
 ## Publicar anotaciones
 
@@ -50,7 +50,7 @@ En la [página del tema del sitio](../sites/site_theme.md), haz clic en el [bot�
 
 En la pestaña «Página de elemento», verás un nuevo bloque llamado «Incrustaciones multimedia (con anotaciones de imagen)». Si sustituyes el bloque normal «Incrustaciones multimedia» por este bloque, las anotaciones de imagen se mostrarán cuando estén disponibles; de lo contrario, los archivos multimedia aparecerán en las páginas de vista de elemento como de costumbre. 
 
-En la pestaña «Página de medios», verás un nuevo bloque llamado «Representación de medios (con anotaciones de imágenes)». Si sustituyes el bloque normal «Representación de medios» por este bloque, se mostrarán las anotaciones de imágenes cuando estén disponibles; de lo contrario, los medios aparecerán en las páginas de visualización de medios como de costumbre. 
+En la pestaña «Página de medios», verás un nuevo bloque llamado «Representación de medios (con anotaciones de imagen)». Si sustituyes el bloque normal «Representación de medios» por este bloque, se mostrarán las anotaciones de imagen cuando estén disponibles; de lo contrario, los medios aparecerán en las páginas de visualización de medios como de costumbre. 
 
 ![La configuración de la página de recursos multimedia, donde «Representación de medios (con anotaciones en imágenes)» aparece como un bloque encima de «Representación de medios» y «Galería Lightbox», que aparecen en rojo ya que se están eliminando de la página.](modulesfiles/imageAnnotate_resourceMedia.png)
 
@@ -58,7 +58,7 @@ Cuando haya anotaciones de imagen disponibles, aparecerá un botón en las pági
 
 ![El recurso multimedia con sus anotaciones, mostrado en la página de visualización del elemento. Debajo de la imagen hay un botón negro que dice «Ver sin anotaciones».](modulesfiles/imageAnnotate_publicResource.png)
 
-Ten en cuenta que, si sueles utilizar la galería Lightbox para mostrar tus archivos multimedia en las páginas de visualización de elementos y de archivos multimedia, esta no se puede modificar para incluir anotaciones en las imágenes. Si deseas mostrar anotaciones, debes utilizar los formatos «Incrustar multimedia» o «Reproducir multimedia». 
+Ten en cuenta que, si sueles utilizar la galería Lightbox para mostrar tus archivos multimedia en las páginas de visualización de elementos y de archivos multimedia, esta no se puede modificar para incluir anotaciones en las imágenes. Si deseas mostrar anotaciones, debes utilizar los formatos «Incrustación de archivos multimedia» o «Representación de archivos multimedia». 
 
 En el caso de los vídeos y los PDF, el botón «Ver anotaciones» aparecerá junto a la representación multimedia habitual y, al hacer clic en él, el contenido multimedia se sustituirá por su miniatura con anotaciones. Módulos como «PDF Embed» pueden determinar si se muestra el fotograma del contenido multimedia o su miniatura en lugares como la página de visualización del elemento o del contenido multimedia. 
 

@@ -36,7 +36,7 @@ Si deseas auditar los datos contenidos en una propiedad, pero almacenar los dato
 
 - **Columna de auditoría de destino**: Selecciona la columna en la que se almacenarán las correcciones. No es necesario seleccionar un destino si coincide con la columna de auditoría anterior. Las opciones son `value`, `uri` o `value_resource_id`. 
 
-- **Tipo de datos de destino**: Selecciona el tipo de datos en el que se almacenarán las correcciones. No es necesario seleccionar un destino si es el mismo que el tipo de datos anterior. Este menú desplegable incluye los tipos de datos estándar de Omeka S, así como cualquier tipo de datos adicional añadido por otros módulos, por ejemplo, los tipos de datos numéricos. 
+- **Tipo de datos de destino**: Selecciona el tipo de datos en el que se almacenarán las correcciones. No es necesario seleccionar un destino si coincide con el tipo de datos anterior. Este menú desplegable incluye los tipos de datos estándar de Omeka S, así como cualquier tipo de datos adicional añadido por otros módulos, por ejemplo, los tipos de datos numéricos. 
 
 Una vez que haya introducido la información en todos los campos pertinentes, haga clic en el botón «Enviar» situado en la esquina superior derecha. 
 
@@ -57,13 +57,13 @@ A continuación verás una fila de botones que te permiten realizar operaciones 
 
 - **Copiar todo**: copia los datos de la columna «De» a la columna «A» para todas las cadenas únicas.
 - **Borrar todo**: elimina todos los datos de la columna «A».
-- **Validar todo**: Comprueba todos los cambios propuestos para asegurarse de que son posibles dentro de los límites de la columna y el tipo de datos actuales; es decir, no se puede asignar un `value_resource_id` a una cadena de texto literal porque el tipo de datos requiere un número. La validación solo comprueba que la entrada sea estructuralmente posible, no que la modificación introducida exista; es decir, se podría cambiar un `value_resource_id` por un número que no se correspondiera con un ID real de Omeka S.
+- **Validar todo**: comprueba todos los cambios propuestos para asegurarse de que son posibles dentro de los límites de la columna y el tipo de datos actuales; es decir, no se puede asignar un `value_resource_id` a una cadena de texto literal porque el tipo de datos requiere un número. La validación solo comprueba que la entrada sea estructuralmente posible, no que la modificación introducida exista; es decir, se podría cambiar un `value_resource_id` por un número que no se correspondiera con un ID real de Omeka S.
 - **Eliminar todo**: Marca la casilla «Eliminar» para todas las cadenas únicas. Esto establecerá en nulo los datos de la propiedad que se está auditando. Se recomienda actuar con extrema precaución al aplicar esta opción.
 - **Deshacer la eliminación de todo**: Desmarca la casilla «Eliminar» para todas las cadenas únicas.
 
 A continuación, verás una tabla con todas las cadenas únicas de tu auditoría. Si el resultado de la auditoría contiene muchas cadenas únicas, puedes utilizar los filtros para centrarte en las cadenas que deseas editar. Además, las columnas con los datos actuales de la auditoría se pueden ordenar haciendo clic en el encabezado de la columna.
 
-La tabla le ofrece un recuento del número de recursos por cadena, la cadena única tal y como existe actualmente (De:), un cuadro de entrada para editar las cadenas actuales (A:) y una casilla de selección de eliminación para establecer los datos en nulo. La celda de edición de cada fila también cuenta con botones que te permiten copiar, borrar y validar los cambios propuestos.
+La tabla le proporciona un recuento del número de recursos por cadena, la cadena única tal y como existe actualmente (De:), un cuadro de entrada para editar las cadenas actuales (A:) y una casilla de selección de eliminación para establecer los datos en nulo. La celda de edición de cada fila también cuenta con botones que te permiten copiar, borrar y validar los cambios propuestos.
 
 ![Tabla de edición de auditoría con una cadena no válida en la primera fila de la columna «A:»; el botón de validación aparece en rojo, lo que indica una discrepancia en el tipo de datos; la segunda fila de la columna «A:» contiene datos enteros válidos y el botón de validación aparece en verde](../modules/modulesfiles/datacleaning_auditTableValidation.png)
 

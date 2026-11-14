@@ -17,11 +17,11 @@ Los servicios de PID disponibles actualmente en este módulo son:
 
 Tras la instalación, «Identificadores persistentes» aparecerá en el menú de navegación de la izquierda, en la sección «Módulos». Este enlace está disponible para los usuarios con permisos de administrador global y supervisor. 
 
-La página «Configuración» que se encuentra aquí contiene los ajustes generales:
+La página «Configuración» que se encuentra aquí contiene ajustes generales:
 
 + **Servicio de PID**: Selecciona cuál de los servicios de PID disponibles deseas utilizar para la generación o extracción. Solo se puede utilizar un servicio de PID a la vez para generar y asignar PID a los elementos. 
 + **Asignar PID a nuevos elementos**: Marca esta casilla para que se aplique automáticamente a cada nuevo elemento en Omeka S, tanto si se crea en Omeka S como si se importa. Esto generará nuevos PID o extraerá los PID existentes y los asignará, dependiendo de tu configuración.
-+ **Campos con PID existentes**: Una lista de campos de metadatos que pueden contener valores de PID. Cuando se crea o se importa un elemento, el módulo comprobará si hay PID en estos campos. Si se encuentra alguno, se asignará el PID existente al elemento (en lugar de generar uno nuevo). Utiliza el formato `dcterms:identifier,bibframe:identifier`, etc.
++ **Campos con PID existentes**: Una lista de campos de metadatos que pueden contener valores de PID. Cuando se crea o se importa un elemento, el módulo comprobará si hay PID en estos campos. Si los encuentra, se asignará el PID existente al elemento (en lugar de generar uno nuevo). Utiliza el formato `dcterms:identifier,bibframe:identifier`, etc.
 + **Campo opcional para almacenar PID**: si se activa, el PID también se escribirá en esta propiedad de metadatos de cada elemento correspondiente cuando se genere o se encuentre. 
 
 ![Opciones de configuración para los ajustes generales tal y como se enumeran más arriba.](../modules/modulesfiles/PID_settings.png)
@@ -47,7 +47,7 @@ La configuración de DataCite requiere:
 + **ID del repositorio de DataCite**: el identificador único asignado al repositorio de DOI de una institución. 
 + **Contraseña de DataCite**: La contraseña asociada al **ID del repositorio de DataCite** mencionado anteriormente. Ten en cuenta que, por motivos de seguridad, esta contraseña no se guarda en el formulario, por lo que, si se realizan cambios en cualquier campo de la pantalla de configuración de DataCite, también deberás volver a introducir la contraseña antes de pulsar «Enviar».
 
-![Opciones de configuración específicas de DataCite, tal y como se enumeran más arriba.](../modules/modulesfiles/PID_DataCiteconfig.png)
+![Opciones de configuración específicas de DataCite tal y como se enumeran más arriba.](../modules/modulesfiles/PID_DataCiteconfig.png)
 
 ### Metadatos obligatorios de DataCite
 

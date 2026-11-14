@@ -2,11 +2,11 @@
 
 El [módulo de búsqueda por facetas](https://omeka.org/s/modules/FacetedBrowse){target=_blank} te permite crear páginas de «exploración de recursos» con facetas (funciones de filtrado y ordenación) que los visitantes del sitio pueden utilizar para explorar tus colecciones. Las páginas de navegación por facetas pueden crearse para elementos, conjuntos de elementos o medios. 
 
-Con este módulo, los administradores del sitio configuran las páginas de búsqueda por facetas en función de los recursos específicos del sitio. A continuación, los usuarios finales pueden navegar por esos recursos y utilizar las facetas para acotar los resultados de forma lógica e intuitiva. Esta funcionalidad es similar a las opciones de filtrado de muchos sitios web y debería resultar fácil de manejar para los usuarios, siempre que se utilice un lenguaje claro.
+Con este módulo, los administradores del sitio configuran las páginas de búsqueda por facetas en función de los recursos específicos del sitio. A continuación, los usuarios finales pueden navegar por esos recursos y utilizar las facetas para acotar los resultados de forma lógica e intuitiva. Esta funcionalidad es similar a las opciones de filtrado de muchos sitios web y debería resultar fácil de manejar para los usuarios, siempre y cuando se utilice un lenguaje claro.
 
 La sección [vista pública](#public-views) que aparece a continuación muestra cómo se muestran estas facetas en páginas de una sola categoría y de varias categorías.
 
-Las [páginas](../sites/site_pages.md) de navegación por facetas se pueden añadir a la [navegación](../sites/site_navigation.md) de un sitio. Puedes [añadir la navegación por facetas a una página como un bloque](#faceted-browse-preview-page-block) que mostrará una vista previa de la página de navegación por facetas, pero sin todas sus funcionalidades. 
+Las [páginas](../sites/site_pages.md) de navegación por facetas se pueden añadir a la [navegación](../sites/site_navigation.md) de un sitio. Puedes [añadir la navegación por facetas a una página como un bloque](#faceted-browse-preview-page-block) que mostrará una vista previa de la página de navegación por facetas, pero sin toda su funcionalidad. 
 
 El contenido de la navegación por facetas se puede establecer como la vista de búsqueda predeterminada cuando un usuario escribe en la barra de búsqueda situada en la parte superior de un sitio de Omeka S. 
 
@@ -42,11 +42,11 @@ Crea una nueva página haciendo clic en el botón «Añadir nueva página». Est
 
 ![Interfaz de creación de página que muestra el menú desplegable para guardar la página](modulesfiles/FacetedBrowse_AddPage.png)
 
-El **título de la página** es obligatorio; se mostrará en las pestañas del navegador y se incluirá en los metadatos de la página. Puedes establecer una etiqueta diferente en la navegación del sitio. La mayoría de los temas no mostrarán este título de forma visible en la página. Cuando una página solo tiene una categoría, su título aparecerá en la página; cuando se establecen dos o más categorías, el encabezado «Explorar» aparecerá encima de los enlaces de categorías en la barra lateral (véase [la captura de pantalla siguiente](#multiple-categories-on-one-page) para ver cómo se mostrará). 
+El **título de la página** es obligatorio; se mostrará en las pestañas del navegador y se incluirá en los metadatos de la página. Puedes establecer una etiqueta diferente en la navegación del sitio. La mayoría de los temas no mostrarán este título de forma visible en la página. Cuando una página solo tiene una categoría, su título aparecerá en la página; cuando se establezcan dos o más categorías, el encabezado «Explorar» aparecerá encima de los enlaces de categorías en la barra lateral (véase [la captura de pantalla siguiente](#multiple-categories-on-one-page) para ver cómo se mostrará). 
 
 Utiliza el menú desplegable **tipo de recurso** para seleccionar el tipo de recurso que deseas que los usuarios puedan explorar en esta página: Elementos, Conjuntos de elementos o Archivos multimedia. Esto no se puede editar una vez creada la página.
 
-A continuación, elige las **miniaturas** que mostrará esta página de navegación por facetas. Puedes elegir [miniaturas cuadradas (recortadas) o miniaturas medianas (sin recortar, con la proporción original)](../content/media.md#media-thumbnails) para los elementos y conjuntos de elementos que se muestran en la tabla. Si lo dejas en «Predeterminado», se mostrarán las miniaturas que prefiera el tema de tu sitio web. 
+A continuación, elige las **miniaturas** que mostrará esta página de navegación por facetas. Puedes elegir [miniaturas cuadradas (recortadas) o miniaturas medianas (sin recortar, con la proporción original)](../content/media.md#media-thumbnails) para los elementos y conjuntos de elementos que se muestran en la tabla. Si dejas esta opción en «Predeterminado», se mostrarán las miniaturas que prefiera el tema de tu sitio web. 
 
 Selecciona «Guardar y... Permanecer en esta página» para continuar creando las categorías de navegación por facetas.
 
@@ -56,7 +56,7 @@ También puedes guardar tus cambios y salir sin trabajar en las categorías ni e
 
 Una vez creada la página, debes crear una categoría. Aquí es donde se configuran las facetas y los filtros utilizados para acotar el conjunto de recursos de dichas facetas. Puedes utilizar varias categorías para ofrecer a los usuarios diferentes subconjuntos de recursos desde los que iniciar su navegación, o bien crear una sola categoría y proporcionar a tus usuarios el conjunto máximo de recursos para explorar.
 
-Por ejemplo, quizá quieras añadir una página general de «Explorar elementos» a tu navegación y, dentro de ella, ofrecer una categoría para navegar únicamente por imágenes, otra categoría para navegar únicamente por eventos y una última categoría que permita a los usuarios explorar todos los elementos del sitio, incluidas imágenes y eventos. O bien, podrías crear páginas de navegación por facetas independientes para añadirlas a tu navegación (una para cada clase de elemento) y, dentro de cada página, ofrecer categorías para restringir aún más los recursos según otro valor. 
+Por ejemplo, quizá quieras añadir una página general de «Explorar elementos» a tu navegación y ofrecer en ella una categoría para navegar únicamente por imágenes, otra categoría para navegar únicamente por eventos y una última categoría que permita a los usuarios explorar todos los elementos del sitio, incluidas imágenes y eventos. O bien, podrías crear páginas de navegación por facetas independientes para añadirlas a tu navegación (una para cada clase de elemento) y, dentro de cada página, ofrecer categorías para restringir aún más los recursos según otro valor. 
 
 Haz clic en el botón «Añadir categoría» para acceder a una nueva interfaz. 
 
@@ -70,9 +70,9 @@ Puedes establecer un método de **ordenación predeterminado** que se utilizará
 
 También puedes incluir algún **texto de ayuda** para guiar a tus usuarios sobre cómo navegar por la página de navegación por facetas. Este texto aparecerá en la barra lateral izquierda junto con tus facetas de esta categoría. Hay un botón para contraer el texto (que está expandido por defecto); el botón dice «Instrucciones» por defecto, pero puedes cambiar esta etiqueta. Si no añades ningún texto de ayuda, este botón y el área de texto no aparecerán. 
 
-Por último, esta área incluye la configuración del comportamiento de las **facetas de valor**: «Coincidir con cualquiera» y «Coincidir con todas». Si utilizas facetas de valor (esta configuración no es aplicable a las facetas de clase, plantilla, conjunto de elementos o texto completo), la opción «Coincidir con cualquiera» ampliará los resultados, mientras que «Coincidir con todas» los reducirá. Por ejemplo, si tienes una faceta de valor para encabezados de materia, el usuario puede seleccionar un encabezado de materia para ver todos los elementos que coincidan con él. Si añade otro encabezado temático, verá los elementos que coincidan con **cualquiera de** las dos selecciones si la categoría está configurada en «Coincidir con cualquiera», o solo los elementos que coincidan con **ambas** selecciones si la categoría está configurada en «Coincidir con todos». Esto también se aplica a una selección de cada una de dos facetas de valor independientes. Ten en cuenta que esta configuración se aplica a todas las facetas de valor de la categoría: no puedes establecer este comportamiento para cada faceta de valor de forma individual. 
+Por último, esta área incluye la configuración del comportamiento de las **facetas de valor**: «Coincidir con cualquiera» y «Coincidir con todas». Si utilizas facetas de valor (esta configuración no es aplicable a las facetas de clase, plantilla, conjunto de elementos o texto completo), la opción «Coincidir con cualquiera» ampliará los resultados, mientras que «Coincidir con todas» los reducirá. Por ejemplo, si tienes una faceta de valor para encabezados de materia, el usuario puede seleccionar un encabezado de materia para ver todos los elementos que coincidan con él. Si añade otro encabezado temático, verá los elementos que coincidan con **cualquiera de** las dos selecciones si la categoría está configurada en «Coincidir con cualquiera», o solo los elementos que coincidan con **ambas** selecciones si la categoría está configurada en «Coincidir con todas». Esto también se aplica a una selección de cada una de dos facetas de valor independientes. Ten en cuenta que esta configuración se aplica a todas las facetas de valor de la categoría: no puedes establecer este comportamiento para cada faceta de valor de forma individual. 
 
-!!! nota
+!!! Nota
   Si utilizas facetas de valor, te recomendamos que utilices el campo «Texto de ayuda» para explicar a tus usuarios el comportamiento esperado.
 
 Tras configurar la categoría, puedes crear facetas y configurar columnas para tu vista de navegación. Una vez que hayas terminado de crear tus facetas y de configurar tus columnas de visualización, guarda tu categoría.
@@ -110,11 +110,11 @@ La imagen siguiente muestra algunas de las opciones del panel deslizante para la
 !!! nota
   Ten en cuenta que la configuración «Modo de faceta de valor», situada en la parte superior de la interfaz de edición de la categoría, se aplicará a todas las facetas de valor que añadas a esta categoría. La opción «Coincidir con cualquiera» permitirá a los usuarios ampliar sus resultados añadiendo más selecciones, mientras que «Coincidir con todos» reducirá los resultados cuando se añadan más criterios.
 
-Es obligatorio introducir un título; este será el encabezado público que se mostrará a los usuarios, y puede utilizarlo para explicar cómo funciona la faceta (por ejemplo, «Buscar en las descripciones» o «Seleccionar encabezados temáticos»). 
+Es obligatorio introducir un título; este será el encabezado público que se mostrará a los usuarios, y puedes utilizarlo para explicar cómo funciona la faceta (por ejemplo, «Buscar en las descripciones» o «Seleccionar encabezados temáticos»). 
 
-Utiliza el menú desplegable para seleccionar qué propiedad se va a utilizar para la faceta. Por ejemplo, quizá desees seleccionar el campo de descripción y permitir a los usuarios buscar dentro de esos textos descriptivos (con el tipo de selección «Entrada de texto» y el tipo de consulta «Contiene»). O quizá prefiera seleccionar su campo de materia y permitir a los usuarios ver todos los valores controlados que utiliza como encabezados de materia. Puede dejar este campo en blanco para ofrecer opciones de búsqueda o navegación por todas las propiedades de los recursos.
+Utiliza el menú desplegable para seleccionar qué propiedad se utilizará para la faceta. Por ejemplo, quizá desees seleccionar el campo de descripción y permitir a los usuarios buscar dentro de esos textos descriptivos (con el tipo de selección «Entrada de texto» y el tipo de consulta «Contiene»). O quizá prefiera seleccionar su campo de materia y permitir a los usuarios ver todos los valores controlados que utiliza como encabezados de materia. Puede dejar este campo en blanco para ofrecer opciones de búsqueda o navegación por todas las propiedades de los recursos.
 
-Configure el «Tipo de selección» para la faceta de navegación. Esto determina cómo interactúan los visitantes del sitio con las opciones del campo:
+Establezca el tipo de selección para la faceta de navegación. Esto determina cómo interactúan los visitantes del sitio con las opciones del campo:
 
 - Única (lista). Los visitantes solo pueden seleccionar una opción; las opciones se muestran en una lista de botones de opción. En la parte superior aparece la opción «Todas», que está seleccionada al cargar la página; los usuarios pueden seleccionar otra opción y, a continuación, desmarcarla seleccionando de nuevo «Todas». 
 - Múltiple (lista). Los visitantes pueden seleccionar varias opciones; estas se muestran en una lista de casillas de selección. Las selecciones múltiples realizadas por los visitantes del sitio **restringirán** (Opción 1 Y Opción 2) los resultados de la búsqueda, independientemente del comportamiento del valor «Coincidir con cualquiera»/«Coincidir con todos» establecido en la categoría. 
@@ -134,7 +134,7 @@ En el caso de **listas o menús desplegables**, puedes establecer un **tipo de c
 - «Es un recurso con ID»: Los visitantes seleccionarán un recurso vinculado a los elementos disponibles en el campo indicado (por ejemplo, todos los elementos con el mismo recurso indicado en el campo «Creador»). Los recursos se muestran por su título, no por su ID. 
   - Si a continuación se selecciona «Añadir todos los valores disponibles», los visitantes verán una lista de recursos que se [utilizan como valores en otros elementos (es decir, recursos vinculados)](../content/items.md#linked-resources). Puedes utilizar esta opción sin seleccionar ninguna propiedad; en ese caso, se incluirán todos los valores de recursos vinculados. Ten en cuenta que los ID no aparecerán en la interfaz pública, aunque sí se muestren en el panel de administración: en las opciones públicas solo se mostrarán los títulos.
 -  «No es un recurso con el ID»: Los visitantes seleccionarán un recurso que se vaya a excluir. 
-	- Si a continuación se selecciona «Añadir todos los valores disponibles», los visitantes verán una lista de recursos que se utilizan como valores en otros elementos. Se puede emplear esta opción sin seleccionar ninguna propiedad; en ese caso, se incluirán todos los valores de los recursos vinculados. Tenga en cuenta que los ID no se mostrarán en la interfaz pública, aunque sí se muestran en el panel de administración.
+	- Si a continuación se selecciona «Añadir todos los valores disponibles», los visitantes verán una lista de recursos que se utilizan como valores en otros elementos. Se puede emplear esta opción sin seleccionar ninguna propiedad; en ese caso, se incluirán todos los valores de los recursos vinculados. Tenga en cuenta que los ID no aparecerán en la interfaz pública, aunque sí se muestran en el panel de administración.
 -  «Tiene algún valor»: Los visitantes seleccionarán la propiedad. Se mostrarán todos los elementos con esa propiedad no vacía.  
   - Esto borrará la propiedad que hayas elegido en los pasos anteriores. Si a continuación seleccionas «Añadir todos los valores disponibles», los visitantes verán una lista de propiedades que contienen valores (en el formato «Dublin Core: Idioma»). 
 -  «No tiene valores»: Los visitantes seleccionarán la propiedad. 
@@ -162,7 +162,7 @@ A continuación, introduce los valores que compondrán la faceta. Cada valor deb
 
 Puedes marcar la casilla «Mostrar todos los valores disponibles» para hacerte una idea de los datos que se pueden introducir. Esto mostrará los valores existentes en la propiedad que hayas seleccionado anteriormente o en todas las propiedades. Puedes ordenar esa tabla por los valores más comunes o por orden alfabético, utilizando los triángulos de ordenación que aparecen en la parte superior de la tabla. A continuación, puede hacer clic en el botón «Añadir todo» para rellenar la lista de valores.
 
-El orden de los valores disponibles (de más a menos frecuentes, alfabéticamente, etc.) no se mantendrá al utilizar el botón «Añadir todo». Los valores de las propiedades se reorganizarán según un orden interno, al igual que las plantillas de recursos, las clases y los recursos por ID. El orden que aparece en el campo del panel de administración es el que se mostrará en la página pública. 
+El orden de los valores disponibles (de más a menos frecuentes, por orden alfabético, etc.) no se mantendrá al utilizar el botón «Añadir todo». Los valores de las propiedades se reorganizarán según un orden interno, al igual que las plantillas de recursos, las clases y los recursos por ID. El orden que aparece en el campo del panel de administración es el que se mostrará en la página pública. 
 
 Por ejemplo, es posible que desees cargar todos los valores de la propiedad «Tema» y permitir a los usuarios explorar los elementos utilizando los encabezados temáticos actualmente en uso. Si seleccionas «Mostrar todos los valores disponibles», verás una lista de los temas actualmente en uso, ordenados de más a menos frecuentes. Ten en cuenta que quizá te interese limpiar tus datos y consolidar valores similares, o corregir errores tipográficos y variaciones, para que la navegación por facetas resulte más útil. Puedes utilizar el [módulo Value Suggest](valuesuggest.md) junto con la navegación por facetas para ver y limpiar datos desordenados.
 
@@ -173,7 +173,7 @@ Cuando estés satisfecho con tu configuración, asegúrate de hacer clic en el b
 
 Así es como aparecerá la faceta de valores del ejemplo anterior en una página pública de navegación por facetas: 
 
-![Configurar el dibujo de la faceta para el tipo de faceta «Valores», tal y como se indica en la sección siguiente.](modulesfiles/FacetedBrowse_facetpublic2.png)
+![Configura el dibujo de la faceta para el tipo de faceta «Valores», tal y como se indica en la sección siguiente.](modulesfiles/FacetedBrowse_facetpublic2.png)
 
 ##### **Clase de recurso** 
 
@@ -207,7 +207,7 @@ Selecciona los conjuntos de elementos que compondrán las facetas.  Si lo deseas
 
 ![Configurar el panel de facetas para el tipo de faceta «Valores».](modulesfiles/FacetedBrowse_facetItemSet.png)
 
-Marca la casilla «Mostrar todos los conjuntos de elementos disponibles» para hacerte una idea de los datos que se pueden introducir. El orden de los valores disponibles (de más a menos frecuentes, alfabéticamente, etc.) no se mantendrá cuando utilices el botón «Añadir todo». Los conjuntos de elementos se reorganizarán según su ID interno. El orden que aparece en el campo del panel de administración es el que se mostrará en la página pública. 
+Marca la casilla «Mostrar todos los conjuntos de elementos disponibles» para hacerte una idea de los datos que se pueden introducir. El orden de los valores disponibles (de más a menos frecuentes, por orden alfabético, etc.) no se mantendrá cuando utilices el botón «Añadir todo». Los conjuntos de elementos se reorganizarán según su ID interno. El orden que aparece en el campo del panel de administración es el que se mostrará en la página pública. 
 
 ##### **Texto completo** 
 
@@ -233,8 +233,8 @@ Puedes configurar la información que se muestra sobre los resultados añadiendo
 
 En la vista pública de una búsqueda por facetas, los usuarios pueden ordenar por una columna seleccionándola en el menú desplegable. Cada columna se puede ordenar en orden ascendente o descendente. Si deseas impedir que los usuarios ordenen por una columna determinada, puedes marcar la casilla «Excluir ordenación por» al configurar dicha columna para excluirla del menú desplegable.
 
-!!! Nota
-	Si un valor es muy largo, como el título o la descripción de un recurso, es posible que las filas de la tabla resulten muy altas, con el campo más grande ocupando la columna más ancha y el resto de columnas reducidas para compensar. Puedes utilizar el [módulo Editor CSS](csseditor.md) para implementar un truncamiento que oculte el texto que se salga de la columna.
+!!! nota
+	Si un valor es muy largo, como el título o la descripción de un recurso, es posible que las filas de la tabla resulten muy altas, con el campo más grande ocupando la columna más ancha y el resto de columnas reducidas para compensar. Puedes utilizar el [módulo Editor CSS](csseditor.md) para implementar un truncamiento que oculte el texto que sobresalga.
 
 Selecciona un tipo de columna para añadir desde el menú desplegable: 
 
@@ -273,19 +273,19 @@ Haz clic en la [pestaña Navegación](../sites/site_navigation.md) de tu sitio. 
 
 Asigna una etiqueta a tu enlace personalizado (opcional) y selecciona una opción de la lista desplegable de páginas de navegación por facetas (obligatorio). Si la etiqueta está en blanco, se utilizará el título de la página.
 
-Puedes añadir tantos enlaces personalizados de navegación por facetas como desees.
+Puedes añadir tantos enlaces personalizados de «Navegación por facetas» como desees.
 
 Arrastra y suelta tus páginas en el lugar deseado de la navegación de tu sitio y, a continuación, guarda los cambios.
 
 ## Vistas públicas
 
-Las vistas públicas de las páginas de navegación por facetas incluyen la página base, en la que puede haber una o más categorías en las que hacer clic, y luego las páginas específicas de cada categoría, que muestran las columnas elegidas para esa vista. Los recursos disponibles se mostrarán en una lista si no se ha seleccionado ninguna columna para su visualización.
+Las vistas públicas de las páginas de navegación por facetas incluyen la página base, donde puede haber una o más categorías en las que hacer clic, y luego páginas específicas de cada categoría, que muestran las columnas elegidas para esa vista. Los recursos disponibles se mostrarán en una lista si no se ha seleccionado ninguna columna para su visualización.
 
 ![Página de navegación por facetas con una lista de eventos que tuvieron lugar en el National Mall. En la parte izquierda de la imagen hay una lista de épocas con botones de opción.](modulesfiles/FacetedBrowse_publicView.png)
 
 En esta imagen, la faceta es «Época», que se muestra como una lista de selección única. Los elementos de esta página se muestran en columnas con el título y la época de cada elemento.
 
-Dependiendo de la configuración de las columnas en cada categoría, es posible que haya más columnas de las que pueda albergar la ventana del navegador del usuario. Si es así, solo verá el número de columnas que quepan en la página sin desbordarse, y verá unas flechas a la izquierda y a la derecha, situadas en la esquina superior derecha de la tabla, para desplazar las columnas ocultas y poder verlas. Ten en cuenta que el texto de las columnas que no se muestran en la página no aparecerá si el usuario realiza una búsqueda de texto en la página.
+Dependiendo de la configuración de las columnas en cada categoría, es posible que haya más columnas de las que pueda albergar la ventana del navegador del usuario. Si es así, solo verá el número de columnas que quepan en la página sin desbordarse, y verá unas flechas a la izquierda y a la derecha, situadas en la esquina superior derecha de la tabla, para desplazarse y ver las columnas ocultas. Ten en cuenta que el texto de las columnas que no se muestran en la página no aparecerá si el usuario realiza una búsqueda de texto en la página.
 
 ![Página de navegación por facetas con la tabla de resultados, en la que se muestran flechas a la izquierda y a la derecha para ver las columnas que no son visibles con el ancho actual de la página.](modulesfiles/FacetedBrowse_publicView2.png)
 
@@ -303,7 +303,7 @@ Cuando un usuario hace clic en una categoría, la lista de recursos cambia para 
 
 Puedes añadir un bloque de página «Vista previa de la navegación por facetas» a las páginas de los sitios de Omeka. Este bloque de página mostrará los primeros elementos que aparecen en la página completa de navegación por facetas, sin ninguna de las facetas de la barra lateral ni las herramientas de navegación disponibles en la página. 
 
-![Bloque de página de vista previa de la navegación por facetas en la configuración de administración, con los ajustes que se indican a continuación. Se ha seleccionado una categoría de página, el «Límite» está fijado en 6, el «Título de la vista previa» está fijado en «Explorar por tipo» y el «Texto del enlace» está fijado en «Explorar todo».](modulesfiles/FacetedBrowse_previewpageblock.png)
+![Bloque de página de vista previa de la navegación por facetas en la configuración de administración, con los ajustes que se indican a continuación. Se ha seleccionado una categoría de página, el «Límite» está establecido en 6, el «Título de la vista previa» en «Explorar por tipo» y el «Texto del enlace» en «Explorar todo».](modulesfiles/FacetedBrowse_previewpageblock.png)
 
 El bloque de página incluye los siguientes ajustes:
 
@@ -324,6 +324,6 @@ Ve a la página de Ajustes de tu sitio y busca la sección «Faceted Browse». V
 
 Ten en cuenta que solo aparecerán las categorías con una faceta de búsqueda de texto. 
 
-Cuando un usuario realice una búsqueda de texto en tu sitio web, se le redirigirá a la categoría de «Navegación por facetas» y verá su búsqueda de texto completada en la faceta de texto completo de la barra lateral. Desde allí, podrá acotar o ampliar aún más su búsqueda. 
+Cuando un usuario realice una búsqueda de texto en tu sitio web, se le redirigirá a la categoría de «Navegación por facetas» y verá su búsqueda de texto ya introducida en la faceta de texto completo de la barra lateral. Desde allí, podrá acotar o ampliar aún más su búsqueda. 
 
 ![Una búsqueda de texto de «william» ha cargado la página de «Navegación por facetas», y «william» también aparece en la faceta de texto completo de la barra lateral.](modulesfiles/FacetedBrowse_sitewide.png)
